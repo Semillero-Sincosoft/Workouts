@@ -1,0 +1,7 @@
+
+      .contenedor-principal {
+        border: solid;
+        display: flex;
+        width: 500px;
+        height: 300px;
+      }
