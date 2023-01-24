@@ -1,28 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
 * {
   padding: 0px;
   margin: 0px;
 }
 
 body {
-  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
   box-sizing: border-box;
   font-size: 18px;
   justify-content: center;
   display: flex;
+  background-color: #0d192b;
 }
 
 .container {
-    width: 40%;
-    border-radius: 7%;
-    height: 618px;
-    background-color: hsl(216, 50%, 16%);
-    display: flex;
-    margin-top: 2%;
+  width: 28%;
+  border-radius: 3%;
+  height: 587px;
+  background-color: #14253d;
+  display: flex;
+  margin-top: 2%;
 }
 
-
 .content {
-  color: hsl(215, 51%, 70%);
+  color: #8bacda;
   margin: 20px;
   flex-direction: column;
   display: flex;
@@ -31,12 +33,49 @@ body {
 }
 
 .content-img {
-  margin: 0px 0px 27px 0px;
+  margin: 0px 0px 21px 0px;
   display: flex;
   justify-content: center;
 }
 .img {
-    width: 100%;
-    border-radius: 6%;
-    height: 500px;
+  width: 96%;
+  border-radius: 4%;
+  height: 317px;
+}
+
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 11px;
+  white-space: pre-line;
+  
+}
+.titulo{
+  color: #fff;
+}
+.texto{
+font-size: 20px;
+}
+.days{
+  color: #8bacda;
+}
+.prices {
+  color: #00fff7;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.content-imgfoto{
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+}
+.img-foto{
+  width: 40px;
+  border: solid white;
+  border-radius: 50%;
+}
+
+.name{
+  color: #fff;
 }
