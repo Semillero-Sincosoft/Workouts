@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  width: 28%;
+  width: 375px;
   border-radius: 3%;
   height: 587px;
   background-color: #14253d;
@@ -29,6 +29,7 @@ body {
   flex-direction: column;
   display: flex;
   width: 100%;
+  height: auto;
   text-align: left;
 }
 
@@ -41,6 +42,13 @@ body {
   width: 96%;
   border-radius: 4%;
   height: 317px;
+
+}
+.img:hover{
+  opacity: 0.4 ;
+  background-color: #00fff7;
+  background-image: url(images/icon-view.svg);
+  cursor: pointer;
 }
 
 .descripcion {
@@ -48,34 +56,45 @@ body {
   flex-direction: column;
   padding: 0px 0px 0px 11px;
   white-space: pre-line;
-  
 }
-.titulo{
+.titulo {
   color: #fff;
 }
-.texto{
-font-size: 20px;
+.texto {
+  font-size: 19px;
 }
-.days{
-  color: #8bacda;
+.titulo:hover{
+  color: #00fff7;
+  cursor: pointer;
 }
 .prices {
   color: #00fff7;
   display: flex;
   justify-content: space-between;
   font-size: 15px;
+  
 }
-.content-imgfoto{
+
+.days {
+  color: #8bacda;
+}
+.content-imgfoto {
   display: flex;
   align-items: center;
-  align-content: space-around;
+  font-size: 14px;
 }
-.img-foto{
+.img-foto {
   width: 40px;
   border: solid white;
   border-radius: 50%;
 }
-
-.name{
+.name2{
+padding: 0px 3px 0px 18px;
+}
+.name {
   color: #fff;
+}
+.name:hover{
+  color: #00fff7;
+  cursor: pointer;
 }
