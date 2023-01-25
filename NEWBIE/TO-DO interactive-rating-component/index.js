@@ -12,7 +12,7 @@ function ocultarMostrar() {
 
 const buttonsContainer = document.querySelector(".numbers");
 const arrayButton = [1, 2, 3, 4, 5];
-
+let calificacion = 0;
 function crearEl() {
   arrayButton.map((el) => {
     const raiting = document.createElement("button");
@@ -22,12 +22,14 @@ function crearEl() {
 
     raiting.addEventListener("click", () => {
       raiting.classList.add("prueba");
+
+      calificacion = el;
       ocultarMostrar();
     });
   });
   const raitingSelect = document.createElement("p");
   raitingSelect.classList.add("raiting-selected");
-  raitingSelect.innerText = "xd";
+  raitingSelect.innerText = calificacion;
   xd.appendChild(raitingSelect);
 }
 crearEl();

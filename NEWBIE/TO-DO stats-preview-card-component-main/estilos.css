@@ -8,53 +8,74 @@
 
 body {
   font-family: "Lexend Deca", sans-serif;
-  background-color: hsl(244, 38%, 16%);
+  background-color: hsl(233, 47%, 7%);
   box-sizing: border-box;
 }
 
 .container {
-  width: 90%;
-  margin: 83px;
-  height: 100%;
+  border-radius: 7px;
+  width: 86%;
+  margin: 85px 0px 0px 99px;
   display: flex;
-  background-color: hsl(233, 47%, 7%);
+  background-color: hsl(244, 38%, 16%);
 }
+
 .content {
   width: 100%;
-  margin: 30px;
-  padding: 0px 0px 0px 15px;
-  display: inline-flex;
-  justify-content: space-around;
+  height: 470px;
+  display: flex;
 }
 
 .content-escrito {
-  font-size: 15px;
-  display: grid;
+  width: 512px;
+  height: 480px;
+  padding: 0px 0px 0px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-h1 {
-  color: #fff;
-}
-p {
-  color: hsla(0, 0%, 100%, 0.6);
+.xddd {
+  color: rgb(170, 92, 219);
 }
 .title {
-  font-size: 46px;
+  font-family: "Inter", sans-serif;
+  font-size: 27px;
+  padding: 0px 0px 0px 0px;
+  color: #fff;
 }
-.descripcion{
-
+.descripcion {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 0px 102px 0px 0px;
 }
 
 .numbers {
   display: flex;
-  font-family: "Lexend Deca", sans-serif;
-  justify-content: space-around;
+  font-family: "Inter", sans-serif;
+  justify-content: space-evenly;
+  font-size: 10px;
+  padding: 0px 113px 0px 0px;
 }
 
 .content-img {
-  width: 100%;
+  width: 53%;
   height: auto;
 }
 .img {
   width: 100%;
-  height: 100%;
+  height: 470px;
+  border-radius: 0px 7px 7px 0px;
+  background-image: linear-gradient(rgb(170, 92, 219,0.8), rgb(170, 92, 219,0.8)),
+    url(images/image-header-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
+/* .img::before{
+  background-color: red;
+  width: 100%;
+  opacity: .4;
+  height: 100%;
+  content: '';
+} */
