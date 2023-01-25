@@ -42,13 +42,17 @@ body {
   width: 96%;
   border-radius: 4%;
   height: 317px;
-
 }
-.img:hover{
-  opacity: 0.4 ;
-  background-color: #00fff7;
-  background-image: url(images/icon-view.svg);
-  cursor: pointer;
+.content-img:hover {
+  display: "none";
+  background-color: #00fff7 !important;
+  z-index: 10;
+}
+
+.color {
+  background-color: red;
+  width: 96%;
+  display: none;
 }
 
 .descripcion {
@@ -63,7 +67,7 @@ body {
 .texto {
   font-size: 19px;
 }
-.titulo:hover{
+.titulo:hover {
   color: #00fff7;
   cursor: pointer;
 }
@@ -72,7 +76,6 @@ body {
   display: flex;
   justify-content: space-between;
   font-size: 15px;
-  
 }
 
 .days {
@@ -85,16 +88,16 @@ body {
 }
 .img-foto {
   width: 40px;
-  border: solid white;
+  border: 1px solid white;
   border-radius: 50%;
 }
-.name2{
-padding: 0px 3px 0px 18px;
+.name2 {
+  padding: 0px 3px 0px 18px;
 }
 .name {
   color: #fff;
 }
-.name:hover{
+.name:hover {
   color: #00fff7;
   cursor: pointer;
 }

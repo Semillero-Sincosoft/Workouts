@@ -13,8 +13,8 @@ body {
 }
 
 .container {
-  width: 100%;
-  margin-top: 8%;
+  width: 90%;
+  margin: 83px;
   height: 100%;
   display: flex;
   background-color: hsl(233, 47%, 7%);
@@ -23,13 +23,13 @@ body {
   width: 100%;
   margin: 30px;
   padding: 0px 0px 0px 15px;
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   justify-content: space-around;
 }
 
 .content-escrito {
   font-size: 15px;
+  display: grid;
 }
 h1 {
   color: #fff;
@@ -37,18 +37,24 @@ h1 {
 p {
   color: hsla(0, 0%, 100%, 0.6);
 }
+.title {
+  font-size: 46px;
+}
+.descripcion{
+
+}
 
 .numbers {
   display: flex;
   font-family: "Lexend Deca", sans-serif;
   justify-content: space-around;
 }
-.title {
-  font-size: 46px;
-}
+
 .content-img {
   width: 100%;
+  height: auto;
 }
-.img{
-width: 100%;
+.img {
+  width: 100%;
+  height: 100%;
 }
