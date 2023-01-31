@@ -75,28 +75,49 @@ body {
   color: hsl(214, 17%, 51%);
 }
 
-.boton {
-  width: 40px;
-  height: 40px;
-  border-radius: 25px;
+#boton {
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50px;
+  padding: 8px;
+  margin-right: 4%;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
   border: none;
-  position: relative;
-  background-color: coral;
-}
+  }
 
 .boton:hover {
-  background-color: hsl(214, 100%, 50%);
+  
 }
 
 .redes {
+  background-color: hsl(217, 46%, 41%);
+  color: 212,23%,69%;
   position: absolute;
-  color: blue;
+} 
+
+/* .redes:hover {
+  padding-top: 30px;
+  width: 117px;
+
+  background-color: hsl(217, 46%, 41%);
+  position: absolute;
+  justify-content: space-evenly;
+  display: flex;
+  height: 100%;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    59% 75%,
+    51% 90%,
+    43% 75%,
+    0% 75%
+  );
+  background-color: black; */
 }
 
-.redes:hover {
-  display: flex;
-  color: black;
-  opacity: 1;
-  border: solid;
-  background-color: darksalmon;
+@media only screen and (min-width: 357px) and (max-width:700px) {
+
+
 }
