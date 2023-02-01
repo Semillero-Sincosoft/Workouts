@@ -1,40 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="estilos.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+    <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main class="container">
+      <section class="content-1">
+        <img
+          class="img-woman"
+          src="images/illustration-woman-online-mobile.svg"
+          alt=""
+        />
+        <div class="content-shadow"></div>
+      </section>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <section class="content-2">
+        <h1 class="title">FAQ</h1>
+        <details class="content-2-details">
+          <summary class="content-2-details-summary">
+            How many team members can I invite?
+            <img class="flecha" src="images/icon-arrow-down.svg" alt="" />
+          </summary>
+          <p class="content-2-details-parrafo">
+            you can invite up to 2 additional users on the free plan.there is no
+            limit on team members for the premium plan.
+          </p>
+        </details>
+        <hr class="content2-line" />
+        <details class="content-2-details">
+          <summary class="content-2-details-summary">
+            What is the maximum file upload size?
+            <img class="flecha" src="images/icon-arrow-down.svg" alt="" />
+          </summary>
+          <p class="content-2-details-parrafo">
+            no more than 2GB.all files in your account must fit your allotted
+            storage space
+          </p>
+        </details>
+        <hr class="content2-line" />
+        <details class="content-2-details">
+          <summary class="content-2-details-summary">
+            How do I reset my password?
+            <img class="flecha" src="images/icon-arrow-down.svg" alt="" />
+          </summary>
+          <p class="content-2-details-parrafo">
+            Click "forgot password?" from the login page or "change
+            password"from your profile page. a reset link will be emailed to
+            you.
+          </p>
+        </details>
+        <hr class="content2-line" />
+        <details class="content-2-details">
+          <summary class="content-2-details-summary">
+            Can I cancel my subscription?
+            <img class="flecha" src="images/icon-arrow-down.svg" alt="" />
+          </summary>
+          <p class="content-2-details-parrafo">
+            Yes! Send us a messages and we´ll process your request no questions
+            asked.
+          </p>
+        </details>
+        <hr class="content2-line" />
+        <details class="content-2-details">
+          <summary class="content-2-details-summary">
+            Do you provide additional support?
+            <img class="flecha" src="images/icon-arrow-down.svg" alt="" />
+          </summary>
+          <p class="content-2-details-parrafo">
+            Chat and email support is avalable 24/7. Phone lines are open during
+            normal business hours.
+          </p>
+        </details>
+        <hr class="content2-line" />
+      </section>
+    </main>
+  </body>
 </html>
