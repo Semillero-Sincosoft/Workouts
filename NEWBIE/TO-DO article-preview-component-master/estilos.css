@@ -57,6 +57,7 @@ body {
 .content-boton {
   justify-content: space-between;
   display: flex;
+  position: relative;
 }
 .logo {
   display: flex;
@@ -75,49 +76,107 @@ body {
   color: hsl(214, 17%, 51%);
 }
 
-#boton {
+.xd {
+  display: flex;
+}
+.boton {
   background-color: hsl(210, 46%, 95%);
-  border-radius: 50px;
-  padding: 8px;
-  margin-right: 4%;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
   text-decoration: none;
   cursor: pointer;
   color: white;
   border: none;
+  position: relative;
+}
+.mensaje {
+  position: absolute;
+  content: "";
+}
+.share {
+  width: 239px;
+  height: 63px;
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  left: 134px;
+  bottom: 103px;
+}
+
+.share-img {
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  width: 39px;
+  padding: 7px;
+  cursor: pointer;
+  height: 40px;
+}
+.share > * {
+  margin-right: 0.8rem;
+}
+.share::before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+  content: "";
+  position: absolute;
+  right: 111px;
+  top: 62px;
+}
+
+.share span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: hsl(212, 23%, 69%);
+}
+
+.hiden {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 82%;
+    border-radius: 10px;
   }
 
-.boton:hover {
-  
-}
-
-.redes {
-  background-color: hsl(217, 46%, 41%);
-  color: 212,23%,69%;
-  position: absolute;
-} 
-
-/* .redes:hover {
-  padding-top: 30px;
-  width: 117px;
-
-  background-color: hsl(217, 46%, 41%);
-  position: absolute;
-  justify-content: space-evenly;
-  display: flex;
-  height: 100%;
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 75%,
-    59% 75%,
-    51% 90%,
-    43% 75%,
-    0% 75%
-  );
-  background-color: black; */
-}
-
-@media only screen and (min-width: 357px) and (max-width:700px) {
-
-
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .content-img {
+    width: 100%;
+    height: 89%;
+  }
+  .img {
+    border-radius: 10px 0px 0px 0px;
+  }
+  .content-escrito {
+    padding: 0px 53px 0px 35px;
+  }
+  .title {
+    font-size: 11px;
+  }
+  .escrito {
+    font-size: 19px;
+  }
+  .content-boton {
+  }
+  .logo {
+  }
+  .img-logo {
+  }
+  .name {
+  }
+  .share {
+  }
 }
