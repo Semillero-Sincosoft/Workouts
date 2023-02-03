@@ -28,7 +28,7 @@ body {
 }
 .content-img {
   width: 90%;
-  height: auto;
+  height: 381px;
 }
 .img {
   width: 100%;
@@ -45,6 +45,7 @@ body {
   height: 100%;
 }
 .title {
+  width: 472px;
   font-size: 14px;
   color: hsl(217, 19%, 35%);
 }
@@ -57,7 +58,6 @@ body {
 .content-boton {
   justify-content: space-between;
   display: flex;
-  position: relative;
 }
 .logo {
   display: flex;
@@ -88,38 +88,44 @@ body {
   cursor: pointer;
   color: white;
   border: none;
-  position: relative;
-}
-.mensaje {
   position: absolute;
-  content: "";
 }
+.flecha {
+  fill: #33ff0088;
+}
+.flecha:hover {
+  fill: slateblue !important;
+}
+
 .share {
   width: 239px;
   height: 63px;
   background-color: hsl(217, 19%, 35%);
   border-radius: 10px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   color: #fff;
-  position: relative;
-  left: 134px;
-  bottom: 103px;
+  position: absolute;
+  right: 123px;
+  top: 320px;
 }
 
 .share-img {
   background-color: hsl(210, 46%, 95%);
   border-radius: 50%;
-  width: 39px;
-  padding: 7px;
+  width: 40px;
+  padding: 12px;
   cursor: pointer;
   height: 40px;
+  position: relative;
+  top: 8px;
 }
 .share-img:hover {
-  background-color: hsl(214, 17%, 51%);
+}
+.share-img:hover + #redes {
+  display: inline-flex;
   color: #fff;
-  background-image: ur;
 }
 .share > * {
   margin-right: 0.8rem;
@@ -141,10 +147,6 @@ body {
   font-weight: 500;
   letter-spacing: 5px;
   color: hsl(212, 23%, 69%);
-}
-
-.hiden {
-  display: none;
 }
 
 @media screen and (max-width: 900px) {
@@ -171,7 +173,7 @@ body {
     border-radius: 10px 10px 0px 0px;
   }
   .content-escrito {
-    padding: 0px ;
+    padding: 0px;
   }
   .title {
     font-size: 12px;
