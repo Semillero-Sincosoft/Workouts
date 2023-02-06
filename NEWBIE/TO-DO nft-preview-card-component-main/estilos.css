@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+  font-size: 18px;
+  justify-content: center;
+  display: flex;
+  background-color: #0d192b;
+}
+
+.container {
+  width: 375px;
+  border-radius: 3%;
+  height: 587px;
+  background-color: #14253d;
+  display: flex;
+  margin-top: 2%;
+}
+
+.content {
+  color: #8bacda;
+  margin: 20px;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
+
+.content-img {
+  margin: 0px 0px 21px 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 4%;
+  height: 58%;
+  position: relative;
+}
+.svg {
+  position: absolute;
+  background-color: hsl(178, 100%, 50%, 60%);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.svg:hover {
+  opacity: 1;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.content-img .svg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+img {
+  border-radius: 10px;
+}
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 11px;
+  white-space: pre-line;
+}
+.titulo {
+  color: #fff;
+}
+.texto {
+  font-size: 17px;
+}
+.titulo:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+.prices {
+  color: #00fff7;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.days {
+  color: #8bacda;
+}
+.content-imgfoto {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-top: 15px;
+}
+.img-foto {
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.name2 {
+  padding: 0px 3px 0px 18px;
+}
+.name {
+  color: #fff;
+}
+.name:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
