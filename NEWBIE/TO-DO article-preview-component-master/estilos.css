@@ -175,7 +175,23 @@ body {
     font-size: 20px;
     width: 100%;
   }
+  .share {
+    top: 2px;
+    right: -29px;
+    height: 81px;
+    width: 488px;
+    border-radius: 0px 0px 11px 11px;
+    justify-content: center;
+  }
+  .content-boton {
+    position: relative;
+  }
 
   .share-img {
+    z-index: 1;
+  }
+  .share-img:hover {
+    background-color: #fff;
+    top: 22px;
   }
 }
