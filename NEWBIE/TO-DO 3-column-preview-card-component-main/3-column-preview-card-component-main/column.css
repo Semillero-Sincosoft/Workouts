@@ -18,8 +18,6 @@
 body {
   background-color: var(--trasparent-color);
   font-family: "Lexend Deca", sans-serif;
-
-  height: 100%;
   justify-content: center;
   align-items: center;
   font-size: 15px;
@@ -27,17 +25,15 @@ body {
 
 main {
   align-items: center;
-  margin-top: 165px;
-  height: 100%;
+  margin-top: 110px;
   flex-direction: column;
 }
 
 .escrito {
   display: flex;
   width: 80%;
-  height: 400px;
+  height: 500px;
   color: var(--primary-color);
-  border: solid black;
 }
 .title {
   font-family: "Big Shoulders Display", cursive;
@@ -45,15 +41,30 @@ main {
 }
 .texto {
   color: var(--trasparent-color);
+  line-height: 20px;
 }
 
 .sedan {
   background-color: var(--yellow-color);
+  padding: 0px 26px 0px 28px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .suvs {
   background-color: var(--cyan-color);
+  padding: 0px 26px 0px 28px;
 }
 .luxu {
   background-color: var(--darkcyan-color);
+  padding: 0px 26px 0px 28px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.learn {
+  width: 150PX;
+  height: 50px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: solid 2px white;
+  color: var(--primary-color);
 }
