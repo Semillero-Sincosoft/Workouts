@@ -45,7 +45,7 @@ body {
   height: 100%;
 }
 .title {
-  width: 472px;
+  width: 473px;
   font-size: 14px;
   color: hsl(217, 19%, 35%);
 }
@@ -91,12 +91,6 @@ body {
   border: none;
   position: absolute;
 }
-.flecha {
-  fill: #33ff0088;
-}
-.flecha:hover {
-  fill: slateblue !important;
-}
 
 .share {
   width: 239px;
@@ -111,7 +105,9 @@ body {
   right: 123px;
   top: 320px;
 }
-
+.share-img:hover {
+  background-color: hsl(217, 19%, 35%);
+}
 .share-img {
   background-color: hsl(210, 46%, 95%);
   border-radius: 50%;
@@ -149,7 +145,7 @@ body {
   color: hsl(212, 23%, 69%);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (min-width: 500px) {
   .container {
     width: 80%;
     margin: 19px;
@@ -158,7 +154,7 @@ body {
 
   .content {
     flex-direction: column;
-    width: 70%;
+    width: 490px;
     height: 750px;
   }
   .content-img {
@@ -168,24 +164,18 @@ body {
     border-radius: 10px 10px 0px 0px;
   }
   .content-escrito {
-    padding: 26px;
+    padding: 0px 30px 0px 39px;
   }
   .title {
-    width: 100%;
+    width: auto;
+    height: auto;
     font-size: 12px;
   }
   .escrito {
     font-size: 20px;
     width: 100%;
   }
-  .content-boton {
-  }
-  .logo {
-  }
-  .img-logo {
-  }
-  .name {
-  }
-  .share {
+
+  .share-img {
   }
 }
