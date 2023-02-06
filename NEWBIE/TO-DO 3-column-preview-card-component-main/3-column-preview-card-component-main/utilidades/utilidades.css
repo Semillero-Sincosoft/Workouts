@@ -1,0 +1,10 @@
+.flex-width {
+  width: 100%;
+  display: flex;
+}
+
+.flex-direction{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+}
