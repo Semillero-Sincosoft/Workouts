@@ -9,3 +9,10 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.learns {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  border: solid 2px white;
+}

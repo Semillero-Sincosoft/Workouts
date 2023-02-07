@@ -61,27 +61,16 @@ main {
 }
 
 .learn1 {
-  width: 150px;
-  height: 50px;
-  border-radius: 30px;
-  border: solid 2px white;
+  
   color: var(--yellow-color);
   background-color: var(--trasparent-color);
 }
 .learn2 {
-  width: 150px;
-  height: 50px;
-  border-radius: 30px;
-  border: solid 2px white;
   color: var(--cyan-color);
   background-color: var(--trasparent-color);
 }
 
 .learn3 {
-  width: 150px;
-  height: 50px;
-  border-radius: 30px;
-  border: solid 2px white;
   color: var(--darkcyan-color);
   background-color: var(--trasparent-color);
 }
