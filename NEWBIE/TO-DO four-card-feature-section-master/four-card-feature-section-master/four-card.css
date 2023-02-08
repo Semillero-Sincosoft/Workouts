@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rojo-color: hsl(0, 78%, 62%);
+  --cyan-color: hsl(180, 62%, 55%);
+  --naranja-color: hsl(34, 97%, 64%);
+  --azul-color: hsl(212, 86%, 64%);
+  --azuloscuro-color: hsl(234, 12%, 34%);
+  --grisbody-color: hsl(229, 6%, 66%);
+  --gris-color: hsl(0, 0%, 98%);
+}
+body {
+  font-size: 15px;
+  --grisazul-color: hsl(229, 6%, 66%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  
+}
