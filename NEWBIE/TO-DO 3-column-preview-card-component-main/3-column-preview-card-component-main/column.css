@@ -27,13 +27,12 @@ body {
 
 .card {
   align-items: center;
-  margin-top: 90px;
   flex-direction: column;
 }
 
 .escrito {
   display: flex;
-  width: 80%;
+  width: 1040px;
   height: 500px;
   color: var(--primary-color);
 }
@@ -44,7 +43,7 @@ body {
 .texto {
   color: var(--trasparent-color);
   line-height: 24px;
-  padding: 0px 93px 0px 0px;
+  padding: 0px 79px 0px 0px;
 }
 
 .sedan {
@@ -85,10 +84,10 @@ body {
 
 @media screen and (max-width: 800px) and (min-width: 400px) {
   .card {
-    margin: 60px;
+  
   }
   .escrito {
-    width: 60%;
+    width: 400px;
     height: auto;
     flex-direction: column;
   }
