@@ -3,9 +3,16 @@
   border-radius: 10px;
   width: 367px;
   height: 209px;
+  box-shadow: 3px 6px 10px 1px var(--grisbody-color);
 }
 
 .flex-and-direction {
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  .cards {
+    height: 214px;
+    width: 362px;
+  }
 }
