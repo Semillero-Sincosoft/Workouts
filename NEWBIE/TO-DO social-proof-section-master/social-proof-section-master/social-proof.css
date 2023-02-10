@@ -11,4 +11,117 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 15px;
+}
+:root {
+  --magenta-color: hsl(300, 43%, 22%);
+  --rosado-color: hsl(333, 80%, 67%);
+  --magentaoscuro-color: hsl(303, 10%, 53%);
+  --magentaclaro-color: hsl(300, 24%, 96%);
+  --blanco-color: hsl(0, 0%, 100%);
+}
+
+.container {
+  display: flex;
+}
+
+.content {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--magenta-color);
+  display: flex;
+  justify-content: space-between;
+}
+.title h1 {
+  font-size: 49px;
+}
+.title p {
+  line-height: 21px;
+  color: var(--magentaoscuro-color);
+  font-size: 18px;
+}
+.products {
+  width: 440px;
+  height: 260px;
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.reviews {
+  display: flex;
+  width: 510px;
+  border: solid;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.content-stars-1 {
+  align-self: flex-start;
+}
+.content-stars-2 {
+  align-self: center;
+}
+
+.content-stars-3 {
+  align-self: self-end;
+}
+
+.cards {
+  border: solid;
+  display: flex;
+  justify-content: space-between;
+  height: 290px;
+}
+.card-1 {
+  background-color: var(--magenta-color);
+  width: 296px;
+  height: 216px;
+  border-radius: 10px;
+  display: flex;
+  padding: 15px;
+  align-self: flex-start;
+}
+.content-perfil {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.content-perfil p {
+  color: var(--blanco-color);
+}
+.perfil {
+  color: var(--blanco-color);
+  display: flex;
+}
+.img {
+  width: 70px;
+}
+.imgs {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+.names {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.city {
+  color: var(--rosado-color);
+  font-weight: 400;
+}
+
+.card-2 {
+  align-self: center;
+}
+.card-3 {
+  align-self: end;
 }
