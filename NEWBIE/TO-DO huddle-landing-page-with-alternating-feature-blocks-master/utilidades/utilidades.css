@@ -1,0 +1,7 @@
+ .buttons{
+  border-radius: 22px;
+  border: none;
+  background-color: var(--pink-color);
+  color: var(--pale-cyan-color);
+  font-weight: 700;
+}
