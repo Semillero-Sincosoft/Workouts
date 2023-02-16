@@ -20,23 +20,16 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
   font-family: var(--titles-fonts);
   gap: 120px;
 }
 .encabezado {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   background-color: var(--pale-cyan-color);
 }
 .bg-main {
   background-image: url(images/bg-hero-desktop.svg);
   height: 34rem;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 .registro {
@@ -55,6 +48,7 @@ body {
   background-color: var(--white-color);
   box-shadow: 1px 1px 9px 1px rgb(248, 248, 248);
   font-weight: 700;
+  color: var(--darck-cyan-color);
   border: none;
 }
 
@@ -75,9 +69,7 @@ body {
 .descripcion {
   width: 440px;
   height: 277px;
-  display: flex;
   justify-content: space-between;
-  flex-direction: column;
 }
 .descripcion h1 {
   color: var(--darck-cyan-color);
@@ -90,8 +82,6 @@ body {
   font-size: 15px;
 }
 .content-escrito {
-  display: flex;
-  flex-direction: column;
   gap: 20px;
 }
 .content-cards {
@@ -106,9 +96,7 @@ body {
 
 .cards {
   width: 500px;
-  display: flex;
   height: 201px;
-  flex-direction: column;
   align-self: center;
   color: var(--graysh-blue-color);
   justify-content: space-evenly;
@@ -137,9 +125,6 @@ body {
 }
 
 .content-community {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 424px;
   height: 200px;
   justify-content: space-evenly;
@@ -155,8 +140,7 @@ footer {
   display: flex;
   font-family: var(--titles-fonts);
 }
-.content-contact {
-  border: solid white;
+.content-footer {
   width: 100%;
   height: 350px;
   display: flex;
@@ -164,47 +148,46 @@ footer {
   align-items: center;
 }
 
-.contact {
+.contact-us {
   width: 350px;
-  border: solid white;
   height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
+.logo-white {
+  width: 164px;
+  height: 44px;
+}
+
+.content-info {
+  padding-right: 10px;
+}
+
+.info {
+  display: flex;
+}
+.info p {
+  font-size: 14px;
+}
+.icons-info {
+  width: 15px;
+  height: 15px;
+  padding: 0px 10px 0px 0px;
+}
+.list {
+  display: flex;
+  width: 300px;
+  height: 140px;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  justify-content: space-evenly;
+}
 .redes {
   width: 30px;
   height: 30px;
   border: solid white 1px;
   border-radius: 50%;
-}
-
-.logo-white {
-  width: 116px;
-}
-.list {
-  display: flex;
-  width: 300px;
-  height: 200px;
-  border: solid white;
-  justify-content: space-between;
-}
-ul {
-  list-style: none;
-  flex-direction: column;
-  align-self: center;
-}
-.xd{
-display: flex;
-flex-direction: column;
-
-}
-.icons{
-width: 15px;
-height: 15px;
-}
-.xdxd{
-  display: flex;
-  align-items: center;
 }

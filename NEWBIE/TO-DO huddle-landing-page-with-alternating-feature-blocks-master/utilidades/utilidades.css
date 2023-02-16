@@ -1,7 +1,33 @@
- .buttons{
+.buttons {
   border-radius: 22px;
   border: none;
   background-color: var(--pink-color);
   color: var(--pale-cyan-color);
   font-weight: 700;
+}
+.d-flez{
+ display: flex; 
+}
+.a-center{
+align-items: center;
+}
+.j-center{
+justify-content: center;
+}
+.j-space-between{
+justify-content: space-between
+}
+.column{
+  flex-direction: column;
+}
+
+.flex-justify-and-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-and-direction {
+  flex-direction: column;
+  display: flex;
 }
