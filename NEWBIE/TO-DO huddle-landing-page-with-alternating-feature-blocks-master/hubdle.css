@@ -28,14 +28,13 @@ body {
 }
 .bg-main {
   background-image: url(images/bg-hero-desktop.svg);
-  height: 34rem;
-  z-index: 1;
+
   justify-content: center;
 }
 .registro {
   justify-content: space-between;
   display: flex;
-  padding-bottom: 30px;
+  margin: 30px 0px 30px 0px;
 }
 .logo {
   width: 168px;
@@ -50,6 +49,10 @@ body {
   font-weight: 700;
   color: var(--darck-cyan-color);
   border: none;
+}
+.login:hover {
+  cursor: pointer;
+  color: var(--graysh-blue-color);
 }
 
 .content-descripcion {
@@ -80,6 +83,17 @@ body {
 
 .descripcion p {
   font-size: 15px;
+}
+.buttons {
+  border-radius: 22px;
+  border: none;
+  background-color: var(--pink-color);
+  color: var(--pale-cyan-color);
+  font-weight: 700;
+}
+.buttons:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 .content-escrito {
   gap: 20px;
@@ -125,11 +139,15 @@ body {
 }
 
 .content-community {
-  width: 424px;
-  height: 200px;
+  width: 647px;
+  height: 205px;
   justify-content: space-evenly;
-  box-shadow: 1px -6px 9px 1px rgb(248, 248, 248);
+  position: absolute;
+  background: var(--pale-cyan-color);
+  border-radius: 15px;
+  top: 1836px;
 }
+
 .get-started-2 {
   width: 270px;
   height: 45px;
@@ -139,6 +157,7 @@ footer {
   color: var(--pale-cyan-color);
   display: flex;
   font-family: var(--titles-fonts);
+  margin-top: 40px;
 }
 .content-footer {
   width: 100%;
@@ -146,6 +165,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 85px;
 }
 
 .contact-us {
@@ -155,8 +175,8 @@ footer {
 }
 
 .logo-white {
-  width: 164px;
-  height: 44px;
+  width: 155px;
+  height: 38px;
 }
 
 .content-info {
@@ -185,9 +205,28 @@ ul {
   list-style: none;
   justify-content: space-evenly;
 }
-.redes {
-  width: 30px;
-  height: 30px;
-  border: solid white 1px;
-  border-radius: 50%;
+
+ul > li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.content-redes {
+  width: 152px;
+  height: 93px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.redes{
+  border: solid 1px;
+  padding: 6px;
+  border-radius: 18px;
+}
+.redes:hover{
+  border: solid var(--pink-color) 1px;
+}
+
+.redes path:hover{
+  cursor: pointer;
+  fill: var(--pink-color);
 }
