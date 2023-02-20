@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --header-color: #002a38;
+  --section-color: #d4e6f1;
+  --head-font: Menlo, monospace;
+  --white-color: white;
+  --section-font: "Nunito", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 18px;
+}
+.prueba {
+  width: 120px;
+  height: 30px;
+}
+ul {
+  display: inline-grid;
+  grid-auto-flow: row;
+  grid-gap: 24px;
+  justify-items: center;
+  list-style: none;
+}
+
+@media (min-width: 500px) {
+  ul {
+    grid-auto-flow: column;
+  }
+}
+
+a {
+  color: var(--white-color);
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+}
+
+a:hover {
+  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+}
+
+li:last-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+li:hover ~ li .emoji {
+  animation: wave-animation 0.3s infinite;
+}
+
+/* below is just for demo styling */
+
+.content-networks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  width: 100%;
+  background-color: var(--header-color);
+  line-height: 1.3;
+  font-family: var(--head-font);
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+.content {
+  font-family: var(--head-font);
+  margin: 20px;
+  height: 490px;
+  background-color: var(--section-color);
+  color: #1c2833;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+}
+.content-button {
+  border: solid;
+  width: 500px;
+  height: 300px;
+  display: flex;
+}
