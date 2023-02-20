@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 15px;
+}
+:root {
+  --background-cards-color: hsl(300, 43%, 22%);
+  --subtitle-cards-color: hsl(333, 80%, 67%);
+  --written-color: hsl(303, 10%, 53%);
+  --magentaclaro-color: hsl(300, 24%, 96%);
+  --blanco-color: hsl(0, 0%, 100%);
+}
+.container {
+  display: flex;
+}
+.content {
+  justify-content: space-around;
+}
+.title {
+  color: var(--background-cards-color);
+  display: flex;
+  justify-content: space-between;
+}
+.title h1 {
+  font-size: 49px;
+}
+.title p {
+  line-height: 21px;
+  color: var(--written-color);
+  font-size: 18px;
+}
+.products {
+  width: 437px;
+  height: 278px;
+  justify-content: space-evenly;
+}
+.reviews {
+  width: 418px;
+  height: 223px;
+  justify-content: space-evenly;
+}
+.content-stars-1 {
+  align-self: flex-start;
+}
+.content-stars-2 {
+  align-self: center;
+}
+.content-stars-3 {
+  align-self: self-end;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  height: 250px;
+  gap: 16px;
+}
+.card-1 {
+  align-self: flex-start;
+}
+.card-2 {
+  align-self: center;
+}
+.card-3 {
+  align-self: end;
+}
+.content-perfil {
+  justify-content: space-evenly;
+}
+.content-perfil p {
+  line-height: 20px;
+  color: var(--blanco-color);
+}
+.perfil {
+  color: var(--blanco-color);
+  display: flex;
+}
+.img {
+  width: 70px;
+}
+.imgs {
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+.names {
+  align-self: center;
+}
+.city {
+  color: var(--subtitle-cards-color);
+  font-weight: 400;
+}
+
+@media screen and (max-width: 935px) and (min-width: 375px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    margin: 15px;
+  }
+  .reviews {
+    align-self: center;
+    width: auto;
+    height: 277px;
+  }
+  .title {
+    flex-direction: column;
+    text-align: center;
+  }
+  .title p {
+    padding-inline: 53px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-self: center;
+    height: 100%;
+  }
+  .content-perfil p {
+    color: var(--blanco-color);
+    padding-inline: 26px;
+  }
+}
