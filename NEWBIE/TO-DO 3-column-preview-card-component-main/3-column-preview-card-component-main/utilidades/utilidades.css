@@ -1,0 +1,28 @@
+.flex-width {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-direction {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.learns {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  border: solid 2px white;
+}
+
+@media screen and (max-width: 800px) {
+  .flex-direction {
+    justify-content: space-between;
+  }
+  .learns {
+    height: 45px;
+  }
+}
