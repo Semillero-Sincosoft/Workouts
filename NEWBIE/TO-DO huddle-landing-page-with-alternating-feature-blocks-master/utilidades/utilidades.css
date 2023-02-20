@@ -1,17 +1,16 @@
-
-.d-flez{
- display: flex; 
+.d-flex {
+  display: flex;
 }
-.a-center{
-align-items: center;
+.a-center {
+  align-items: center;
 }
-.j-center{
-justify-content: center;
+.j-center {
+  justify-content: center;
 }
-.j-space-between{
-justify-content: space-between
+.j-space-between {
+  justify-content: space-between;
 }
-.column{
+.column {
   flex-direction: column;
 }
 

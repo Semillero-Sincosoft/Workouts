@@ -23,15 +23,15 @@ body {
   font-family: var(--titles-fonts);
   gap: 120px;
 }
-.encabezado {
+.head {
   background-color: var(--pale-cyan-color);
 }
-.bg-bg-header {
+.bg-header {
   background-image: url(images/bg-hero-desktop.svg);
 
   justify-content: center;
 }
-.registro {
+.menu {
   justify-content: space-between;
   display: flex;
   margin: 30px 0px 30px 0px;
@@ -55,33 +55,30 @@ body {
   color: var(--graysh-blue-color);
 }
 
-.content-descripcion {
+.content-description {
   display: flex;
   justify-content: space-between;
   width: 1135px;
 }
-.img-directorio {
-  width: 600px;
-  height: 390px;
-}
+
 .get-started {
   width: 224px;
   height: 42px;
 }
 
-.descripcion {
+.description {
   width: 440px;
   height: 277px;
   justify-content: space-between;
 }
-.descripcion h1 {
+.description h1 {
   color: var(--darck-cyan-color);
   margin: 0px;
   padding-top: 27px;
   font-size: 30px;
 }
 
-.descripcion p {
+.description p {
   font-size: 15px;
 }
 .buttons {
@@ -95,8 +92,12 @@ body {
   cursor: pointer;
   opacity: 0.6;
 }
-.content-escrito {
+.content-written {
   gap: 20px;
+}
+.img-written {
+  width: 600px;
+  height: 390px;
 }
 .content-cards {
   display: flex;
@@ -211,7 +212,7 @@ ul > li:hover {
   text-decoration: underline;
 }
 
-.content-redes {
+.content-networks {
   width: 152px;
   height: 93px;
   display: flex;
@@ -233,54 +234,87 @@ svg:hover path {
 
 @media screen and (max-width: 1135px) {
   .container {
+    gap: 67px;
   }
-  .encabezado {
-  }
-  .bg-bg-header {
-  }
-  .registro {
+  .bg-header .head {
     align-items: center;
     justify-content: center;
     gap: 58px;
   }
-  .logo{
+  .logo {
     width: 158px;
     height: 30px;
   }
-  .content-descripcion {
+  .login {
+    height: 38px;
+    width: 137px;
+  }
+  .content-description {
     flex-direction: column;
     align-items: center;
     width: 375px;
-    border: solid;
   }
-  .descripcion {
+  .description {
     text-align: center;
     align-items: center;
   }
-  .descripcion p {
+  .description p {
     font-size: 15px;
-    padding-inline: 44px;
+    padding-inline: 76px;
   }
-  .descripcion h1 {
-    padding-inline: 20px;
+  .description h1 {
+    padding-inline: 40px;
     font-size: 27px;
   }
-
   .content-cards {
     flex-direction: column-reverse;
     text-align: center;
-    width: 600px;
+    width: 370px;
+    height: 510px;
     padding: 0px;
   }
-  .cards {
+  .imgs {
+    width: 300px;
   }
-  .img-directorio {
-    width: 426px;
-    height: 300px;
+  .cards p {
+    padding-inline: 90px;
+  }
+  .img-written {
+    width: 354px;
+    height: 260px;
     display: flex;
     padding-top: 40px;
   }
-
-  .login {
+  .content-community {
+    top: 2377px;
+    width: 375px;
+    text-align: center;
+    height: 167px;
+    font-size: 13px;
+  }
+  .content-footer {
+    flex-direction: column;
+    margin-top: 120px;
+    height: 575px;
+  }
+  .info p {
+    text-align: left;
+    padding-right: 60px;
+  }
+  .contact-us {
+    height: 337px;
+    margin-bottom: 18px;
+  }
+  .list {
+    flex-direction: column;
+    height: 187px;
+    width: 386px;
+  }
+  ul {
+    height: 100px;
+  }
+  .content-networks {
+    height: 163px;
+    align-items: center;
   }
 }
