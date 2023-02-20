@@ -1,40 +1,90 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="utilidades/utilidades.css" />
+    <link rel="stylesheet" href="estilos.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <!-- https://material.io/resources/icons/?style=sharp -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <!-- https://material.io/resources/icons/?style=twotone -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Product preview card component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-    <link rel="stylesheet" href="./estilos.css" />
   </head>
+
   <body>
-    <main>
-      <section class="contenedor-principal">
-        <aside><img src="./images/image-product-desktop.jpg" /></aside>
-        <aside>
-          <h1>Gabrielle Essence Eau Da Parfum</h1>
-          <h5>Gabrielle Essence Eau Da Parfum</h5>
-        </aside>
+    <main class="flex align-justify  container ">
+      <section class="flex   content-perfume">
+
+        <div class="flex img-container">
+          <img src="images/image-product-desktop.jpg" alt="" class="img" />
+        </div>
+
+        <div class="flex main-content">
+                  <h4 class="flex titulo">PERFUME</h4>
+                  <h1 class="flex subtitle font-family">Gabrielle Essence Eau De Parfum</h1>
+                  <p class="flex descripcion">
+                    A floral, solar and voluptuous interpretation composed by Olivier Polge,
+                   Perfurmer-Creator for the House of CHANEL.
+                  </p>
+                  <div class="flex align-justify prices ">        
+                    <h1 class="flex padding-inline number-big font-family">
+                      $149.99
+                    </h1> 
+                      <h5 class="flex align-justify number-small price-sale">$169.99</h5>
+                  </div>
+          <button class=" flex align-justify btn-cart">
+            <span class="material-icons-outlined cart-shopping">
+              shopping_cart
+            </span>
+            Add to cart
+          </button>
+          <!-- main content div cierre -->
+        </div> 
+                  <!-- main content div cierre -->
+
+      </div>
+        
+
+        </div>
       </section>
-    </main>
+  </main>
   </body>
 </html>
