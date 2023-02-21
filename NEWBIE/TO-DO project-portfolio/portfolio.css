@@ -7,11 +7,13 @@
   box-sizing: border-box;
 }
 :root {
-  --header-color: #002a38;
+  --primary-color: #083e55;
   --section-color: #d4e6f1;
   --head-font: Menlo, monospace;
   --white-color: white;
   --section-font: "Nunito", sans-serif;
+  --robot-font: "Roboto", sans-serif;
+  --secundary-color: linear-gradient(to right, #191c32, #3b3b3b);
 }
 
 body {
@@ -19,15 +21,12 @@ body {
   height: 100vh;
   font-size: 18px;
 }
-.prueba {
-  width: 120px;
-  height: 30px;
-}
 ul {
   display: inline-grid;
   grid-auto-flow: row;
   grid-gap: 24px;
   justify-items: center;
+  align-items: center;
   list-style: none;
 }
 
@@ -41,6 +40,7 @@ a {
   color: var(--white-color);
   text-decoration: none;
   box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+  transition: ease-in 0.1s;
 }
 
 a:hover {
@@ -56,17 +56,16 @@ li:hover ~ li .emoji {
   animation: wave-animation 0.3s infinite;
 }
 
-/* below is just for demo styling */
-
 .content-networks {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   height: 65px;
   width: 100%;
-  background-color: var(--header-color);
+  background-color: var(--primary-color);
   line-height: 1.3;
   font-family: var(--head-font);
+  padding: 10px;
 }
 
 @keyframes wave-animation {
@@ -81,19 +80,61 @@ li:hover ~ li .emoji {
     transform: rotate(-15deg);
   }
 }
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .content {
-  font-family: var(--head-font);
-  margin: 20px;
+  font-family: var(--robot-font);
   height: 490px;
-  background-color: var(--section-color);
-  color: #1c2833;
+  background: var(--secundary-color);
+  color: var(--header-color);
   flex-direction: column;
   display: flex;
   text-align: center;
 }
+
 .content-button {
   border: solid;
   width: 500px;
   height: 300px;
   display: flex;
+}
+.content-description {
+  border: solid;
+  justify-content: space-evenly;
+  height: auto;
+  display: flex;
+  margin-top: 20px;
+}
+.description {
+  width: 900px;
+  border: solid;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--white-color);
+  margin: 10px;
+}
+.name:hover {
+  color: #7986cb;
+  cursor: pointer;
+}
+.content-img {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-perfil {
+  width: 174px;
+  height: 231px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 125px;
+  border: solid 2px white;
 }
