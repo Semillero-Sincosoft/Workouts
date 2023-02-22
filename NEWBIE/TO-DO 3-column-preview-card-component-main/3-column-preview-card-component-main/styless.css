@@ -20,7 +20,7 @@ body {
   width: 100vw;
 }
 main {
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,9 +123,9 @@ p, button{
       margin-bottom: 20px;
   }
   .card-3__p{
-      font-size: 17px;
+      font-size: 15px;
       font-weight:lighter;
-      margin-bottom: 40px;
+      margin-bottom: 68px;
       line-height: 27px;
       padding: 10px;
       padding-left: 0;
@@ -145,9 +145,12 @@ p, button{
       color:var(--paragraphs);
   
   }
-/* --- */
-@media screen and (max-width:375px) {
-   .content-cards{
+
+ @media screen and (max-width:917px) and (min-width:375px) {
+   body{
+    height: 100%;
+   }
+    .content-cards{
     display:flex;
     flex-direction:column;
 }
@@ -155,14 +158,14 @@ p, button{
     margin-bottom: 30px;
 }
     
-}
+
 .card-1__p{
     margin-bottom: 30px;
     font-size: 15px;
 }
 
-/* -- */
-.card-2__img{
+
+ .card-2__img{
     margin-bottom: 30px;
 }
     
@@ -171,7 +174,7 @@ p, button{
     margin-bottom: 30px;
     font-size: 15px;
 }
-/* -- */
+
 .card-3__img{
     margin-bottom: 30px;
 }
@@ -180,4 +183,6 @@ p, button{
 .card-3__p{
     margin-bottom: 30px;
     font-size: 14px;
+} 
+
 }
