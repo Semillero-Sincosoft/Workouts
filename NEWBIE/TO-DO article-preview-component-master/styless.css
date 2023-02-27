@@ -83,15 +83,76 @@ main {
 
 .icon-share {
   background-color: var(--Light-Grayish-Blue);
-  width: 40px;
-  height: 40px;
   padding: 12px;
   border-radius: 50%;
 }
 ul {
   list-style-type: none;
 }
+div.open-share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  position: absolute;
+  bottom: 45%;
+  transform: translateX(-47%);
+  width: 270px;
+  height: 9px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.icon-share:hover{
+  background-color: var(--Desaturated-Dark-Blue);
+}
+.icon-share:hover path{
+fill: white;
+}
 
+.SHARE{
+  letter-spacing: 7px;
+}
+.Triangle-hov{
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 20px solid var(--Very-Dark-Grayish-Blue);
+  transform: translateX(-50%);
+  transform: translateY(155%);
+  position:absolute;
+}
+.icon-share-active {
+  display: none;
+}
+path:hover{
+  fill: white !important;
+}
+div.icon-active-share:hover > .open-share {
+  visibility: visible;
+  cursor: pointer;
+  opacity: 100%;
+}
+div.open-share.clicked {
+  height: 58px;
+}
+div.open-share div {
+  padding: 50px;
+}
+div.open-share > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Grayish-Blue);
+}
+div.open-share > div:first-child ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.open-share > div:first-child ul li {
+  margin: 0 10px;
+}
 .mobile {
   display: none;
 }
@@ -108,9 +169,11 @@ ul {
   .content-main {
     margin: 0;
   }
-.SHARE{
-  letter-spacing: 6px;
-}
+  .SHARE {
+    letter-spacing: 6px;
+    color: var(--Light-Grayish-Blue);
+    opacity: 50%;
+  }
   div.open-share {
     display: flex;
     align-items: center;
@@ -120,22 +183,31 @@ ul {
     left: 0;
     bottom: -50%;
     width: 100%;
+    border-radius: 0px 0px 10px 10px;
     height: 0;
     overflow: hidden;
-    transition: all 0.4s ease-in-out;
-    opacity: 50%;
+    visibility: hidden;
+    transform: translateX(0);
+  }
+  .Triangle-hov{
+    display: none;
+  }
+  div.icon-active-share:hover > .open-share {
+    visibility: visible;
+    cursor: pointer;
+    opacity: 100%;
   }
   .icon-share-active {
+    display: flex;
     border-radius: 50px;
-    background-color: red;
+    background-color: var(--Desaturated-Dark-Blue);
     width: 40px;
     height: 40px;
     padding: 12px;
     margin-left: -16px;
   }
   div.open-share.clicked {
-    height: 86px;
-    overflow: auto;
+    height: 85px;
   }
   div.open-share div {
     padding: 5px 30px;
