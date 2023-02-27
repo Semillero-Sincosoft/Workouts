@@ -269,7 +269,7 @@ li:hover ~ li .emoji {
   height: 50px;
   line-height: 45px;
   color: #000;
-  background: rgb(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.4);
   text-align: center;
 }
 
@@ -393,7 +393,7 @@ svg:hover path {
     font-size: 13px;
   }
   .content-footer {
-    height: 500px;
+    height: 260px;
     flex-direction: column;
     align-items: center;
     width: 546px;
