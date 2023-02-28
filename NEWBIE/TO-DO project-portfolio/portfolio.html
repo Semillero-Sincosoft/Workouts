@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="utilidades/utilidades.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
@@ -14,10 +15,10 @@
   </head>
 
   <body>
-    <main class="container">
-      <header class="title">
-        <section class="content-networks">
-          <article class="content-name">
+    <main class="container flex-direction-column">
+      <header class="title display-flex justify-items-center">
+        <section class="content-header display-flex space-between  ">
+          <article class="content-name display-flex aling-items-center">
             <span class="material-symbols-outlined img-header">
               rocket_launch
             </span>
@@ -32,9 +33,9 @@
           </article>
         </section>
       </header>
-      <section class="content">
-        <div class="content-description">
-          <section class="description">
+      <section class="content flex-direction-column aling-self-center">
+        <div class="content-description display-flex space-evenly ">
+          <section class="description flex-direction-column space-evenly">
             <h2 class="title-description">
               ¿Quién es <span class="name">Cristian?</span>
             </h2>
@@ -44,28 +45,28 @@
               páginas web cada vez más adentrándose a este grandioso mundo,
               diseñando proyectos interesantes que más adelante encontraran
             </p>
-            <section class="content-education">
+            <section class="content-education flex-direction-column aling-self-center">
               <h2>Educación</h2>
-              <article class="education">
+              <article class="education display-flex">
                 <span class="material-symbols-outlined"> school </span>
                 <p>Bachillerato completado</p>
               </article>
-              <article class="education">
+              <article class="education display-flex">
                 <span class="material-symbols-outlined"> school </span>
                 <p>Tecnólogo en programación</p>
               </article>
             </section>
           </section>
-          <article class="content-img">
+          <article class="content-img display-flex aling-justify-items-center">
             <img
-              class="img-perfil"
+              class="img-perfil display-flex aling-justify-items-center"
               src="image/MicrosoftTeams-image (1).png"
               alt=""
             />
           </article>
         </div>
         <h2 class="title-portfolio">Portafolio</h2>
-        <section class="content-portfolio" id="portfolio">
+        <section class="content-portfolio display-flex aling-items-center space-around " id="portfolio">
           
           
           <div class="card">
@@ -127,7 +128,7 @@
             </div>
           </div>
         </section>
-        <section class="content-portfolio" >
+        <section class="content-portfolio display-flex aling-items-center space-around" >
           <div class="card">
             <div class="face front">
               <img class="" src="design/cards.jpg" alt="" />
@@ -182,7 +183,7 @@
             </div>
           </div>
         </section>
-        <section class="content-portfolio" >
+        <section class="content-portfolio display-flex aling-items-center space-around" >
           <div class="card">
             <div class="face front">
               <img class="" src="design/page.jpg" alt="" />
@@ -238,7 +239,7 @@
             </div>
           </div>
         </section>
-        <section class="content-portfolio" >
+        <section class="content-portfolio display-flex aling-items-center space-around" >
           <div class="card">
             <div class="face front">
               <img class="" src="design/profile.jpg" alt="" />
@@ -280,7 +281,7 @@
       </section>
     </main>
     
-    <footer id="footer">
+    <footer class="display-flex" id="footer">
       <section class="content-footer">
         <article class="contact-us flex-and-direction">
           <div class="content-info">
@@ -291,7 +292,7 @@
               </p>
             </div>
           </div>
-          <div class="content-info">
+          <div class="content-info flex-direction-column  space-evenly">
             <div class="info">
               <div class="icons-info">
                 <img class="icons-info" src="image/icon-phone.svg" alt="" />
