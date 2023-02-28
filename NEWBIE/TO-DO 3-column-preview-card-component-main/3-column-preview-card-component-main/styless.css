@@ -51,6 +51,7 @@ button {
   font-family: var(--Secondary-font);
   color: var(--Transparent-white);
 }
+
 .card button {
   margin-bottom: 50px;
   height: 48px;
