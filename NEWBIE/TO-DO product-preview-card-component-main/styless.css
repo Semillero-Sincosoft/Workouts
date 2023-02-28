@@ -27,7 +27,7 @@ main {
   align-items: center;
   border: solid;
 }
-.main {
+.cont-general {
   display: flex;
   flex-direction: column;
   width: 350px;
@@ -108,7 +108,7 @@ button:hover {
 }
 
 @media screen and (min-width:800px) {
-    .main{
+    .cont-general{
         flex-direction: row;
         width: 600px;
         height:450px;
