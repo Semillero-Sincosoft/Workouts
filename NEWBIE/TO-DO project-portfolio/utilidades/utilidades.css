@@ -1,12 +1,12 @@
-.display-flex {
+.flex {
   display: flex;
 }
-.flex-direction-column {
+.column {
   display: flex;
   flex-direction: column;
 }
 /* ------------ aling-justify items ----------------- */
-.aling-justify-items-center {
+.center {
   align-items: center;
   justify-content: center;
 }
@@ -57,12 +57,12 @@
   justify-content: flex-start;
 }
 /* -----------espaciado --------------------- */
-.space-between {
+.between {
   justify-content: space-between;
 }
-.space-evenly {
+.evenly {
   justify-content: space-evenly;
 }
-.space-around {
+.around {
   justify-content: space-around;
 }
