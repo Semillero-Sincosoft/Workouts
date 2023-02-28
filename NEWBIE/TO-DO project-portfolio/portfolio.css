@@ -11,10 +11,9 @@
   --secundary-color: #126474;
   --section-color: #afafaf;
   --head-font: Menlo, monospace;
-  --black-color: black;
   --color-primary: white;
   --robot-font: "Roboto", sans-serif;
-  --primary-color: (#fbfbfb;);
+  --primary-color: #fbfbfb;
   --background-buttons: #7986cb;
   --buttons-color: #4741d7;
 }
@@ -129,6 +128,7 @@ li:hover ~ li .emoji {
   display: flex;
   margin-top: 20px;
   background-color: #fbfbfb;
+  border-radius: 20px;
 }
 .content-description p {
   color: #6a6a6a;
@@ -208,6 +208,7 @@ li:hover ~ li .emoji {
 
 .button-link:hover {
   color: #fff;
+  cursor: pointer;
 }
 .button-link::after {
   content: "";
@@ -230,6 +231,9 @@ li:hover ~ li .emoji {
   bottom: 0;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
+}
+.link a {
+  box-shadow: none;
 }
 
 .card {
@@ -255,18 +259,18 @@ li:hover ~ li .emoji {
 .card .front img {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 79%;
   object-fit: cover;
+  opacity: 0.63;
 }
 
 .card .front h2 {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   height: 50px;
   line-height: 45px;
   color: #000;
-  background: rgba(255, 255, 255, 0.4);
   text-align: center;
 }
 
@@ -274,10 +278,10 @@ li:hover ~ li .emoji {
   transform: perspective(600px) rotateY(180deg);
   background: var(--secundary-color);
   padding: 15px;
-  color: #000;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   box-shadow: 0 5px 10px #000;
 }
