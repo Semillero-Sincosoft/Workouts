@@ -43,7 +43,6 @@ main {
 }
 .card p.paragraph {
   font-size: 15px;
-  font-weight: lighter;
   margin-bottom: 70px;
   line-height: 27px;
 }
@@ -52,6 +51,7 @@ button {
   font-family: var(--Secondary-font);
   color: var(--Transparent-white);
 }
+
 .card button {
   margin-bottom: 50px;
   height: 48px;
@@ -77,7 +77,7 @@ button {
   border: solid 2px;
   color: var(--Transparent-white);
 }
-/* ---- */
+
 .card-2 {
   background-color: var(--Dark-cyan);
 }
@@ -90,7 +90,7 @@ button {
   border: solid 2px;
   color: var(--Transparent-white);
 }
-/* ---- */
+
 .card-3 {
   background-color: var(--Very-dark-cyan);
   border-radius: 0px 8px 8px 0px;
