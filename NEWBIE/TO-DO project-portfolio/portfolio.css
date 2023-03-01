@@ -98,42 +98,48 @@ li:hover ~ li .emoji {
 }
 .content-description {
   height: auto;
-  background-color: #f1ebeb;
   border-radius: 20px;
+  background-color: #daf0ff;
 }
 .content-description p {
-  color: #6a6a6a;
+  color: #383838;
+  text-align: left;
+  line-height: 32px;
+  font-size: 17px;
 }
 .description {
   width: 600px;
-  height: 350px;
+  height: 436px;
   color: #000;
+  z-index: 1;
 }
-.backgraund {
-  background-image: url(image/ondas-2.jpg);
-
-  width: 100%;
-  display: flex;
-  object-fit: cover;
-  justify-content: space-around;
-} 
+.background {
+  background-image: url(image/ondas.jpg);
+  background-size: cover;
+  width: 99%;
+  position: absolute;
+  height: 436px;
+  opacity: 0.2;
+  border-radius: 15px;
+}
 .title-description {
   font-size: 35px;
 }
 
 .education {
   width: 260px;
-  gap: 12px;
+  height: 104px;
+  justify-content: end;
 }
 
 .content-img {
   width: 25%;
 }
 img.perfil {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 20px;
-  filter: grayscale(1);
+  filter: blur();
 }
 .content-portfolio {
   text-align: left;
