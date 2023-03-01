@@ -10,7 +10,7 @@
 :root {
   --secundary-color: #126474;
   --section-color: #afafaf;
-  --head-font: Menlo, monospace;
+
   --color-primary: white;
   --robot-font: "Roboto", sans-serif;
   --primary-color: #fbfbfb;
@@ -91,11 +91,6 @@ li:hover ~ li .emoji {
   gap: 59px;
 }
 
-.content-button {
-  width: 500px;
-  height: 300px;
-  display: flex;
-}
 .content-description {
   height: auto;
   border-radius: 20px;
@@ -106,6 +101,9 @@ li:hover ~ li .emoji {
   text-align: left;
   line-height: 32px;
   font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .description {
   width: 600px;
@@ -219,7 +217,6 @@ img.perfil {
   width: 100%;
   height: 79%;
   object-fit: cover;
-  opacity: 0.63;
 }
 
 .card .front h2 {
@@ -281,7 +278,9 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
 }
-
+.icons-svg {
+  width: 14px;
+}
 .list-footer {
   display: flex;
   flex-direction: column;
@@ -303,10 +302,10 @@ footer {
   justify-content: space-between;
 }
 footer svg {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border: solid 1px;
-  padding: 2px;
+  padding: 4px;
   border-radius: 25px;
 }
 
@@ -318,7 +317,56 @@ svg:hover path {
 }
 
 @media screen and (max-width: 1200px) {
-  .content {
+  .content-description {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 700px;
+  }
+  .content-header {
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+  }
+  .background {
+    height: 700px;
+  }
+  .content-img {
+    width: 100%;
+  }
+  img.perfil {
+    width: 220px;
+    height: 150px;
+  }
+  .description {
+    width: 375px;
+  }
+  .description p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .content-portfolio {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  footer {
+    justify-content: center;
+    font-size: 13px;
+  }
+  .content-footer {
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+  }
+  .contact-us {
+    width: 100px;
+  }
+  .list-footer {
+    flex-direction: row;
+    height: 100px;
+  }
+}
+/* .content {
     width: 100%;
     gap: 33px;
   }
@@ -333,6 +381,7 @@ svg:hover path {
     font-size: 16px;
     line-height: 24px;
   }
+  
   .content-education {
     gap: 10px;
   }
@@ -340,35 +389,20 @@ svg:hover path {
     flex-direction: column;
     gap: 40px;
   }
-  .content-header {
-    height: 120px;
-    flex-direction: column;
-    align-items: center;
-    width: 375px;
-    font-size: 14px;
-    padding: 10px;
+  .background {
+    height: 696px;
   }
-
-  footer {
-    justify-content: center;
-    font-size: 13px;
+  img.perfil {
+    width: 300px;
+    height: 170px;
   }
-  .content-footer {
-    height: 260px;
-    flex-direction: column;
-    align-items: center;
-    width: 546px;
-    justify-content: center;
-  }
-  .list-footer {
-    flex-direction: row;
-    height: 100px;
-  }
+  
+  
+  
   .content-info {
     width: 375px;
     height: 156px;
   }
   .contact-us {
     width: 375px;
-  }
-}
+  } */
