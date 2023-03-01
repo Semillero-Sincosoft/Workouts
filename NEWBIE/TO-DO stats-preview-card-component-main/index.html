@@ -1,33 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4</title>
+    <link
+      rel="stylesheet"
+      href="/NEWBIE/TO-DO stats-preview-card-component-main/styless.css"
+    />
+  </head>
+  <body>
+    <main class="content-Home">
+      <section class="content-card">
+        <figure>
+          <img
+            class="mobile"
+            src="/NEWBIE/TO-DO stats-preview-card-component-main/images/image-header-mobile.jpg"
+            alt=""
+          />
+          <img
+            class="desktop"
+            src="/NEWBIE/TO-DO stats-preview-card-component-main/images/image-header-desktop.jpg"
+            alt=""
+          />
+        </figure>
+        <articlle class="content-box">
+          <article class="content-Info-Text">
+            <h1 class="title">Get <span>insights</span> that help your business grow.</h1>
+            <p class="text Info">
+              Discover the benefits of data analytics and make better decisions
+              regarding revenue customer experience, and overall efficiency.
+            </p>
+          </article>
+          <article class="stats">
+            <ul>
+              <li>
+                <h2 class="subtitle stat-num">10k+</h2>
+                <p class="text stat">companies</p>
+              </li>
+              <li>
+                <h2 class="subtitle stat-numt">314</h2>
+                <p class="text stat">templates</p>
+              </li>
+              <li>
+                <h2 class="subtitle stat-num">12M+</h2>
+                <p class="subtitle stat">queries</p>
+              </li>
+            </ul>
+          </article>
+        </articlle>
+      </section>
+    </main>
+  </body>
 </html>
