@@ -30,6 +30,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 20px;
 }
 
 header {
@@ -144,6 +145,7 @@ button:hover {
   color: var(--off-white);
   display: flex;
   width: fit-content;
+  font-size: 19px;
 }
 .new-txt:hover{
   color: var(--soft-orange);
