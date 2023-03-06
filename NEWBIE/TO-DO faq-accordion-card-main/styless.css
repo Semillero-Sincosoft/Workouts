@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(300, 0%, 0%);
+  --font-only: "Kumbh Sans", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  font-family: var(--font-only);
+}
+body {
+  overflow: hidden;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-card {
+  background-color: var(--White);
+  width: 330px;
+  height: 540px;
+  border-radius: 20px;
+  background-image: url(./images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: left 45px top 0vh;
+  position: relative;
+  box-shadow: 0px 6px 60px -20px var(--Black);
+}
+picture.content-mobile-main {
+  width: 240px;
+  position: absolute;
+  top: -105px;
+  left: 45px;
+}
+.img-main {
+  width: 100%;
+  height: 180px;
+}
+p {
+  font-size: 1.2rem;
+  color: var(--Dark-grayish-blue);
+}
+h1 {
+  font-size: 3rem;
+  padding-bottom: 40px;
+}
+hr {
+  margin-bottom: 15px;
+  opacity: 30%;
+}
+.content-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 140px;
+  align-items: center;
+}
+.content-text {
+  height: 270px;
+  overflow: auto;
+}
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--Dark-grayish-blue);
+  padding-bottom: 5px;
+}
+h3:hover {
+  color: var(--Soft-red);
+  cursor: pointer;
+}
+summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  overflow: hidden;
+}
+.text {
+  width: 260px;
+}
+summary h3 {
+  margin-bottom: 2px;
+}
+summary picture:hover {
+  cursor: pointer;
+  rotate: 180deg;
+  transition: 0.5s;
+}
+summary picture {
+  rotate: 0deg;
+  transition: 0.5s;
+}
+details {
+  width: 270px;
+  margin-bottom: 14px;
+}
+@media screen and (min-width: 1000px) {
+  .content-card {
+    width: 920px;
+    height: 510px;
+  }
+  .content-info {
+    align-items: flex-start;
+    padding: 0;
+    margin: 70px 0px 0px 530px;
+  }
+  .content-card {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left -555px bottom -120px;
+  }
+  picture.content-mobile-main {
+    height: 100%;
+    width: 500px;
+    top: -5%;
+    left: -10.5%;
+  }
+  .img-main {
+    height: 100%;
+  }
+}
