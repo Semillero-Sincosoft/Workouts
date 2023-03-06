@@ -19,17 +19,10 @@ body {
   background-color: var(--off-white);
   font-size: 15px;
   font-family: var(--font-content);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 main {
   width: 1111px;
-  display: flex;
   height: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   margin: 20px;
 }
 
@@ -60,6 +53,29 @@ li > p:hover {
 ul :last-child {
   padding-right: 0;
 }
+
+header nav.open {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 4px 4px 4px rgb(0, 0,0,0,0.5 );
+  z-index: 1;
+}
+header nav ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header nav ul li {
+  margin: 24px 0;
+  
+}
+
 .menu {
   display: none;
 }
@@ -94,10 +110,10 @@ ul :last-child {
   width: 352px;
   color: var(--very-dark-blue);
 }
-.written p{
+.written p {
   line-height: 23px;
 }
-button {
+.info-read {
   width: 185px;
   height: 47px;
   background-color: var(--soft-red);
@@ -108,7 +124,7 @@ button {
   letter-spacing: 2.5px;
   font-size: 15px;
 }
-button:hover {
+.info-read:hover {
   background-color: var(--very-dark-blue);
   cursor: pointer;
 }
@@ -125,19 +141,16 @@ button:hover {
   background-color: var(--very-dark-blue);
   color: var(--Grayish-blue);
 }
-.content-new p{
+.content-new p {
   line-height: 25px;
 }
-.content-new h2{
+.content-new h2 {
   font-size: 32px;
   color: var(--soft-orange);
 }
-
 .new {
   display: flex;
-
   flex-direction: column;
-  justify-content: flex-start;
   gap: 15px;
 }
 
@@ -147,10 +160,9 @@ button:hover {
   width: fit-content;
   font-size: 19px;
 }
-.new-txt:hover{
+.new-txt:hover {
   color: var(--soft-orange);
   cursor: pointer;
-
 }
 footer img {
   width: 100px;
@@ -169,7 +181,7 @@ footer {
 .cards h2 {
   color: var(--Grayish-blue);
 }
-.cards p{
+.cards p {
   line-height: 25px;
 }
 
@@ -232,7 +244,13 @@ footer {
     display: none;
   }
   ul {
-    display: none;
+    flex-direction: column;
+  }
+  li {
+    padding: 0;
+  }
+  nav {
+    display: ;
   }
   .menu {
     display: flex;
@@ -291,7 +309,36 @@ footer {
   .card-3 {
     line-height: 26px;
   }
-  .subtitle{
+  .subtitle {
     font-size: 19px;
+  }
+  .sidenav {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 39px;
+    left: 461px;
+    overflow-x: hidden;
+    background: #111;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
   }
 }
