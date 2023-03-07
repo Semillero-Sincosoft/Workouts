@@ -129,7 +129,7 @@ ul :last-child {
   gap: 15px;
 }
 
-.prueba {
+.hidden {
   display: none;
 }
 
@@ -205,7 +205,7 @@ footer {
 }
 
 @media screen and (max-width: 1111px) {
-  .prueba {
+  .hidden {
     display: flex;
   }
   header .menu-button button {
