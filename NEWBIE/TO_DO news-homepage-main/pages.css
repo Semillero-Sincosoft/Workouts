@@ -60,7 +60,7 @@ body {
   gap: 40px;
 }
 
-.content-description img {
+.content-description > img {
   width: 730px;
   height: 300px;
 }
