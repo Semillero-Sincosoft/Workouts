@@ -20,13 +20,13 @@ body {
   font-size: 15px;
   font-family: var(--font-content);
 }
-main {
+.main {
   width: 1111px;
   height: 100%;
   margin: 20px;
 }
 
-header {
+.header {
   width: 100%;
   height: auto;
 }
@@ -35,22 +35,22 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-ul {
+.ul {
   display: flex;
   align-items: center;
 }
-ul li {
+.ul .li {
   list-style: none;
 }
-li {
+.li {
   padding: 0px 44px 0px 0px;
   display: inline-block;
-}
-li > p:hover {
+} 
+.li > p:hover {
   cursor: pointer;
   color: var(--soft-orange);
 }
-ul :last-child {
+.ul :last-child {
   padding-right: 0;
 }
 
