@@ -44,8 +44,9 @@ span {
   align-items: center;
 }
 .content-title p {
-  padding: 0 0 3rem 0;
-  width: 85%;
+  margin: 0 3rem 0 3rem;
+  padding: 0 0 3rem 0 ;
+  width: 100%;
   font-weight: 500;
   color: var(--Dark-Grayish-Magenta);
   line-height: 2.4rem;
@@ -131,21 +132,22 @@ body {
   line-height: 2.4rem;
   margin: 0 3rem 0 3rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1400px) {
   body {
     background-image: url(./social-proof-section-master/images/bg-pattern-top-desktop.svg),
       url(./social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
     background-repeat: no-repeat;
-    background-position: left 0vw top 0vh, right 0vw bottom 0vh;
+    background-position: top 0vh left 0vw, top 10rem left 90rem;
   }
   h1 {
     font-size: 4.4rem;
-    padding-right:14rem ;
+    padding-right: 14rem;
     margin: 0 0 2rem 0;
   }
   .content-element {
     margin-top: 12.5rem;
-    width: 100%;
+    width: 144rem;
+    height: 80rem;
     height: fit-content;
     background-image: none;
   }
@@ -165,7 +167,6 @@ body {
   .content-stats {
     width: fit-content;
   }
-
   .stat {
     width: 45rem;
     height: 6rem;
@@ -187,12 +188,18 @@ body {
   .content-coments {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    margin: 0 0 0 16.5rem;
   }
-  .two{
-    margin-top: 4rem;
+  .content-text{
+    width: 27.5rem;
   }
-  .three{
-    margin-top: 8rem;
+  .content-text p{
+    font-size: 1.6rem;
+  }
+  .two {
+    margin: 4rem 0 0 2rem;
+  }
+  .three {
+    margin: 8rem 0 0 3rem;
   }
 }
