@@ -35,22 +35,22 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.ul {
+ul {
   display: flex;
   align-items: center;
 }
-.ul .li {
+ul li {
   list-style: none;
 }
-.li {
+li {
   padding: 0px 44px 0px 0px;
   display: inline-block;
 } 
-.li > p:hover {
+li > p:hover {
   cursor: pointer;
   color: var(--soft-orange);
 }
-.ul :last-child {
+ul :last-child {
   padding-right: 0;
 }
 
@@ -60,7 +60,7 @@ body {
   gap: 40px;
 }
 
-.content-description > img {
+.content-description  img {
   width: 730px;
   height: 300px;
 }
@@ -88,6 +88,7 @@ body {
 .written p {
   line-height: 23px;
 }
+
 .info-read {
   width: 185px;
   height: 47px;
@@ -253,7 +254,7 @@ footer {
   .content {
     padding: 6px 17px 0px 8px;
   }
-  main {
+  .main {
     width: 375px;
   }
 
