@@ -67,7 +67,7 @@ articleSuvs.appendChild(buttonSuvs);
 //card Luxu
 sectionEscrito.appendChild(articleLuxu);
 articleLuxu.appendChild(imgCardLuxu);
-articleLuxu.appendChild(h1Sedan);
+articleLuxu.appendChild(h1Luxu);
 articleLuxu.appendChild(pTextoLuxu);
 articleLuxu.appendChild(buttonLuxu);
 //nodos principales
