@@ -35,7 +35,7 @@ p {
   font-family: var(--Open-Sans);
 }
 section.content-home {
-  width: 50rem;
+  width: 45.2rem;
   height: fit-content;
   background-color: var(--White);
 }
@@ -78,14 +78,22 @@ article .logo-header {
   color: var(--Grayish-Blue);
   cursor: pointer;
 }
+.content-info-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 header .text-header {
   text-align: center;
-  width: 74%;
+  width: 80%;
   margin: 10rem 0 6rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+}
+header .text-header p {
+  width: 95%;
 }
 header .text-header h1,
 p {
@@ -165,6 +173,15 @@ picture .img-card {
 /*main*/
 
 /*footer*/
+footer {
+  background-color: var(--Very-Dark-Cyan);
+  position: relative;
+}
+footer p {
+  color: var(--White);
+  font-size: 1.7rem;
+  font-weight: 300;
+}
 .content-above {
   display: flex;
   flex-direction: column;
@@ -177,7 +194,7 @@ picture .img-card {
   border-radius: 1.6rem;
   position: absolute;
   top: -14.5rem;
-  margin: 0 0 0 3.5rem;
+  margin: 0 0 0 1.5rem;
   box-shadow: 0px 0px 35px -25px rgba(0, 0, 0, 1);
 }
 .content-above button {
@@ -199,22 +216,151 @@ picture .img-card {
 .content-above button p {
   font-weight: 700;
 }
+.content-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  margin: 0 0 0 2rem;
+}
+article .content-logo-footer {
+  display: flex;
+  justify-content: flex-start;
+}
 article .logo-footer {
   margin: 10rem 0 0 0;
- width: 20.2rem;
- height: 3.2rem;
+  height: 3.5rem;
 }
-.content-logo-footer{
-    display: flex;
-    align-items: flex-start;
+.content-logo-footer {
+  display: flex;
+  align-items: flex-start;
 }
-footer {
-  background-color: var(--Very-Dark-Cyan);
-  position: relative;
+.location,
+.phone,
+.email {
+  display: flex;
+  gap: 2.2rem;
+  margin: 0 0 3rem 0;
 }
-footer p {
-  color: var(--White);
-  font-size: 1.5rem;
-  font-weight: 400;
+.location .icon-location {
+  height: 2rem;
+  margin: 0.5rem 0 0 0;
+}
+.location p {
+  width: 70%;
+}
+.phone .icon-phone,
+.icon-email {
+  height: 1.7rem;
+  margin: 0.5rem 0 0 0;
+}
+
+footer .company-info .column-1,
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.column-1 p,
+.column-2 p {
+  width: fit-content;
+}
+.column-1 p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.column-2 p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.company-info .column-1 {
+  margin: 0 0 2rem 0;
+}
+.content-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 6rem 0;
+}
+.content-social .icons {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 0 2rem 0;
+}
+svg {
+  border: solid var(--White) 0.1rem;
+  border-radius: 50%;
+  padding: 0.6rem;
+}
+svg:hover {
+  border: solid var(--Pink) 0.1rem;
+  cursor: pointer;
+}
+svg:hover path {
+  fill: var(--Pink);
+}
+.content-social .rights {
+  font-size: 1.2rem;
 }
 /*footer*/
+@media screen and (min-width: 1000px) {
+  section.content-home {
+    width: 100%;
+  }
+  header {
+    background-image: url(./images/bg-hero-desktop.svg);
+  }
+  .content-info-header {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  header .text-header h1 {
+    width: 50rem;
+    font-size: 4rem;
+  }
+  header .text-header .text-paragr {
+  width: 52rem;
+  }
+  header .text-header h1,
+  p {
+    text-align: left;
+  }
+  .text-header .button-text-sign{
+    padding: 0;
+  }
+  header .content button p{
+  text-align: center;
+  }
+  header .text-header{
+    align-items: flex-start;
+    padding: 0 0 0 7.5rem;
+  }
+  header .text-header button p{
+    text-align: center;
+  }
+  picture .img-header{
+    margin: 2rem 9rem 0 0 ;
+    width: 60rem;
+    height: 40.2rem;
+  }
+  .card{
+    width: 125rem;
+    height: 44rem;
+    flex-direction: row;
+  }
+  article .content-text-card{
+    align-items: flex-start;
+  }
+  .two .content-text-card{
+   order: 1;
+  }
+  .two picture{
+    order:2;
+  }
+  .card picture img{
+    width: 40rem;
+    height: 33rem;
+  }
+}
