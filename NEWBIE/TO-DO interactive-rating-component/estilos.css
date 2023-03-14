@@ -1,7 +1,7 @@
 @import "utilidades/utilidades.css";
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,12 +9,14 @@ body {
   justify-content: center;
   background-color: #121417;
   font-family: "Overpass", sans-serif;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .container {
   width: auto;
   height: 486px;
-  margin-top: 7%;
   border-radius: 39px;
   justify-content: space-evenly;
   background-color: #252d37;
@@ -91,7 +93,6 @@ body {
 
 .container-active {
   width: 100;
-  margin-top: 90px;
   border-radius: 20px;
   display: none;
   height: auto;
