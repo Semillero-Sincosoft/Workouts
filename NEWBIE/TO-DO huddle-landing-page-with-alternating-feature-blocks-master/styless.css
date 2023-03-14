@@ -122,12 +122,16 @@ picture .img-header {
   margin: 0 0 3rem 0;
 }
 /*Header*/
-
 /*main*/
+main {
+  display: flex;
+  justify-content: center;
+}
 .content-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 5rem;
 }
 .card {
@@ -171,11 +175,12 @@ picture .img-card {
   height: 23rem;
 }
 /*main*/
-
 /*footer*/
 footer {
   background-color: var(--Very-Dark-Cyan);
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 footer p {
   color: var(--White);
@@ -194,7 +199,6 @@ footer p {
   border-radius: 1.6rem;
   position: absolute;
   top: -14.5rem;
-  margin: 0 0 0 1.5rem;
   box-shadow: 0px 0px 35px -25px rgba(0, 0, 0, 1);
 }
 .content-above button {
@@ -222,9 +226,15 @@ footer p {
   gap: 3.6rem;
   margin: 0 0 0 2rem;
 }
+footer .info-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 article .content-logo-footer {
   display: flex;
   justify-content: flex-start;
+  margin: 0 0 2rem 0;
 }
 article .logo-footer {
   margin: 10rem 0 0 0;
@@ -253,7 +263,6 @@ article .logo-footer {
   height: 1.7rem;
   margin: 0.5rem 0 0 0;
 }
-
 footer .company-info .column-1,
 .column-2 {
   display: flex;
@@ -321,46 +330,89 @@ svg:hover path {
     font-size: 4rem;
   }
   header .text-header .text-paragr {
-  width: 52rem;
+    width: 52rem;
   }
   header .text-header h1,
   p {
     text-align: left;
   }
-  .text-header .button-text-sign{
+  .text-header .button-text-sign {
     padding: 0;
   }
-  header .content button p{
-  text-align: center;
+  header .content button p {
+    text-align: center;
   }
-  header .text-header{
+  header .text-header {
     align-items: flex-start;
     padding: 0 0 0 7.5rem;
   }
-  header .text-header button p{
+  header .text-header button p {
     text-align: center;
   }
-  picture .img-header{
-    margin: 2rem 9rem 0 0 ;
+  picture .img-header {
+    margin: 2rem 9rem 0 0;
     width: 60rem;
     height: 40.2rem;
   }
-  .card{
+  .card {
     width: 125rem;
     height: 44rem;
     flex-direction: row;
+    padding: 0 4rem 0 9rem;
   }
-  article .content-text-card{
+  article .content-text-card {
     align-items: flex-start;
+    margin: 0 0 10rem 0;
   }
-  .two .content-text-card{
-   order: 1;
+  .one .content-text-card,
+  .one .content-text-card {
+    order: 1;
   }
-  .two picture{
-    order:2;
+  .one picture,
+  .three picture {
+    order: 2;
   }
-  .card picture img{
+  .card picture img {
     width: 40rem;
     height: 33rem;
+  }
+  .content-cards .card {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .content-cards .card p {
+    width: 48rem;
+  }
+  .three .content-text-card p {
+    width: 45rem;
+  }
+  .content-above button p {
+    text-align: center;
+  }
+  .content-contact {
+    flex-direction: row;
+    gap: 20rem;
+    padding: 0 5rem 0 5rem;
+  }
+  footer .info-contact p {
+    width: 35rem;
+  }
+  footer .company-info {
+    margin: 15rem 0 0 0;
+    display: flex;
+    gap: 15rem;
+  }
+  footer .column-1,
+  footer .column-2 {
+    width: 9.6rem;
+  }
+  footer .content-social {
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 20rem;
+    margin: 15rem 0 0 0;
+  }
+  footer .content-social p {
+    width: 25rem;
   }
 }
