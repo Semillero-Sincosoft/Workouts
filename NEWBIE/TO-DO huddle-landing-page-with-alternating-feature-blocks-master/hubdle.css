@@ -146,8 +146,13 @@ body {
   position: absolute;
   background: var(--pale-cyan-color);
   border-radius: 15px;
-  top: 1836px;
+  left: 335px;
+  top: -115px;
 }
+.content-community h2{
+  color: black;
+}
+
 
 .get-started-2 {
   width: 270px;
@@ -159,6 +164,7 @@ footer {
   display: flex;
   font-family: var(--titles-fonts);
   margin-top: 40px;
+  position: relative;
 }
 .content-footer {
   width: 100%;
@@ -225,6 +231,10 @@ svg {
   border-radius: 18px;
 }
 
+.content-networks img{
+  width: 25px;
+}
+
 svg:hover {
   color: var(--pink-color);
 }
@@ -286,7 +296,8 @@ svg:hover path {
     padding-top: 40px;
   }
   .content-community {
-    top: 2377px;
+    left: 138px;
+    top: -74px;
     width: 375px;
     text-align: center;
     height: 167px;
