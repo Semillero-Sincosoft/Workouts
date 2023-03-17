@@ -1,0 +1,28 @@
+# JS
+
+## CÓMO DECLARAR FUNCIONES
+
+FUNCIONES NOMBRADAS
+function sumar() {
+
+}
+
+//FUNCIONES ANÓNIMA TRADICIONAL
+let sumar = function () {
+
+}
+
+//FUNCIONES ANÓNIMA FLAT ARROW
+let sumar = () => {
+
+}
+
+## PARTES DE LA FUNCIÓN
+
+### DECLARACIÓN
+
+### PARÁMETROS - ARGUMENTOS
+
+### CUERPO
+
+### RETORNO

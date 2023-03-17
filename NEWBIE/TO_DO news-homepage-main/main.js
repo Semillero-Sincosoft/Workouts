@@ -1,8 +1,7 @@
 // //ACA SE VAN A METER TODOS LOS DATOS
 const contenedor = document.querySelector(".body");
-const containerMain = document.createElement('main');
-containerMain.classList.add('main', 'contenedor')
-
+const containerMain = document.createElement("main");
+containerMain.classList.add("main", "contenedor");
 
 let header = document.createElement("header");
 header.classList.add("header");
@@ -26,14 +25,11 @@ divMenu.classList.add("menu-button", "hidden");
 let buttonMenuHeader = document.createElement("button");
 buttonMenuHeader.setAttribute("id", "menu-button");
 
-
 //menu cierre
 //Este es la lista del header
 
 let imgMenu = document.createElement("img");
 imgMenu.src = "assets/images/icon-menu.svg";
-
-
 
 let listNav = document.createElement("ul");
 listNav.classList.add("ul");
@@ -96,34 +92,34 @@ let contentNew = document.createElement("section");
 contentNew.classList.add("content-new");
 let h2New = document.createElement("h2");
 h2New.textContent = "New";
-//aca estan los div del content
-let divNew = document.createElement("div");
-divNew.classList.add("new");
-let h3NewSubtitle = document.createElement("h3");
-h3NewSubtitle.classList.add("new-txt");
-h3NewSubtitle.textContent = "Hydrogen VS Electric Cars";
-let pNew = document.createElement("p");
-pNew.textContent = "Will hydrogen-fueled cars ever catch up to EVs?";
-let hrLinea = document.createElement("hr");
 
-let divNew2 = document.createElement("div");
-divNew2.classList.add("new");
-let h3NewSubtitle2 = document.createElement("h3");
-h3NewSubtitle2.classList.add("new-txt");
-h3NewSubtitle2.textContent = "The Downsides of AI Artistry";
-let pNew2 = document.createElement("p");
-pNew2.textContent =
-  "What are the possible adverse effects of on-demand AI image generation?";
-let hrLinea2 = document.createElement("hr");
+const crearNoticia = (titulo, descripcion) => {
+  let divNew = document.createElement("div");
+  divNew.classList.add("new");
 
-let divNew3 = document.createElement("div");
-divNew3.classList.add("new");
-let h3NewSubtitle3 = document.createElement("h3");
-h3NewSubtitle3.classList.add("new-txt");
-h3NewSubtitle3.textContent = "Is VC Funding Drying Up?";
-let pNew3 = document.createElement("p");
-pNew3.textContent =
-  "Private funding by VC firms is down 50% YOY. We take a look a what that means.";
+  //titulo
+  let h3NewSubtitle = document.createElement("h3");
+  h3NewSubtitle.classList.add("new-txt");
+  h3NewSubtitle.textContent = titulo;
+
+  //desc
+  let pNew = document.createElement("p");
+  pNew.textContent = descripcion;
+
+  divNew.append(h3NewSubtitle, pNew);
+
+  return divNew;
+};
+
+crearNoticia(
+  "Hydrogen VS Electric Cars",
+  "Will hydrogen-fueled cars ever catch up to EVs?"
+);
+crearNoticia(
+  "The Downsides of AI Artistry",
+  "What are the possible adverse effects of on-demand AI image generation?"
+);
+
 //-----------footer----------
 let footer = document.createElement("footer");
 let sectionFooter = document.createElement("section");
@@ -208,13 +204,11 @@ listNav.appendChild(licategories);
 divMenu.appendChild(buttonMenuHeader);
 buttonMenuHeader.appendChild(imgMenu);
 
-
-
 //content-description
 description.appendChild(imgDesktop);
 description.appendChild(imgMobile);
 nav.appendChild(buttonheader);
-buttonheader.appendChild(imgMenuClose)
+buttonheader.appendChild(imgMenuClose);
 nav.appendChild(listNav);
 //aca se encuentra el containerMain de descripcion y sus hijos
 sectionDescription.appendChild(description);
@@ -231,19 +225,6 @@ articleWritten.appendChild(buttonDescription);
 sectionDescription.appendChild(contentNew);
 contentNew.appendChild(h2New);
 //agrego un nuevo div
-contentNew.appendChild(divNew);
-divNew.appendChild(h3NewSubtitle);
-divNew.appendChild(pNew);
-divNew.appendChild(hrLinea);
-//
-contentNew.appendChild(divNew2);
-divNew2.appendChild(h3NewSubtitle2);
-divNew2.appendChild(pNew2);
-divNew2.appendChild(hrLinea2);
-//
-contentNew.appendChild(divNew3);
-divNew3.appendChild(h3NewSubtitle3);
-divNew3.appendChild(pNew3);
 
 footer.appendChild(sectionFooter);
 sectionFooter.appendChild(articleImgFooter);
@@ -273,7 +254,7 @@ articleCard3.appendChild(pFooter3);
 sectionHeader.appendChild(articlelogo);
 sectionHeader.appendChild(nav);
 sectionHeader.appendChild(divMenu);
-contenedor.appendChild(containerMain)
+contenedor.appendChild(containerMain);
 containerMain.appendChild(header);
 containerMain.appendChild(sectionDescription);
 containerMain.appendChild(footer);
