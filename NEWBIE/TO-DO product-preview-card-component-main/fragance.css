@@ -11,12 +11,13 @@ body {
   background-color: #f2ebe3;
   justify-content: center;
   display: flex;
+  width: 100vw;
+  height: 100vh;
 }
 
 .container {
   width: 100%;
   height: 100%;
-  margin-top: 40px;
 }
 .content-perfume {
   align-items: center;
@@ -46,7 +47,7 @@ body {
   flex-direction: column;
   width: 316px;
 }
-.titulo {
+.title {
   font-family: "Montserrat", sans-serif;
   color: hsl(228, 12%, 48%);
   font-size: 12px;
