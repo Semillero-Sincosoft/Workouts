@@ -223,10 +223,12 @@ articleWritten.appendChild(pWritten);
 //aca va el boton de la descripcion
 articleWritten.appendChild(buttonDescription);
 
-const creaNoticia = (title, writtenNew) => {
-  const contentNew = document.createElement("section");
-  contentNew.classList.add("content-new");
+const contentNew = document.createElement("section");
+contentNew.classList.add("content-new");
+sectionDescription.append(contentNew);
 
+//definición de la función
+const creaNoticia = (title, writtenNew) => {
   const divNew = document.createElement("div");
   divNew.classList.add("new");
 
@@ -242,17 +244,28 @@ const creaNoticia = (title, writtenNew) => {
   contentNew.append(divNew);
   divNew.append(newSubtitle, pNew);
 
-  return contentNew;
+  return divNew;
 };
-const y = creaNoticia(
+
+//invocación de la función
+const noticiaHydrogen = creaNoticia(
   "Hydrogen VS Electric Cars",
   "Will hydrogen-fueled cars ever catch up to EVs?"
 );
-const y2 = creaNoticia(
-  "Hydrogen VS Electric Cars",
-  "Will hydrogen-fueled cars ever catch up to EVs?"
+
+//invocación de la función
+const noticiaAI = creaNoticia(
+  "The downsides of AI Artistry",
+  "What are the possibles adverse effects of on-demand AI image generation?"
 );
-sectionDescription.append(y);
+
+//invocación de la función
+const noticiaVC = creaNoticia(
+  "Is VC Funding Drying Up",
+  "Private funding by VC firms is down 50%"
+);
+
+contentNew.append(noticiaHydrogen, noticiaAI, noticiaVC);
 
 // contentNew.append()
 const footer = (titleFooter, writtenFooter) => {
