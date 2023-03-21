@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Abel", sans-serif;
+}
+:root {
+  --Light-Green: hsl(171, 15%, 64%);
+  --Dark-Green: hsl(172, 19%, 25%);
+  --Light-Black: hsl(1360, 7%, 24%);
+  --white: hsl(0, 0, 100, 100%);
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+header{
+    background-color: var(--Light-Green);
+    display: flex;
+    justify-content: center;
+}
+.content-galery img{
+    width: 30rem;
+}
+main article img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: .5s ease;
+}
+main article img:hover{
+    cursor:pointer;
+    width: 39rem;
+    opacity: 1;
+}
+/*
+.content-home{
+    width: 100%;
+    height: 100%;
+}
+header{
+    background-color:var(--Light-Green);
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main h1{
+    font-size: 5rem;
+    color: var(--Light-Black);
+    padding: 4rem 0 4rem 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90rem;
+    width: 100%;
+}
+main .content-main{
+    height: 60rem;
+}
+main .first-column, main .second-column{
+    width: 90rem;
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+main .content-galery img{
+    width: 20rem;
+}
+main article{
+    display: flex;
+    height: 27rem;
+}
+main article img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.9;
+    position: relative;
+    transition: .5s ease;
+}
+
+main article button, h3{
+    position: absolute;
+    opacity: 0;
+}
+main article button{
+  margin: 12rem 0 0 16rem;
+}
+main article img:hover,h3{
+    cursor:pointer;
+    width: 39rem;
+    opacity: 1;
+}
+main .first-img:hover button{
+    opacity: 1;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40rem;
+    width: 100%;
+    height: 20rem;
+    background-color: var(--Dark-Green);
+}
+footer ul{
+    list-style:none;
+    display: flex;
+    gap: 2rem;
+}
+footer ul li p{
+    font-size: 2.2rem;
+    line-height: 5rem;
+    color:white;
+}
+footer .content-social svg{
+    height: 4rem;
+    fill: white;
+} */
