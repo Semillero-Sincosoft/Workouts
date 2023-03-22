@@ -86,15 +86,19 @@ const list = (pNav, li2) => {
 //content-description
 const sectionDescription = document.createElement("section");
 sectionDescription.classList.add("content-description");
-const imgDesktop = document.createElement("img");
-const imgMobile = document.createElement("img");
 
+//INVOCAR FUNCIÓN PARA CREAR IMÁGENES
+const imgDesktop = document.createElement("img");
+imgDesktop.classList.add("desktop");
+imgDesktop.src = "assets/images/image-web-3-desktop.jpg";
+
+const imgMobile = document.createElement("img");
+imgMobile.classList.add("mobile");
+imgMobile.src = "assets/images/image-web-3-mobile.jpg";
+
+//FN_CE
 const description = document.createElement("section");
 description.classList.add("description");
-imgDesktop.src = "assets/images/image-web-3-desktop.jpg";
-imgDesktop.classList.add("desktop");
-imgMobile.src = "assets/images/image-web-3-mobile.jpg";
-imgMobile.classList.add("mobile");
 //creacion del del section info
 const sectionInfo = document.createElement("section");
 sectionInfo.classList.add("info");
@@ -169,6 +173,9 @@ const h2New = document.createElement("h2")
 h2New.textContent="New"
 contentNew.append(h2New)
 
+//*********************************************************** FUNCIÓN NOTICIAS*/
+//CREAR UNA FUNCIÓN QUE RECIBA DOS PARÁMETROS DE TEXTO Y RETORNE UN ELEMENTO HTML div que adentro tenga un h3 y un p con cada texto
+// (title, writtennew) =>  <div class="new"> <h3> title </h3> <p> writtenNew </p> </div>
 //definición de la función
 const creaNoticia = (title, writtenNew) => {
   const divNew = document.createElement("div");
