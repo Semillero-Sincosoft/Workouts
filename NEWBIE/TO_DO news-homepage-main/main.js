@@ -1,15 +1,28 @@
-// //ACA SE VAN A METER TODOS LOS DATOS
 const contenedor = document.querySelector(".body");
+
+//*********************************************************** FUNCIÓN PARA CREAR ELEMENTOS HTML*/
+//FN_CE
+//CREAR UNA FUNCIÓN QUE RECIBA EL TIPO DE ELEMENTO QUE VA A CREAR Y LA CLASE, LA FUNCIÓN RETORNA EL ELEMENTO CREADO
+// (tipo, clase) => HTMLElement
+// const main = crearEtiqueta("main", "main contenedor");
 const containerMain = document.createElement("main");
 containerMain.classList.add("main", "contenedor");
 
 const header = document.createElement("header");
 header.classList.add("header");
+
 const sectionHeader = document.createElement("section");
 sectionHeader.classList.add("content");
+
+// const articleLogo = crearEtiqueta("article"); que la función no se estalle si no le llega la clase
 const articlelogo = document.createElement("article");
+
+//*********************************************************** FUNCIÓN PARA CREAR IMG*/
+//CREAR UNA FUNCIÓN QUE RECIBA LA URL DE UNA IMAGEN Y RETORNE UN ELEMENTO TIPO IMG
+// (src) => HTMLElement img con el src
 const logoHeader = document.createElement("img");
 logoHeader.src = "assets/images/logo.svg";
+
 const imgMenuClose = document.createElement("img");
 imgMenuClose.src = "assets/images/icon-menu-close.svg";
 
@@ -27,12 +40,16 @@ buttonMenuHeader.setAttribute("id", "menu-button");
 
 //menu cierre
 //Este es la lista del header
-
+//INVOCAR LA FUNCIÓN PARA CREAR IMG
 const imgMenu = document.createElement("img");
 imgMenu.src = "assets/images/icon-menu.svg";
 
 const listNav = document.createElement("ul");
 listNav.classList.add("ul");
+
+//*********************************************************** FUNCIÓN PARA CREAR LI*/
+//CREAR UNA FUNCIÓN QUE RECIBA UN TEXTO Y RETORNE UN LI CON UN TEXTO QUE ES EL PARÁMETRO PASADO A LA FUNCIÓN
+// (txt) => <li>txt</li>
 const liHome = document.createElement("li");
 liHome.classList.add("li");
 const pLiText = document.createElement("p");
@@ -57,18 +74,24 @@ const licategories = document.createElement("li");
 licategories.classList.add("li");
 const plicategories = document.createElement("p");
 const textPCategories = document.createTextNode("categories");
+
+//INVOCAR FUNCIÓN DE CREACIÓN DE ELEMENTO HTML
 //content-description
 const sectionDescription = document.createElement("section");
 sectionDescription.classList.add("content-description");
-const imgDesktop = document.createElement("img");
-const imgMobile = document.createElement("img");
 
+//INVOCAR FUNCIÓN PARA CREAR IMÁGENES
+const imgDesktop = document.createElement("img");
+imgDesktop.classList.add("desktop");
+imgDesktop.src = "assets/images/image-web-3-desktop.jpg";
+
+const imgMobile = document.createElement("img");
+imgMobile.classList.add("mobile");
+imgMobile.src = "assets/images/image-web-3-mobile.jpg";
+
+//FN_CE
 const description = document.createElement("section");
 description.classList.add("description");
-imgDesktop.src = "assets/images/image-web-3-desktop.jpg";
-imgDesktop.classList.add("desktop");
-imgMobile.src = "assets/images/image-web-3-mobile.jpg";
-imgMobile.classList.add("mobile");
 //creacion del del section info
 const sectionInfo = document.createElement("section");
 sectionInfo.classList.add("info");
@@ -227,6 +250,9 @@ const contentNew = document.createElement("section");
 contentNew.classList.add("content-new");
 sectionDescription.append(contentNew);
 
+//*********************************************************** FUNCIÓN NOTICIAS*/
+//CREAR UNA FUNCIÓN QUE RECIBA DOS PARÁMETROS DE TEXTO Y RETORNE UN ELEMENTO HTML div que adentro tenga un h3 y un p con cada texto
+// (title, writtennew) =>  <div class="new"> <h3> title </h3> <p> writtenNew </p> </div>
 //definición de la función
 const creaNoticia = (title, writtenNew) => {
   const divNew = document.createElement("div");
