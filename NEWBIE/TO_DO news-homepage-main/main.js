@@ -1,62 +1,88 @@
 // //ACA SE VAN A METER TODOS LOS DATOS
-const contenedor = document.querySelector(".body");
+
 const containerMain = document.createElement("main");
 containerMain.classList.add("main", "contenedor");
 
+// const sectionHeader = document.createElement("section");
+// sectionHeader.classList.add("content");
+// const articlelogo = document.createElement("article");
+// const logoHeader = document.createElement("img");
+// logoHeader.src = "assets/images/logo.svg";
+// const imgMenuClose = document.createElement("img");
+// imgMenuClose.src = "assets/images/icon-menu-close.svg";
+
+// //viene el nev y boton open
+// const nav = document.createElement("nav");
+// const buttonheader = document.createElement("button");
+// buttonheader.classList.add("hidden");
+// buttonheader.setAttribute("id", "menu-close");
+// //boton del menu responsive
+
+// const divMenu = document.createElement("div");
+// divMenu.classList.add("menu-button", "hidden");
+// const buttonMenuHeader = document.createElement("button");
+// buttonMenuHeader.setAttribute("id", "menu-button");
+
+// //menu cierre
+// //Este es la lista del header
+
+// articlelogo.appendChild(logoHeader);
+// header.appendChild(sectionHeader);
+
+// sectionHeader.appendChild(articlelogo);
+// // sectionHeader.appendChild(nav);
+// sectionHeader.appendChild(divMenu);
+
+const imagesHeader = (imagesHeader1) => {
+  const imgFooter = document.createElement("img");
+  imgFooter.src = imagesHeader1;
+  return imgFooter;
+};
+
 const header = document.createElement("header");
-header.classList.add("header");
-const sectionHeader = document.createElement("section");
-sectionHeader.classList.add("content");
-const articlelogo = document.createElement("article");
-const logoHeader = document.createElement("img");
-logoHeader.src = "assets/images/logo.svg";
-const imgMenuClose = document.createElement("img");
-imgMenuClose.src = "assets/images/icon-menu-close.svg";
+containerMain.append(header)
+const list = (pNav, li2) => {
+  const contentHeader = document.createElement("section")
+  const ul = document.createElement("ul");
 
-//viene el nev y boton open
-const nav = document.createElement("nav");
-const buttonheader = document.createElement("button");
-buttonheader.classList.add("hidden");
-buttonheader.setAttribute("id", "menu-close");
-//boton del menu responsive
+  const li = document.createElement("li");
+  li.textContent = li2;
+  const hola =document.createElement("p")
+  hola.textContent=pNav
 
-const divMenu = document.createElement("div");
-divMenu.classList.add("menu-button", "hidden");
-const buttonMenuHeader = document.createElement("button");
-buttonMenuHeader.setAttribute("id", "menu-button");
 
-//menu cierre
-//Este es la lista del header
+  return ul;
+};
 
-const imgMenu = document.createElement("img");
-imgMenu.src = "assets/images/icon-menu.svg";
+//  const imgMenu = document.createElement("img");
+//  imgMenu.src = "assets/images/icon-menu.svg";
 
-const listNav = document.createElement("ul");
-listNav.classList.add("ul");
-const liHome = document.createElement("li");
-liHome.classList.add("li");
-const pLiText = document.createElement("p");
-const textpHome = document.createTextNode("Home");
-//lista new
-const liNew = document.createElement("li");
-liNew.classList.add("li");
-const pLiNew = document.createElement("p");
-const textPNew = document.createTextNode("New");
-//lista popular
-const liPopular = document.createElement("li");
-liPopular.classList.add("li");
-const pLiPopular = document.createElement("p");
-const textPPopular = document.createTextNode("Popular");
-//lista de trending
-const liTrending = document.createElement("li");
-liTrending.classList.add("li");
-const pliTrending = document.createElement("p");
-const textptrending = document.createTextNode("trending");
-//lista categories
-const licategories = document.createElement("li");
-licategories.classList.add("li");
-const plicategories = document.createElement("p");
-const textPCategories = document.createTextNode("categories");
+// const listNav = document.createElement("ul");
+// listNav.classList.add("ul");
+// const liHome = document.createElement("li");
+// liHome.classList.add("li");
+// const pLiText = document.createElement("p");
+// const textpHome = document.createTextNode("Home");
+// //lista new
+// const liNew = document.createElement("li");
+// liNew.classList.add("li");
+// const pLiNew = document.createElement("p");
+// const textPNew = document.createTextNode("New");
+// //lista popular
+// const liPopular = document.createElement("li");
+// liPopular.classList.add("li");
+// const pLiPopular = document.createElement("p");
+// const textPPopular = document.createTextNode("Popular");
+// //lista de trending
+// const liTrending = document.createElement("li");
+// liTrending.classList.add("li");
+// const pliTrending = document.createElement("p");
+// const textptrending = document.createTextNode("trending");
+// //lista categories
+// const licategories = document.createElement("li");
+// licategories.classList.add("li");
+// const plicategories = document.createElement("p");
+// const textPCategories = document.createTextNode("categories");
 //content-description
 const sectionDescription = document.createElement("section");
 sectionDescription.classList.add("content-description");
@@ -88,129 +114,42 @@ const buttonDescription = document.createElement("button");
 buttonDescription.classList.add("info-read");
 buttonDescription.textContent = "READ MORE";
 
-// //creacion de nueva section"section new"
-// const contentNew = document.createElement("section");
-// contentNew.classList.add("content-new");
-// const h2New = document.createElement("h2");
-// h2New.textContent = "New";
-// //aca estan los div del content
-// const divNew = document.createElement("div");
-// divNew.classList.add("new");
-// const h3NewSubtitle = document.createElement("h3");
-// h3NewSubtitle.classList.add("new-txt");
-// h3NewSubtitle.textContent = "Hydrogen VS Electric Cars";
-// const pNew = document.createElement("p");
-// pNew.textContent = "Will hydrogen-fueled cars ever catch up to EVs?";
-// const hrLinea = document.createElement("hr");
+// //lista home
+// liHome.appendChild(textpHome);
+// liHome.appendChild(pLiText);
+// pLiText.appendChild(textpHome);
+// listNav.appendChild(liHome);
+// //lista new
+// liNew.appendChild(textPNew);
+// liNew.appendChild(pLiNew);
+// listNav.appendChild(liNew);
+// pLiNew.appendChild(textPNew);
+// //lista popular
+// liPopular.appendChild(textPPopular);
+// liPopular.appendChild(pLiPopular);
+// listNav.appendChild(liPopular);
+// pLiPopular.appendChild(textPPopular);
+// // lista trending
+// liTrending.appendChild(textptrending);
+// liTrending.appendChild(pliTrending);
+// pliTrending.appendChild(textptrending);
+// listNav.appendChild(liTrending);
+// // lista categories
+// licategories.appendChild(textPCategories);
+// licategories.appendChild(plicategories);
+// plicategories.appendChild(textPCategories);
+// listNav.appendChild(licategories);
 
-// const divNew2 = document.createElement("div");
-// divNew2.classList.add("new");
-// const h3NewSubtitle2 = document.createElement("h3");
-// h3NewSubtitle2.classList.add("new-txt");
-// h3NewSubtitle2.textContent = "The Downsides of AI Artistry";
-// const pNew2 = document.createElement("p");
-// pNew2.textContent =
-//   "What are the possible adverse effects of on-demand AI image generation?";
-// const hrLinea2 = document.createElement("hr");
+// //agregacion de boton de menu
+// divMenu.appendChild(buttonMenuHeader);
+//  buttonMenuHeader.appendChild(imgMenu);
 
-// const divNew3 = document.createElement("div");
-// divNew3.classList.add("new");
-// const h3NewSubtitle3 = document.createElement("h3");
-// h3NewSubtitle3.classList.add("new-txt");
-// h3NewSubtitle3.textContent = "Is VC Funding Drying Up?";
-// const pNew3 = document.createElement("p");
-// pNew3.textContent =
-//   "Private funding by VC firms is down 50% YOY. We take a look a what that means.";
-// //-----------footer----------
-// const footer = document.createElement("footer");
-// const sectionFooter = document.createElement("section");
-// sectionFooter.classList.add("cards");
-// const articleImgFooter = document.createElement("article");
-// articleImgFooter.classList.add("content-img");
-// const imgFooter = document.createElement("img");
-// imgFooter.src = "assets/images/image-retro-pcs.jpg";
-// const articleCard1 = document.createElement("article");
-// articleCard1.classList.add("card-1");
-// const h2Footer = document.createElement("h2");
-// h2Footer.textContent = "01";
-// const pFooterSubtitle = document.createElement("p");
-// pFooterSubtitle.classList.add("subtitle");
-// pFooterSubtitle.textContent = "Reviving Retro PCs";
-// const pFooter = document.createElement("p");
-// pFooter.textContent = "What happens when old PCs are given modern upgrades?";
-
-// const sectionFooter2 = document.createElement("section");
-// sectionFooter2.classList.add("cards");
-// const articleImgFooter2 = document.createElement("article");
-// articleImgFooter2.classList.add("content-img");
-// const imgFooter2 = document.createElement("img");
-// imgFooter2.src = "assets/images/image-top-laptops.jpg";
-// const articleCard2 = document.createElement("article");
-// articleCard2.classList.add("card-2");
-// const h2Footer2 = document.createElement("h2");
-// h2Footer2.textContent = "02";
-// const pFooterSubtitle2 = document.createElement("p");
-// pFooterSubtitle2.classList.add("subtitle");
-// pFooterSubtitle2.textContent = "Top 10 Laptops of 2022";
-// const pFooter2 = document.createElement("p");
-// pFooter2.textContent = "Our best picks for various needs and budgets.";
-
-// const sectionFooter3 = document.createElement("section");
-// sectionFooter3.classList.add("cards");
-// const articleImgFooter3 = document.createElement("article");
-// articleImgFooter3.classList.add("content-img");
-// const imgFooter3 = document.createElement("img");
-// imgFooter3.src = "assets/images/image-gaming-growth.jpg";
-// const articleCard3 = document.createElement("article");
-// articleCard3.classList.add("card-3");
-// const h2Footer3 = document.createElement("h2");
-// h2Footer3.textContent = "03";
-// const pFooterSubtitle3 = document.createElement("p");
-// pFooterSubtitle3.classList.add("subtitle");
-// pFooterSubtitle3.textContent = "The Growth of Gaming";
-// const pFooter3 = document.createElement("p");
-// pFooter3.textContent = "How the pandemic has sparked fresh opportunities.";
-
-//acá se colocan los hijos
-sectionHeader.appendChild(logoHeader);
-articlelogo.appendChild(logoHeader);
-header.appendChild(sectionHeader);
-//lista home
-liHome.appendChild(textpHome);
-liHome.appendChild(pLiText);
-pLiText.appendChild(textpHome);
-listNav.appendChild(liHome);
-//lista new
-liNew.appendChild(textPNew);
-liNew.appendChild(pLiNew);
-listNav.appendChild(liNew);
-pLiNew.appendChild(textPNew);
-//lista popular
-liPopular.appendChild(textPPopular);
-liPopular.appendChild(pLiPopular);
-listNav.appendChild(liPopular);
-pLiPopular.appendChild(textPPopular);
-// lista trending
-liTrending.appendChild(textptrending);
-liTrending.appendChild(pliTrending);
-pliTrending.appendChild(textptrending);
-listNav.appendChild(liTrending);
-// lista categories
-licategories.appendChild(textPCategories);
-licategories.appendChild(plicategories);
-plicategories.appendChild(textPCategories);
-listNav.appendChild(licategories);
-
-//agregacion de boton de menu
-divMenu.appendChild(buttonMenuHeader);
-buttonMenuHeader.appendChild(imgMenu);
-
-//content-description
+// //content-description
 description.appendChild(imgDesktop);
 description.appendChild(imgMobile);
-nav.appendChild(buttonheader);
-buttonheader.appendChild(imgMenuClose);
-nav.appendChild(listNav);
+// nav.appendChild(buttonheader);
+// buttonheader.appendChild(imgMenuClose);
+// nav.appendChild(listNav);
 //aca se encuentra el containerMain de descripcion y sus hijos
 sectionDescription.appendChild(description);
 description.appendChild(sectionInfo);
@@ -226,6 +165,9 @@ articleWritten.appendChild(buttonDescription);
 const contentNew = document.createElement("section");
 contentNew.classList.add("content-new");
 sectionDescription.append(contentNew);
+const h2New = document.createElement("h2")
+h2New.textContent="New"
+contentNew.append(h2New)
 
 //definición de la función
 const creaNoticia = (title, writtenNew) => {
@@ -252,7 +194,6 @@ const noticiaHydrogen = creaNoticia(
   "Hydrogen VS Electric Cars",
   "Will hydrogen-fueled cars ever catch up to EVs?"
 );
-
 //invocación de la función
 const noticiaAI = creaNoticia(
   "The downsides of AI Artistry",
@@ -265,23 +206,82 @@ const noticiaVC = creaNoticia(
   "Private funding by VC firms is down 50%"
 );
 
-contentNew.append(noticiaHydrogen, noticiaAI, noticiaVC);
-
-// contentNew.append()
-const footer = (titleFooter, writtenFooter) => {
-  const h2Footer = document.createElement("h2");
-  h2Footer.textContent = writtenFooter;
-
-  const subtitle = document.createElement("p");
-  subtitle.textContent = writtenFooter;
+const testImage = (images) => {
+  const imgFooter = document.createElement("img");
+  imgFooter.src = images;
+  return imgFooter;
 };
 
+contentNew.append(noticiaHydrogen, noticiaAI, noticiaVC);
+
+const footer = document.createElement("footer");
+
+const contentGame = (
+  titleFooter,
+  subtitlep,
+  writtenFooter,
+  images,
+  classArticle
+) => {
+  const cards = document.createElement("section");
+  cards.classList.add("cards");
+  const contentImg = document.createElement("article");
+
+  const imgFooter = testImage(images);
+
+  contentImg.append(imgFooter);
+
+  cards.append(contentImg);
+
+  const contentCard2 = document.createElement("article");
+  contentCard2.classList.add(classArticle);
+
+  const h2Footer = document.createElement("h2");
+  h2Footer.textContent = titleFooter;
+
+  const subtitle = document.createElement("p");
+  subtitle.classList.add("subtitle");
+  subtitle.textContent = subtitlep;
+
+  const prueba = document.createElement("p");
+  prueba.textContent = writtenFooter;
+
+  contentCard2.append(h2Footer, subtitle, prueba);
+  cards.append(contentCard2);
+  return cards;
+};
+const card1 = contentGame(
+  "01",
+  "Reviving Retro PCs",
+  "What happens when old PCs are given modern upgrades?",
+  "assets/images/image-retro-pcs.jpg",
+  "card-1"
+);
+
+footer.append(card1);
+
+const card2 = contentGame(
+  "01",
+  "Reviving Retro PCs",
+  " Our best picks for various needs and budgets.",
+  "assets/images/image-top-laptops.jpg",
+  "card-2"
+);
+
+footer.append(card2);
+
+const card3 = contentGame(
+  "01",
+  "Reviving Retro PCs",
+  "How the pandemic has sparked fresh opportunities.",
+  "assets/images/image-gaming-growth.jpg",
+  "card-3"
+);
+
+footer.append(card3);
+
 //nodos principales
-sectionHeader.appendChild(articlelogo);
-sectionHeader.appendChild(nav);
-sectionHeader.appendChild(divMenu);
-contenedor.appendChild(containerMain);
-containerMain.appendChild(header);
+
 containerMain.appendChild(sectionDescription);
-// containerMain.appendChild(footer);
-// sectionDescription.append(y2);
+containerMain.append(footer);
+document.body.append(containerMain);
