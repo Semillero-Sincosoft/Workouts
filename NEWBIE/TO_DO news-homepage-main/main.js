@@ -11,7 +11,7 @@ containerMain.classList.add("main", "contenedor");
 // const imgMenuClose = document.createElement("img");
 // imgMenuClose.src = "assets/images/icon-menu-close.svg";
 
-// //viene el nev y boton open
+// //viene el nav y boton open
 // const nav = document.createElement("nav");
 // const buttonheader = document.createElement("button");
 // buttonheader.classList.add("hidden");
@@ -33,26 +33,92 @@ containerMain.classList.add("main", "contenedor");
 // // sectionHeader.appendChild(nav);
 // sectionHeader.appendChild(divMenu);
 
-const imagesHeader = (imagesHeader1) => {
+// const imagesHeader = (imagess) => {
+//   const imgsHeader = document.createElement("img");
+//   imgsHeader.src = imagess;
+
+//   return imgsHeader;
+// };
+
+// const header = (elemento) => {
+//   const head = document.createElement(elemento);
+//   return head;
+// };
+
+// // const div = header("header");
+
+const testImage = (images) => {
   const imgFooter = document.createElement("img");
-  imgFooter.src = imagesHeader1;
+  imgFooter.src = images;
   return imgFooter;
 };
 
 const header = document.createElement("header");
-containerMain.append(header)
-const list = (pNav, li2) => {
-  const contentHeader = document.createElement("section")
-  const ul = document.createElement("ul");
+containerMain.append(header);
+const contentHeader = document.createElement("section");
+contentHeader.classList.add("content");
+header.append(contentHeader);
 
-  const li = document.createElement("li");
-  li.textContent = li2;
-  const hola =document.createElement("p")
-  hola.textContent=pNav
+const articlelogo = (imagelogo) => {
+  const contentImgHeader = document.createElement("article");
+  const logo = testImage(imagelogo);
+  contentImgHeader.append(logo);
 
-
-  return ul;
+  return contentImgHeader;
 };
+const xd = articlelogo("assets/images/logo.svg")
+console.log(xd)
+contentHeader.append(xd)
+
+const head = (pNav) => {
+  const li = document.createElement("li");
+  const pli = document.createElement("p");
+  pli.textContent = pNav;
+
+  li.append(pli);
+  header.append(contentHeader);
+  return li;
+};
+
+const lihome = head("Home");
+const liNew = head("New");
+const liPopular = head("Popular");
+const licategories = head("Categories");
+
+// const contentGame = (
+//   titleFooter,
+//   subtitlep,
+//   writtenFooter,
+//   images,
+//   classArticle
+// ) => {
+//   const cards = document.createElement("section");
+//   cards.classList.add("cards");
+//   const contentImg = document.createElement("article");
+
+//   const imgFooter = testImage(images);
+
+//   contentImg.append(imgFooter);
+
+//   cards.append(contentImg);
+
+//   const contentCard2 = document.createElement("article");
+//   contentCard2.classList.add(classArticle);
+
+//   const h2Footer = document.createElement("h2");
+//   h2Footer.textContent = titleFooter;
+
+//   const subtitle = document.createElement("p");
+//   subtitle.classList.add("subtitle");
+//   subtitle.textContent = subtitlep;
+
+//   const prueba = document.createElement("p");
+//   prueba.textContent = writtenFooter;
+
+//   contentCard2.append(h2Footer, subtitle, prueba);
+//   cards.append(contentCard2);
+//   return cards;
+// };
 
 //  const imgMenu = document.createElement("img");
 //  imgMenu.src = "assets/images/icon-menu.svg";
@@ -169,9 +235,9 @@ articleWritten.appendChild(buttonDescription);
 const contentNew = document.createElement("section");
 contentNew.classList.add("content-new");
 sectionDescription.append(contentNew);
-const h2New = document.createElement("h2")
-h2New.textContent="New"
-contentNew.append(h2New)
+const h2New = document.createElement("h2");
+h2New.textContent = "New";
+contentNew.append(h2New);
 
 //*********************************************************** FUNCIÓN NOTICIAS*/
 //CREAR UNA FUNCIÓN QUE RECIBA DOS PARÁMETROS DE TEXTO Y RETORNE UN ELEMENTO HTML div que adentro tenga un h3 y un p con cada texto
@@ -213,12 +279,6 @@ const noticiaVC = creaNoticia(
   "Private funding by VC firms is down 50%"
 );
 
-const testImage = (images) => {
-  const imgFooter = document.createElement("img");
-  imgFooter.src = images;
-  return imgFooter;
-};
-
 contentNew.append(noticiaHydrogen, noticiaAI, noticiaVC);
 
 const footer = document.createElement("footer");
@@ -232,12 +292,11 @@ const contentGame = (
 ) => {
   const cards = document.createElement("section");
   cards.classList.add("cards");
+
   const contentImg = document.createElement("article");
 
   const imgFooter = testImage(images);
-
   contentImg.append(imgFooter);
-
   cards.append(contentImg);
 
   const contentCard2 = document.createElement("article");
