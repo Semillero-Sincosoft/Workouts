@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Cyan-opacity: hsl(178, 100%, 50%, 0.5);
+  --Very-dark-blue-1: hsl(217, 54%, 11%);
+  --Very-dark-blue-2: hsl(216, 50%, 16%);
+  --Very-dark-blue-3: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--Very-dark-blue-1);
+}
+.content-home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-general {
+  width: 330px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Very-dark-blue-2);
+  border-radius: 20px;
+}
+.content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  margin: 0px 0px 0px 50px;
+}
+.content-info h1 {
+  font-size: 22px;
+  color: var(--White);
+  padding-bottom: 15px;
+  font-weight: 500;
+}
+.content-info h1:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+.content-info p {
+  padding: 0px 15px 15px 0px;
+}
+.content-info {
+  padding: 0px 30px 0px 0px;
+}
+p {
+  color: var(--Soft-blue);
+  font-size: 16px;
+  font-weight: 200;
+}
+figure {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+}
+.eye-inter {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 278px;
+  width: 278px;
+  background-color: var(--Cyan-opacity);
+  display: none;
+  border-radius: 10px;
+}
+figure:hover .eye-inter {
+  display: flex;
+  cursor: pointer;
+}
+.eye-inter img {
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+img.nft {
+  width: 278px;
+  height: 278px;
+  border-radius: 10px 10px 10px 10px;
+  margin: 20px 20px 25px 20px;
+}
+img.avatar {
+  height: 33px;
+}
+div.rhombus,
+div.clock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+div.rhombus p {
+  color: var(--Cyan);
+  padding: 0px 0px 0px 8px;
+}
+div.clock p {
+  padding-left: 8px;
+}
+div.clock {
+  padding-left: 85px;
+}
+.content-stats p {
+  font-weight: 300;
+}
+.content-stats,
+.content-author {
+  display: flex;
+}
+div.line {
+  height: 1px;
+  width: 83%;
+  background-color: var(--Soft-blue);
+  opacity: 30%;
+}
+.content-author {
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+}
+.content-author span {
+  color: var(--White);
+}
+.content-author span:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+.content-author p {
+  padding-left: 20px;
+}
+.avatar {
+  border: solid white 1px;
+  border-radius: 20px;
+}
