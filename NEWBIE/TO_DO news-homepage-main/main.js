@@ -1,17 +1,18 @@
 // //ACA SE VAN A METER TODOS LOS DATOS
 
-const containerMain = document.createElement("main");
-containerMain.classList.add("main", "contenedor");
+// const createTags = (tags, classes) => {
+//   const Elements = document.createElement(tags);
+//   Elements.classList.add(classes);
+// };
+// const containerMain = createTags("main","main","contenedor")
 
-// const sectionHeader = document.createElement("section");
-// sectionHeader.classList.add("content");
-// const articlelogo = document.createElement("article");
-// const logoHeader = document.createElement("img");
-// logoHeader.src = "assets/images/logo.svg";
+ const containerMain = document.createElement("main");
+ containerMain.classList.add("main", "contenedor");
+
 // const imgMenuClose = document.createElement("img");
 // imgMenuClose.src = "assets/images/icon-menu-close.svg";
 
-// //viene el nav y boton open
+//viene el nav y boton open
 // const nav = document.createElement("nav");
 // const buttonheader = document.createElement("button");
 // buttonheader.classList.add("hidden");
@@ -32,22 +33,9 @@ containerMain.classList.add("main", "contenedor");
 // sectionHeader.appendChild(articlelogo);
 // // sectionHeader.appendChild(nav);
 // sectionHeader.appendChild(divMenu);
-
-// const imagesHeader = (imagess) => {
-//   const imgsHeader = document.createElement("img");
-//   imgsHeader.src = imagess;
-
-//   return imgsHeader;
-// };
-
-// const header = (elemento) => {
-//   const head = document.createElement(elemento);
-//   return head;
-// };
-
 // // const div = header("header");
 
-const testImage = (images) => {
+const createImage = (images) => {
   const imgFooter = document.createElement("img");
   imgFooter.src = images;
   return imgFooter;
@@ -61,64 +49,15 @@ header.append(contentHeader);
 
 const articlelogo = (imagelogo) => {
   const contentImgHeader = document.createElement("article");
-  const logo = testImage(imagelogo);
+  const logo = createImage(imagelogo);
   contentImgHeader.append(logo);
 
   return contentImgHeader;
 };
-const xd = articlelogo("assets/images/logo.svg")
-console.log(xd)
-contentHeader.append(xd)
+const logito = articlelogo("assets/images/logo.svg");
+contentHeader.append(logito);
 
-const head = (pNav) => {
-  const li = document.createElement("li");
-  const pli = document.createElement("p");
-  pli.textContent = pNav;
 
-  li.append(pli);
-  header.append(contentHeader);
-  return li;
-};
-
-const lihome = head("Home");
-const liNew = head("New");
-const liPopular = head("Popular");
-const licategories = head("Categories");
-
-// const contentGame = (
-//   titleFooter,
-//   subtitlep,
-//   writtenFooter,
-//   images,
-//   classArticle
-// ) => {
-//   const cards = document.createElement("section");
-//   cards.classList.add("cards");
-//   const contentImg = document.createElement("article");
-
-//   const imgFooter = testImage(images);
-
-//   contentImg.append(imgFooter);
-
-//   cards.append(contentImg);
-
-//   const contentCard2 = document.createElement("article");
-//   contentCard2.classList.add(classArticle);
-
-//   const h2Footer = document.createElement("h2");
-//   h2Footer.textContent = titleFooter;
-
-//   const subtitle = document.createElement("p");
-//   subtitle.classList.add("subtitle");
-//   subtitle.textContent = subtitlep;
-
-//   const prueba = document.createElement("p");
-//   prueba.textContent = writtenFooter;
-
-//   contentCard2.append(h2Footer, subtitle, prueba);
-//   cards.append(contentCard2);
-//   return cards;
-// };
 
 //  const imgMenu = document.createElement("img");
 //  imgMenu.src = "assets/images/icon-menu.svg";
@@ -295,7 +234,7 @@ const contentGame = (
 
   const contentImg = document.createElement("article");
 
-  const imgFooter = testImage(images);
+  const imgFooter = createImage(images);
   contentImg.append(imgFooter);
   cards.append(contentImg);
 
