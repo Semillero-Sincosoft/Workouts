@@ -56,9 +56,23 @@ const articlelogo = (imagelogo) => {
 };
 const logito = articlelogo("assets/images/logo.svg");
 contentHeader.append(logito);
+const nav = document.createElement("nav")
+const list = (iconMenu)=>{
+ 
+    
+const btn = document.createElement("button");
+const img = createImage(iconMenu)
+btn.append(img)
+btn.classList.add("hidden")
+btn.setAttribute("id","menu-close");
+nav.append(btn)
+return btn;
 
+}
+const lol = list("assets/images/icon-menu-close.svg")
 
-
+nav.append(lol)
+contentHeader.append(nav)
 //  const imgMenu = document.createElement("img");
 //  imgMenu.src = "assets/images/icon-menu.svg";
 
