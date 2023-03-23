@@ -48,6 +48,7 @@ header {
   background-color: var(--Very-Pale-Cyan);
   background-image: url(./images/bg-hero-mobile.svg);
   background-repeat: no-repeat;
+  background-position: initial;
   background-size: 100%;
 }
 article.content {
@@ -208,6 +209,7 @@ footer p {
   border-radius: 3rem;
   background-color: var(--Pink);
   margin: 2rem 0 0 0;
+  box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.33);
 }
 .content-above button:hover {
   opacity: 75%;
@@ -398,7 +400,7 @@ svg:hover path {
     width: 35rem;
   }
   footer .company-info {
-    margin: 15rem 0 0 0;
+    margin: 17rem 0 0 0;
     display: flex;
     gap: 15rem;
   }

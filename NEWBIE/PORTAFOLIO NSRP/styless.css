@@ -14,7 +14,6 @@
 html {
   font-size: 62.5%;
 }
-/* header */
 header {
   display: flex;
   justify-content: center;
@@ -26,9 +25,6 @@ header img {
   transition: 1s ease;
   transform: scale(1.2);
 }
-/* header */
-
-/* section */
 .content-mayor {
   display: flex;
   justify-content: space-around;
@@ -122,9 +118,6 @@ button {
   width: 100%;
   height: 23rem;
 }
-/* section */
-
-/* footer */
 footer {
   background-color: var(--Dark-Green);
   height: 20rem;
@@ -158,7 +151,6 @@ footer .content-info-footer {
   transform: rotate(360deg);
   transition: ease-out 0.8s;
 }
-/* footer */
 @media screen and (max-width: 950px) {
   .content-mayor {
     flex-direction: column;
