@@ -9,32 +9,6 @@
  const containerMain = document.createElement("main");
  containerMain.classList.add("main", "contenedor");
 
-// const imgMenuClose = document.createElement("img");
-// imgMenuClose.src = "assets/images/icon-menu-close.svg";
-
-//viene el nav y boton open
-// const nav = document.createElement("nav");
-// const buttonheader = document.createElement("button");
-// buttonheader.classList.add("hidden");
-// buttonheader.setAttribute("id", "menu-close");
-// //boton del menu responsive
-
-// const divMenu = document.createElement("div");
-// divMenu.classList.add("menu-button", "hidden");
-// const buttonMenuHeader = document.createElement("button");
-// buttonMenuHeader.setAttribute("id", "menu-button");
-
-// //menu cierre
-// //Este es la lista del header
-
-// articlelogo.appendChild(logoHeader);
-// header.appendChild(sectionHeader);
-
-// sectionHeader.appendChild(articlelogo);
-// // sectionHeader.appendChild(nav);
-// sectionHeader.appendChild(divMenu);
-// // const div = header("header");
-
 const createImage = (images) => {
   const imgFooter = document.createElement("img");
   imgFooter.src = images;
@@ -73,36 +47,6 @@ const lol = list("assets/images/icon-menu-close.svg")
 
 nav.append(lol)
 contentHeader.append(nav)
-//  const imgMenu = document.createElement("img");
-//  imgMenu.src = "assets/images/icon-menu.svg";
-
-// const listNav = document.createElement("ul");
-// listNav.classList.add("ul");
-// const liHome = document.createElement("li");
-// liHome.classList.add("li");
-// const pLiText = document.createElement("p");
-// const textpHome = document.createTextNode("Home");
-// //lista new
-// const liNew = document.createElement("li");
-// liNew.classList.add("li");
-// const pLiNew = document.createElement("p");
-// const textPNew = document.createTextNode("New");
-// //lista popular
-// const liPopular = document.createElement("li");
-// liPopular.classList.add("li");
-// const pLiPopular = document.createElement("p");
-// const textPPopular = document.createTextNode("Popular");
-// //lista de trending
-// const liTrending = document.createElement("li");
-// liTrending.classList.add("li");
-// const pliTrending = document.createElement("p");
-// const textptrending = document.createTextNode("trending");
-// //lista categories
-// const licategories = document.createElement("li");
-// licategories.classList.add("li");
-// const plicategories = document.createElement("p");
-// const textPCategories = document.createTextNode("categories");
-//content-description
 const sectionDescription = document.createElement("section");
 sectionDescription.classList.add("content-description");
 
@@ -137,42 +81,9 @@ const buttonDescription = document.createElement("button");
 buttonDescription.classList.add("info-read");
 buttonDescription.textContent = "READ MORE";
 
-// //lista home
-// liHome.appendChild(textpHome);
-// liHome.appendChild(pLiText);
-// pLiText.appendChild(textpHome);
-// listNav.appendChild(liHome);
-// //lista new
-// liNew.appendChild(textPNew);
-// liNew.appendChild(pLiNew);
-// listNav.appendChild(liNew);
-// pLiNew.appendChild(textPNew);
-// //lista popular
-// liPopular.appendChild(textPPopular);
-// liPopular.appendChild(pLiPopular);
-// listNav.appendChild(liPopular);
-// pLiPopular.appendChild(textPPopular);
-// // lista trending
-// liTrending.appendChild(textptrending);
-// liTrending.appendChild(pliTrending);
-// pliTrending.appendChild(textptrending);
-// listNav.appendChild(liTrending);
-// // lista categories
-// licategories.appendChild(textPCategories);
-// licategories.appendChild(plicategories);
-// plicategories.appendChild(textPCategories);
-// listNav.appendChild(licategories);
-
-// //agregacion de boton de menu
-// divMenu.appendChild(buttonMenuHeader);
-//  buttonMenuHeader.appendChild(imgMenu);
-
 // //content-description
 description.appendChild(imgDesktop);
 description.appendChild(imgMobile);
-// nav.appendChild(buttonheader);
-// buttonheader.appendChild(imgMenuClose);
-// nav.appendChild(listNav);
 //aca se encuentra el containerMain de descripcion y sus hijos
 sectionDescription.appendChild(description);
 description.appendChild(sectionInfo);
