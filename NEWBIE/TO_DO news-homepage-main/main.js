@@ -1,13 +1,15 @@
 // //ACA SE VAN A METER TODOS LOS DATOS
 
-// const createTags = (tags, classes) => {
-//   const Elements = document.createElement(tags);
-//   Elements.classList.add(classes);
-// };
-// const containerMain = createTags("main","main","contenedor")
+const createTags = (tags, classes) => {
+  const Element = document.createElement(tags);
+  classes.forEach((clase) => {
+    Element.setAttribute("class", classes);
+  });
 
- const containerMain = document.createElement("main");
- containerMain.classList.add("main", "contenedor");
+  return Element;
+};
+const containerMain = createTags("main", ["main"]);
+
 
 const createImage = (images) => {
   const imgFooter = document.createElement("img");
@@ -15,7 +17,7 @@ const createImage = (images) => {
   return imgFooter;
 };
 
-const header = document.createElement("header");
+const header = createTags("header", []);
 containerMain.append(header);
 const contentHeader = document.createElement("section");
 contentHeader.classList.add("content");
@@ -30,23 +32,37 @@ const articlelogo = (imagelogo) => {
 };
 const logito = articlelogo("assets/images/logo.svg");
 contentHeader.append(logito);
-const nav = document.createElement("nav")
-const list = (iconMenu)=>{
- 
-    
-const btn = document.createElement("button");
-const img = createImage(iconMenu)
-btn.append(img)
-btn.classList.add("hidden")
-btn.setAttribute("id","menu-close");
-nav.append(btn)
-return btn;
 
-}
-const lol = list("assets/images/icon-menu-close.svg")
 
-nav.append(lol)
-contentHeader.append(nav)
+const nav = createTags("nav", []);
+const list = (iconMenu) => {
+  const btn = document.createElement("button");
+  const img = createImage(iconMenu);
+  btn.append(img);
+  btn.classList.add("hidden");
+  btn.setAttribute("id", "menu-close");
+  nav.append(btn);
+  return btn;
+};
+const closeMain = list("assets/images/icon-menu-close.svg");
+
+nav.append(closeMain);
+contentHeader.append(nav);
+const menuButton = createTags("div", ["menu-button", " hidden"])
+contentHeader.append(menuButton)
+
+const createLi = (li) => {
+  const ul = document.createElement("ul");
+  li.forEach((element) => {
+    const lili = document.createElement("li");
+    const pp = document.createElement("p");
+    pp.innerHTML = element;
+    lili.append(pp);
+    ul.append(lili);
+  });
+  return ul;
+};
+nav.append(createLi(["home", "new", "popular", "categories"]));
 const sectionDescription = document.createElement("section");
 sectionDescription.classList.add("content-description");
 
@@ -96,12 +112,14 @@ articleWritten.appendChild(pWritten);
 //aca va el boton de la descripcion
 articleWritten.appendChild(buttonDescription);
 
+
 const contentNew = document.createElement("section");
 contentNew.classList.add("content-new");
 sectionDescription.append(contentNew);
 const h2New = document.createElement("h2");
 h2New.textContent = "New";
 contentNew.append(h2New);
+
 
 //*********************************************************** FUNCIÓN NOTICIAS*/
 //CREAR UNA FUNCIÓN QUE RECIBA DOS PARÁMETROS DE TEXTO Y RETORNE UN ELEMENTO HTML div que adentro tenga un h3 y un p con cada texto
@@ -212,6 +230,7 @@ footer.append(card3);
 
 //nodos principales
 
-containerMain.appendChild(sectionDescription);
-containerMain.append(footer);
+containerMain.append(sectionDescription, footer);
 document.body.append(containerMain);
+
+
