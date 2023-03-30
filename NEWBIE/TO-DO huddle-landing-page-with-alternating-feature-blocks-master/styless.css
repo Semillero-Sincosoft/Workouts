@@ -99,7 +99,7 @@ header .text-header h1,
 p {
   color: var(--Very-Dark-Cyan);
 }
-header .text-header button {
+header .text-header button.firstButton {
   width: 29rem;
   height: 5rem;
   background-color: var(--Pink);
