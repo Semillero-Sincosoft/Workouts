@@ -1,16 +1,12 @@
 // //ACA SE VAN A METER TODOS LOS DATOS
-
+//funcion para crear etiquetas
 const createTags = (tags, classes) => {
   const Element = document.createElement(tags);
-  classes.forEach((clase) => {
-    Element.setAttribute("class", classes);
-  });
-
+  Element.setAttribute("class", classes.join(" "));
   return Element;
 };
 const containerMain = createTags("main", ["main"]);
-
-
+//funcion para crear imgs solamente
 const createImage = (images) => {
   const imgFooter = document.createElement("img");
   imgFooter.src = images;
@@ -19,10 +15,10 @@ const createImage = (images) => {
 
 const header = createTags("header", []);
 containerMain.append(header);
-const contentHeader = document.createElement("section");
-contentHeader.classList.add("content");
+const contentHeader = createTags("section", ["content"]);
 header.append(contentHeader);
 
+//funcion para meter dentro de un article una imagen
 const articlelogo = (imagelogo) => {
   const contentImgHeader = document.createElement("article");
   const logo = createImage(imagelogo);
@@ -33,24 +29,28 @@ const articlelogo = (imagelogo) => {
 const logito = articlelogo("assets/images/logo.svg");
 contentHeader.append(logito);
 
-
+//funcion para crear
 const nav = createTags("nav", []);
-const list = (iconMenu) => {
+const button = (iconMenu, idS) => {
   const btn = document.createElement("button");
   const img = createImage(iconMenu);
   btn.append(img);
   btn.classList.add("hidden");
-  btn.setAttribute("id", "menu-close");
+  btn.setAttribute("id", idS);
   nav.append(btn);
   return btn;
 };
-const closeMain = list("assets/images/icon-menu-close.svg");
+contentHeader.append(nav);
+const closeMain = button("assets/images/icon-menu-close.svg", "menu-close");
 
 nav.append(closeMain);
-contentHeader.append(nav);
-const menuButton = createTags("div", ["menu-button", " hidden"])
-contentHeader.append(menuButton)
 
+const menuButton = createTags("div", ["menu-button", "hidden"]);
+contentHeader.append(menuButton);
+const menuclick = button("assets/images/icon-menu.svg", "menu-button");
+menuButton.append(menuclick);
+
+//fnucion para hacer lista
 const createLi = (li) => {
   const ul = document.createElement("ul");
   li.forEach((element) => {
@@ -63,55 +63,51 @@ const createLi = (li) => {
   return ul;
 };
 nav.append(createLi(["home", "new", "popular", "categories"]));
-const sectionDescription = document.createElement("section");
-sectionDescription.classList.add("content-description");
 
-//INVOCAR FUNCIÓN PARA CREAR IMÁGENES
-const imgDesktop = document.createElement("img");
-imgDesktop.classList.add("desktop");
-imgDesktop.src = "assets/images/image-web-3-desktop.jpg";
-
-const imgMobile = document.createElement("img");
-imgMobile.classList.add("mobile");
-imgMobile.src = "assets/images/image-web-3-mobile.jpg";
-
-//FN_CE
+const sectionDescription = createTags("section", ["content-description"]);
 const description = document.createElement("section");
 description.classList.add("description");
-//creacion del del section info
-const sectionInfo = document.createElement("section");
-sectionInfo.classList.add("info");
-const articleTitle = document.createElement("article");
-//titulo descripcion grande
-const h1TitleDescription = document.createElement("h1");
-articleTitle.classList.add("title");
-h1TitleDescription.textContent = "The Bright Future of Web 3.0?";
-//creacion de el otro article
-const articleWritten = document.createElement("article");
-articleWritten.classList.add("written");
-const pWritten = document.createElement("p");
-pWritten.textContent =
-  " We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?";
-//coloco el boton
-const buttonDescription = document.createElement("button");
-buttonDescription.classList.add("info-read");
-buttonDescription.textContent = "READ MORE";
 
-// //content-description
-description.appendChild(imgDesktop);
-description.appendChild(imgMobile);
-//aca se encuentra el containerMain de descripcion y sus hijos
+//funcion para crear imgs con clases
+const imageAndClass = (image1, clas) => {
+  const desktop = document.createElement("img");
+  desktop.src = image1;
+  desktop.classList.add(clas);
+  return desktop;
+};
+const Desktop = imageAndClass(
+  "assets/images/image-web-3-desktop.jpg",
+  "desktop"
+);
+description.append(Desktop);
+const mobile = imageAndClass("assets/images/image-web-3-mobile.jpg", "mobile");
+description.appendChild(mobile);
+
+//funcion para crear una seccion
+const Info = (h1, p, btton) => {
+  const sectionInfo = createTags("section", ["info"]);
+  const contentTitle = createTags("article", ["title"]);
+  const TitleDescription = document.createElement("h1");
+  TitleDescription.textContent = h1;
+  const contentWritten = createTags("article", ["written"]);
+  const writtenDescripcion = document.createElement("p");
+  writtenDescripcion.textContent = p;
+  const buttonDescription = document.createElement("button");
+  buttonDescription.classList.add("info-read");
+  buttonDescription.textContent = btton;
+  sectionInfo.append(contentTitle, contentWritten);
+  contentTitle.append(TitleDescription);
+  contentWritten.append(writtenDescripcion, buttonDescription);
+  return sectionInfo;
+};
+const hola = Info(
+  "The Bright Future of Web 3.0?",
+  "We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?",
+  "READ MORE"
+);
+
+description.append(hola);
 sectionDescription.appendChild(description);
-description.appendChild(sectionInfo);
-//aca se coloca el titulo
-sectionInfo.appendChild(articleTitle);
-articleTitle.appendChild(h1TitleDescription);
-//se agrega article written
-sectionInfo.appendChild(articleWritten);
-articleWritten.appendChild(pWritten);
-//aca va el boton de la descripcion
-articleWritten.appendChild(buttonDescription);
-
 
 const contentNew = document.createElement("section");
 contentNew.classList.add("content-new");
@@ -119,12 +115,7 @@ sectionDescription.append(contentNew);
 const h2New = document.createElement("h2");
 h2New.textContent = "New";
 contentNew.append(h2New);
-
-
-//*********************************************************** FUNCIÓN NOTICIAS*/
-//CREAR UNA FUNCIÓN QUE RECIBA DOS PARÁMETROS DE TEXTO Y RETORNE UN ELEMENTO HTML div que adentro tenga un h3 y un p con cada texto
-// (title, writtennew) =>  <div class="new"> <h3> title </h3> <p> writtenNew </p> </div>
-//definición de la función
+//*********************************************************** FUNCIÓN NOTICIAS*
 const creaNoticia = (title, writtenNew) => {
   const divNew = document.createElement("div");
   divNew.classList.add("new");
@@ -143,7 +134,6 @@ const creaNoticia = (title, writtenNew) => {
 
   return divNew;
 };
-
 //invocación de la función
 const noticiaHydrogen = creaNoticia(
   "Hydrogen VS Electric Cars",
@@ -187,8 +177,7 @@ const contentGame = (
   const h2Footer = document.createElement("h2");
   h2Footer.textContent = titleFooter;
 
-  const subtitle = document.createElement("p");
-  subtitle.classList.add("subtitle");
+  const subtitle = createTags("p", ["subtitle"]);
   subtitle.textContent = subtitlep;
 
   const prueba = document.createElement("p");
@@ -205,7 +194,6 @@ const card1 = contentGame(
   "assets/images/image-retro-pcs.jpg",
   "card-1"
 );
-
 footer.append(card1);
 
 const card2 = contentGame(
@@ -215,7 +203,6 @@ const card2 = contentGame(
   "assets/images/image-top-laptops.jpg",
   "card-2"
 );
-
 footer.append(card2);
 
 const card3 = contentGame(
@@ -225,12 +212,7 @@ const card3 = contentGame(
   "assets/images/image-gaming-growth.jpg",
   "card-3"
 );
-
 footer.append(card3);
-
 //nodos principales
-
 containerMain.append(sectionDescription, footer);
 document.body.append(containerMain);
-
-
