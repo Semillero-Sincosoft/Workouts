@@ -38,7 +38,7 @@ body {
   width: 544px;
   padding-bottom: 20px;
 }
-.envoltura {
+.wrapper {
   display: flex;
   flex-direction: column;
 }
