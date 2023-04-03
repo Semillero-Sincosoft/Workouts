@@ -65,8 +65,8 @@ body {
   justify-content: center;
 }
 .content-element {
-  background-image: url(./social-proof-section-master/images/bg-pattern-top-mobile.svg),
-    url(./social-proof-section-master/images/bg-pattern-bottom-mobile.svg);
+  /* background-image: url(images/bg-pattern-top-mobile.svg),
+    url(./images/bg-pattern-bottom-mobile.svg); */
   background-repeat: no-repeat;
   background-position: left 0vw top 0vh, left 0vw bottom 0vh;
   width: 38rem;
@@ -134,8 +134,8 @@ body {
 }
 @media screen and (min-width: 1400px) {
   body {
-    background-image: url(./social-proof-section-master/images/bg-pattern-top-desktop.svg),
-      url(./social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
+    /* background-image: url(./social-proof-section-master/images/bg-pattern-top-desktop.svg),
+      url(./social-proof-section-master/images/bg-pattern-bottom-desktop.svg); */
     background-repeat: no-repeat;
     background-position: top 0vh left 0vw, top 10rem left 90rem;
   }
