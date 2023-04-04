@@ -44,7 +44,7 @@ span {
   align-items: center;
 }
 .content-title p {
-  margin: 0 3rem 0 3rem;
+  /* margin: 0 3rem 0 3rem; */
   padding: 0 0 3rem 0 ;
   width: 100%;
   font-weight: 500;
