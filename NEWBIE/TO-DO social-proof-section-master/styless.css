@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: var(--only-font);
+}
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+  --only-font: "League Spartan", sans-serif;
+}
+h1 {
+  margin: 8rem 5rem 2rem 5rem;
+  font-size: 3.2rem;
+  color: var(--Very-Dark-Magenta);
+}
+p,
+h3 {
+  font-size: 1.7rem;
+}
+.stat h3 {
+  font-weight: 800;
+}
+h3 {
+  color: var(--White);
+  font-weight: 500;
+}
+span {
+  color: var(--Soft-Pink);
+  opacity: 65%;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.content-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-title p {
+  margin: 0 3rem 0 3rem;
+  padding: 0 0 3rem 0 ;
+  width: 100%;
+  font-weight: 500;
+  color: var(--Dark-Grayish-Magenta);
+  line-height: 2.4rem;
+}
+.content-stats h3 {
+  color: var(--Very-Dark-Magenta);
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.content-home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content-element {
+  background-image: url(./social-proof-section-master/images/bg-pattern-top-mobile.svg),
+    url(./social-proof-section-master/images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: left 0vw top 0vh, left 0vw bottom 0vh;
+  width: 38rem;
+  height: 153rem;
+  display: flex;
+  flex-direction: column;
+}
+.content-title {
+  text-align: center;
+}
+.content-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+.content-stats img {
+  padding-left: 0.8rem;
+}
+.stat {
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 0.6rem;
+  width: 33rem;
+  height: 7.7rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content-coments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 32.8rem;
+  height: 24rem;
+  border-radius: 1rem;
+  background-color: var(--Very-Dark-Magenta);
+}
+.content-user {
+  margin: 3rem 0 1.4rem 3rem;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-user h3 {
+  line-height: 2rem;
+}
+.content-user img {
+  border-radius: 50%;
+  width: 4rem;
+}
+.content-text {
+  color: var(--White);
+  line-height: 2.4rem;
+  margin: 0 3rem 0 3rem;
+}
+@media screen and (min-width: 1400px) {
+  body {
+    background-image: url(./social-proof-section-master/images/bg-pattern-top-desktop.svg),
+      url(./social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top 0vh left 0vw, top 10rem left 90rem;
+  }
+  h1 {
+    font-size: 4.4rem;
+    padding-right: 14rem;
+    margin: 0 0 2rem 0;
+  }
+  .content-element {
+    margin-top: 12.5rem;
+    width: 144rem;
+    height: 80rem;
+    height: fit-content;
+    background-image: none;
+  }
+  .content-title {
+    width: 38%;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 0 16.5rem;
+  }
+  .content-title p {
+    width: 80%;
+  }
+  .content-pr {
+    display: flex;
+  }
+  .content-stats {
+    width: fit-content;
+  }
+  .stat {
+    width: 45rem;
+    height: 6rem;
+    border-radius: 1rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 3rem;
+  }
+  .first {
+    margin-right: 20rem;
+  }
+  .second {
+    margin-right: 10rem;
+  }
+  .star {
+    margin-right: 1.5rem;
+    width: fit-content;
+  }
+  .content-coments {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 16.5rem;
+  }
+  .content-text{
+    width: 27.5rem;
+  }
+  .content-text p{
+    font-size: 1.6rem;
+  }
+  .two {
+    margin: 4rem 0 0 2rem;
+  }
+  .three {
+    margin: 8rem 0 0 3rem;
+  }
+}
