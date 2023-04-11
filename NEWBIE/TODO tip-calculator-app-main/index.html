@@ -31,18 +31,28 @@
               alt=""
               srcset=""
             />
-            <input type="number" class="add" placeholder="0" />
+            <input type="number" class="add" placeholder="0" id="values" />
           </div>
         </article>
-        <article class="percentages">
-          <p>Select Tip %</p>
-          <button class="buttons">5%</button>
-          <button class="buttons">10%</button>
-          <button class="buttons">15%</button>
-          <button class="buttons">25%</button>
-          <button class="buttons">50%</button>
-          <input type="number" class="custom" placeholder="custom" />
-        </article>
+
+        <section class="percentages">
+          <div>
+            <p>Select Tip %</p>
+          </div>
+          <article class="content-buttons">
+            <button class="buttons">5%</button>
+            <button class="buttons">10%</button>
+            <button class="buttons">15%</button>
+            <button class="buttons">25%</button>
+            <button class="buttons">50%</button>
+            <input
+              type="number"
+              class="custom"
+              id="add-percentage"
+              placeholder="Custom"
+            />
+          </article>
+        </section>
 
         <article class="content-bill">
           <p>Number of People</p>
@@ -58,22 +68,25 @@
         </article>
       </section>
       <section class="distribute">
-        <article class="content-proportion">
-          <div class="amount">
-            <h3>Tip Amount</h3>
-            <p>/ person</p>
-          </div>
-          <input type="number" placeholder="0" class="show-result" />
-        </article>
-        <article class="content-proportion">
-          <div class="amount">
-            <h3>Total</h3>
-            <p>/ person</p>
-          </div>
-          <input type="number" class="show-result" placeholder="0" />
-        </article>
+        <div class="xd">
+          <article class="content-proportion">
+            <div class="amount">
+              <h3>Tip Amount</h3>
+              <p>/ person</p>
+            </div>
+            <p class="price" id="result-prices">0</p>
+          </article>
+          <article class="content-proportion">
+            <div class="amount">
+              <h3>Total</h3>
+              <p>/ person</p>
+            </div>
+            <p class="price">0</p>
+          </article>
+        </div>
         <button class="reset">RESET</button>
       </section>
     </main>
   </body>
+  <script src="calculator.js"></script>
 </html>
