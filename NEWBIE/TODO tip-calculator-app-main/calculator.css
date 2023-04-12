@@ -50,6 +50,13 @@ body {
   font-size: 17px;
   font-weight: 800;
 }
+
+.content-buttons {
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .buttons {
   width: 117px;
   height: 48px;
@@ -112,7 +119,6 @@ body {
 .custom {
   width: 117px;
   height: 48px;
-  margin-bottom: 17px;
   border-radius: 6px;
   padding: 12px;
   border: none;
@@ -121,6 +127,7 @@ body {
   background-color: var(--Very-light-grayish-cyan);
   outline: none;
   text-align: end;
+  margin: 10px;
 }
 .custom:hover {
   cursor: pointer;
@@ -168,7 +175,6 @@ body {
   color: var(--Grayish-cyan);
   font-weight: 700;
 }
-
 .show-result::placeholder {
   text-align: end;
 }
@@ -180,6 +186,7 @@ body {
   color: var(--color-Strong);
   width: 150px;
   text-align: end;
+  font-weight: 700;
 }
 
 .reset {
@@ -191,8 +198,8 @@ body {
   font-weight: 700;
   color: var(--color-dark-cyan);
 }
-.xd {
-  height: 140px;
+.content-accounts {
+  gap: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -208,12 +215,14 @@ body {
 @media (max-width: 880px) {
   body {
     width: 100%;
+    height: auto;
   }
   .container {
     flex-direction: column;
     width: 375px;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
+    height: 790px;
   }
 
   .distribute {
@@ -224,8 +233,9 @@ body {
     align-self: end;
   }
   .content {
-    margin-top: 20px;
     align-items: center;
+    margin: 20px 0px 0px 0px;
+    gap: 5px;
   }
   .buttons {
     width: 147px;
@@ -245,9 +255,26 @@ body {
     display: grid;
     grid-gap: 11px;
     grid-template-columns: 152px 1fr;
+    width: 311px;
   }
   .custom {
     width: 147px;
     font-size: 29px;
+    margin: 0;
+  }
+
+  .content-accounts {
+    gap: 32px;
+  }
+  .price {
+    font-size: 32px;
+  }
+
+  .reset {
+    height: 39px;
+  }
+
+  .content p {
+    margin: 12px;
   }
 }
