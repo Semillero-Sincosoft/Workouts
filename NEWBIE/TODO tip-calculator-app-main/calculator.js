@@ -1,62 +1,109 @@
-const containerButtons = document.querySelector(".content-buttons");
-const input = document.createElement("input");
+const inputBill = document.getElementById("bill");
 
-const prices = document.getElementById("result-prices");
+const inputCustom = document.getElementById("custom");
 
-const createButton = (classes, text, porci) => {
-  button = document.createElement("button");
-  button.classList.add(classes);
-  button.innerText = text;
-  button.value = porci;
-  containerButtons.append(button);
-  containerButtons.append(input);
-  return button;
-};
+const buttons = document.querySelectorAll(".content-buttons button");
 
-const button1 = createButton("buttons", "5%", 0.05);
-const button2 = createButton("buttons", "10%", 0.1);
-const button3 = createButton("buttons", "15%", 0.15);
-const button4 = createButton("buttons", "25%", 0.25);
-const button5 = createButton("buttons", "50%", 0.5);
+const inputPeople = document.getElementById("people");
 
-const prueba = document.querySelectorAll("buttons").value;
+const pBillAmount = document.getElementById("tip-amount");
 
-input.classList.add("custom");
-input.id = "add-percentage";
-input.type = "number";
-input.placeholder = "Custom";
-const numero = input.value
+const resetButtons = document.getElementById("reset-button");
 
-const custom = document.getElementById("add-percentage");
+const pPersonTotal = document.getElementById("total");
 
-prices.textContent = "$" + numero * custom;
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    let tipvalue = e.target.innerText;
+    tipvalue = tipvalue.substr(0, tipvalue.length - 1);
 
-prices.textContent = "$" + numero * button1;
+    console.log(tipvalue);
+    if (inputBill.value === "") {
+      return;
+    } else if (inputPeople === "") {
+      inputPeople.value = 1;
+    }
 
-const p = (argumento1, argumento2)=>{
+    calculateTip(
+      parseFloat(inputBill.value),
+      parseInt(tipvalue),
+      parseInt(inputPeople.value)
+    );
+  });
+});
+var perro = typeof tipvalue;
+console.log(perro);
+inputCustom.addEventListener("keyup", (e) => {
+  if (inputBill.value === "") {
+    resetEveryThing();
+    return;
+  } else if (inputPeople.value === "") {
+    inputPeople.value = 1;
+  }
+  calculateTip(
+    parseFloat(inputBill.value),
+    parseFloat(e.target.value),
+    parseInt(inputPeople.value)
+  );
+});
 
+function calculateTip(inputBill, tipPercentage, inputPeople) {
+  let tipAmount = (inputBill * (tipPercentage / 100)) / inputPeople;
+  let tip = Math.floor(tipAmount * 100) / 100;
+  tip = tip.toFixed(2);
 
+  let totalAmount = (tipAmount * inputPeople + inputBill) / inputPeople;
+  totalAmount = totalAmount.toFixed(2);
 
+  pBillAmount.textContent = `$ ${tip}`;
+  pPersonTotal.textContent = `$ ${totalAmount}`;
 }
-// const arrayButton = [5, 10, 15, 25, 50];
 
-// function divideNumbers() {
-//   const inputBill = document.getElementById("values").value;
-//   const custom = document.getElementById("add-percentage").value;
-//   const prices = document.getElementById("result-prices");
+// buttons.forEach((button) => {
+//   button.addEventListener("click", (e) => {
+//     let tipValue = e.target.textContent;
+//     tipValue = tipValue.substr(0, tipValue.length - 1);
+//     if (inputBill.value === "") {
+//       return;
+//     }
+//     if (inputPeople.value === "") {
+//       inputPeople.value = 1;
+//     }
 
-//   prices.innerText = "$" + inputBill * (custom / 100);
-//   return prices;
+//     calculateTip(
+//       parseFloat(inputBill.value),
+//       parseInt(tipValue),
+//       parseInt(inputPeople.value)
+//     );
+//   });
+// });
+
+// inputCustom.addEventListener("keyup", (e) => {
+//   if (event.keyCode === 13) {
+//   } else if (inputBill.value === "") {
+//     resetEveryThing();
+
+//     return;
+//   } else if (inputPeople.value === "") {
+//     inputPeople.value = 1;
+//   }
+
+//   calculateTip(
+//     parseFloat(inputBill.value),
+//     parseFloat(e.target.value),
+//     parseInt(inputPeople.value)
+//   );
+// });
+
+// resetButtons.addEventListener("click", resetEveryThing);
+
+// function resetEveryThing() {
+//   pBillAmount.textContent = "$0.00";
+//   pPersonTotal.textContent = "$0.00";
+
+//   inputBill.value = "";
+
+//   inputPeople.value = "";
+
+//   inputCustom.value = "";
 // }
-
-// // arrayButton.map((el) => {
-// //   const createButton = document.createElement("button");
-// //   createButton.classList.add("buttons");
-// //   createButton.innerText = el + "%";
-// //   const prueba = el / 100;
-// //   createButton.value = prueba;
-// //   createButton.value = prueba;
-// //   containerButtons.append(createButton);
-
-// // });
-// // prices.innerText = "$" + inputBill * (5 / 100);

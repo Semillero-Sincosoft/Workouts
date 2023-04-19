@@ -31,7 +31,7 @@
               alt=""
               srcset=""
             />
-            <input type="number" class="add" placeholder="0" id="values" />
+            <input type="number" class="add cu" placeholder="0" id="bill" />
           </div>
         </article>
 
@@ -39,7 +39,14 @@
           <div>
             <p>Select Tip %</p>
           </div>
-          <article class="content-buttons"></article>
+          <article class="content-buttons">
+            <button class="buttons">5%</button
+            ><button class="buttons">10%</button
+            ><button class="buttons">15%</button
+            ><button class="buttons">25%</button>
+            <button class="buttons">50%</button>
+            <input type="number" placeholder="Custom" class="add custom" id="custom" />
+          </article>
         </section>
 
         <article class="content-bill">
@@ -51,7 +58,7 @@
               alt=""
               srcset=""
             />
-            <input type="number" class="add" placeholder="0" />
+            <input type="number" class="add" placeholder="0" id="people" />
           </div>
         </article>
       </section>
@@ -62,19 +69,19 @@
               <h3>Tip Amount</h3>
               <p>/ person</p>
             </div>
-            <p class="price" id="result-prices">$0.00</p>
+            <p class="price" id="tip-amount ">$0.00</p>
           </article>
           <article class="content-proportion">
             <div class="amount">
               <h3>Total</h3>
               <p>/ person</p>
             </div>
-            <p class="price">$0.00</p>
+            <p class="price" id="Total">$0.00</p>
           </article>
         </div>
-        <button class="reset">RESET</button>
+        <button class="reset" id="reset-button">RESET</button>
       </section>
     </main>
   </body>
-  <script src="calculator.js"></script>
+  <script type ="text/javascript" src="calculator.js"></script>
 </html>
