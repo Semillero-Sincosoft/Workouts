@@ -204,7 +204,7 @@ button:focus {
   background-color: var(--Very-light-Grayish-Cyan-Hover);
   opacity: 100%;
 }
-.content-view .reset:focus {
+.content-view .reset:active {
   background-color: var(--Strong-cyan);
   opacity: 100%;
 }

@@ -1,53 +1,66 @@
-const contentOptionsTips = document.querySelector(".content-options-tips");
-const into = document.getElementById("invoice").value
-const resultTip = document.getElementById("result-tip")
+const intoBill = document.getElementById("invoice");
+const buttons = document.querySelectorAll(".content-options-tips button");
+const numberOfPeople = document.getElementById("num-people");
+const customTip = document.getElementById("custom");
+const resultTipAmount = document.getElementById("result-tip");
+const resultTotalAmount = document.getElementById("result-total");
+const resetButton = document.getElementById("reset-all");
 
-function createButton ( clas, value, text) {
-    const element = document.createElement("button");
-    element.classList.add(clas);
-    element.value = value;
-    element.textContent = text;
-    contentOptionsTips.append(element);
-    
+//Calculate Tip When Click On Tip Percentage Button
+buttons.forEach((buttons) => {
+  buttons.addEventListener("click", (e) => {
+    let tipValue = e.target.textContent;
+    tipValue = tipValue.substr(0, tipValue.length - 1);
+
+    if (intoBill.value === "") return;
+    if (numberOfPeople.value === "") numberOfPeople.value = 1;
+
+    calculateTip(
+      parseFloat(intoBill.value),
+      parseInt(tipValue),
+      parseInt(numberOfPeople.value)
+    );
+
+  });
+});
+
+//Calculate Tip When User Give Custom Tip Percentage Input
+customTip.addEventListener("keyup", (e) =>{
+  if(event.keyCode == 13){
+    if (intoBill.value === ""){
+      resetEverything();
+      return;
+    }else if(numberOfPeople.value === ""){
+      numberOfPeople.value = 1;
+    }
+    calculateTip(
+      parseFloat(intoBill.value),
+      parseFloat(e.target.value),
+      parseInt(numberOfPeople.value)
+    );
+  }
+});
+
+
+function calculateTip(intoBill,tipPercentage,numberOfPeople){
+  let tipAmount = (intoBill * (tipPercentage / 100)) / numberOfPeople;
+  let tip = Math.floor(tipAmount * 100) / 100;
+  tip = tip.toFixed(2);
+
+  let totalAmount = (tipAmount * numberOfPeople + intoBill) / numberOfPeople;
+  totalAmount = totalAmount.toFixed(2);
+
+  resultTipAmount.textContent = `$${tip}`;
+  resultTotalAmount.textContent = `$${totalAmount}`;
+
 }
-const button1 = createButton("button-one", 0.05, "5%");
-const button2 = createButton("button-two", 0.1, "10%");
-const button3 = createButton("button-three", 0.15, "15%");
-const button4 = createButton("button-four", 0.25, "25%");
-const button5 = createButton("button-five", 0.5, "50%");
 
-
-const inputCustom = document.createElement("input");
-inputCustom.classList.add("tip-custom-option");
-inputCustom.type="number";
-inputCustom.placeholder="Custom";
-inputCustom.id = "custom";
-contentOptionsTips.append(inputCustom);
-
-function calculatePercentage (){
-    
+//reset
+resetButton.addEventListener("click", resetEverything);
+function resetEverything(){
+  resultTipAmount.textContent = "$0.00";
+  resultTotalAmount.textContent = "$0.00";
+  intoBill.value = "";
+  numberOfPeople.value = "";
+  customTip.value = "";
 }
-
-
-// const arrayButton = [5, 10, 15, 25, 50];
-// arrayButton.map((el) =>{
-//     const createButton = document.createElement ("button");
-//     createButton.innerText = el + "%";
-//     const valueType = el / 100;
-//     createButton.value = valueType;
-//     let into = document.getElementById("invoice").value;
-//     let resultado = document.getElementById("result-tip");
-//     resultado.innerText = "$" + into * createButton
-//     return resultado
-//     contentOptionsTips.append(createButton, inputCustom);
-// })
-
-// function calculatePercentage (){
-//     let into = document.getElementById("invoice").value;
-//     let custom = document.getElementById("custom").value;
-//     let resultado = document.getElementById("result-tip");
-//     resultado.innerText= "$" + into * ( custom / 100)  
-//     return resultado
-// }
-// calculatePercentage ()
-
