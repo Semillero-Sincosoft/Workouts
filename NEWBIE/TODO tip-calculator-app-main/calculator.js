@@ -31,22 +31,24 @@ buttons.forEach((button) => {
     );
   });
 });
-var perro = typeof tipvalue;
-console.log(perro);
-inputCustom.addEventListener("keyup", (e) => {
-  if (inputBill.value === "") {
-    resetEveryThing();
-    return;
-  } else if (inputPeople.value === "") {
-    inputPeople.value = 1;
-  }
-  calculateTip(
-    parseFloat(inputBill.value),
-    parseFloat(e.target.value),
-    parseInt(inputPeople.value)
-  );
-});
 
+inputCustom.addEventListener("keyup", (e) => {
+    if (event.keyCode === 13) {
+    } else if (inputBill.value === "") {
+      resetEveryThing();
+  
+      return;
+    } else if (inputPeople.value === "") {
+      inputPeople.value = 1;
+    }
+  
+    calculateTip(
+      parseFloat(inputBill.value),
+      parseFloat(e.target.value),
+      parseInt(inputPeople.value)
+    );
+  });
+  
 function calculateTip(inputBill, tipPercentage, inputPeople) {
   let tipAmount = (inputBill * (tipPercentage / 100)) / inputPeople;
   let tip = Math.floor(tipAmount * 100) / 100;
@@ -76,23 +78,6 @@ function calculateTip(inputBill, tipPercentage, inputPeople) {
 //       parseInt(inputPeople.value)
 //     );
 //   });
-// });
-
-// inputCustom.addEventListener("keyup", (e) => {
-//   if (event.keyCode === 13) {
-//   } else if (inputBill.value === "") {
-//     resetEveryThing();
-
-//     return;
-//   } else if (inputPeople.value === "") {
-//     inputPeople.value = 1;
-//   }
-
-//   calculateTip(
-//     parseFloat(inputBill.value),
-//     parseFloat(e.target.value),
-//     parseInt(inputPeople.value)
-//   );
 // });
 
 // resetButtons.addEventListener("click", resetEveryThing);
