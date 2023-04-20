@@ -20,7 +20,7 @@ buttons.forEach((button) => {
     console.log(tipvalue);
     if (inputBill.value === "") {
       return;
-    } else if (inputPeople === "") {
+    } else if (inputPeople.value === "") {
       inputPeople.value = 1;
     }
 
@@ -33,22 +33,22 @@ buttons.forEach((button) => {
 });
 
 inputCustom.addEventListener("keyup", (e) => {
-    if (event.keyCode === 13) {
-    } else if (inputBill.value === "") {
+  if (event.keyCode === 13) {
+    if (inputBill.value === "") {
       resetEveryThing();
-  
       return;
     } else if (inputPeople.value === "") {
       inputPeople.value = 1;
     }
-  
+
     calculateTip(
       parseFloat(inputBill.value),
       parseFloat(e.target.value),
       parseInt(inputPeople.value)
     );
-  });
-  
+  }
+});
+
 function calculateTip(inputBill, tipPercentage, inputPeople) {
   let tipAmount = (inputBill * (tipPercentage / 100)) / inputPeople;
   let tip = Math.floor(tipAmount * 100) / 100;
@@ -57,38 +57,19 @@ function calculateTip(inputBill, tipPercentage, inputPeople) {
   let totalAmount = (tipAmount * inputPeople + inputBill) / inputPeople;
   totalAmount = totalAmount.toFixed(2);
 
-  pBillAmount.textContent = `$ ${tip}`;
-  pPersonTotal.textContent = `$ ${totalAmount}`;
+  pBillAmount.textContent = `$${tip}`;
+  pPersonTotal.textContent = `$${totalAmount}`;
 }
 
-// buttons.forEach((button) => {
-//   button.addEventListener("click", (e) => {
-//     let tipValue = e.target.textContent;
-//     tipValue = tipValue.substr(0, tipValue.length - 1);
-//     if (inputBill.value === "") {
-//       return;
-//     }
-//     if (inputPeople.value === "") {
-//       inputPeople.value = 1;
-//     }
+resetButtons.addEventListener("click", resetEveryThing);
 
-//     calculateTip(
-//       parseFloat(inputBill.value),
-//       parseInt(tipValue),
-//       parseInt(inputPeople.value)
-//     );
-//   });
-// });
+function resetEveryThing() {
+  pBillAmount.textContent = "$0.00";
+  pPersonTotal.textContent = "$0.00";
 
-// resetButtons.addEventListener("click", resetEveryThing);
+  inputBill.value = "";
 
-// function resetEveryThing() {
-//   pBillAmount.textContent = "$0.00";
-//   pPersonTotal.textContent = "$0.00";
+  inputPeople.value = "";
 
-//   inputBill.value = "";
-
-//   inputPeople.value = "";
-
-//   inputCustom.value = "";
-// }
+  inputCustom.value = "";
+}

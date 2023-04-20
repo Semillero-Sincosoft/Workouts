@@ -185,7 +185,7 @@ body {
 .price {
   font-size: 40px;
   color: var(--color-Strong);
-  width: 150px;
+  width: 210px;
   text-align: end;
   font-weight: 700;
 }
