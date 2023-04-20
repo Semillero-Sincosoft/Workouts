@@ -1,16 +1,14 @@
-const inputBill = document.getElementById("bill");
+import {
+  buttons,
+  inputCustom,
+  resetButtons,
+  inputBill,
+  inputPeople,
+  pBillAmount,
+  pPersonTotal,
+} from "./variablesGlobals.js";
 
-const inputCustom = document.getElementById("custom");
-
-const buttons = document.querySelectorAll(".content-buttons button");
-
-const inputPeople = document.getElementById("people");
-
-const pBillAmount = document.getElementById("tip-amount");
-
-const resetButtons = document.getElementById("reset-button");
-
-const pPersonTotal = document.getElementById("total");
+import { reset } from "./funciones.js";
 
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -34,8 +32,8 @@ buttons.forEach((button) => {
 
 inputCustom.addEventListener("keyup", (e) => {
   if (event.keyCode === 13) {
-    if (inputBill.value === "") {
-      resetEveryThing();
+    if (inputCustom.value === "") {
+      alert("por favor ingrese valores");
       return;
     } else if (inputPeople.value === "") {
       inputPeople.value = 1;
@@ -63,13 +61,3 @@ function calculateTip(inputBill, tipPercentage, inputPeople) {
 
 resetButtons.addEventListener("click", resetEveryThing);
 
-function resetEveryThing() {
-  pBillAmount.textContent = "$0.00";
-  pPersonTotal.textContent = "$0.00";
-
-  inputBill.value = "";
-
-  inputPeople.value = "";
-
-  inputCustom.value = "";
-}
