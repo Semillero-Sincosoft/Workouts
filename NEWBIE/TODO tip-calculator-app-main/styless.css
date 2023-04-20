@@ -171,7 +171,7 @@ button:focus {
   font-weight: 700;
   text-align: end;
   color: var(--Strong-cyan);
-  width: 20rem;
+  width: 22rem;
   opacity: 85%;
 }
 .view {
@@ -188,8 +188,6 @@ button:focus {
   color: var(--Light-grayish-cyan);
   opacity: 40%;
   font-size: 1.2rem;
-  
-
 }
 .content-view .reset {
   width: 35rem;
