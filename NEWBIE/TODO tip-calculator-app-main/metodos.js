@@ -3,7 +3,6 @@ import { calculateTip} from "./funciones.js";
 export const eventButton =  button.forEach((buttons) => {
     buttons.addEventListener("click", (e) => {
       let tipValue = e.target.textContent.replace("%", "");
-      // let tipValue = e.target.textContent.replace("%",""); re factorizado linea 11
       if (intoBill.value === "") return;
       if (numberOfPeople.value === "") numberOfPeople.value = 1;
   
