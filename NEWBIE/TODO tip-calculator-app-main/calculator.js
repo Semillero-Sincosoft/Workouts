@@ -1,63 +1,31 @@
 import {
-  buttons,
-  inputCustom,
-  resetButtons,
-  inputBill,
-  inputPeople,
-  pBillAmount,
-  pPersonTotal,
+  customPercentage,
+  resetButton,
+  intoBill,
+  numberPeople,
+  
 } from "./variablesGlobals.js";
 
-import { reset } from "./funciones.js";
+import {pruena, calculatePrueba, reset } from "./funciones.js";
 
-buttons.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    let tipvalue = e.target.innerText;
-    tipvalue = tipvalue.substr(0, tipvalue.length - 1);
+pruena();
 
-    console.log(tipvalue);
-    if (inputBill.value === "") {
-      return;
-    } else if (inputPeople.value === "") {
-      inputPeople.value = 1;
-    }
-
-    calculateTip(
-      parseFloat(inputBill.value),
-      parseInt(tipvalue),
-      parseInt(inputPeople.value)
-    );
-  });
-});
-
-inputCustom.addEventListener("keyup", (e) => {
+customPercentage.addEventListener("keyup", (e) => {
   if (event.keyCode === 13) {
-    if (inputCustom.value === "") {
+    if (customPercentage.value === "") {
       alert("por favor ingrese valores");
       return;
-    } else if (inputPeople.value === "") {
-      inputPeople.value = 1;
+    } else if (numberPeople.value === "") {
+      numberPeople.value = 1;
     }
 
-    calculateTip(
-      parseFloat(inputBill.value),
+    calculatePrueba(
+      parseFloat(intoBill.value),
       parseFloat(e.target.value),
-      parseInt(inputPeople.value)
+      parseInt(numberPeople.value)
     );
   }
 });
 
-function calculateTip(inputBill, tipPercentage, inputPeople) {
-  let tipAmount = (inputBill * (tipPercentage / 100)) / inputPeople;
-  let tip = Math.floor(tipAmount * 100) / 100;
-  tip = tip.toFixed(2);
-
-  let totalAmount = (tipAmount * inputPeople + inputBill) / inputPeople;
-  totalAmount = totalAmount.toFixed(2);
-
-  pBillAmount.textContent = `$${tip}`;
-  pPersonTotal.textContent = `$${totalAmount}`;
-}
-
 reset();
-resetButtons.addEventListener("click", reset);
+resetButton.addEventListener("click", reset);
