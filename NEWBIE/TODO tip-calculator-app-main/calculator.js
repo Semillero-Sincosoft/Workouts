@@ -59,5 +59,5 @@ function calculateTip(inputBill, tipPercentage, inputPeople) {
   pPersonTotal.textContent = `$${totalAmount}`;
 }
 
-resetButtons.addEventListener("click", resetEveryThing);
-
+reset();
+resetButtons.addEventListener("click", reset);
