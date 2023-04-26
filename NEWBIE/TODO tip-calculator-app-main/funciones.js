@@ -18,7 +18,7 @@ export const reset = function resetEveryThing() {
   customPercentage.value = "";
 };
 
-export function pruena() {
+export function eventButton() {
   tipButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       let tipvalue = e.target.innerText.replace("%", "");
@@ -30,7 +30,7 @@ export function pruena() {
         numberPeople.value = 1;
       }
 
-      calculatePrueba(
+      calculateBill(
         parseFloat(intoBill.value),
         parseInt(tipvalue),
         parseInt(numberPeople.value)
@@ -39,18 +39,17 @@ export function pruena() {
   });
 }
 
-export const calculatePrueba = function calculateTip(
-  inputBill,
+export const calculateBill = function calculateTip(
+  intoBill,
   tipPercentage,
-  inputPeople
+  numberPeople
 ) {
-  let tipAmount = (inputBill * (tipPercentage / 100)) / inputPeople;
-  let tip = Math.floor(tipAmount * 100) / 100;
-  tip = tip.toFixed(2);
+  let tipAmount = (intoBill * (tipPercentage / 100)) / numberPeople;
 
-  let totalAmount = (tipAmount * inputPeople + inputBill) / inputPeople;
-  totalAmount = totalAmount.toFixed(2);
+  let totalAmount = intoBill / numberPeople + tipAmount;
 
-  billTip.textContent = `$${tip}`;
-  moneyPerPerson.textContent = `$${totalAmount}`;
+  billTip.textContent = `$${tipAmount.toFixed(2)}`;
+  moneyPerPerson.textContent = `$${totalAmount.toFixed(2)}`;
 };
+
+function esPar() {}

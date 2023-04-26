@@ -3,12 +3,11 @@ import {
   resetButton,
   intoBill,
   numberPeople,
-  
 } from "./variablesGlobals.js";
 
-import {pruena, calculatePrueba, reset } from "./funciones.js";
+import { eventButton, calculateBill, reset } from "./funciones.js";
 
-pruena();
+eventButton();
 
 customPercentage.addEventListener("keyup", (e) => {
   if (event.keyCode === 13) {
@@ -19,7 +18,7 @@ customPercentage.addEventListener("keyup", (e) => {
       numberPeople.value = 1;
     }
 
-    calculatePrueba(
+    calculateBill(
       parseFloat(intoBill.value),
       parseFloat(e.target.value),
       parseInt(numberPeople.value)
