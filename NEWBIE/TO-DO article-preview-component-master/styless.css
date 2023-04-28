@@ -3,13 +3,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
 }
 :root {
   --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
   --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
   --Grayish-Blue: hsl(212, 23%, 69%);
   --Light-Grayish-Blue: hsl(210, 46%, 95%);
-  --font-family-import: "Manrope", sans-serif;
 }
 h1,
 p,
@@ -102,17 +102,17 @@ div.open-share {
   border-radius: 10px;
   visibility: hidden;
 }
-.icon-share:hover{
+.icon-share:hover {
   background-color: var(--Desaturated-Dark-Blue);
 }
-.icon-share:hover path{
-fill: white;
+.icon-share:hover path {
+  fill: white;
 }
 
-.SHARE{
+.text-share {
   letter-spacing: 7px;
 }
-.Triangle-hov{
+.triangle-hov {
   width: 0;
   height: 0;
   border-left: 18px solid transparent;
@@ -120,12 +120,12 @@ fill: white;
   border-top: 20px solid var(--Very-Dark-Grayish-Blue);
   transform: translateX(-50%);
   transform: translateY(155%);
-  position:absolute;
+  position: absolute;
 }
 .icon-share-active {
   display: none;
 }
-path:hover{
+path:hover {
   fill: white !important;
 }
 div.icon-active-share:hover > .open-share {
@@ -161,7 +161,6 @@ div.open-share > div:first-child ul li {
 }
 @media screen and (max-width: 770px) {
   .container {
-    display: flex;
     flex-direction: column;
     height: fit-content;
     width: 330px;
@@ -189,7 +188,7 @@ div.open-share > div:first-child ul li {
     visibility: hidden;
     transform: translateX(0);
   }
-  .Triangle-hov{
+  .Triangle-hov {
     display: none;
   }
   div.icon-active-share:hover > .open-share {
