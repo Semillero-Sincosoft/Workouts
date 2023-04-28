@@ -99,7 +99,7 @@ header .text-header h1,
 p {
   color: var(--Very-Dark-Cyan);
 }
-header .text-header button {
+header .text-header button.firstButton {
   width: 29rem;
   height: 5rem;
   background-color: var(--Pink);
@@ -297,16 +297,17 @@ footer .company-info .column-1,
   gap: 2rem;
   margin: 0 0 2rem 0;
 }
-svg {
+.icon {
   border: solid var(--White) 0.1rem;
   border-radius: 50%;
   padding: 0.6rem;
 }
-svg:hover {
+.icon:hover {
   border: solid var(--Pink) 0.1rem;
   cursor: pointer;
+  fill: var(--Pink);
 }
-svg:hover path {
+.content-icon-facebook:hover path {
   fill: var(--Pink);
 }
 .content-social .rights {
