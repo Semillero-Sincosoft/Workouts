@@ -73,14 +73,14 @@ body {
 .card-3 {
   align-self: end;
 }
-.content-perfil {
+.content-profile {
   justify-content: space-evenly;
 }
-.content-perfil p {
+.content-profile p {
   line-height: 20px;
   color: var(--blanco-color);
 }
-.perfil {
+.profile {
   color: var(--blanco-color);
   display: flex;
 }
@@ -127,7 +127,7 @@ body {
     align-self: center;
     height: 100%;
   }
-  .content-perfil p {
+  .content-profile p {
     color: var(--blanco-color);
     padding-inline: 26px;
   }
