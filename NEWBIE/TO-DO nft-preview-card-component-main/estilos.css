@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
-
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
 }
-
 body {
   font-family: "Outfit", sans-serif;
-  box-sizing: border-box;
   font-size: 18px;
   justify-content: center;
   display: flex;
@@ -22,7 +20,6 @@ body {
   display: flex;
   margin-top: 2%;
 }
-
 .content {
   color: #8bacda;
   margin: 20px;
@@ -32,7 +29,6 @@ body {
   height: auto;
   text-align: left;
 }
-
 .content-img {
   margin: 0px 0px 21px 0px;
   display: flex;
@@ -64,19 +60,20 @@ body {
 img {
   border-radius: 10px;
 }
-.descripcion {
+.description {
   display: flex;
   flex-direction: column;
   padding: 0px 0px 0px 11px;
-  white-space: pre-line;
+  gap: 16px;
+
 }
-.titulo {
+.title {
   color: #fff;
 }
-.texto {
+.text {
   font-size: 17px;
 }
-.titulo:hover {
+.title:hover {
   color: #00fff7;
   cursor: pointer;
 }
@@ -86,17 +83,20 @@ img {
   justify-content: space-between;
   font-size: 15px;
 }
-
+.content-dinner {
+  display: flex;
+  gap: 10px;
+}
 .days {
   color: #8bacda;
 }
-.content-imgfoto {
+.content-photo {
   display: flex;
   align-items: center;
   font-size: 14px;
   padding-top: 15px;
 }
-.img-foto {
+.img-photo {
   width: 40px;
   border: 1px solid white;
   border-radius: 50%;
