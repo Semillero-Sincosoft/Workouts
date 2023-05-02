@@ -48,7 +48,7 @@ header {
   background-color: var(--Very-Pale-Cyan);
   background-image: url(./images/bg-hero-mobile.svg);
   background-repeat: no-repeat;
-  background-position: initial;
+
   background-size: 100%;
 }
 article.content {
@@ -100,7 +100,8 @@ header .text-header h1,
 p {
   color: var(--Very-Dark-Cyan);
 }
-header .text-header button {
+
+header .text-header button.firstButton {
   width: 29rem;
   height: 5rem;
   background-color: var(--Pink);
@@ -299,16 +300,20 @@ footer .company-info .column-1,
   gap: 2rem;
   margin: 0 0 2rem 0;
 }
-svg {
+
+.icon {
+
   border: solid var(--White) 0.1rem;
   border-radius: 50%;
   padding: 0.6rem;
 }
-svg:hover {
+
+.icon:hover {
   border: solid var(--Pink) 0.1rem;
   cursor: pointer;
+  fill: var(--Pink);
 }
-svg:hover path {
+.content-icon-facebook:hover path {
   fill: var(--Pink);
 }
 .content-social .rights {
@@ -400,7 +405,7 @@ svg:hover path {
     width: 35rem;
   }
   footer .company-info {
-    margin: 17rem 0 0 0;
+    margin: 15rem 0 0 0;
     display: flex;
     gap: 15rem;
   }
