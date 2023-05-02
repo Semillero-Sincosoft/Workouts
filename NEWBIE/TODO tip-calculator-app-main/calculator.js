@@ -1,30 +1,10 @@
-import {
-  customPercentage,
-  resetButton,
-  intoBill,
-  numberPeople,
-} from "./variablesGlobals.js";
+import { resetButton } from "./globalVariable.js";
 
-import { eventButton, calculateBill, reset } from "./funciones.js";
+import { eventButtonTip, reset, eventClickAndValues } from "./funciones.js";
 
-eventButton();
+eventButtonTip();
 
-customPercentage.addEventListener("keyup", (e) => {
-  if (event.keyCode === 13) {
-    if (customPercentage.value === "") {
-      alert("por favor ingrese valores");
-      return;
-    } else if (numberPeople.value === "") {
-      numberPeople.value = 1;
-    }
-
-    calculateBill(
-      parseFloat(intoBill.value),
-      parseFloat(e.target.value),
-      parseInt(numberPeople.value)
-    );
-  }
-});
+eventClickAndValues();
 
 reset();
 resetButton.addEventListener("click", reset);

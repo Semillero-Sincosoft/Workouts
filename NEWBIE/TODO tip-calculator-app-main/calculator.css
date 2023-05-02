@@ -269,6 +269,8 @@ body {
   }
   .price {
     font-size: 32px;
+    width: 180px;
+
   }
 
   .reset {
