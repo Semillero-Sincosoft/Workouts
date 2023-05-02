@@ -1,2 +1,2 @@
-import { intoBill,button, numberOfPeople, customTip, resultTipAmount, resultTotalAmount, resetButton } from "./variables.js";
-import { eventButton } from "./metodos.js";
+import { intoBill,button, numberOfPeople, customTip, resultTipAmount, resultTotalAmount, resetButton } from "./elementosHTML.js";
+import { eventButton } from "./funciones.js";
