@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --primary-font: "Big Shoulders Display", cursive;
+  --Secondary-font: "Lexend Deca", sans-serif;
+}
+body {
+  background-color: var(--Very-light-gray);
+  height: 100vh;
+  width: 100vw;
+}
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  border-radius: 8px;
+  display: flex;
+  width: 921px;
+  height: 500px;
+}
+.card img {
+  width: 30%;
+  margin-bottom: 20px;
+}
+.card h2.title {
+  font-family: var(--primary-font);
+  color: var(--Very-light-gray);
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+.card p.paragraph {
+  font-size: 15px;
+  margin-bottom: 70px;
+  line-height: 27px;
+}
+.card p,
+button {
+  font-family: var(--Secondary-font);
+  color: var(--Transparent-white);
+}
+
+.card button {
+  margin-bottom: 50px;
+  height: 48px;
+  width: 146px;
+  border: none;
+  border-radius: 50px;
+}
+.card-1,
+.card-2,
+.card-3 {
+  padding: 45px 50px 0px 50px;
+}
+.card-1 {
+  background-color: var(--Bright-orange);
+  border-radius: 8px 0px 0px 8px;
+}
+.card-1 button {
+  color: var(--Bright-orange);
+  background-color: var(--Very-light-gray);
+}
+.card-1 button:hover {
+  background-color: transparent;
+  border: solid 2px;
+  color: var(--Transparent-white);
+}
+
+.card-2 {
+  background-color: var(--Dark-cyan);
+}
+.card-2 button {
+  color: var(--Dark-cyan);
+  background-color: var(--Very-light-gray);
+}
+.card-2 button:hover {
+  background-color: transparent;
+  border: solid 2px;
+  color: var(--Transparent-white);
+}
+
+.card-3 {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0px 8px 8px 0px;
+}
+.card-3 button {
+  color: var(--Very-dark-cyan);
+  background-color: var(--Very-light-gray);
+}
+.card-3 button:hover {
+  background-color: transparent;
+  border: solid 2px;
+  color: var(--Transparent-white);
+}
+
+@media screen and (max-width: 917px) {
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .card {
+    flex-direction: column;
+    width: 320px;
+  }
+  .card-1 {
+    border-radius: 8px 8px 0px 0px;
+    padding-right: 45px;
+  }
+  .card-3 {
+    border-radius: 0px 0px 8px 8px;
+    padding-right: 45px;
+  }
+  img {
+    margin-bottom: 30px;
+  }
+
+  p.paragraph {
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+}
