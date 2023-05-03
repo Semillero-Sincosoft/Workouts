@@ -1,69 +1,15 @@
 //funcion que crea etiquetas con clases
-const createTagsCLass = (tags, classes) => {
-  const element = document.createElement(tags);
-  element.setAttribute("class", classes.join(" "));
-
-  return element;
-};
-
-//creacion de una funcion que crea etiquetas
-const createTags = (tags) => {
-  const element = document.createElement(tags);
-  return element;
-};
-
+import { createTags } from "./createElement.js";
+import { wrapperHeader } from "./header.js";
+import { content, cards } from "./section.js";
 const main = createTags("section");
-const wrapperHeader = (title, subtitle, written) => {
-  const head = createTagsCLass("header", ["encabezado", "flex-and-direction"]);
-  const sectionHeader = createTagsCLass("section", ["title"]);
-  const titleHeader = createTags("h1");
-  const subtitleHeader = createTags("h2");
-  const writtenHeader = createTags("p");
 
-  titleHeader.textContent = title;
-  subtitleHeader.textContent = subtitle;
-  writtenHeader.textContent = written;
-  head.append(sectionHeader);
-  sectionHeader.append(titleHeader, subtitleHeader, writtenHeader);
-
-  return head;
-};
-
-const header = wrapperHeader(
+//creacion de una funcion que crea tarjetas
+export const header = wrapperHeader(
   "Reliable, efficient delivery",
   "Powered by Technology",
   "Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful"
 );
-//creacion de una funcion que crea tarjetas
-
-const content = createTagsCLass("section", ["content"]);
-const cards = (title, written, img, clas) => {
-  const contentCards = createTagsCLass("div", [
-    "columns",
-    "flex-and-direction",
-  ]);
-
-  const content = createTagsCLass("section", ["cards"]);
-  content.classList.add(clas);
-  contentCards.append(content);
-  const contentTitle = createTagsCLass("article", ["title-content"]);
-  const title2 = createTags("h2");
-  title2.textContent = title;
-  contentTitle.append(title2);
-  const contentWritten = createTags("p");
-  contentWritten.textContent = written;
-
-  contentImg = createTagsCLass("article", ["img", "flex-and-direction"]);
-  img1 = createTags("img");
-  img1.src = img;
-
-  content.append(contentTitle, contentImg);
-
-  contentTitle.appendChild(contentWritten);
-  contentImg.appendChild(img1);
-
-  return contentCards;
-};
 
 const supervisor = cards(
   "Supervisor",
