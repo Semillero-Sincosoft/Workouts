@@ -2,37 +2,22 @@ import { createImage, createTag } from "./createElements.js";
 
 export const contentCards = createTag("section", ["content-cards", "card-2"]);
 
-export const card = (subtitle, writen, img) => {
+export const card = (subtitle, writen,img) => {
   const cards = createTag("article", ["cards", "flex-and-direction"]);
   const h2Card = createTag("h2", [""]);
   h2Card.textContent = subtitle;
   const writtenGrow = createTag("p", [""]);
   writtenGrow.textContent = writen;
   const contentImgTogether = createTag("article", ["content-img-together"]);
-  const imageTogether = createImage(img, "imgs");
-
+  const imageTogether = createImage(
+    "images/illustration-grow-together.svg",
+    "imgs"
+  );
+  
   contentCards.append(cards, contentImgTogether);
   cards.append(h2Card, writtenGrow);
   contentImgTogether.append(imageTogether);
   return cards;
-};
-
-export const createCard = (subtitle, text, urlImg, cardObjetivo = "") => {
-  const card = createTag("article", ["cards", "flex-and-direction"]);
-  const subtitleh2 = document.createElement("h2");
-  subtitleh2.textContent = subtitle;
-  const textoInformativo = document.createElement("p");
-  textoInformativo.textContent = text;
-
-  const contentImg = createTag("article", ["content-img-together"]);
-  const imagen = createImage(urlImg, "imgs");
-  contentImg.append(imagen);
-  const objetivo = document.getElementsByClassName("card-1")[0];
-  objetivo.append(imagen);
-  card.append(subtitleh2, textoInformativo);
-  contentCards.append(card, contentImg);
-
-  return card;
 };
 
 export const contentCardFlow = document.createElement("section");
