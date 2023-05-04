@@ -2,8 +2,8 @@ import { createTag } from "./createElements.js";
 
 import {
   contentCards,
-  contentCardFlow,
-  contentCardUsers,
+  //contentCardFlow,
+  // contentCardUsers,
   card,
   card2,
   createCard,
@@ -18,6 +18,18 @@ import {
 } from "./header.js";
 const container = createTag("main", ["container", "flex-and-direction"]);
 
+/**SECTIONS DE CARDS */
+const contentCardTogether = document.createElement("section");
+contentCardTogether.classList.add("content-cards", "card-1");
+
+
+const contentCardFlow = document.createElement("section");
+contentCardFlow.classList.add("content-cards", "card-2");
+
+
+const contentCardUsers = document.createElement("section");
+contentCardUsers.classList.add("content-cards", "card-3");
+
 const contentHead = header(
   "Build The Community Your Fans Will Love",
   " Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion."
@@ -29,28 +41,32 @@ const contentWritten = createTag("div", [
   "flex-and-direction",
 ]);
 
-const together = card(
-  "Grow Together",
-  "Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.",
-  "images/illustration-grow-together.svg"
-);
+contentWritten.append(contentCardTogether);
+// const together = createCard(
+//   "Grow Together",
+//   "Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.",
+//   "images/illustration-grow-together.svg",
+//   "card-1"
+// );
 const together1 = createCard(
   "Grow Together",
   "Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.",
-  "images/illustration-grow-together.svg"
+  "images/illustration-grow-together.svg",
+  contentCardTogether
 );
 
 const cardFLow = createCard(
   "Flowing Conversations",
   "You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.",
   "images/illustration-flowing-conversation.svg",
-  "card-1"
+  contentCardFlow
 );
 
 const cardUsers = createCard(
   "Your Users",
   "It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.",
-  "images/illustration-your-users.svg"
+  "images/illustration-your-users.svg",
+  contentCardUsers
 );
 
 const community = document.createElement("section");

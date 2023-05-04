@@ -17,7 +17,8 @@ export const card = (subtitle, writen, img) => {
   return cards;
 };
 
-export const createCard = (subtitle, text, urlImg, cardObjetivo = "") => {
+export const createCard = (subtitle, text, urlImg, cardObjetivo) => {
+  console.log(cardObjetivo);
   const card = createTag("article", ["cards", "flex-and-direction"]);
   const subtitleh2 = document.createElement("h2");
   subtitleh2.textContent = subtitle;
@@ -27,16 +28,15 @@ export const createCard = (subtitle, text, urlImg, cardObjetivo = "") => {
   const contentImg = createTag("article", ["content-img-together"]);
   const imagen = createImage(urlImg, "imgs");
   contentImg.append(imagen);
-  const objetivo = document.getElementsByClassName("card-1")[0];
-  objetivo.append(imagen);
+
   card.append(subtitleh2, textoInformativo);
-  contentCards.append(card, contentImg);
+  cardObjetivo.append(card, imagen);
 
   return card;
 };
 
-export const contentCardFlow = document.createElement("section");
-contentCardFlow.classList.add("content-cards", "card-1");
+// export const contentCardFlow = document.createElement("section");
+// contentCardFlow.classList.add("content-cards", "card-1");
 
 export const card2 = (h2, p) => {
   const cards2 = document.createElement("article");
@@ -75,5 +75,5 @@ export const card3 = (h2, p) => {
   return cards2;
 };
 
-export const contentCardUsers = document.createElement("section");
-contentCardUsers.classList.add("content-cards", "card-2");
+// export const contentCardUsers = document.createElement("section");
+// contentCardUsers.classList.add("content-cards", "card-2");
