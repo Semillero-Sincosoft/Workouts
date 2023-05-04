@@ -1,13 +1,6 @@
 import { createTag } from "./createElements.js";
 
-import {
-  contentCards,
-  //contentCardFlow,
-  // contentCardUsers,
-  card,
-  card2,
-  createCard,
-} from "./cards.js";
+import { contentCards, createCard } from "./cards.js";
 import {
   header,
   head,
@@ -38,44 +31,47 @@ const contentWritten = createTag("div", [
   "content-written",
   "flex-and-direction",
 ]);
-
-contentWritten.append(contentCardTogether);
-// const together = createCard(
-//   "Grow Together",
-//   "Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.",
-//   "images/illustration-grow-together.svg",
-//   "card-1"
-// );
 const together1 = createCard(
   "Grow Together",
   "Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.",
   "images/illustration-grow-together.svg",
-  contentCardTogether
+  contentCards
 );
 
-const cardFLow = card2(
+const cardFLow = createCard(
   "Flowing Conversations",
   "You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.",
   "images/illustration-flowing-conversation.svg",
   contentCardFlow
 );
 
-const cardUsers = card3(
+const cardUsers = createCard(
   "Your Users",
   "It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.",
   "images/illustration-your-users.svg",
   contentCardUsers
 );
 
-const community = document.createElement("section");
-community.classList.add("community");
-const contentCommunity = document.createElement("article");
-contentCommunity.classList.add("content-community", "flex-justify-and-item");
-const titleCommunity = document.createElement("h2");
-titleCommunity.textContent = "Ready To Build Your Community?";
-const btnCommunity = document.createElement("button");
-btnCommunity.classList.add("get-started-2", "buttons");
-btnCommunity.textContent = "Get Started For Free";
+const contentCommunity = createTag("article", [
+  "content-community",
+  "flex-justify-and-item",
+]);
+
+const createRegister = (h2, button) => {
+  const title = createCard("h2", [""]);
+  title.textContent = h2;
+  const btn = createTag("button", ["get-started", "buttons"]);
+  btn.textContent = button;
+
+  return contentCommunity;
+};
+
+
+// const titleCommunity = document.createElement("h2");
+// titleCommunity.textContent = "Ready To Build Your Community?";
+// const btnCommunity = document.createElement("button");
+// btnCommunity.classList.add("get-started-2", "buttons");
+// btnCommunity.textContent = "Get Started For Free";
 //comienza footer
 
 const footer = document.createElement("footer");
@@ -124,24 +120,16 @@ writtenGmail.textContent = "example@huddle.com";
 const contentList = document.createElement("article");
 contentList.classList.add("list");
 
-const ul = document.createElement("ul");
-ul.classList.add("flex-and-direction");
-const liAbout = document.createElement("li");
-liAbout.textContent = "About Us";
-const liWhat = document.createElement("li");
-liWhat.textContent = "What We Do";
-const liFaq = document.createElement("li");
-liFaq.textContent = "FAQ";
-
 const textLi = ["About Us", "What We Do", "FAQ"];
 
 function crearEL() {
   const ul = document.createElement("ul");
+  ul.classList.add("flex-and-direction");
 
   contentList.append(ul);
   for (let i = 0; i < textLi.length; i++) {
-    // const li = createTag("li", [""]);
     const li = document.createElement("li");
+
     li.textContent = textLi[i];
     ul.append(li);
   }
@@ -149,7 +137,7 @@ function crearEL() {
   return ul;
 }
 
-const xd = crearEL();
+const list = crearEL();
 
 const ulBlog = document.createElement("ul");
 ulBlog.classList.add("flex-and-direction");
@@ -179,14 +167,14 @@ window.addEventListener("load", () => {
 head.append(contentHead);
 
 contentWritten.appendChild(contentCards);
-contentCards.appendChild(together);
+contentCards.appendChild(together1);
+
 contentCardFlow.append(cardFLow);
 
 contentCardUsers.appendChild(cardUsers);
 
-community.appendChild(contentCommunity);
-contentCommunity.appendChild(titleCommunity);
-contentCommunity.appendChild(btnCommunity);
+// contentCommunity.appendChild(titleCommunity);
+// contentCommunity.appendChild(btnCommunity);
 
 footer.appendChild(contentFooter);
 contentFooter.appendChild(contactUs);
@@ -210,12 +198,12 @@ contentGmail.appendChild(gmailSvg);
 gmail.appendChild(writtenGmail);
 
 contentFooter.appendChild(contentList);
-contentList.appendChild(xd);
+contentList.appendChild(list);
 
 contentList.appendChild(ulBlog);
-ulBlog.appendChild(liCareer);
-ulBlog.appendChild(liBLog);
-ulBlog.appendChild(liContact);
+// ulBlog.appendChild(liCareer);
+// ulBlog.appendChild(liBLog);
+// ulBlog.appendChild(liContact);
 
 contentFooter.appendChild(contentNetworks);
 contentNetworks.appendChild(facebook);
@@ -231,5 +219,5 @@ container.append(
 );
 bgHeader.appendChild(menu);
 bgHeader.appendChild(contentDescrption);
-footer.appendChild(community);
+footer.appendChild(contentCommunity);
 document.body.appendChild(container);
