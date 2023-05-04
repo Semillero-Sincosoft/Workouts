@@ -1,5 +1,13 @@
-import { createImage, createTag } from "./createElements.js";
+import { createTag } from "./createElements.js";
 
+import {
+  contentCards,
+  contentCardFlow,
+  contentCardUsers,
+  card,
+  card2,
+  createCard,
+} from "./cards.js";
 import {
   header,
   head,
@@ -21,80 +29,29 @@ const contentWritten = createTag("div", [
   "flex-and-direction",
 ]);
 
-const contentCards = createTag("section", ["content-cards", "card-2"]);
-
-const card = (subtitle, writen, imgs) => {
-  const cards = createTag("article", ["cards", "flex-and-direction"]);
-
-  const h2Card = createTag("h2", [""]);
-  h2Card.textContent = subtitle;
-
-  const writtenGrow = createTag("p", [""]);
-  writtenGrow.textContent = writen;
-
-  const contentImgTogether = createTag("article", ["content-img-together"]);
-
-  const imgTogether = document.createElement("img");
-  imgTogether.src = imgs;
-  imgTogether.classList.add("imgs");
-  contentCards.append(cards, contentImgTogether);
-  cards.append(h2Card, writtenGrow);
-  contentImgTogether.append(imgTogether);
-
-  return cards;
-};
-
 const together = card(
   "Grow Together",
   "Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.",
   "images/illustration-grow-together.svg"
 );
-
-const contentCardFlow = document.createElement("section");
-contentCardFlow.classList.add("content-cards", "card-1");
-
-const card2 = (h2, p, imgs) => {
-  const cards2 = document.createElement("article");
-  cards2.classList.add("cards", "flex-and-direction");
-
-  const h2Flow = createTag("h2", [""]);
-  h2Flow.textContent = h2;
-
-  const writtenFlow = createTag("p", [""]);
-  writtenFlow.textContent = p;
-
-  const contentImg = createTag("article", [""]);
-  contentCardFlow.append(contentImg, cards2);
-  const img = document.createElement("img");
-  img.src = imgs;
-  img.classList.add("imgs");
-  cards2.append(h2Flow, writtenFlow);
-  contentImg.appendChild(img);
-  return cards2;
-};
-
-const cardFLow = card2(
-  "Flowing Conversations",
-  "You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.",
-  "images/illustration-flowing-conversation.svg"
+const together1 = createCard(
+  "Grow Together",
+  "Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.",
+  "images/illustration-grow-together.svg"
 );
 
+const cardFLow = createCard(
+  "Flowing Conversations",
+  "You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.",
+  "images/illustration-flowing-conversation.svg",
+  "card-1"
+);
 
-
-const contentCardUsers = document.createElement("section");
-contentCardUsers.classList.add("content-cards", "card-1");
-const cards3 = document.createElement("article");
-cards3.classList.add("cards", "flex-and-direction");
-const h2User = document.createElement("h2");
-h2User.textContent = "Your Users";
-const writtenUsers = document.createElement("p");
-writtenUsers.textContent =
-  "It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.";
-const contentImgUsers = document.createElement("article");
-contentImgUsers.classList.add("content-img-together");
-const imgUsers = document.createElement("img");
-imgUsers.classList.add("imgs");
-imgUsers.src = "images/illustration-your-users.svg";
+const cardUsers = createCard(
+  "Your Users",
+  "It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.",
+  "images/illustration-your-users.svg"
+);
 
 const community = document.createElement("section");
 community.classList.add("community");
@@ -162,6 +119,24 @@ liWhat.textContent = "What We Do";
 const liFaq = document.createElement("li");
 liFaq.textContent = "FAQ";
 
+const textLi = ["About Us", "What We Do", "FAQ"];
+
+function crearEL() {
+  const ul = document.createElement("ul");
+
+  contentList.append(ul);
+  for (let i = 0; i < textLi.length; i++) {
+    // const li = createTag("li", [""]);
+    const li = document.createElement("li");
+    li.textContent = textLi[i];
+    ul.append(li);
+  }
+
+  return ul;
+}
+
+const xd = crearEL();
+
 const ulBlog = document.createElement("ul");
 ulBlog.classList.add("flex-and-direction");
 const liCareer = document.createElement("li");
@@ -189,12 +164,14 @@ window.addEventListener("load", () => {
 });
 head.append(contentHead);
 
-contentWritten.appendChild(contentCards);
-contentCards.appendChild(together);
+//contentWritten.appendChild(contentCards);
+//contentCards.appendChild(together);
 contentCardFlow.append(cardFLow);
 
-// contentCardUsers.appendChild(cardFLos);
+contentWritten.appendChild(together1);
+//contentWritten.appendChild(together1);
 
+contentCardUsers.appendChild(cardUsers);
 
 community.appendChild(contentCommunity);
 contentCommunity.appendChild(titleCommunity);
@@ -222,10 +199,7 @@ contentGmail.appendChild(gmailSvg);
 gmail.appendChild(writtenGmail);
 
 contentFooter.appendChild(contentList);
-contentList.appendChild(ul);
-ul.appendChild(liAbout);
-ul.appendChild(liWhat);
-ul.appendChild(liFaq);
+contentList.appendChild(xd);
 
 contentList.appendChild(ulBlog);
 ulBlog.appendChild(liCareer);
