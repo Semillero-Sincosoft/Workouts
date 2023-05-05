@@ -102,12 +102,11 @@ head.appendChild(bgHeader);
 menu.appendChild(logo);
 
 // menu.appendChild(login);
-menu.appendChild(document.createElement("button")).classList.add("login");
-window.addEventListener("load", () => {
-  const loginBtn = document.querySelector(".login");
-  loginBtn.textContent = "Try It Free";
-});
+
+const loginBtn = document.createElement("button");
+loginBtn.textContent = "Try It Free";
 head.append(contentHead);
+menu.appendChild(loginBtn).classList.add("login");
 
 contentWritten.appendChild(contentCards);
 contentCards.appendChild(together1);
@@ -126,7 +125,7 @@ contentFooter.appendChild(contentList);
 contentList.appendChild(list);
 
 contentFooter.appendChild(contentNetworks);
-contentNetworks.append(facebook,twitter,instagram);
+contentNetworks.append(facebook, twitter, instagram);
 
 //nodos principales
 container.append(
