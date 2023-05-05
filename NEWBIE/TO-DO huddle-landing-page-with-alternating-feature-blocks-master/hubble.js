@@ -9,6 +9,20 @@ import {
   logo,
   contentDescrption,
 } from "./header.js";
+import {
+  contact,
+  footer,
+  contentFooter,
+  contactUs,
+  logoWhite,
+  contentList,
+  list,
+  contentNetworks,
+  facebook,
+  twitter,
+  instagram,
+} from "./footer.js";
+
 const container = createTag("main", ["container", "flex-and-direction"]);
 
 /**SECTIONS DE CARDS */
@@ -57,107 +71,36 @@ const contentCommunity = createTag("article", [
   "flex-justify-and-item",
 ]);
 
+// ======= registre card =======
 const createRegister = (h2, button) => {
-  const title = createCard("h2", [""]);
+  const title = createTag("h2", [""]);
   title.textContent = h2;
   const btn = createTag("button", ["get-started", "buttons"]);
   btn.textContent = button;
 
-  return contentCommunity;
+  contentCommunity.append(title, btn);
+  return btn;
 };
 
+const textRegister = createRegister(
+  "Ready To Build Your Community?",
+  "Get Started For Free"
+);
 
-// const titleCommunity = document.createElement("h2");
-// titleCommunity.textContent = "Ready To Build Your Community?";
-// const btnCommunity = document.createElement("button");
-// btnCommunity.classList.add("get-started-2", "buttons");
-// btnCommunity.textContent = "Get Started For Free";
-//comienza footer
+const ubication = contact(
+  "images/icon-location.svg",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+);
 
-const footer = document.createElement("footer");
-const contentFooter = document.createElement("section");
-contentFooter.classList.add("content-footer");
-const contactUs = document.createElement("article");
-contactUs.classList.add("contact-us", "flex-and-direction");
-const logoWhite = document.createElement("img");
-logoWhite.classList.add("logo-white");
-logoWhite.src = "images/logo-white.svg";
+const numberContact = contact("images/icon-phone.svg", "+1-543-123-4567");
 
-const contentInfo = document.createElement("div");
-contentInfo.classList.add("content-info");
-const info = document.createElement("div");
-info.classList.add("info");
-const iconInfo = document.createElement("div");
-iconInfo.classList.add("icons-info");
-const svgiconInfo = document.createElement("img");
-svgiconInfo.src = "images/icon-location.svg";
-const writtenFooter = document.createElement("p");
-writtenFooter.textContent =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+const gmail = contact("images/icon-email.svg", "example@huddle.com");
 
-const infoContact = document.createElement("div");
-infoContact.classList.add("content-info");
-const contact = document.createElement("div");
-contact.classList.add("info");
-const contentPhone = document.createElement("div");
-contentPhone.classList.add("icons-info");
-const phone = document.createElement("img");
-phone.src = "images/icon-phone.svg";
-const numContact = document.createElement("p");
-numContact.textContent = "+1-543-123-4567";
+// aca esta la lista del footer
 
-const infoGmail = document.createElement("div");
-infoGmail.classList.add("contentf-info");
-const gmail = document.createElement("div");
-gmail.classList.add("info");
-const contentGmail = document.createElement("div");
-contentGmail.classList.add("icons-info");
-const gmailSvg = document.createElement("img");
-gmailSvg.src = "images/icon-email.svg";
-const writtenGmail = document.createElement("p");
-writtenGmail.textContent = "example@huddle.com";
-
-const contentList = document.createElement("article");
-contentList.classList.add("list");
-
-const textLi = ["About Us", "What We Do", "FAQ"];
-
-function crearEL() {
-  const ul = document.createElement("ul");
-  ul.classList.add("flex-and-direction");
-
-  contentList.append(ul);
-  for (let i = 0; i < textLi.length; i++) {
-    const li = document.createElement("li");
-
-    li.textContent = textLi[i];
-    ul.append(li);
-  }
-
-  return ul;
-}
-
-const list = crearEL();
-
-const ulBlog = document.createElement("ul");
-ulBlog.classList.add("flex-and-direction");
-const liCareer = document.createElement("li");
-liCareer.textContent = "Career";
-const liBLog = document.createElement("li");
-liBLog.textContent = "Blog";
-const liContact = document.createElement("li");
-liContact.textContent = "Contact Us";
-
-const contentNetworks = document.createElement("article");
-contentNetworks.classList.add("content-networks");
-const facebook = document.createElement("img");
-facebook.src = "images/facebook (4).svg";
-const twitter = document.createElement("img");
-twitter.src = "images/gorjeo (2).svg";
-const instagram = document.createElement("img");
-instagram.src = "images/instagram (3).svg";
 head.appendChild(bgHeader);
 menu.appendChild(logo);
+
 // menu.appendChild(login);
 menu.appendChild(document.createElement("button")).classList.add("login");
 window.addEventListener("load", () => {
@@ -173,42 +116,18 @@ contentCardFlow.append(cardFLow);
 
 contentCardUsers.appendChild(cardUsers);
 
-// contentCommunity.appendChild(titleCommunity);
-// contentCommunity.appendChild(btnCommunity);
+contentCommunity.appendChild(textRegister);
 
 footer.appendChild(contentFooter);
 contentFooter.appendChild(contactUs);
-contactUs.appendChild(logoWhite);
-contactUs.appendChild(contentInfo);
-contentInfo.appendChild(info);
-info.appendChild(iconInfo);
-iconInfo.appendChild(svgiconInfo);
-info.appendChild(writtenFooter);
-
-contactUs.appendChild(infoContact);
-infoContact.appendChild(contact);
-contact.appendChild(contentPhone);
-contentPhone.appendChild(phone);
-contact.appendChild(numContact);
-
-contactUs.appendChild(infoGmail);
-infoGmail.appendChild(gmail);
-gmail.appendChild(contentGmail);
-contentGmail.appendChild(gmailSvg);
-gmail.appendChild(writtenGmail);
+contactUs.append(logoWhite, ubication, numberContact, gmail);
 
 contentFooter.appendChild(contentList);
 contentList.appendChild(list);
 
-contentList.appendChild(ulBlog);
-// ulBlog.appendChild(liCareer);
-// ulBlog.appendChild(liBLog);
-// ulBlog.appendChild(liContact);
-
 contentFooter.appendChild(contentNetworks);
-contentNetworks.appendChild(facebook);
-contentNetworks.appendChild(twitter);
-contentNetworks.appendChild(instagram);
+contentNetworks.append(facebook,twitter,instagram);
+
 //nodos principales
 container.append(
   head,
