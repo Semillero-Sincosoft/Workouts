@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Dark-cyan: hsl(176, 72%, 28%);
+  --color-Dark-gray: hsl(0, 0%, 48%);
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+  background-image: url(images/image-hero-desktop.jpg);
+  background-repeat: no-repeat;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header {
+  height: 400px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 52px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  color: white;
+  height: 10px;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.img-logo {
+  width: 130px;
+  height: 20px;
+}
+
+.card-monitor {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  bottom: 80px;
+  border-radius: 20px;
+  gap: 17px;
+  width: 730px;
+  height: 270px;
+}
+.card-monitor p {
+  color: var(--color-Dark-gray);
+}
+
+.img-master {
+  position: relative;
+  top: -60px;
+}
+
+.button-proyect {
+  width: 200px;
+  height: 56px;
+  border-radius: 28px;
+  border: none;
+  background-color: var(--Moderate-cyan);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.content-button {
+  display: flex;
+  justify-content: space-between;
+  width: 87%;
+}
+
+.bookmark {
+  display: flex;
+  width: 175px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: #fafafa;
+  gap: 10px;
+}
+
+.bookmark p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-tip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 731px;
+  height: 160px;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.content-tip h2 {
+  font-size: 32px;
+}
+
+.content-tip p {
+  color: var(--color-Dark-gray);
+}
+
+.number {
+  border-right: solid 1px var(--color-Dark-gray);
+}
