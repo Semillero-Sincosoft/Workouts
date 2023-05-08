@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caculator</title>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+  <body>
+    <img src="images/logo.svg" alt="" class="logo-title" />
+    <main class="content-home">
+      <section class="content-calculator">
+        <article class="content-options">
+          <section class="content-into">
+            <h2>Bill</h2>
+            <article class="content">
+              <article class="icon">
+                <img src="images/icon-dollar.svg" alt="" />
+              </article>
+              <article class="content-bill">
+                <input
+                  class="bill-amount into"
+                  type="number"
+                  placeholder="0"
+                  id="invoice"
+                />
+              </article>
+            </article>
+          </section>
+
+          <article class="content-tips">
+            <h2>Select Tip %</h2>
+            <section class="content-options-tips">
+              <button>5%</button>
+              <button>10%</button>
+              <button>15%</button>
+              <button>25%</button>
+              <button>50%</button>
+              <input
+                class="tip-custom-option"
+                type="number"
+                placeholder="Custom"
+                id="custom"
+              />
+            </section>
+          </article>
+
+          <section class="content-people">
+            <h2>Number of People</h2>
+            <article class="content">
+              <img src="images/icon-person.svg" alt="" />
+              <input
+                type="number"
+                class="number-people-division into"
+                placeholder="0"
+                id="num-people"
+              />
+            </article>
+          </section>
+        </article>
+
+        <article class="content-view">
+          <section class="content-numbers-result">
+            <div class="content-results">
+              <section class="tip-amount view">
+                <article class="text-tip-amount">
+                  <h2>Tip Amount</h2>
+                  <p>/ person</p>
+                </article>
+              </section>
+              <section class="total view">
+                <article class="text-total">
+                  <h2>Total</h2>
+                  <p>/ person</p>
+                </article>
+              </section>
+            </div>
+            <div class="numbers-result">
+              <article class="result-tip-amount">
+                <p id="result-tip">$0.00</p>
+              </article>
+              <article class="result-total">
+                <p id="result-total">$0.00</p>
+              </article>
+            </div>
+          </section>
+
+          <button class="reset" id="reset-all">RESET</button>
+        </article>
+      </section>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
