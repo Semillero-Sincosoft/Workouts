@@ -2,8 +2,10 @@
 :root {
   --Moderate-cyan: hsl(176, 50%, 47%);
   --Dark-cyan: hsl(176, 72%, 28%);
-  --Black: hsl(0, 0%, 0%);
   --Dark-gray: hsl(0, 0%, 48%);
+  --Very-light-gray:hsl(0,0%,85%);
+  --Medium-gray:hsl(0,0%,96%);
+  --Light-Gray:hsl(0,0%,98%);
 }
 *{
     margin: 0;
@@ -14,4 +16,164 @@ html{
     font-size: 62.5%;
     font-family: 'Commissioner', sans-serif;
 }
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
+h1{
+  font-size: 2.7rem;
+}
+h2{
+  font-size: 3.2rem;
+}
+p{
+  font-size: 1.6rem;
+}
+body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Light-Gray);
+}
+header{
+  width: 100%;
+  height: 40rem;
+  background-image: url(images/image-hero-desktop.jpg);
+  background-repeat: round; 
+  padding:4rem 16rem 0 16rem;
+position: relative;
+}
+header section{
+  display: flex;
+  justify-content: space-between;
+}
+header section nav ul{
+  font-size: 1.2rem;
+  display: flex;
+  gap: 3rem;
 
+}
+li{
+  list-style: none;
+  color:white ;
+}
+li:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* main */
+main{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-home{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 73rem;
+  position: relative;
+  top:-9rem ;
+}
+.content-support{
+  height:26.8rem;
+  width: 100%;
+  border: solid var(--Medium-gray);
+  border-radius: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5.5rem 1rem 0 1rem;
+}
+.content-logo-mastercraft{
+  position: absolute;
+  top: -3.1rem;
+}
+.content-text-support{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 3rem 0;
+}
+.content-buttons{
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+}
+.content-button-support button{
+  width:20.4rem;
+  height: 5.6rem;
+  border-radius: 5rem;
+  border: none;
+  background-color: var(--Moderate-cyan);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.content-bookmark{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 17.4rem;
+  height: 5.6rem;
+  border-radius: 5rem;
+  background-color:var(--Medium-gray);
+  color: var(--Dark-gray);
+  font-weight: 600;
+}
+
+.content-stats{
+  width: 100%;
+  height: 21rem;
+  background-color: white;
+  display: flex;
+  border: solid var(--Medium-gray);
+  border-radius: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content-numbers-stats{
+  display: flex;
+  width: 100%;
+  gap: 4.5rem;
+  justify-content: center;
+  margin: 0 0 4rem 0;
+}
+.content-numbers-stats article{
+  width: 18rem;
+  height: 5.8rem;
+  border-right: solid var(--Very-light-gray) 0.2rem;
+}
+.content-numbers-stats article:last-child{
+  border: none;
+}
+.load-bar{
+  width:63.4rem ;
+  height: 1.2rem;
+  background-color: var(--Medium-gray);
+  border-radius: 1rem;
+}
+.load-bar div{
+  width: 49.6rem;
+  height: 100%;
+  background-color: var(--Moderate-cyan);
+  border-radius: 1rem;
+}
+
+.content-available-units{
+  height: ;
+  background-color: white;
+  border-radius: 1rem;
+  border: solid var(--Medium-gray);
+  padding: 2rem 2rem 0 2rem;
+}
+/* main */
