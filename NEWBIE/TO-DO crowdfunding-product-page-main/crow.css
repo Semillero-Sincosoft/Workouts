@@ -10,6 +10,7 @@
   --Moderate-cyan: hsl(176, 50%, 47%);
   --Dark-cyan: hsl(176, 72%, 28%);
   --color-Dark-gray: hsl(0, 0%, 48%);
+  --gray-white: #fafafa;
 }
 
 body {
@@ -17,6 +18,13 @@ body {
   width: 100%;
   height: 100%;
   background-color: #fafafa;
+}
+::-webkit-scrollbar {
+  width: 0;
+
+  height: 0;
+
+  background-color: transparent;
 }
 .container {
   display: flex;
@@ -45,7 +53,7 @@ nav {
   display: none;
 }
 
-.prueba {
+.content-nav {
   display: none;
 }
 
@@ -53,7 +61,7 @@ ul {
   display: flex;
   list-style: none;
   gap: 30px;
-  color: white;
+  color: #fff;
   height: 10px;
 }
 
@@ -68,7 +76,7 @@ li:hover {
 }
 
 .card-monitor {
-  background-color: white;
+  background-color: #fff;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -99,11 +107,36 @@ li:hover {
   font-size: 15px;
   font-weight: 700;
 }
-.button-proyect:hover{
+.button-proyect:hover {
+  cursor: pointer;
+  background-color: var(--Dark-cyan);
+}
+.button-proyect:focus {
   cursor: pointer;
   background-color: var(--Dark-cyan);
 }
 
+.btn-bookmark {
+  border-radius: 45px;
+  width: fit-content;
+  height: 57px;
+  border: none;
+}
+.btn-bookmark:hover circle {
+  fill: var(--Dark-cyan);
+  cursor: pointer;
+}
+
+.btn-bookmark:focus circle {
+  fill: var(--Dark-cyan);
+}
+.btn-bookmark:hover path {
+  fill: #fff;
+  cursor: pointer;
+}
+.btn-bookmark:focus path {
+  fill: #fff;
+}
 .content-btn-bookmark {
   display: flex;
   justify-content: space-between;
@@ -111,13 +144,63 @@ li:hover {
   padding-top: 29px;
 }
 
+.card-alert {
+  position: absolute;
+  width: 539px;
+  height: 449px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  right: 99px;
+  padding-inline: 39px;
+  border-radius: 15px;
+  z-index: 2;
+  display: none;
+}
+.img-check {
+  width: 90px;
+  height: 90px;
+  border-radius: 30px;
+}
+
+.xd {
+  background-color: rgba(0, 0, 0, 0.7);
+  filter: opacity(0.5);
+  z-index: -1;
+
+  /* filter: blur(20px); */
+}
+
+.card-alert button {
+  width: 107px;
+  height: 48px;
+  border-radius: 28px;
+  border: none;
+  background-color: var(--Moderate-cyan);
+}
+
+.card-alert button:hover {
+  cursor: pointer;
+  background-color: var(--Dark-cyan);
+}
+.card-alert button:focus {
+  cursor: pointer;
+  background-color: var(--Dark-cyan);
+}
+
 .bookmark {
   display: flex;
   width: 175px;
   height: 56px;
   border-radius: 28px;
-  background-color: #fafafa;
+  background-color: var(--gray-white);
   gap: 10px;
+}
+.bookmark circle:focus svg {
+  fill: var(--Dark-cyan);
 }
 
 .bookmark p {
@@ -228,6 +311,14 @@ li:hover {
   background-color: var(--Moderate-cyan);
   color: #fff;
   font-weight: 700;
+}
+.btn-card:hover {
+  cursor: pointer;
+  background-color: var(--Dark-cyan);
+}
+.btn-card:focus {
+  cursor: pointer;
+  background-color: var(--Dark-cyan);
 }
 
 .btn {
@@ -349,7 +440,7 @@ li:hover {
   }
   .content-cards {
     width: 350px;
-    padding: 43px 38px 0px 38px;
+    padding: 43px 38px 1px 38px;
   }
 
   .card-project {
@@ -358,6 +449,9 @@ li:hover {
     margin-bottom: 30px;
   }
 
+  .card:last-child {
+    margin-bottom: 50px;
+  }
   .card-project p {
     font-size: 14px;
   }
@@ -386,14 +480,10 @@ li:hover {
     flex-direction: column;
   }
 
-  .prueba {
+  .content-nav {
     display: flex;
     height: fit-content;
   }
-/* 
-  #menu-close {
-    display: flex;
-  } */
 
   header .menu-button button {
     background: transparent;
@@ -410,7 +500,7 @@ li:hover {
     z-index: 3;
     cursor: pointer;
   }
-  header .menu-button{
+  header .menu-button {
     right: 70px;
   }
   header nav.open {
