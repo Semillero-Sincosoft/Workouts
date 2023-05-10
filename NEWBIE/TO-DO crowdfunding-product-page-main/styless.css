@@ -3,34 +3,42 @@
   --Moderate-cyan: hsl(176, 50%, 47%);
   --Dark-cyan: hsl(176, 72%, 28%);
   --Dark-gray: hsl(0, 0%, 48%);
-  --Very-light-gray:hsl(0,0%,85%);
-  --Medium-gray:hsl(0,0%,96%);
-  --Light-Gray:hsl(0,0%,98%);
+  --Very-light-gray: hsl(0, 0%, 85%);
+  --Medium-gray: hsl(0, 0%, 96%);
+  --Light-Gray: hsl(0, 0%, 98%);
+  --light-black: hsl(0, 0%, 60%);
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    font-size: 62.5%;
-    font-family: 'Commissioner', sans-serif;
+html {
+  font-size: 62.5%;
+  font-family: "Commissioner", sans-serif;
 }
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
   background-color: transparent;
 }
-h1{
+h1 {
   font-size: 2.7rem;
 }
-h2{
+h2 {
   font-size: 3.2rem;
 }
-p{
-  font-size: 1.6rem;
+h3 {
+  font-size: 2rem;
 }
-body{
+h4 {
+  font-size: 1.8rem;
+}
+p {
+  font-size: 1.6rem;
+  color: var(--Dark-gray);
+}
+body {
   width: 100%;
   height: 100%;
   display: flex;
@@ -38,51 +46,50 @@ body{
   align-items: center;
   background-color: var(--Light-Gray);
 }
-header{
+header {
   width: 100%;
   height: 40rem;
   background-image: url(images/image-hero-desktop.jpg);
-  background-repeat: round; 
-  padding:4rem 16rem 0 16rem;
-position: relative;
+  background-repeat: round;
+  /* padding: 4rem 16rem 0 16rem; */
+  position: relative;
 }
-header section{
+header section {
   display: flex;
   justify-content: space-between;
 }
-header section nav ul{
+header section nav ul {
   font-size: 1.2rem;
   display: flex;
   gap: 3rem;
-
 }
-li{
+li {
   list-style: none;
-  color:white ;
+  color: white;
 }
-li:hover{
+li:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
 /* main */
-main{
+main {
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.content-home{
+.content-home {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 73rem;
   position: relative;
-  top:-9rem ;
+  top: -9rem;
 }
-.content-support{
-  height:26.8rem;
+.content-support {
+  height: 26.8rem;
   width: 100%;
   border: solid var(--Medium-gray);
   border-radius: 1rem;
@@ -92,24 +99,24 @@ main{
   align-items: center;
   padding: 5.5rem 1rem 0 1rem;
 }
-.content-logo-mastercraft{
+.content-logo-mastercraft {
   position: absolute;
   top: -3.1rem;
 }
-.content-text-support{
+.content-text-support {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   margin: 0 0 3rem 0;
 }
-.content-buttons{
+.content-buttons {
   width: 92%;
   display: flex;
   justify-content: space-between;
 }
-.content-button-support button{
-  width:20.4rem;
+.content-button-support button {
+  width: 20.4rem;
   height: 5.6rem;
   border-radius: 5rem;
   border: none;
@@ -118,19 +125,37 @@ main{
   font-size: 1.5rem;
   font-weight: 600;
 }
-.content-bookmark{
+.content-button-support button:hover,
+.content-button-support button:focus,
+.content-info-card .active-button:hover,
+.content-info-card .active-button:focus {
+  background-color: var(--Dark-cyan);
+  cursor: pointer;
+}
+.content-bookmark {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   width: 17.4rem;
   height: 5.6rem;
+  border: none;
   border-radius: 5rem;
-  background-color:var(--Medium-gray);
+  background-color: var(--Medium-gray);
   color: var(--Dark-gray);
   font-weight: 600;
 }
-
-.content-stats{
+.content-bookmark svg circle:hover{
+  fill: var(--Dark-gray);
+  cursor: pointer;
+}
+button.content-bookmark:focus circle{
+  fill: var(--Moderate-cyan);
+  cursor: pointer;
+}
+button.content-bookmark:focus path{
+  fill: white;
+}
+.content-stats {
   width: 100%;
   height: 21rem;
   background-color: white;
@@ -141,39 +166,110 @@ main{
   align-items: center;
   justify-content: center;
 }
-.content-numbers-stats{
+.content-numbers-stats {
   display: flex;
   width: 100%;
   gap: 4.5rem;
   justify-content: center;
   margin: 0 0 4rem 0;
 }
-.content-numbers-stats article{
+.content-numbers-stats article {
   width: 18rem;
   height: 5.8rem;
   border-right: solid var(--Very-light-gray) 0.2rem;
 }
-.content-numbers-stats article:last-child{
+.content-numbers-stats article:last-child {
   border: none;
 }
-.load-bar{
-  width:63.4rem ;
+.load-bar {
+  width: 63.4rem;
   height: 1.2rem;
   background-color: var(--Medium-gray);
   border-radius: 1rem;
 }
-.load-bar div{
+.load-bar div {
   width: 49.6rem;
   height: 100%;
   background-color: var(--Moderate-cyan);
   border-radius: 1rem;
 }
 
-.content-available-units{
-  height: ;
+.content-available-units {
+  height: 112.7rem;
   background-color: white;
   border-radius: 1rem;
   border: solid var(--Medium-gray);
   padding: 2rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.content-available-units .content-about-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 22rem;
+  width: 93%;
+  line-height: 2.7rem;
+}
+.content-available-units div {
+  width: 63.4rem;
+  height: 24.8rem;
+  padding: 1rem 0 1rem 0;
+  border: solid var(--Medium-gray);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.content-available-units .content-title-card {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.content-available-units .content-text-card {
+  width: 90%;
+  line-height: 2.7rem;
+}
+.content-available-units .content-title-card p {
+  color: var(--Moderate-cyan);
+  font-weight: 500;
+}
+.content-available-units .content-info-card {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.content-available-units .content-info-card article {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.content-available-units .content-info-card button {
+  width: 15.7rem;
+  height: 4.8rem;
+  border-radius: 5rem;
+  border: none;
+  color: white;
+  background-color: var(--Moderate-cyan);
+}
+section .card-title-disable,
+section .card-text-disable,
+section .card-info-disable {
+  opacity: 40%;
+}
+section .card-info-disable .disable-button {
+  background-color: var(--light-black);
 }
 /* main */
+@media screen and (max-width: 800px) {
+.content-home{
+  width: 60rem;
+}
+  header{
+    background-image: url(images/image-hero-mobile.jpg);
+    background-size:100% 100%;
+  }
+}
