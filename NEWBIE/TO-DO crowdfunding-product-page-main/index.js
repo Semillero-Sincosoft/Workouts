@@ -1,8 +1,8 @@
-const navbar = document.querySelector("nav");
-const openMenu = document.getElementById("menu-button");
-const closeMenu = document.getElementById("menu-close");
 
 const openCLose = () => {
+  const navbar = document.querySelector("nav");
+  const openMenu = document.getElementById("menu-button");
+  const closeMenu = document.getElementById("menu-close");
   openMenu.addEventListener("click", () => {
     navbar.classList.add("open");
     openMenu.style.display = "none";
@@ -18,6 +18,7 @@ const openCLose = () => {
 
 openCLose();
 
+
 const buttonProyect = document.getElementById("button-proyect");
 const cardAlert = document.getElementById("card-alert");
 const div = document.getElementById("div");
@@ -30,7 +31,6 @@ const btnGotIt = document.getElementById("btn-got-it");
 
 btnGotIt.addEventListener("click", () => {
   cardAlert.style.display = "none ";
-
   div.style.display = "none";
 });
 
@@ -46,7 +46,7 @@ const btnBookmark = document.getElementById("btn-bookmark");
 window.addEventListener("click", function (e) {
   if (btnBookmark.contains(e.target)) {
     pbookmark.textContent = "Bookmarked";
-    pbookmark.style.color = "var(--Dark-cyan)";
+    pbookmark.style.color = "var(--Dark-gray)";
     // Clicked in box
   } else {
     pbookmark.textContent = "Bookmark";
