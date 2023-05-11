@@ -54,6 +54,9 @@ header {
   /* padding: 4rem 16rem 0 16rem; */
   position: relative;
 }
+div.content-drop-menu{
+  display: none;
+}
 header section {
   display: flex;
   justify-content: space-between;
@@ -144,15 +147,15 @@ main {
   color: var(--Dark-gray);
   font-weight: 600;
 }
-.content-bookmark svg circle:hover{
+.content-bookmark svg circle:hover {
   fill: var(--Dark-gray);
   cursor: pointer;
 }
-button.content-bookmark:focus circle{
+button.content-bookmark:focus circle {
   fill: var(--Moderate-cyan);
   cursor: pointer;
 }
-button.content-bookmark:focus path{
+button.content-bookmark:focus path {
   fill: white;
 }
 .content-stats {
@@ -214,6 +217,7 @@ button.content-bookmark:focus path{
   line-height: 2.7rem;
 }
 .content-available-units div {
+  background-color: white;
   width: 63.4rem;
   height: 24.8rem;
   padding: 1rem 0 1rem 0;
@@ -265,11 +269,108 @@ section .card-info-disable .disable-button {
 }
 /* main */
 @media screen and (max-width: 800px) {
-.content-home{
-  width: 60rem;
-}
-  header{
+  .prueba{
+    width: 32.7rem;
+    height: 21.2rem;
+    border-radius: 1rem;
+    background-color: white;
+    z-index:3;
+    position: absolute;
+    top: 9rem;
+    right: 8rem;
+    padding: 3rem 0 0 2.5rem;
+  }
+  header section nav ul{
+    flex-direction: column;
+    gap: 4.5rem;
+  }
+  li{
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  div.content-drop-menu{
+    display: flex;
+    height: fit-content;
+  }
+
+  button.icon-menu,button.icon-close{
+    background: transparent;
+    border: none;
+  }
+  button.icon-close{
+    display: none;
+  }
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  p,
+  h4 {
+    font-size: 1.4rem;
+  }
+  p {
+    text-align: center;
+  }
+  header {
     background-image: url(images/image-hero-mobile.jpg);
-    background-size:100% 100%;
+  }
+  .content-bookmark p {
+    display: none;
+  }
+  .content-bookmark {
+    width: fit-content;
+  }
+  .content-home {
+    width: 32.7rem;
+  }
+  .content-stats {
+    height: 41.3rem;
+  }
+  .content-numbers-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-numbers-stats article {
+    text-align: center;
+    border: none;
+  }
+  .content-stats .load-bar {
+    width: 28rem;
+  }
+  .content-stats .load-bar div {
+    width: 21.9rem;
+  }
+  .content-available-units {
+    height: 168.7rem;
+    justify-content: end;
+    padding-bottom: 4rem;
+    gap: 2.5rem;
+  }
+  .content-available-units div {
+    width: 27.8rem;
+    height: 37rem;
+  }
+  .content-available-units .content-about-project {
+    width: 99%;
+    margin: 0 0 3rem 0;
+    height: 37.2rem;
+    gap: 2rem;
+  }
+  .content-about-project p {
+    text-align: start;
+  }
+  section.content-title-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  section.content-text-card p {
+    width: 95%;
+    text-align: start;
+  }
+  section.content-info-card {
+    flex-direction: column;
+    gap: 2rem;
   }
 }
