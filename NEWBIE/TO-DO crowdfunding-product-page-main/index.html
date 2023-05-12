@@ -13,7 +13,7 @@
         <picture>
           <img src="images/logo.svg" alt="" />
         </picture>
-        <nav>
+        <nav class="nav-open oculto" id="prueba">
           <ul>
             <li>About</li>
             <li>Discover</li>
@@ -21,10 +21,10 @@
           </ul>
         </nav>
         <div class="content-drop-menu">
-          <button class="icon-menu" id="open">
+          <button class="icon-menu" id="open" onclick="nav.show()" >
             <img src="images/icon-hamburger.svg" alt="" />
           </button>
-          <button class="icon-close" id="close">
+          <button class="icon-close oculto" id="close" onclick="nav.hidden()">
             <img src="images/icon-close-menu.svg" alt="" />
           </button>
         </div>
@@ -32,6 +32,34 @@
     </header>
 
     <main>
+      <section id="dialog-support" class="content-back-project oculto">
+        <picture onclick="dialog.ocultar()">
+          <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z"
+              fill="#000"
+              fill-rule="evenodd"
+              opacity=".4"
+            />
+          </svg>
+        </picture>
+        <article class="content-text-back">
+          <h2>Back this project</h2>
+          <p>
+            Want to support us in bringing Mastercraft Bamboo Monitor Riser out
+            in the world?
+          </p>
+        </article>
+        <article class="content-cards-back">
+          <div>
+            <button>continue</button>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </article>
+      </section>
+
       <section class="content-home">
         <article class="content-support">
           <picture class="content-logo-mastercraft">
@@ -46,9 +74,10 @@
           </div>
           <article class="content-buttons">
             <div class="content-button-support">
-              <button id="open-support">Back this project</button>
+              <button id="open-support" onclick="dialog.mostrar()">
+                Back this project
+              </button>
             </div>
-
 
             <section id="check-support">
               <picture>
@@ -64,7 +93,6 @@
               </article>
               <button id="close-support">Go it!</button>
             </section>
-
 
             <button class="content-bookmark">
               <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">

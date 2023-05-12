@@ -1,27 +1,24 @@
-const navContainer = document.querySelector("nav");
-const openMenu = document.getElementById("open");
-const closeMenu = document.getElementById("close");
-
-const checkSupport = document.getElementById("check-support")
-const openSupport = document.getElementById("open-support");
-const closeSupport = document.getElementById("close-support")
-
-openMenu.addEventListener("click", ()=>{
-    navContainer.classList.add("nav-open")
-    openMenu.style.display = "none";
-    closeMenu.style.display = "flex";
-})
-closeMenu.addEventListener("click",()=>{
-    navContainer.classList.remove("nav-open");
-    openMenu.style.display = "flex"
-    closeMenu.style.display = "none"
-})
-
-openSupport.addEventListener("click",()=>{
-    checkSupport.classList.add("popup-notification");
-    checkSupport.style.display = "flex"
-})
-closeSupport.addEventListener("click",()=>{
-    checkSupport.classList.remove("popup-notification")
-    checkSupport.style.display = "none"
-})
+const nav = {
+  element: document.getElementById("prueba"),
+  iconOpen: document.getElementById("open"),
+  iconClose: document.getElementById("close"),
+  show: function () {
+    this.element.classList.remove("oculto");
+    this.iconOpen.classList.add("oculto");
+    this.iconClose.classList.remove("oculto");
+  },
+  hidden: function () {
+    this.element.classList.add("oculto");
+    this.iconOpen.classList.remove("oculto");
+    this.iconClose.classList.add("oculto");
+  },
+};
+const dialog = {
+  elemento: document.getElementById("dialog-support"),
+  mostrar: function () {
+    this.elemento.classList.remove("oculto");
+  },
+  ocultar: function () {
+    this.elemento.classList.add("oculto");
+  },
+};

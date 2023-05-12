@@ -51,7 +51,7 @@ header {
   height: 40rem;
   background-image: url(images/image-hero-desktop.jpg);
   background-repeat: round;
-  /* padding: 4rem 16rem 0 16rem; */
+  padding: 4rem 16rem 0 16rem; 
   position: relative;
 }
 div.content-drop-menu{
@@ -117,6 +117,42 @@ main {
 .content-support section{
   display: none;
 }
+.content-back-project{
+  position:absolute;
+  background-color: white;
+  border: solid red;
+  width:73rem ;
+  height: 90.5rem;
+  top: 15rem;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem ;
+}
+.oculto{
+  display: none;
+}
+.content-back-project picture{
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.content-back-project .content-text-back{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.content-back-project .content-text-back h2{
+  font-size: 2.6rem;
+}
+.content-back-project div{
+  width: 63.4rem;
+  height: 15.8rem;
+  border: solid green;
+}
+
 .popup-notification{
   position: absolute;
   background-color: white;
@@ -174,7 +210,8 @@ main {
 .content-button-support button:hover,
 .content-button-support button:focus,
 .content-info-card .active-button:hover,
-.content-info-card .active-button:focus {
+.content-info-card .active-button:focus,
+#close-support:hover {
   background-color: var(--Dark-cyan);
   cursor: pointer;
 }
@@ -348,9 +385,7 @@ section .card-info-disable .disable-button {
     background: transparent;
     border: none;
   }
-  button.icon-close{
-    display: none;
-  }
+
   h1 {
     font-size: 2rem;
     text-align: center;
@@ -364,6 +399,7 @@ section .card-info-disable .disable-button {
   }
   header {
     background-image: url(images/image-hero-mobile.jpg);
+    padding: 0;
   }
   .content-bookmark p {
     display: none;
