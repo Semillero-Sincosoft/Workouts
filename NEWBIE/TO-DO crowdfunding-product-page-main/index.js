@@ -1,59 +1,53 @@
 const openCLose = () => {
   const navbar = document.querySelector("nav");
-  const openMenu = document.getElementById("menu-button");
-  const closeMenu = document.getElementById("menu-close");
-  openMenu.addEventListener("click", () => {
-    navbar.classList.add("open");
-    openMenu.style.display = "none";
-    closeMenu.style.display = "flex";
-  });
-
-  closeMenu.addEventListener("click", () => {
-    navbar.classList.remove("open");
-    openMenu.style.display = "flex";
-    closeMenu.style.display = "none";
-  });
-};
-
-openCLose();
-
-const buttonProyect = document.getElementById("button-proyect");
-const cardAlert = document.getElementById("card-alert");
-buttonProyect.addEventListener("click", () => {
-  cardAlert.style.display = "flex";
-});
-
-const btnGotIt = document.getElementById("btn-got-it");
-
-btnGotIt.addEventListener("click", () => {
-  cardAlert.style.display = "none ";
-  div.style.display = "none";
-});
-
-const pbookmark = document.getElementById("p-bookmark");
-const btnBookmark = document.getElementById("btn-bookmark");
-
-// document.body.addEventListener("click", () => {
-//   pbookmark.textContent = "boomark";
-// });
-
-// btnBookmark.addEventListener("click", () => {});
-
-window.addEventListener("click", function (e) {
-  if (btnBookmark.contains(e.target)) {
-    pbookmark.textContent = "Bookmarked";
-    pbookmark.style.color = "var(--Dark-gray)";
-    // Clicked in box
+  navbar.classList.toggle("open");
+  const imgMenu = document.getElementById("img-menu");
+  if (navbar.classList.contains("open")) {
+    imgMenu.src = "images/icon-close-menu.svg";
   } else {
-    pbookmark.textContent = "Bookmark";
-    pbookmark.style.color = "#bbb";
-    // Clicked outside the box
+    imgMenu.src = "images/icon-hamburger.svg";
   }
-});
+};
+function toggleCard(open) {
+  const cardAlert = document.getElementById("card-alert");
+  const modal = document.getElementById("modal");
+  modal.classList.toggle("modal");
+  if (open == true) {
+    cardAlert.style.display = "flex";
+  } else {
+    cardAlert.style.display = "none";
+  }
+}
 
-const contentSale = document.getElementById("container-sales");
-const buttonSale = document.getElementById("btn-card");
+function addToFavorites() {
+  const btnBookmark = document.getElementById("btn-bookmark");
+  const textBookmark = document.getElementById("p-bookmark");
 
-buttonSale.addEventListener("click", () => {
-  contentSale.classList.add = "";
-  });
+  //si tiene clase active quítesela
+
+  // está preguntando si btn tiene la clase active
+  if (btnBookmark.classList.contains("active")) {
+    //si tiene la clase
+    //cambiar el texto a booked
+    btnBookmark.classList.remove("active");
+    textBookmark.textContent = "Bookmark";
+  } else {
+    //no tiene la clase
+    //cambia el texto a book
+    textBookmark.textContent = "Bookmarked";
+    btnBookmark.classList.add("active");
+  }
+}
+
+function openCloseCard() {
+  const closeCard = document.querySelectorAll(".btn-card");
+  const containerSales = document.getElementById("container-sales");
+  closeCard.classList.remove("prueba");
+  if (closeCard.classList.contains("prueba")) {
+    containerSales.style.opacity = "1";
+  } else {
+    closeCard.classList.add("prueba");
+    containerSales.style.opacity = "0";
+  }
+}
+openCloseCard()

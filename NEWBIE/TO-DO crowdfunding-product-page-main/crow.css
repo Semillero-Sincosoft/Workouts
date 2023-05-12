@@ -122,47 +122,34 @@ li:hover {
   height: 57px;
   border: none;
 }
-.btn-bookmark:hover circle {
-  fill: var(--Dark-cyan);
-  cursor: pointer;
-}
 
-.btn-bookmark:focus circle {
-  fill: var(--Dark-cyan);
-}
-.btn-bookmark:hover path {
-  fill: #fff;
-  cursor: pointer;
-}
-.btn-bookmark:focus path {
-  fill: #fff;
-}
 .content-btn-bookmark {
   display: flex;
   justify-content: space-between;
   width: 87%;
   padding-top: 29px;
 }
-label:focus,
 label:hover {
   color: var(--Dark-cyan);
   cursor: pointer;
 }
 
+label:focus{
+  color: var(--Dark-cyan);
+}
+
+
 .card-alert {
-  position: absolute;
+  position: relative;
   width: 539px;
   height: 449px;
   text-align: center;
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
-  right: 99px;
   padding-inline: 39px;
   border-radius: 15px;
-  z-index: 2;
   display: none;
 }
 .img-check {
@@ -170,15 +157,6 @@ label:hover {
   height: 90px;
   border-radius: 30px;
 }
-
-.xd {
-  background-color: rgba(0, 0, 0, 0.7);
-  filter: opacity(0.5);
-  z-index: -1;
-
-  /* filter: blur(20px); */
-}
-
 .card-alert button {
   width: 107px;
   height: 48px;
@@ -204,8 +182,13 @@ label:hover {
   background-color: var(--gray-white);
   gap: 10px;
 }
-.bookmark circle:focus svg {
+
+.btn-bookmark.active svg g circle {
   fill: var(--Dark-cyan);
+}
+
+.btn-bookmark.active svg g circle path {
+  fill: white;
 }
 
 .bookmark p {
@@ -289,15 +272,26 @@ label:hover {
 }
 
 .container-sales {
-  position: absolute;
-  top: 7px;
-  left: 0px;
   background: antiquewhite;
   padding: 45px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 750px;
+}
+.modal {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
 }
 
 .container-sales article {
@@ -306,9 +300,16 @@ label:hover {
 }
 
 .close-card {
+  background-color: transparent;
+  border: none;
   position: absolute;
   right: -16px;
   top: -17px;
+  cursor: pointer;
+}
+
+.close-card.open {
+  display: flex;
 }
 
 .sponsorship-card {
@@ -355,10 +356,8 @@ label:hover {
 }
 .text-card-buy-monitor {
   font-size: 15px;
-  padding-left: 35px;
-  padding-right: 22px;
+  padding-right: 43px;
   line-height: 20px;
-  color: var(--color-Dark-gray);
 }
 
 .sponsorship-card input {
@@ -389,7 +388,7 @@ label {
 
 .card-project {
   gap: 45px;
-  height: 305px;
+  height: 268px;
   display: flex;
   flex-direction: column;
 }
@@ -417,20 +416,22 @@ label {
   color: #fff;
   font-weight: 700;
 }
-.btn-card:hover {
+
+/* .btn-card:hover {
   cursor: pointer;
   background-color: var(--Dark-cyan);
 }
 .btn-card:focus {
   cursor: pointer;
   background-color: var(--Dark-cyan);
-}
+} */
 
-.prueba {
-  display: none;
+.btn-card.prueba:hover button {
+  cursor: pointer;
+  background-color: var(--Dark-cyan);
 }
-.prueba1{
-  display: flex;
+.btn-card.prueba:focus button {
+  background-color: var(--Dark-cyan);
 }
 
 .btn {
@@ -594,6 +595,24 @@ label {
     flex-direction: column;
     gap: 20px;
   }
+  .container-sales {
+    width: 350px;
+    padding: 20px;
+    left: 0px;
+  }
+
+  .sponsorship-card {
+    height: 250px;
+    padding: 26px 31px 26px 32px;
+  }
+  .card-buy-monitor {
+    height: 250px;
+  }
+
+  .close-card {
+    top: 0;
+    right: 0;
+  }
 
   .title-mohogany {
     flex-direction: column;
@@ -631,9 +650,9 @@ label {
     width: 395px;
     background-color: white;
     padding: 30px;
-    z-index: 10;
+    z-index: 1;
     opacity: 1;
-    height: 29%;
+    height: 230px;
     border-radius: 15px;
   }
   header nav ul {
@@ -651,9 +670,9 @@ label {
     display: flex;
   }
   /* header nav ul li {
-      margin: 15px 0;
-      font-size: 15px;
-    } */
+        margin: 15px 0;
+        font-size: 15px;
+      } */
 
   header nav {
     opacity: 0;
