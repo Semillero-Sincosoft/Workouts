@@ -143,10 +143,10 @@ li:hover {
   width: 87%;
   padding-top: 29px;
 }
-label:focus ,label:hover{
-  color: red;
+label:focus,
+label:hover {
+  color: var(--Dark-cyan);
   cursor: pointer;
-  text-decoration: line-through;
 }
 
 .card-alert {
@@ -364,14 +364,21 @@ label:focus ,label:hover{
 .sponsorship-card input {
   width: 18px;
   height: 18px;
+  accent-color: var(--Dark-cyan);
 }
 .sponsorship-card h3 {
   font-size: 14px;
 }
 
-.sponsorship-card h3:hover {
+.sponsorship-card label:hover {
   cursor: pointer;
   color: var(--Dark-cyan);
+
+  font-weight: bold;
+}
+
+label {
+  font-weight: 600;
 }
 .sponsorship-card P {
   font-size: 15px;
@@ -417,6 +424,13 @@ label:focus ,label:hover{
 .btn-card:focus {
   cursor: pointer;
   background-color: var(--Dark-cyan);
+}
+
+.prueba {
+  display: none;
+}
+.prueba1{
+  display: flex;
 }
 
 .btn {
@@ -539,6 +553,13 @@ label:focus ,label:hover{
   .content-cards {
     width: 350px;
     padding: 43px 38px 1px 38px;
+  }
+
+  .card-alert {
+    width: 355px;
+    top: -85px;
+    left: 1px;
+    padding-inline: 31px;
   }
 
   .card-project {

@@ -1,4 +1,3 @@
-
 const openCLose = () => {
   const navbar = document.querySelector("nav");
   const openMenu = document.getElementById("menu-button");
@@ -18,13 +17,10 @@ const openCLose = () => {
 
 openCLose();
 
-
 const buttonProyect = document.getElementById("button-proyect");
 const cardAlert = document.getElementById("card-alert");
-const div = document.getElementById("div");
 buttonProyect.addEventListener("click", () => {
   cardAlert.style.display = "flex";
-  div.classList.add("xd");
 });
 
 const btnGotIt = document.getElementById("btn-got-it");
@@ -54,3 +50,10 @@ window.addEventListener("click", function (e) {
     // Clicked outside the box
   }
 });
+
+const contentSale = document.getElementById("container-sales");
+const buttonSale = document.getElementById("btn-card");
+
+buttonSale.addEventListener("click", () => {
+  contentSale.classList.add = "";
+  });
