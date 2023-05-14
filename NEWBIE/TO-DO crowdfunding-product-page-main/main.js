@@ -1,5 +1,8 @@
+document.getElementById("miDiv").addEventListener("click", function() {
+  document.getElementById("prueba").checked = true;
+});
 const nav = {
-  element: document.getElementById("prueba"),
+  element: document.getElementById("nav-content"),
   iconOpen: document.getElementById("open"),
   iconClose: document.getElementById("close"),
   show: function () {

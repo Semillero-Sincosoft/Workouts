@@ -13,7 +13,7 @@
         <picture>
           <img src="images/logo.svg" alt="" />
         </picture>
-        <nav class="nav-open oculto" id="prueba">
+        <nav class="nav-open oculto" id="nav-content">
           <ul>
             <li>About</li>
             <li>Discover</li>
@@ -51,15 +51,18 @@
           </p>
         </article>
         <article class="content-cards-back">
-          <div>
-           <article>
-            <input type="radio" class="nombre">
-            <label for="nombre">prueba</label>
-           </article>
+          <div tabindex="0">
+            <article>
+              <input type="radio" class="nombre" name="xd" />
+              <label for="nombre">prueba</label>
+            </article>
           </div>
-          <div>
-            <input type="radio" class="nombre" >
-            <label for="nombre">hola</label>
+          <div  tabindex="0" for="prueba" id="miDiv">
+            <label for="prueba" id="miLabel">
+              <input type="radio" class="nombre" name="xd" id="prueba"/>
+            </label>
+           
+            
           </div>
           <div></div>
           <div></div>
