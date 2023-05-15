@@ -5,7 +5,14 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 :root {
   --Moderate-cyan: hsl(176, 50%, 47%);
   --Dark-cyan: hsl(176, 72%, 28%);
@@ -41,11 +48,6 @@ header {
   padding: 52px;
   background-repeat: round;
 }
-
-/* .encendido {
-  display: flex;
-} */
-
 nav {
   height: fit-content;
 }
@@ -275,7 +277,7 @@ label:focus {
 }
 
 .container-sales {
-  background: antiquewhite;
+  background: white;
   padding: 45px;
   border-radius: 15px;
   display: flex;
@@ -287,28 +289,25 @@ label:focus {
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
-  display: flex;
   justify-content: center;
   align-items: center;
   display: none;
 }
-
-#articleBamboo:focus {
+.border-cards:focus {
   border: solid red 1px;
 }
-
-.modal.apagado {
+.apagado{
   display: none;
 }
-
-.modal.encendido {
+.encendido {
   display: flex;
 }
 
-.container-sales article {
+.img-close-card {
   display: flex;
   position: relative;
 }
@@ -321,13 +320,16 @@ label:focus {
   top: -17px;
   cursor: pointer;
 }
+.close-card img:hover {
+  animation: rotate 1s infinite;
+}
 
 .close-card.open {
   display: flex;
 }
 
 .sponsorship-card {
-  height: 122px;
+  height: auto;
   padding: 28px;
   gap: 14px;
   box-shadow: 0px 0px 1px 0px;
@@ -337,10 +339,33 @@ label:focus {
   border-radius: 13px;
 }
 
-.sponsorship-card div {
+/* .sponsorship-card div {
   display: flex;
   align-items: center;
   gap: 12px;
+} */
+.content-value {
+  display: none;
+  align-items: center;  
+  justify-content: space-between;
+  border-top: 1px solid var(--color-Dark-gray);
+}
+.value {
+  width: 99px;
+  height: 48px;
+  border-radius: 25px;
+  border: solid 1px var(--color-Dark-gray);
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .card-buy-monitor {
@@ -360,7 +385,7 @@ label:focus {
   gap: 15px;
 }
 
-.card-buy-monitor input {
+.radio-input {
   width: 18px;
   height: 18px;
   accent-color: var(--Dark-cyan);
@@ -373,10 +398,22 @@ label:focus {
   padding-right: 43px;
   line-height: 20px;
 }
+.button-value {
+  width: 107px;
+  height: 48px;
+  border-radius: 28px;
+  border: none;
+  background-color: var(--Dark-cyan);
+  color: #fff;
+  font-weight: 700;
+}
 
-.sponsorship-card input {
+.radio-input {
   width: 18px;
   height: 18px;
+  accent-color: var(--Dark-cyan);
+}
+input {
   accent-color: var(--Dark-cyan);
 }
 .sponsorship-card h3 {
@@ -386,7 +423,6 @@ label:focus {
 .sponsorship-card label:hover {
   cursor: pointer;
   color: var(--Dark-cyan);
-
   font-weight: bold;
 }
 
@@ -405,6 +441,10 @@ label {
   height: 268px;
   display: flex;
   flex-direction: column;
+}
+
+.card-buy-monitor:last-child{
+opacity: 0.4;
 }
 
 .card-project p {
@@ -430,24 +470,6 @@ label {
   color: #fff;
   font-weight: 700;
 }
-
-/* .btn-card:hover {
-  cursor: pointer;
-  background-color: var(--Dark-cyan);
-}
-.btn-card:focus {
-  cursor: pointer;
-  background-color: var(--Dark-cyan);
-} */
-
-.btn-card.prueba:hover button {
-  cursor: pointer;
-  background-color: var(--Dark-cyan);
-}
-.btn-card.prueba:focus button {
-  background-color: var(--Dark-cyan);
-}
-
 .btn {
   background-color: var(--color-Dark-gray);
 }
@@ -628,7 +650,7 @@ label {
     height: 250px;
   }
 
-  .card-buy-monitor div{
+  .card-buy-monitor div {
     display: inline-block;
   }
 

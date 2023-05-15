@@ -9,21 +9,11 @@ const openCLose = () => {
   }
 };
 
-// function toggleCard(open) {
-//   const modal = document.getElementById("modal");
-//   modal.classList.add("modal");
-//   if (open == true) {
-//     modal.classList.add("encendido");
-//   } else {
-//   }
-//   modal.classList.add("apagado");
-// }
-
-function prendidoApagado(open) {
+function prendidoApagado(ids, open) {
   const modal = document.getElementById("modal");
   modal.classList.toggle("encendido");
   if (open == true) {
-    modal.classList.add("encedido");
+    modal.classList.add("encendido");
   } else {
     modal.classList.remove("apagado");
   }
@@ -32,9 +22,7 @@ function prendidoApagado(open) {
 function addToFavorites() {
   const btnBookmark = document.getElementById("btn-bookmark");
   const textBookmark = document.getElementById("p-bookmark");
-
   //si tiene clase active quítesela
-
   // está preguntando si btn tiene la clase active
   if (btnBookmark.classList.contains("active")) {
     //si tiene la clase
@@ -49,19 +37,27 @@ function addToFavorites() {
   }
 }
 
-document.getElementById("articleBamboo").addEventListener("click",()=>{
-  document.getElementById("BambooStand").checked = true
-})
+function checked(idsArticle, idInput) {
+  document.getElementById(idsArticle).addEventListener("click", () => {
+    document.getElementById(idInput).checked = true;
+  });
+}
+const bamboo = checked("articleBamboo", "BambooStand");
+const black = checked("articleBlack", "Black-edition");
+const sponsor = checked("articleReward", "subtitle-reward");
 
-// function openCloseCard() {
-//   const closeCard = document.querySelectorAll(".btn-card");
-//   const containerSales = document.getElementById("container-sales");
-//   closeCard.classList.remove("prueba");
-//   if (closeCard.classList.contains("prueba")) {
-//     containerSales.style.opacity = "1";
-//   } else {
-//     closeCard.classList.add("prueba");
-//     containerSales.style.opacity = "0";
-//   }
-// }
-// openCloseCard()
+function prendidoApagado2() {
+  const articleReward = document.getElementById("articleReward");
+  const articleBamboo  = document.getElementById("articleBamboo");
+  const contentPrices = document.getElementById("content-prices");
+
+  articleReward.addEventListener('click', ()=>{
+    contentPrices.style.display = "flex" 
+  })
+  articleBamboo.addEventListener('click', ()=>{
+    contentPrices.style.display = "none";
+    articleBamboo.style.border = "1px solid green ";
+  })
+
+}
+prendidoApagado2()
