@@ -42,6 +42,10 @@ header {
   background-repeat: round;
 }
 
+/* .encendido {
+  display: flex;
+} */
+
 nav {
   height: fit-content;
 }
@@ -134,10 +138,9 @@ label:hover {
   cursor: pointer;
 }
 
-label:focus{
+label:focus {
   color: var(--Dark-cyan);
 }
-
 
 .card-alert {
   position: relative;
@@ -284,7 +287,6 @@ label:focus{
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
@@ -292,6 +294,18 @@ label:focus{
   justify-content: center;
   align-items: center;
   display: none;
+}
+
+#articleBamboo:focus {
+  border: solid red 1px;
+}
+
+.modal.apagado {
+  display: none;
+}
+
+.modal.encendido {
+  display: flex;
 }
 
 .container-sales article {
@@ -605,8 +619,17 @@ label {
     height: 250px;
     padding: 26px 31px 26px 32px;
   }
+
+  .sponsorship-card p {
+    padding: 0;
+    text-align: left;
+  }
   .card-buy-monitor {
     height: 250px;
+  }
+
+  .card-buy-monitor div{
+    display: inline-block;
   }
 
   .close-card {
@@ -663,12 +686,6 @@ label {
     font-weight: 500;
   }
 
-  .close {
-    display: none;
-  }
-  .open {
-    display: flex;
-  }
   /* header nav ul li {
         margin: 15px 0;
         font-size: 15px;

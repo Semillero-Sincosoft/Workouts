@@ -8,14 +8,24 @@ const openCLose = () => {
     imgMenu.src = "images/icon-hamburger.svg";
   }
 };
-function toggleCard(open) {
-  const cardAlert = document.getElementById("card-alert");
+
+// function toggleCard(open) {
+//   const modal = document.getElementById("modal");
+//   modal.classList.add("modal");
+//   if (open == true) {
+//     modal.classList.add("encendido");
+//   } else {
+//   }
+//   modal.classList.add("apagado");
+// }
+
+function prendidoApagado(open) {
   const modal = document.getElementById("modal");
-  modal.classList.toggle("modal");
+  modal.classList.toggle("encendido");
   if (open == true) {
-    cardAlert.style.display = "flex";
+    modal.classList.add("encedido");
   } else {
-    cardAlert.style.display = "none";
+    modal.classList.remove("apagado");
   }
 }
 
@@ -39,15 +49,19 @@ function addToFavorites() {
   }
 }
 
-function openCloseCard() {
-  const closeCard = document.querySelectorAll(".btn-card");
-  const containerSales = document.getElementById("container-sales");
-  closeCard.classList.remove("prueba");
-  if (closeCard.classList.contains("prueba")) {
-    containerSales.style.opacity = "1";
-  } else {
-    closeCard.classList.add("prueba");
-    containerSales.style.opacity = "0";
-  }
-}
-openCloseCard()
+document.getElementById("articleBamboo").addEventListener("click",()=>{
+  document.getElementById("BambooStand").checked = true
+})
+
+// function openCloseCard() {
+//   const closeCard = document.querySelectorAll(".btn-card");
+//   const containerSales = document.getElementById("container-sales");
+//   closeCard.classList.remove("prueba");
+//   if (closeCard.classList.contains("prueba")) {
+//     containerSales.style.opacity = "1";
+//   } else {
+//     closeCard.classList.add("prueba");
+//     containerSales.style.opacity = "0";
+//   }
+// }
+// openCloseCard()
