@@ -1,6 +1,10 @@
-document.getElementById("miDiv").addEventListener("click", function() {
-  document.getElementById("prueba").checked = true;
-});
+function selectCard(container,input){
+  document.getElementById(container).addEventListener("click", function() {
+    document.getElementById(input).checked = true;
+  });
+}
+selectCard("card-1","input-card-1")
+selectCard("card-2","input-card-2")
 const nav = {
   element: document.getElementById("nav-content"),
   iconOpen: document.getElementById("open"),

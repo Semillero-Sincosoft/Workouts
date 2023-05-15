@@ -2,6 +2,7 @@
 :root {
   --Moderate-cyan: hsl(176, 50%, 47%);
   --Dark-cyan: hsl(176, 72%, 28%);
+  --Strong-cyan:hsl(176,39%,57%,100%);
   --Dark-gray: hsl(0, 0%, 48%);
   --Very-light-gray: hsl(0, 0%, 85%);
   --Medium-gray: hsl(0, 0%, 96%);
@@ -22,7 +23,7 @@ html {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 }
 ::-webkit-scrollbar {
@@ -140,7 +141,7 @@ main {
   padding: 2rem 5rem 0 5rem;
 }
 picture svg:hover{
-  animation: rotate 1s ease-in-out;
+  animation: rotate 0.8s ease-in-out;
   cursor: pointer;
 }
 picture svg:hover path{
@@ -148,6 +149,9 @@ picture svg:hover path{
 }
 .oculto {
   display: none;
+}
+.content-back-project .content-text-back h2 {
+  font-size: 2.6rem;
 }
 .content-back-project picture {
   height: fit-content;
@@ -160,21 +164,41 @@ picture svg:hover path{
   flex-direction: column;
   gap: 2rem;
 }
-.content-cards-back div:focus{
-  border: solid green;
-  cursor: pointer;
-}
-label:hover{
-  color: red;
-}
-.content-back-project .content-text-back h2 {
-  font-size: 2.6rem;
-}
 .content-back-project div {
   width: 63.4rem;
   height: 15.8rem;
   border: solid var(--Medium-gray);
+  border-radius: 0.8rem;
 }
+.content-cards-back div{
+  cursor: pointer;
+}
+.content-cards-back div:focus{
+  border: solid green;
+  cursor: pointer;
+}
+article.check-card{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: fit-content;
+}
+.content-cards-back label{
+  font-size:1.8rem;
+  font-weight: 700;
+}
+label:hover{
+  color: var(--Strong-cyan);
+}
+input[type="radio"]{
+  width: 2rem;
+  height: 2rem;
+  accent-color: var(--Dark-cyan);
+}
+div.card-one p{
+  text-align: start;
+}
+
 
 .popup-notification {
   position: absolute;

@@ -32,7 +32,7 @@
     </header>
 
     <main>
-      <section id="dialog-support" class="content-back-project oculto">
+      <section id="dialog-support" class="content-back-project"> <!--el oculto va aca-->
         <picture onclick="dialog.ocultar()">
           <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -50,20 +50,39 @@
             in the world?
           </p>
         </article>
+
         <article class="content-cards-back">
-          <div tabindex="0">
+
+          <div tabindex="0" id="card-1" class="card-one">
+            <article class="check-card">
+              <input type="radio" class="nombre" name="xd" id="input-card-1" />
+              <label for="nombre">Pledge with no reward</label>
+            </article>
             <article>
-              <input type="radio" class="nombre" name="xd" />
-              <label for="nombre">prueba</label>
+              <p>
+                Choose to support us without a reward if you simply believe in
+                our project. As a backer, you will be signed up to receive
+                product updates via email.
+              </p>
+            </article>
+
+            <article>
+              <section>
+                <p>Enter your pledge</p>
+              </section>
+              <section>
+                <input type="number" placeholder="$">
+                <button>Continue</button>
+              </section>
             </article>
           </div>
-          <div  tabindex="0" for="prueba" id="miDiv">
+
+          <div tabindex="0" for="prueba" id="card-2">
             <label for="prueba" id="miLabel">
-              <input type="radio" class="nombre" name="xd" id="prueba"/>
+              <input type="radio" class="nombre" name="xd" id="input-card-2" />
             </label>
-           
-            
           </div>
+
           <div></div>
           <div></div>
         </article>
