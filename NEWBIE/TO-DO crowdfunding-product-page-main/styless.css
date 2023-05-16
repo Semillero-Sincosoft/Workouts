@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700;800&display=swap");
+@import url(dialog-support.css);
+@import url(dialog-thx.css);
+@import url(products-cards.css);
+@import url(content-stats.css);
+@import url(content-support.css);
 :root {
   --Moderate-cyan: hsl(176, 50%, 47%);
   --Dark-cyan: hsl(176, 72%, 28%);
@@ -17,6 +22,11 @@
 html {
   font-size: 62.5%;
   font-family: "Commissioner", sans-serif;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 @keyframes rotate {
   from {
@@ -83,8 +93,6 @@ li:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-
-/* main */
 main {
   width: 100%;
   height: fit-content;
@@ -100,301 +108,12 @@ main {
   position: relative;
   top: -9rem;
 }
-.content-support {
-  height: 26.8rem;
-  width: 100%;
-  border: solid var(--Medium-gray);
-  border-radius: 1rem;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5.5rem 1rem 0 1rem;
-}
-.content-logo-mastercraft {
-  position: absolute;
-  top: -3.1rem;
-}
-.content-text-support {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin: 0 0 3rem 0;
-}
-
-.content-support section {
-  display: none;
-}
-.content-back-project {
-  position: absolute;
-  background-color: white;
-  border: solid var(--Medium-gray);
-  border-radius: 1rem;
-  width: 73rem;
-  height: 90.5rem;
-  top: 15rem;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem 5rem 0 5rem;
-}
-picture svg:hover{
-  animation: rotate 0.8s ease-in-out;
-  cursor: pointer;
-}
-picture svg:hover path{
-  fill: var(--Dark-cyan);
-}
 .oculto {
   display: none;
 }
-.content-back-project .content-text-back h2 {
-  font-size: 2.6rem;
-}
-.content-back-project picture {
-  height: fit-content;
-  width: 100%;
+.show{
   display: flex;
-  justify-content: end;
 }
-.content-back-project .content-text-back {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.content-back-project div {
-  width: 63.4rem;
-  height: 15.8rem;
-  border: solid var(--Medium-gray);
-  border-radius: 0.8rem;
-}
-.content-cards-back div{
-  cursor: pointer;
-}
-.content-cards-back div:focus{
-  border: solid green;
-  cursor: pointer;
-}
-article.check-card{
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  width: fit-content;
-}
-.content-cards-back label{
-  font-size:1.8rem;
-  font-weight: 700;
-}
-label:hover{
-  color: var(--Strong-cyan);
-}
-input[type="radio"]{
-  width: 2rem;
-  height: 2rem;
-  accent-color: var(--Dark-cyan);
-}
-div.card-one p{
-  text-align: start;
-}
-
-
-.popup-notification {
-  position: absolute;
-  background-color: white;
-  top: 14rem;
-  left: 9rem;
-  z-index: 3;
-  width: 54rem;
-  height: 40rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  text-align: center;
-  border-radius: 1rem;
-}
-.popup-notification article {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 80%;
-}
-.popup-notification picture {
-  margin: 0 0 1rem 0;
-}
-.popup-notification article h2 {
-  font-size: 2.4rem;
-}
-.popup-notification article p {
-  line-height: 3rem;
-}
-.popup-notification button {
-  width: 10.7rem;
-  height: 4.7rem;
-  border: none;
-  border-radius: 5rem;
-  background-color: var(--Moderate-cyan);
-  color: white;
-}
-
-.content-buttons {
-  width: 92%;
-  display: flex;
-  justify-content: space-between;
-}
-.content-button-support button {
-  width: 20.4rem;
-  height: 5.6rem;
-  border-radius: 5rem;
-  border: none;
-  background-color: var(--Moderate-cyan);
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-.content-button-support button:hover,
-.content-button-support button:focus,
-.content-info-card .active-button:hover,
-.content-info-card .active-button:focus,
-#close-support:hover {
-  background-color: var(--Dark-cyan);
-  cursor: pointer;
-}
-.content-bookmark {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  width: 17.4rem;
-  height: 5.6rem;
-  border: none;
-  border-radius: 5rem;
-  background-color: var(--Medium-gray);
-  color: var(--Dark-gray);
-  font-weight: 600;
-}
-.content-bookmark svg circle:hover {
-  fill: var(--Dark-gray);
-  cursor: pointer;
-}
-button.content-bookmark:focus circle {
-  fill: var(--Moderate-cyan);
-  cursor: pointer;
-}
-button.content-bookmark:focus path {
-  fill: white;
-}
-.content-stats {
-  width: 100%;
-  height: 21rem;
-  background-color: white;
-  display: flex;
-  border: solid var(--Medium-gray);
-  border-radius: 1rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.content-numbers-stats {
-  display: flex;
-  width: 100%;
-  gap: 4.5rem;
-  justify-content: center;
-  margin: 0 0 4rem 0;
-}
-.content-numbers-stats article {
-  width: 18rem;
-  height: 5.8rem;
-  border-right: solid var(--Very-light-gray) 0.2rem;
-}
-.content-numbers-stats article:last-child {
-  border: none;
-}
-.load-bar {
-  width: 63.4rem;
-  height: 1.2rem;
-  background-color: var(--Medium-gray);
-  border-radius: 1rem;
-}
-.load-bar div {
-  width: 49.6rem;
-  height: 100%;
-  background-color: var(--Moderate-cyan);
-  border-radius: 1rem;
-}
-
-.content-available-units {
-  height: 112.7rem;
-  background-color: white;
-  border-radius: 1rem;
-  border: solid var(--Medium-gray);
-  padding: 2rem 2rem 0 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-}
-.content-available-units .content-about-project {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 22rem;
-  width: 93%;
-  line-height: 2.7rem;
-}
-.content-available-units div {
-  background-color: white;
-  width: 63.4rem;
-  height: 24.8rem;
-  padding: 1rem 0 1rem 0;
-  border: solid var(--Medium-gray);
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.content-available-units .content-title-card {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
-.content-available-units .content-text-card {
-  width: 90%;
-  line-height: 2.7rem;
-}
-.content-available-units .content-title-card p {
-  color: var(--Moderate-cyan);
-  font-weight: 500;
-}
-.content-available-units .content-info-card {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
-.content-available-units .content-info-card article {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.content-available-units .content-info-card button {
-  width: 15.7rem;
-  height: 4.8rem;
-  border-radius: 5rem;
-  border: none;
-  color: white;
-  background-color: var(--Moderate-cyan);
-}
-section .card-title-disable,
-section .card-text-disable,
-section .card-info-disable {
-  opacity: 40%;
-}
-section .card-info-disable .disable-button {
-  background-color: var(--light-black);
-}
-/* main */
 @media screen and (max-width: 800px) {
   nav {
     opacity: 0;

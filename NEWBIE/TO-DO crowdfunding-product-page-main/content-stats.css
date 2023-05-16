@@ -1,0 +1,38 @@
+.content-stats {
+    width: 100%;
+    height: 21rem;
+    background-color: white;
+    display: flex;
+    border: solid var(--Medium-gray);
+    border-radius: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content-numbers-stats {
+    display: flex;
+    width: 100%;
+    gap: 4.5rem;
+    justify-content: center;
+    margin: 0 0 4rem 0;
+  }
+  .content-numbers-stats article {
+    width: 18rem;
+    height: 5.8rem;
+    border-right: solid var(--Very-light-gray) 0.2rem;
+  }
+  .content-numbers-stats article:last-child {
+    border: none;
+  }
+  .load-bar {
+    width: 63.4rem;
+    height: 1.2rem;
+    background-color: var(--Medium-gray);
+    border-radius: 1rem;
+  }
+  .load-bar div {
+    width: 49.6rem;
+    height: 100%;
+    background-color: var(--Moderate-cyan);
+    border-radius: 1rem;
+  }
