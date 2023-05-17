@@ -1,36 +1,69 @@
-function selectCard(container,input){
-  document.getElementById(container).addEventListener("click", function() {
+function selectCard(container, input) {
+  document.getElementById(container).addEventListener("click", function () {
     document.getElementById(input).checked = true;
   });
 }
-selectCard("card-1","input-card-1")
-selectCard("card-2","input-card-2")
-selectCard("card-3","input-card-3")
+selectCard("card-1", "input-card-1");
+selectCard("card-2", "input-card-2");
+selectCard("card-3", "input-card-3");
 
 const cardOne = document.getElementById("card-1");
 const contentAmountCardOne = document.getElementById("content-amount-card-one");
-
 const cardTwo = document.getElementById("card-2");
 const contentAmountCardTwo = document.getElementById("content-amount-card-two");
+const cardThree = document.getElementById("card-3");
+const contentAmountCardThree = document.getElementById(
+  "content-amount-card-three"
+);
 
-const cardThree = document.getElementById("card-3")
-const contentAmountCardThree = document.getElementById("content-amount-card-three")
+function addCardClickListener(card, contentAmount) {
+  card.addEventListener("click", () => {
+    contentAmountCardOne.style.display = "none";
+    contentAmountCardTwo.style.display = "none";
+    contentAmountCardThree.style.display = "none";
+    contentAmount.style.display = "flex";
+  });
+}
+addCardClickListener(cardOne, contentAmountCardOne);
+addCardClickListener(cardTwo, contentAmountCardTwo);
+addCardClickListener(cardThree, contentAmountCardThree);
 
-cardOne.addEventListener("click",() => {
-  contentAmountCardOne.style.display = "flex"
-  contentAmountCardTwo.style.display = "none"
-  contentAmountCardThree.style.display = "none"
-})
-cardTwo.addEventListener("click",() =>{
-  contentAmountCardOne.style.display = "none"
-  contentAmountCardTwo.style.display = "flex"
-  contentAmountCardThree.style.display = "none"
-})
-cardThree.addEventListener("click",() => {
-  contentAmountCardOne.style.display = "none"
-  contentAmountCardTwo.style.display = "none"
-  contentAmountCardThree.style.display = "flex"
-})
+function mark() {
+  const button = document.getElementById("button-bookmark");
+  const textButton = document.getElementById("text-bookmark");
+
+  if (button.classList.contains("active")) {
+    button.classList.remove("active");
+    textButton.textContent = "Bookmark";
+    textButton.style.color = "var(--Dark-gray)";
+  } else {
+    textButton.textContent = "Bookmarked";
+    textButton.style.color = "var(--Moderate-cyan)";
+    button.classList.add("active");
+  }
+}
+const botonPrueba = document.getElementById("button-bookmark");
+const textoPrueba = document.getElementById("text-bookmark");
+
+botonPrueba.addEventListener("click", function () {
+  const botonSeleccionadoPrueba = localStorage.getItem("botonSeleccionado");
+  if (botonSeleccionadoPrueba === "true") {
+    localStorage.setItem("botonSeleccionado", "false");
+    botonPrueba.classList.remove("active");
+    textoPrueba.textContent = "Bookmark";
+  } else {
+    localStorage.setItem("botonSeleccionado", "true");
+    botonPrueba.classList.add("active");
+  }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const botonSeleccionado = localStorage.getItem("botonSeleccionado");
+  if (botonSeleccionado === "true") {
+    botonPrueba.classList.add("active");
+    textoPrueba.textContent = "Bookmarked";
+  }
+});
+
 const nav = {
   element: document.getElementById("nav-content"),
   iconOpen: document.getElementById("open"),

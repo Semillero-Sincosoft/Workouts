@@ -1,72 +1,84 @@
 .content-support {
-    height: 26.8rem;
-    width: 100%;
-    border: solid var(--Medium-gray);
-    border-radius: 1rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5.5rem 1rem 0 1rem;
-  }
-  .content-logo-mastercraft {
-    position: absolute;
-    top: -3.1rem;
-  }
-  .content-text-support {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin: 0 0 3rem 0;
-  }
-  
-  .content-support section {
-    display: none;
-  }
-  .content-buttons {
-    width: 92%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .content-button-support button {
-    width: 20.4rem;
-    height: 5.6rem;
-    border-radius: 5rem;
-    border: none;
-    background-color: var(--Moderate-cyan);
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  .content-button-support button:hover,
-  .content-button-support button:focus,
-  .content-info-card .active-button:hover,
-  .content-info-card .active-button:focus,
-  #close-support:hover {
-    background-color: var(--Dark-cyan);
-    cursor: pointer;
-  }
-  .content-bookmark {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    width: 17.4rem;
-    height: 5.6rem;
-    border: none;
-    border-radius: 5rem;
-    background-color: var(--Medium-gray);
-    color: var(--Dark-gray);
-    font-weight: 600;
-  }
-  .content-bookmark svg circle:hover {
-    fill: var(--Dark-gray);
-    cursor: pointer;
-  }
-  button.content-bookmark:focus circle {
+  height: 26.8rem;
+  width: 100%;
+  border: solid var(--Medium-gray);
+  border-radius: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5.5rem 1rem 0 1rem;
+}
+.content-logo-mastercraft {
+  position: absolute;
+  top: -3.1rem;
+}
+.content-text-support {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 3rem 0;
+}
+
+.content-support section {
+  display: none;
+}
+.content-buttons {
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+}
+.content-button-support button {
+  width: 20.4rem;
+  height: 5.6rem;
+  border-radius: 5rem;
+  border: none;
+  background-color: var(--Moderate-cyan);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.content-button-support button:hover,
+.content-button-support button:focus,
+.content-info-card .active-button:hover,
+.content-info-card .active-button:focus,
+#close-support:hover {
+  background-color: var(--Dark-cyan);
+  cursor: pointer;
+}
+.content-bookmark {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: fit-content;
+  height: 5.6rem;
+  border: none;
+  border-radius: 5rem;
+  background-color: var(--Medium-gray);
+  color: var(--Dark-gray);
+  font-weight: 600;
+  padding-right: 2rem;
+}
+.content-bookmark.active svg circle {
+  fill: var(--Moderate-cyan);
+}
+.content-bookmark.active svg path {
+  fill: white;
+}
+
+.content-bookmark svg circle:hover {
+  fill: var(--Dark-gray);
+  cursor: pointer;
+}
+/* button.content-bookmark:focus circle{
     fill: var(--Moderate-cyan);
+    cursor: pointer;
+  }
+  button.content-bookmark:focus p{
+    color: var(--Moderate-cyan);
     cursor: pointer;
   }
   button.content-bookmark:focus path {
     fill: white;
-  }
+  } */
