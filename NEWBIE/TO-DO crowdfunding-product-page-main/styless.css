@@ -173,6 +173,7 @@ main {
   }
   .content-bookmark {
     width: fit-content;
+    background-color: transparent;
   }
   .content-home {
     width: 32.7rem;

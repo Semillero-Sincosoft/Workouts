@@ -42,6 +42,8 @@ function mark() {
     button.classList.add("active");
   }
 }
+
+
 const botonPrueba = document.getElementById("button-bookmark");
 const textoPrueba = document.getElementById("text-bookmark");
 
@@ -56,13 +58,16 @@ botonPrueba.addEventListener("click", function () {
     botonPrueba.classList.add("active");
   }
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const botonSeleccionado = localStorage.getItem("botonSeleccionado");
   if (botonSeleccionado === "true") {
     botonPrueba.classList.add("active");
     textoPrueba.textContent = "Bookmarked";
+    textoPrueba.style.color = "var(--Moderate-cyan)"
   }
 });
+
 
 const nav = {
   element: document.getElementById("nav-content"),

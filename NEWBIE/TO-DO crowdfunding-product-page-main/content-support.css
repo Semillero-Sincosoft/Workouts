@@ -27,6 +27,7 @@
 .content-buttons {
   width: 92%;
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
 }
 .content-button-support button {
