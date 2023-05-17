@@ -4,13 +4,13 @@
     border: solid var(--Medium-gray);
     border-radius: 1rem;
     width: 73rem;
-    height: 90.5rem;
+    height: fit-content;
     top: 15rem;
     z-index: 3;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem 5rem 0 5rem;
+    padding: 2rem 5rem 5rem 5rem;
   }
   picture svg:hover{
     animation: rotate 0.8s ease-in-out;
@@ -40,8 +40,18 @@
     border-radius: 0.8rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding:3rem 3.8rem 3rem 2.8rem;
+    gap: 2rem;
+    padding:3rem 2.8rem 3rem 2.5rem;
+  }
+  .content-back-project{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .content-cards-back{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
   .content-cards-back div{
     cursor: pointer;
@@ -49,6 +59,16 @@
   .content-cards-back div:focus{
     border: solid var(--Strong-cyan);
     cursor: pointer;
+  }
+  .content-cards-back div:focus:last-child{
+    border: solid var(--Medium-gray);
+    cursor: not-allowed;
+  }
+  .content-cards-back div:last-child{
+    opacity: 40%;
+  }
+  .content-cards-back div:last-child .content-amount-card-support{
+    display: none;
   }
   article.check-card{
     display: flex;
@@ -70,22 +90,23 @@
   }
   div article.content-text-card-support p{
     text-align: start;
-    margin: 0 0 0 4rem;
+    width: 100%;
+    margin: 0 3rem 0 1rem;
   }
-  div article.content-amount-cardOne{
+  div article.content-amount-card-support{
     border-top: solid 0.2rem var(--Medium-gray);
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     margin: 2rem;
     padding: 3rem 0 0 0;
   }
-  div article.content-amount-cardOne section:last-child{
+  div article.content-amount-card-support section:last-child{
     display: flex;
     align-items: center;
     gap: 2rem;
   }
-  div article.content-amount-cardOne section input{
+  div article.content-amount-card-support section input{
     width: 10rem;
     height: 4.7rem;
     background-color: white;
@@ -97,7 +118,7 @@
     font-weight: 500;
     caret-color: var(--Strong-cyan);
   }
-  div article.content-amount-cardOne section button{
+  div article.content-amount-card-support section button{
     width: 10rem;
     height: 5.2rem;
     background-color: var(--Dark-cyan);
@@ -105,4 +126,6 @@
     color: white;
     border-radius: 2.5rem;
   }
-  
+.oculto{
+    display: none;
+}

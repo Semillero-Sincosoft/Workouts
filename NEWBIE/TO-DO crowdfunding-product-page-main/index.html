@@ -32,7 +32,8 @@
     </header>
 
     <main>
-      <section id="dialog-support" class="content-back-project"> <!--el oculto va aca-->
+      <section id="dialog-support" class="content-back-project oculto">
+        <!--el oculto va aca-->
         <picture onclick="dialog.ocultar()">
           <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -52,10 +53,14 @@
         </article>
 
         <article class="content-cards-back">
-
-          <div tabindex="0" id="card-1" class="card-one">
+          <div tabindex="0" id="card-1" class="card">
             <article class="check-card">
-              <input type="radio" class="nombre" name="xd" id="input-card-1" />
+              <input
+                type="radio"
+                class="nombre"
+                name="check"
+                id="input-card-1"
+              />
               <label for="nombre">Pledge with no reward</label>
             </article>
             <article class="content-text-card-support">
@@ -66,25 +71,103 @@
               </p>
             </article>
 
-            <article class="content-amount-cardOne">
+            <article class="content-amount-card-support" id="content-amount-card-one">
               <section>
                 <p>Enter your pledge</p>
               </section>
               <section>
-                <input type="number" placeholder="$">
+                <input type="number" placeholder="$" />
                 <button>Continue</button>
               </section>
             </article>
           </div>
 
-          <div tabindex="0" for="prueba" id="card-2">
-            <label for="prueba" id="miLabel">
-              <input type="radio" class="nombre" name="xd" id="input-card-2" />
-            </label>
+          <div tabindex="0" id="card-2" class="card">
+            <article class="check-card">
+              <input
+                type="radio"
+                class="nombre"
+                name="check"
+                id="input-card-2"
+              />
+              <label for="nombre">Bamboo Stand</label>
+            </article>
+            <article class="content-text-card-support">
+              <p>
+                You get an ergonomic stand made of natural bamboo. You've helped
+                us launch our promotional campaign, and you’ll be added to a
+                special Backer member list.
+              </p>
+            </article>
+
+            <article class="content-amount-card-support" id="content-amount-card-two">
+              <section>
+                <p>Enter your pledge</p>
+              </section>
+              <section>
+                <input type="number" placeholder="$" />
+                <button>Continue</button>
+              </section>
+            </article>
           </div>
 
-          <div></div>
-          <div></div>
+          <div tabindex="0" id="card-3" class="card">
+            <article class="check-card">
+              <input
+                type="radio"
+                class="nombre"
+                name="check"
+                id="input-card-3"
+              />
+              <label for="nombre">Black Edition Stand</label>
+            </article>
+            <article class="content-text-card-support">
+              <p>
+                You get a Black Special Edition computer stand and a personal
+                thank you. You’ll be added to our Backer member list. Shipping
+                is included.
+              </p>
+            </article>
+
+            <article class="content-amount-card-support" id="content-amount-card-three">
+              <section>
+                <p>Enter your pledge</p>
+              </section>
+              <section>
+                <input type="number" placeholder="$" />
+                <button>Continue</button>
+              </section>
+            </article>
+          </div>
+
+          <div tabindex="0" id="card-4" class="card">
+            <article class="check-card">
+              <input
+                type="radio"
+                class="nombre"
+                name="check"
+                id="input-card-4"
+              />
+              <label for="nombre">Mahogany Special Edition</label>
+            </article>
+            <article class="content-text-card-support">
+              <p>
+                You get two Special Edition Mahogany stands, a Backer T-Shirt,
+                and a personal thank you. You’ll be added to our Backer member
+                list. Shipping is included.
+              </p>
+            </article>
+
+            <article class="content-amount-card-support">
+              <section>
+                <p>Enter your pledge</p>
+              </section>
+              <section>
+                <input type="number" placeholder="$" />
+                <button>Continue</button>
+              </section>
+            </article>
+          </div>
         </article>
       </section>
 
@@ -107,7 +190,10 @@
               </button>
             </div>
 
-            <section class="popup-notification oculto" id="check-support oculte">
+            <section
+              class="popup-notification oculto"
+              id="check-support oculte"
+            >
               <picture>
                 <img src="images/icon-check.svg" alt="" />
               </picture>

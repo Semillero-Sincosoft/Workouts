@@ -108,11 +108,11 @@ main {
   position: relative;
   top: -9rem;
 }
-.oculto {
-  display: none;
-}
 .show{
   display: flex;
+}
+.oculto {
+  display: none;
 }
 @media screen and (max-width: 800px) {
   nav {
