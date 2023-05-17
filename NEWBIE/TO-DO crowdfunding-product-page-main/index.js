@@ -77,9 +77,27 @@ addCardClickListener(card1, contentAmountCard1);
 addCardClickListener(card2, contentAmountCard2);
 addCardClickListener(card3, contentAmountCard3);
 
+// const input = document.getElementById("input-sponsor");
+// const button = document.getElementById("btn-sponsor");
+// const cardAlert = document.getElementById("card-alert");
+// input.addEventListener("input", validateInput);
+
+// function validateInput() {
+//   let inputValue = input.value;
+
+//   if ((button = inputValue)) {
+//     button.disabled = false;
+//   } else {
+//     button.disabled = true;
+//     cardAlert.style.display = "flex";
+//   }
+// }
+// validateInput()
 // function sponsorAmout(open) {
-//   const inputSponsor = document.getElementById("input-sponsor");
-//   const buttonSponsor = document.getElementById("btn-sponsor");
+const inputSponsor = document.getElementById("input-sponsor");
+const buttonSponsor = document.getElementById("btn-sponsor");
+const containerSales = document.getElementById("container-sales");
+const cardAlert = document.getElementById("card-alert")
 //   buttonSponsor.disabled = true;
 
 //   if (open == true) {
@@ -90,13 +108,14 @@ addCardClickListener(card3, contentAmountCard3);
 //     }
 //   }
 // }
-// buttonSponsor.addEventListener("click", () => {
-//   if (inputSponsor.value <= 0) {
-//     inputSponsor.style.border = "solid red 1px";
-//   } else {
-//     cardAlert.style.display = "flex";
-//     containerSales.classList.add("apagado");
-//   }
-// });
 
 // sponsorAmout();
+
+buttonSponsor.addEventListener("click", () => {
+  if (inputSponsor.value <= 0) {
+    inputSponsor.style.border = "solid red 1px";
+  } else {
+    cardAlert.classList.add("encendido")
+    containerSales.classList.add("apagado");
+  }
+});
