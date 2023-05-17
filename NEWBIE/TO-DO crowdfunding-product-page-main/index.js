@@ -9,7 +9,7 @@ const openCLose = () => {
   }
 };
 function toggleCard(open) {
-  const modal = document.getElementById("modal2");
+  const modal = document.getElementById("card-alert");
   modal.classList.add("modal");
   if (open == true) {
     cardAlert.style.display = "flex";
@@ -53,7 +53,7 @@ function checked(idsArticle, idInput) {
 }
 const sponsor = checked("articleReward", "subtitle-reward");
 const bamboo = checked("articleBamboo", "BambooStand");
-const black = checked("articleBlack", "Black-edition");
+const black = checked("articleBlack", "black-edition");
 
 function addCardClickListener(card, contentAmount) {
   card.addEventListener("click", () => {
@@ -80,7 +80,6 @@ addCardClickListener(card3, contentAmountCard3);
 // const input = document.getElementById("input-sponsor");
 // const button = document.getElementById("btn-sponsor");
 // const cardAlert = document.getElementById("card-alert");
-// input.addEventListener("input", validateInput);
 
 // function validateInput() {
 //   let inputValue = input.value;
@@ -94,10 +93,6 @@ addCardClickListener(card3, contentAmountCard3);
 // }
 // validateInput()
 // function sponsorAmout(open) {
-const inputSponsor = document.getElementById("input-sponsor");
-const buttonSponsor = document.getElementById("btn-sponsor");
-const containerSales = document.getElementById("container-sales");
-const cardAlert = document.getElementById("card-alert")
 //   buttonSponsor.disabled = true;
 
 //   if (open == true) {
@@ -111,11 +106,37 @@ const cardAlert = document.getElementById("card-alert")
 
 // sponsorAmout();
 
+const inputSponsor = document.getElementById("input-sponsor");
+const buttonSponsor = document.getElementById("btn-sponsor");
+const containerSales = document.getElementById("modal");
+const cardAlert = document.getElementById("card-alert");
 buttonSponsor.addEventListener("click", () => {
   if (inputSponsor.value <= 0) {
     inputSponsor.style.border = "solid red 1px";
   } else {
-    cardAlert.classList.add("encendido")
+    cardAlert.classList.add("encendido");
     containerSales.classList.add("apagado");
   }
 });
+
+// const btnBamboo = document.getElementById("button-bamboo");
+// const inputBamboo = document.getElementById("inputBamboo");
+// btnBamboo.addEventListener("click", () => {
+//   if (inputBamboo.value <= 25) {
+//     inputBamboo.style.border = "solid red 1px";
+//   } else {
+//     cardAlert.classList.add("encendido");
+//     containerSales.classList.add("apagado");
+//   }
+// });
+
+// const buttonBlack = document.getElementById("buttonBlack");
+// const blackEdition = document.getElementById("black-edition");
+// buttonBlack.addEventListener("click", () => {
+//   if (blackEdition.value <= 75) {
+//     blackEdition.style.border = "solid red 1px";
+//   } else {
+//     cardAlert.classList.add("encendido");
+//     containerSales.classList.add("apagado");
+//   }
+// });

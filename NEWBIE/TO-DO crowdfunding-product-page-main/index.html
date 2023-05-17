@@ -98,6 +98,7 @@
                       class="value"
                       id="input-sponsor"
                       value="0"
+                      min="0"
                     />
                     <button class="button-value" id="btn-sponsor">
                       Continue
@@ -141,9 +142,13 @@
                       type="number"
                       placeholder="$0"
                       class="value"
+                      id="inputBamboo"
                       value="25"
+                      min="0"
                     />
-                    <button class="button-value">Continue</button>
+                    <button class="button-value" id="button-bamboo">
+                      Continue
+                    </button>
                   </div>
                 </article>
               </article>
@@ -158,10 +163,10 @@
                     <label for="Black-edition">
                       <input
                         type="radio"
-                        id="Black-edition"
                         value="Black-edition"
                         name="checket"
                         class="input-radio"
+                        min="0"
                       />
                       Black Edition Stand</label
                     >
@@ -185,15 +190,19 @@
                       placeholder="$0"
                       class="value"
                       value="75"
+                      id="black-edition"
+                      min="0"
                     />
-                    <button class="button-value">Continue</button>
+                    <button class="button-value" id="buttonBlack">
+                      Continue
+                    </button>
                   </div>
                 </article>
               </article>
               <article class="card-buy-monitor">
                 <div>
                   <div>
-                    <input type="radio" disabled/>
+                    <input type="radio" disabled />
                     <h3>Mahogany special Edition</h3>
                     <p>Pledge $200 or more</p>
                   </div>
@@ -210,7 +219,7 @@
               </article>
             </div>
           </div>
-          <div class="modal" id="modal2">
+          <div class="modal" id="card-alert">
             <section class="card-alert" id="card-alert">
               <img src="images/icon-check.svg" class="img-check" alt="" />
               <h2>Thanks for your support!</h2>
@@ -225,8 +234,8 @@
             </section>
           </div>
           <div class="bookmark">
-            <but  ton
-              class="btn-bookmark "
+            <button
+              class="btn-bookmark"
               id="btn-bookmark"
               onclick="addToFavorites()"
             >
@@ -236,7 +245,7 @@
                   <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
                 </g>
               </svg>
-            </but>
+            </button>
             <p id="p-bookmark">Bookmark</p>
           </div>
         </div>
@@ -292,12 +301,7 @@
               <h2>101</h2>
               <p>left</p>
             </div>
-            <button
-              class="btn-card"
-            "
-            >
-              Select Reward
-            </button>
+            <button class="btn-card">Select Reward</button>
           </section>
         </article>
         <article class="card">

@@ -44,6 +44,7 @@
   width: fit-content;
   height: 57px;
   border: none;
+  cursor: pointer;
 }
 
 .content-btn-bookmark {
@@ -72,7 +73,7 @@ label:focus {
 .btn-bookmark.active svg g circle {
   fill: var(--Dark-cyan);
 }
-    
+
 .btn-bookmark.active svg g path {
   fill: white;
 }

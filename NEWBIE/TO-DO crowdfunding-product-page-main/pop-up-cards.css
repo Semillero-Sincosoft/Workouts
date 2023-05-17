@@ -65,6 +65,6 @@ input[type="number"] {
 }
 .button-value:hover,
 .button-value:focus {
-  background-color: red;
+  background-color: var(--Moderate-cyan);
   cursor: pointer;
 }
