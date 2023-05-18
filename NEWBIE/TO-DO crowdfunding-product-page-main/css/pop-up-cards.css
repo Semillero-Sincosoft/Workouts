@@ -54,7 +54,7 @@
   justify-content: space-evenly;
   border-radius: 13px;
 }
-.card-buy-monitor div {
+.units-available {
   display: flex;
   align-items: center;
   justify-content: space-between;

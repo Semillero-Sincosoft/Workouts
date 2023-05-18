@@ -1,4 +1,4 @@
-const openCLose = () => {
+  const openCLose = () => {
   const navbar = document.querySelector("nav");
   navbar.classList.toggle("open");
   const imgMenu = document.getElementById("img-menu");

@@ -43,7 +43,7 @@ body {
 }
 @media screen and (max-width: 750px) {
   header {
-    background-image: url(images/image-hero-mobile.jpg);
+    background-image: url(../images/image-hero-mobile.jpg);
   }
   li {
     margin: 0;
@@ -71,8 +71,8 @@ body {
   }
   .card-monitor p {
     font-size: 15px;
-    text-align: center;
     line-height: 20px;
+    padding-bottom: 35px;
   }
 
   .card-monitor h1 {
@@ -161,17 +161,27 @@ body {
     padding: 0;
     text-align: left;
   }
-  .card-buy-monitor {
-    height: 250px;
-  }
 
-  .card-buy-monitor div {
-    display: inline-block;
+  .units-available {
+    position: relative;
   }
 
   .close-card {
     top: 0;
     right: 0;
+  }
+
+  .content-value {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .money-validation {
+    display: flex;
+  }
+
+  .number-of-units{
+position: absolute;
+top: 160px;
   }
 
   .title-mohogany {
