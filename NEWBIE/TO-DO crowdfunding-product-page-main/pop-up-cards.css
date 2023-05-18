@@ -64,7 +64,7 @@ input[type="number"] {
   font-weight: 700;
 }
 .button-value:hover,
-.button-value:focus {
+.button-value:focus { 
   background-color: var(--Moderate-cyan);
   cursor: pointer;
 }
