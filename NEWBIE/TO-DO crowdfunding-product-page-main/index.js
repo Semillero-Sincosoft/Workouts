@@ -71,36 +71,38 @@ const inputSponsor = document.getElementById("input-sponsor");
 const buttonSponsor = document.getElementById("btn-sponsor");
 const containerSales = document.getElementById("modal");
 const cardAlert = document.getElementById("card-alert");
+
 buttonSponsor.addEventListener("click", () => {
   if (inputSponsor.value <= 0) {
-    inputSponsor.style.border = "solid red 1px";
+    alert("tiene que ingresar un valor mayor a 0");
   } else {
     containerSales.classList.remove("encendido");
-    cardAlert.classList.add("encendido")
+    cardAlert.classList.add("encendido");
   }
 });
-const btnGotIt = document.getElementById("btn-got-it")
-btnGotIt.addEventListener("click",()=>{
-cardAlert.classList.remove("encendido")  
-})
-// const btnBamboo = document.getElementById("button-bamboo");
-// const inputBamboo = document.getElementById("inputBamboo");
-// btnBamboo.addEventListener("click", () => {
-//   if (inputBamboo.value <= 25) {
-//     inputBamboo.style.border = "solid red 1px";
-//   } else {
-//     cardAlert.classList.add("encendido");
-//     containerSales.classList.add("apagado");
-//   }
-// });
 
-// const buttonBlack = document.getElementById("buttonBlack");
-// const blackEdition = document.getElementById("black-edition");
-// buttonBlack.addEventListener("click", () => {
-//   if (blackEdition.value <= 75) {
-//     blackEdition.style.border = "solid red 1px";
-//   } else {
-//     cardAlert.classList.add("encendido");
-//     containerSales.classList.add("apagado");
-//   }
-// });
+const btnGotIt = document.getElementById("btn-got-it");
+btnGotIt.addEventListener("click", () => {
+  cardAlert.classList.remove("encendido");
+});
+const btnBamboo = document.getElementById("button-bamboo");
+const inputBamboo = document.getElementById("inputBamboo");
+btnBamboo.addEventListener("click", () => {
+  if (inputBamboo.value < 25) {
+    alert("ingrese un valor mayor a 24");
+  } else {
+    cardAlert.classList.add("encendido");
+    containerSales.classList.add("apagado");
+  }
+});
+
+const buttonBlack = document.getElementById("buttonBlack");
+const blackEdition = document.getElementById("black-edition");
+buttonBlack.addEventListener("click", () => {
+  if (blackEdition.value < 75) {
+    alert("ingrese un valor mayor a 74")
+  } else {
+    cardAlert.classList.add("encendido");
+    containerSales.classList.add("apagado");
+  }
+});
