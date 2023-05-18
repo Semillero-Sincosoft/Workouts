@@ -80,6 +80,10 @@
     font-size:1.8rem;
     font-weight: 700;
   }
+  .content-cards-back .check-card p{
+    color: var(--Strong-cyan);
+    font-weight: 600;
+  }
   label:hover{
     color: var(--Strong-cyan);
   }

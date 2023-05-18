@@ -1,3 +1,42 @@
+// const inputSponsor = document.getElementById("input-sponsor");
+// const buttonSponsor = document.getElementById("btn-sponsor");
+// const containerSales = document.getElementById("modal");
+// const cardAlert = document.getElementById("card-alert");
+// buttonSponsor.addEventListener("click", () => {
+//   if (inputSponsor.value <= 0) {
+//     alert("tiene que ingresar un valor mayor a 0");
+//   } else {
+//     containerSales.classList.remove("encendido");
+//     cardAlert.classList.add("encendido");
+//   }
+// });
+// const btnGotIt = document.getElementById("btn-got-it");
+// btnGotIt.addEventListener("click", () => {
+//   cardAlert.classList.remove("encendido");
+// });
+// const btnBamboo = document.getElementById("button-bamboo");
+// const inputBamboo = document.getElementById("inputBamboo");
+// btnBamboo.addEventListener("click", () => {
+//   if (inputBamboo.value < 25) {
+//     alert("ingrese un valor mayor a 24");
+//   } else {
+//     containerSales.classList.remove("encendido");
+//     cardAlert.classList.add("encendido");
+//   }
+// });
+// const buttonBlack = document.getElementById("buttonBlack");
+// const blackEdition = document.getElementById("black-edition");
+// buttonBlack.addEventListener("click", () => {
+//   if (blackEdition.value < 75) {
+//     alert("ingrese un valor mayor a 74");
+//   } else {
+//     cardAlert.classList.add("encendido");
+//     containerSales.classList.remove("encendido");
+//   }
+// });
+
+
+
 function selectCard(container, input) {
   document.getElementById(container).addEventListener("click", function () {
     document.getElementById(input).checked = true;
@@ -43,7 +82,6 @@ function mark() {
   }
 }
 
-
 const botonPrueba = document.getElementById("button-bookmark");
 const textoPrueba = document.getElementById("text-bookmark");
 
@@ -64,21 +102,24 @@ document.addEventListener("DOMContentLoaded", function () {
   if (botonSeleccionado === "true") {
     botonPrueba.classList.add("active");
     textoPrueba.textContent = "Bookmarked";
-    textoPrueba.style.color = "var(--Moderate-cyan)"
+    textoPrueba.style.color = "var(--Moderate-cyan)";
   }
 });
-
 
 const nav = {
   element: document.getElementById("nav-content"),
   iconOpen: document.getElementById("open"),
   iconClose: document.getElementById("close"),
+  firstCard: document.getElementById("content-amount-card-one"),
+  secondCard: document.getElementById("content-amount-card-two"),
+  thirdCard: document.getElementById("content-amount-card-three"),
   show: function () {
     this.element.classList.remove("oculto");
     this.iconOpen.classList.add("oculto");
     this.iconClose.classList.remove("oculto");
   },
   hidden: function () {
+    this.firstCard.removeAttribute("display");
     this.element.classList.add("oculto");
     this.iconOpen.classList.remove("oculto");
     this.iconClose.classList.add("oculto");

@@ -51,15 +51,17 @@
 .content-bookmark {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  width: fit-content;
+  gap: 2rem;
+  width: 19rem;
   height: 5.6rem;
   border: none;
   border-radius: 5rem;
   background-color: var(--Medium-gray);
   color: var(--Dark-gray);
   font-weight: 600;
-  padding-right: 2rem;
+}
+.content-bookmark:hover{
+  cursor: pointer;
 }
 .content-bookmark.active svg circle {
   fill: var(--Moderate-cyan);
