@@ -85,24 +85,27 @@ const btnGotIt = document.getElementById("btn-got-it");
 btnGotIt.addEventListener("click", () => {
   cardAlert.classList.remove("encendido");
 });
+
 const btnBamboo = document.getElementById("button-bamboo");
 const inputBamboo = document.getElementById("inputBamboo");
+
 btnBamboo.addEventListener("click", () => {
   if (inputBamboo.value < 25) {
     alert("ingrese un valor mayor a 24");
   } else {
+    containerSales.classList.remove("encendido");
     cardAlert.classList.add("encendido");
-    containerSales.classList.add("apagado");
   }
 });
 
 const buttonBlack = document.getElementById("buttonBlack");
 const blackEdition = document.getElementById("black-edition");
+
 buttonBlack.addEventListener("click", () => {
   if (blackEdition.value < 75) {
-    alert("ingrese un valor mayor a 74")
+    alert("ingrese un valor mayor a 74");
   } else {
     cardAlert.classList.add("encendido");
-    containerSales.classList.add("apagado");
+    containerSales.classList.remove("encendido");
   }
 });
