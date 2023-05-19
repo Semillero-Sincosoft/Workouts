@@ -99,11 +99,14 @@
   }
   div article.content-amount-card-support{
     border-top: solid 0.2rem var(--Medium-gray);
-    display: none;
-    justify-content: space-between;
-    align-items: center;
     margin: 2rem;
     padding: 3rem 0 0 0;
+  }
+  div article.content-amount-card-support .elements-card{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
   div article.content-amount-card-support section:last-child{
     display: flex;
@@ -144,4 +147,7 @@
   }
 .oculto{
     display: none;
+}
+.show{
+  display: flex;
 }

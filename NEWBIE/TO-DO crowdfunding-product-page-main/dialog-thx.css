@@ -12,6 +12,7 @@
     gap: 3rem;
     text-align: center;
     border-radius: 1rem;
+    display: flex;
   }
   .popup-notification article {
     display: flex;

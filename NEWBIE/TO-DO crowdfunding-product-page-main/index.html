@@ -71,13 +71,15 @@
               </p>
             </article>
 
-            <article class="content-amount-card-support" id="content-amount-card-one">
-              <section>
-                <p>Enter your pledge</p>
-              </section>
-              <section>
-                <input type="number" placeholder="$" id="value-card-1"/>
-                <button class="button-value-disabled" disabled id="button-value-card-1">Continue</button>
+            <article class="content-amount-card-support oculto" id="content-amount-card-one">
+              <section class="elements-card">
+                <section>
+                  <p>Enter your pledge</p>
+                </section>
+                <section>
+                  <input type="number" placeholder="$" min="0" id="value-card-1"/>
+                  <button class="button-value-disabled" disabled id="button-value-card-1">Continue</button>
+                </section>
               </section>
             </article>
           </div>
@@ -101,13 +103,15 @@
               </p>
             </article>
 
-            <article class="content-amount-card-support" id="content-amount-card-two">
-              <section>
-                <p>Enter your pledge</p>
-              </section>
-              <section>
-                <input type="number" placeholder="$" id="value-card-2"/>
-                <button class="button-value-disabled" disabled id="button-value-card-2">Continue</button>
+            <article class="content-amount-card-support oculto" id="content-amount-card-two">
+              <section class="elements-card">
+                <section>
+                  <p>Enter your pledge</p>
+                </section>
+                <section>
+                  <input type="number" placeholder="$" id="value-card-2"/>
+                  <button class="button-value-disabled" disabled id="button-value-card-2">Continue</button>
+                </section>
               </section>
             </article>
           </div>
@@ -131,13 +135,15 @@
               </p>
             </article>
 
-            <article class="content-amount-card-support" id="content-amount-card-three">
-              <section>
-                <p>Enter your pledge</p>
-              </section>
-              <section>
-                <input type="number" placeholder="$" id="value-card-3"/>
-                <button class="button-value-disabled" disabled id="button-value-card-3">Continue</button>
+            <article class="content-amount-card-support oculto" id="content-amount-card-three">
+              <section class="elements-card">
+                <section>
+                  <p>Enter your pledge</p>
+                </section>
+                <section>
+                  <input type="number" placeholder="$" id="value-card-3"/>
+                  <button class="button-value-disabled" disabled id="button-value-card-3">Continue</button>
+                </section>
               </section>
             </article>
           </div>
@@ -196,7 +202,7 @@
 
             <section
               class="popup-notification oculto"
-              id="check-support oculte"
+              id="check-support"
             >
               <picture>
                 <img src="images/icon-check.svg" alt="" />
@@ -209,7 +215,7 @@
                   campaign is completed.
                 </p>
               </article>
-              <button id="close-support">Go it!</button>
+              <button id="close-check-support">Go it!</button>
             </section>
 
             <button class="content-bookmark" id="button-bookmark" onclick="mark()">
