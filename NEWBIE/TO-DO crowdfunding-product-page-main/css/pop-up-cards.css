@@ -147,6 +147,10 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.button-value:disabled {
+  background-color: gray;
+}
+
 .button-value {
   width: 107px;
   height: 48px;
@@ -160,4 +164,36 @@ input[type="number"] {
 .button-value:focus {
   background-color: var(--Moderate-cyan);
   cursor: pointer;
+}
+
+.hd {
+  display: none;
+}
+.fl {
+  display: flex;
+}
+
+.number-invalide {
+  width: 400px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  justify-content: space-evenly;
+  border-radius: 20px;
+}
+
+.number-invalide button{
+  width: 90px;
+  height: 45px;
+  border-radius: 15px;
+  background-color: var(--Moderate-cyan);
+  border: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 14px;
+}
+.number-invalide svg {
+  fill: red;
 }
