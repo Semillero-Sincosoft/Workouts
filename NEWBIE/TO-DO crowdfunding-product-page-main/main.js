@@ -1,39 +1,58 @@
-// const inputSponsor = document.getElementById("input-sponsor");
-// const buttonSponsor = document.getElementById("btn-sponsor");
-// const containerSales = document.getElementById("modal");
-// const cardAlert = document.getElementById("card-alert");
-// buttonSponsor.addEventListener("click", () => {
-//   if (inputSponsor.value <= 0) {
-//     alert("tiene que ingresar un valor mayor a 0");
-//   } else {
-//     containerSales.classList.remove("encendido");
-//     cardAlert.classList.add("encendido");
+const valueCard1 = document.getElementById("value-card-1");
+const buttonValueCard1 = document.getElementById("button-value-card-1");
+const valueCard2 = document.getElementById("value-card-2");
+const buttonValueCard2 = document.getElementById("button-value-card-2");
+const valueCard3 = document.getElementById("value-card-3")
+const buttonValueCard3 = document.getElementById("button-value-card-3")
+
+
+  valueCard1.addEventListener("keyup", (e) => {
+    if(event.keyCode == 13){
+      if(valueCard1.value > 0 ){
+        buttonValueCard1.removeAttribute("disabled")
+        buttonValueCard1.classList.remove("button-value-disabled");
+        buttonValueCard1.classList.add("button-value") 
+      }else{
+        valueCard1.style.border = "solid red 1px"
+      }
+    }
+  })
+
+  valueCard2.addEventListener("keyup", (e) => {
+    if(event.keyCode == 13){
+      if(valueCard2.value >= 25 ){
+        buttonValueCard2.removeAttribute("disabled")
+        buttonValueCard2.classList.remove("button-value-disabled");
+        buttonValueCard2.classList.add("button-value") 
+      }else{
+        valueCard2.style.border = "solid red 1px"
+      }
+    }
+  })
+
+  valueCard3.addEventListener("keyup", (e) => {
+    if(event.keyCode == 13){
+      if(valueCard3.value >= 75 ){
+        buttonValueCard3.removeAttribute("disabled")
+        buttonValueCard3.classList.remove("button-value-disabled");
+        buttonValueCard3.classList.add("button-value") 
+      }
+      else{
+        valueCard3.style.border = "solid red 1px"
+      }
+    }
+  })
+
+// valueCard1.addEventListener("keyup", (e) => {
+//   if(event.keyCode == 13){
+//     if(valueCard1.value >= 25 ){
+//       buttonValueCard1.removeAttribute("disabled")
+//       buttonValueCard1.classList.remove("button-value-disabled");
+//       buttonValueCard1.classList.add("button-value") 
+//     }
 //   }
-// });
-// const btnGotIt = document.getElementById("btn-got-it");
-// btnGotIt.addEventListener("click", () => {
-//   cardAlert.classList.remove("encendido");
-// });
-// const btnBamboo = document.getElementById("button-bamboo");
-// const inputBamboo = document.getElementById("inputBamboo");
-// btnBamboo.addEventListener("click", () => {
-//   if (inputBamboo.value < 25) {
-//     alert("ingrese un valor mayor a 24");
-//   } else {
-//     containerSales.classList.remove("encendido");
-//     cardAlert.classList.add("encendido");
-//   }
-// });
-// const buttonBlack = document.getElementById("buttonBlack");
-// const blackEdition = document.getElementById("black-edition");
-// buttonBlack.addEventListener("click", () => {
-//   if (blackEdition.value < 75) {
-//     alert("ingrese un valor mayor a 74");
-//   } else {
-//     cardAlert.classList.add("encendido");
-//     containerSales.classList.remove("encendido");
-//   }
-// });
+// })
+
 
 
 

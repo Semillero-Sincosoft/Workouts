@@ -122,13 +122,25 @@
     font-weight: 500;
     caret-color: var(--Strong-cyan);
   }
-  div article.content-amount-card-support section button{
+  div article.content-amount-card-support section .button-value{
     width: 10rem;
     height: 5.2rem;
     background-color: var(--Dark-cyan);
     border: none;
     color: white;
     border-radius: 2.5rem;
+  }
+  div article.content-amount-card-support section .button-value:hover{
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+  }
+ .button-value-disabled:disabled{
+    width:10rem ;
+    height: 5.2rem;
+    border: none;
+    color: black;
+    border-radius: 2.5rem;
+    background-color: rgb(230, 230, 230);
   }
 .oculto{
     display: none;
