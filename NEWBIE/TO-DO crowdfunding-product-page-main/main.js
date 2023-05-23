@@ -159,16 +159,12 @@ const nav = {
   element: document.getElementById("nav-content"),
   iconOpen: document.getElementById("open"),
   iconClose: document.getElementById("close"),
-  firstCard: document.getElementById("content-amount-card-one"),
-  secondCard: document.getElementById("content-amount-card-two"),
-  thirdCard: document.getElementById("content-amount-card-three"),
   show: function () {
     this.element.classList.remove("oculto");
     this.iconOpen.classList.add("oculto");
     this.iconClose.classList.remove("oculto");
   },
   hidden: function () {
-    this.firstCard.removeAttribute("display");
     this.element.classList.add("oculto");
     this.iconOpen.classList.remove("oculto");
     this.iconClose.classList.add("oculto");
