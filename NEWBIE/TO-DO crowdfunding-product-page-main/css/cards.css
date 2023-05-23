@@ -32,7 +32,7 @@
   box-shadow: 0px 0px 1px 0px;
   padding: 38px 32px 32px 32px;
   display: flex;
-  height: 255px;
+  height: fit-content;
   flex-direction: column;
   gap: 40px;
   border-radius: 20px;

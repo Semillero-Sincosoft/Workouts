@@ -322,10 +322,23 @@
               <h2>101</h2>
               <p>left</p>
             </div>
-            <button class="btn-card" onclick="prendidoApagado(open)">
-              Select Reward
-            </button>
+            <button class="btn-card" id="select-bamboo">Select Reward</button>
           </section>
+          <article class="content-value" id="select-validation">
+            <p>Enter your pledge</p>
+            <div class="money-validation">
+              <input
+                type="number"
+                placeholder="$0"
+                class="value"
+                id="input-sponsor"
+                min="0"
+              />
+              <button class="button-value" disabled id="btn-sponsor" value="0">
+                Continue
+              </button>
+            </div>
+          </article>
         </article>
         <article class="card">
           <div class="title-card">

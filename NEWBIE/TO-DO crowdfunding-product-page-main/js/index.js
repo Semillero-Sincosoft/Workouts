@@ -65,9 +65,6 @@ function openCloseCard(contentAmount) {
     }
   });
 }
-///boton.disbaled=false;
-//buttonSponsor.classl
-
 function addCardClickListener(card, contentAmount) {
   card.addEventListener("click", () => {
     openCloseCard(contentAmount);
@@ -108,9 +105,6 @@ inputSponsor.addEventListener("keyup", () => {
       warning.classList.add("encendido");
     } else {
       buttonSponsor.removeAttribute("disabled");
-      containerSales.classList.remove("encendido");
-      // cardAlert.classList.add("encendido");
-      // buttonSponsor.setAttribute("disabled");
     }
   }
 });
@@ -119,7 +113,6 @@ const btnWarning = document.getElementById("btn-warning");
 btnWarning.addEventListener("click", () => {
   warning.classList.remove("encendido");
 });
-
 const btnGotIt = document.getElementById("btn-got-it");
 btnGotIt.addEventListener("click", () => {
   cardAlert.classList.remove("encendido");
@@ -129,11 +122,11 @@ const btnBamboo = document.getElementById("button-bamboo");
 const inputBamboo = document.getElementById("inputBamboo");
 
 btnBamboo.addEventListener("click", () => {
-  if (inputBamboo.value <= 25) {
-    warning.classList.add("encendido");
-  } else {
+  if (inputBamboo.value >= 25) {
     containerSales.classList.remove("encendido");
     cardAlert.classList.add("encendido");
+  } else {
+    warning.classList.add("encendido");
   }
 });
 
@@ -141,35 +134,35 @@ inputBamboo.addEventListener("keyup", () => {
   if (event.keyCode == 13) {
     if (inputBamboo.value >= 25) {
       btnBamboo.removeAttribute("disabled");
-      containerSales.classList.remove("encendido");
-      cardAlert.classList.add("encendido");
     } else {
       warning.classList.add("encendido");
-      // buttonSponsor.setAttribute("disabled");
     }
   }
 });
 
+function validation75(button, input) {
+  input.addEventListener("keyup", () => {
+    if (event.keyCode == 13) {
+      if (input.value >= 75) {
+        button.removeAttribute("disabled");
+      } else {
+        warning.classList.add("encendido");
+      }
+    }
+  });
+  button.addEventListener("click", () => {
+    if (input.value >= 75) {
+      containerSales.classList.remove("encendido");
+      cardAlert.classList.add("encendido");
+    } else {
+      warning.classList.add("encendido");
+    }
+  });
+}
 const buttonBlack = document.getElementById("buttonBlack");
 const inputBlack = document.getElementById("input-black");
+validation75(buttonBlack, inputBlack);
 
-inputBlack.addEventListener("keyup", () => {
-  if (event.keyCode == 13) {
-    if (inputBlack.value >= 75) {
-      buttonBlack.removeAttribute("disabled");
-      containerSales.classList.remove("encendido");
-      cardAlert.classList.add("encendido");
-    } else {
-      warning.classList.add("encendido");
-    }
-  }
-});
-buttonBlack.addEventListener("click", () => {
-  if (inputBlack.value >= 75) {
-    containerSales.classList.remove("encendido");
-    cardAlert.classList.add("encendido");
-    
-  } else {
-    warning.classList.add("encendido");
-  }
-});
+const btn = document.getElementById("select-bamboo");
+const contentAmountCard4 = document.getElementById("select-validation");
+
