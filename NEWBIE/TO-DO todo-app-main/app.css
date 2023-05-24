@@ -12,6 +12,25 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+:root {
+  --Bright-Blue: hsl(220, 98%, 61%);
+  /* --Check-Background: linear-gradient ( hsl(192, 100%, 67%) to hsl(280, 87%, 65%)) */
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+  /* dark theme */
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Ver-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
 header {
   background-image: url(images/bg-desktop-light.jpg);
   width: 100%;
@@ -22,15 +41,31 @@ header {
   justify-content: center;
   align-items: center;
 }
+header section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+header section article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.moon {
+  width: 20px;
+  height: 20px;
+}
 header h1 {
   color: white;
   text-align: left;
+  font-size: 40px;
+  letter-spacing: 17px;
 }
 
 header input {
-  width: 700px;
-  height: 80px;
+  width: 541px;
+  height: 65px;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -40,15 +75,43 @@ header input {
   text-align: center;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    border: solid;
-    flex-direction: column;
-    align-items:center;
-    height: fit-content;
-
+.container {
+  display: flex;
+  justify-content: center;
+  border: solid;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
 }
-.content-homeworks{
-    height: 40px;
+.homeworks {
+  height: 63px;
+  width: 541px;
+  border: solid 1px;
+  align-items: center;
+  display: flex;
+  gap:  30px;
+  padding: 24px;
+}
+
+.circular-checkbox {
+  appearance: none; /* Desactiva la apariencia por defecto del checkbox */
+  -webkit-appearance: none; /* Para navegadores basados en WebKit, como Safari */
+  -moz-appearance: none; /* Para navegadores basados en Gecko, como Firefox */
+  width: 24px; /* Ajusta el ancho del checkbox */
+  height: 24px; /* Ajusta la altura del checkbox */
+  border-radius: 50%; /* Establece el radio del borde para hacerlo circular */
+  border: 1px solid #000; /* Establece un borde al checkbox */
+}
+
+.circular-checkbox:checked {
+  background: linear-gradient(
+    90deg,
+    rgba(87, 221, 255, 1) 0%,
+    rgba(192, 88, 243, 1) 50%
+  );
+}
+
+span{
+  font-size: 20px;
+  color: var(--);
 }
