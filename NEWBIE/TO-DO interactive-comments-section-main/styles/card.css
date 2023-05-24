@@ -1,0 +1,10 @@
+.content-user{
+    display: flex;
+    align-items: center;
+    width: 24.2rem;
+    gap: 1.6rem;
+}
+img{
+    width: 3.3rem;
+    height: 3.3rem;
+}
