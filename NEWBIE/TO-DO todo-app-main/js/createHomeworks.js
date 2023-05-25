@@ -1,3 +1,4 @@
+import { stick } from "./selection.js";
 export function crearTarea() {
   const article = document.createElement("article");
   article.classList.add("homeworks");
@@ -13,16 +14,17 @@ export function crearTarea() {
   return article;
 }
 
-function crearButtons(text) {
-  const buttons = document.createElement("buttons");
-  buttons.textContent = text;
-  return buttons;
-}
+export function crearArticles(stickResolve) {
+  const article = document.createElement("article");
+  const labelTodo = document.createElement("p");
+  labelTodo.textContent = stickResolve.text;
 
-const all = crearButtons("all");
+  article.append(labelTodo);
+  for (let i = 0; i < stickResolve.buttons.length; i++) {
+    const button = document.createElement("button");
+    button.textContent = stickResolve.buttons[i];
 
-function crearTareaArticle() {
-  const articles = document.createElement("article");
-  const text = document.createElement("p");
-  
+    article.append(button);
+  }
+  stick.append(article);
 }

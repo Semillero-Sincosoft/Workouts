@@ -1,9 +1,9 @@
-import { crearTarea } from "./createHomeworks.js";
 import { stick } from "./selection.js";
-import { articleStick } from "./app.js";
+import { crearTarea } from "./createHomeworks.js";
+
 export const main = document.querySelector("main");
 const content = document.createElement("section");
-
+content.setAttribute("id","content")
 content.classList.add("content");
 export const insertarTarea = (tarea) => {
   const { texto, finalizado } = tarea;
@@ -14,10 +14,5 @@ export const insertarTarea = (tarea) => {
   content.append(htmlTarea, stick);
 };
 
-export const prueba = (article) => {
-  const { text } = article;
 
-  const texto = (querySelector("p").textContent = text);
-
-  stick.append(texto);
-};
+content.a

@@ -5,12 +5,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  font-family: "Josefin Sans", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -71,7 +71,8 @@ body {
 }
 
 .circular-checkbox:checked {
-  background-image: url(../images/Success.svg);
+  background-image: url(../images/Succes.svg);
+  background-size: cover;
 }
 .circular-checkbox:hover {
   cursor: pointer;
@@ -95,4 +96,32 @@ span {
 
 .content-stick {
   height: 51px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.content-stick article {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.content-stick article p {
+  padding-right: 46px;
+}
+
+.content-stick article button:last-child{
+  padding-left: 15px;
+}
+
+.content-stick button {
+  border: none;
+  background-color: transparent;
+  height: fit-content;
+  width: fit-content;
+  font-size: 16px;
+}
+
+.content-stick button {
+  cursor: pointer;
 }

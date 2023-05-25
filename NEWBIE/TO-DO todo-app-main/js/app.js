@@ -1,29 +1,12 @@
-import { insertarTarea, prueba } from "./validationHomework.js";
+// import { stick } from "./selection.js";
+import { insertarTarea } from "./validationHomework.js";
 export const tareas = [
-  { texto: "ir al banco", finalizado: true },
+  { texto: "ir al banco", finalizado: false },
   { texto: "limpiar zapatos", finalizado: false },
   { texto: "barrer la calle", finalizado: true },
 ];
 
 tareas.forEach(insertarTarea);
-
-export const articleStick = [
-  {
-    Text: `item left`,
-  },
-  {
-    buttons: {
-      button1: "all",
-      button2: "active",
-      button3: "complete",
-    },
-  },
-  {
-    clearComplete: "clear complete",
-  },
-];
-
-articleStick.forEach(prueba);
 
 const input = document.getElementById("text");
 input.addEventListener("keyup", (e) => {
