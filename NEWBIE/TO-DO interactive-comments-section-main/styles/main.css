@@ -32,7 +32,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  border: solid;
   width: fit-content;
   height: fit-content;
   padding: 1rem;
