@@ -33,3 +33,9 @@ export const createButtonIcon = (svg,text) => {
 
   return contentReply
 }
+
+export const createText = (content) =>{
+  const text = createElement("p","text-comment");
+  text.textContent = content;
+  return text;
+}

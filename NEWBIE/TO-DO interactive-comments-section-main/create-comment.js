@@ -2,6 +2,7 @@ import {
   createElement,
   createUserAvatar,
   createButtonIcon,
+  createText,
 } from "./utilities-ui.js";
 export const createComment = (comentarioPr) => {
   const idComment = comentarioPr.id;
@@ -60,8 +61,7 @@ export const createComment = (comentarioPr) => {
   );
   contentTitleComment.append(iconButton);
   //texto Comentario
-  const textComment = createElement("p", "text-comment");
-  textComment.textContent = contentText;
-  comment.append(textComment);
+  const textComment = createText(comentarioPr.content)
+  comment.append(textComment)
   //texto Comentario
 };
