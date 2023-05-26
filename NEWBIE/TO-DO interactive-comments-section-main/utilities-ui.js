@@ -1,3 +1,4 @@
+import { incrementVotes } from "./functionalities.js";
 export const createElement = (tagName, className) => {
   const element = document.createElement(tagName);
   if (className) {
@@ -19,7 +20,6 @@ export const createUserAvatar = (user) => {
 
   return contentUser;
 };
-
 export const createButtonIcon = (svg, text) => {
   const contentReply = createElement("div", "content-button-icon");
 
@@ -48,13 +48,13 @@ const prueba = () => {
   console.log("prueba");
 };
 
-export const createButtonVotes = (svgIconOne, svgIconTwo,id) => {
+export const createButtonVotes = (svgIconOne, svgIconTwo, id) => {
   const button = createElement("div", "button-likes");
 
   const iconPlus = createElement("div", "icon-plus");
   iconPlus.innerHTML = svgIconOne;
   iconPlus.onclick = () => {
-    incrementVotes(true,id);
+    incrementVotes(true, id);
   };
   button.append(iconPlus);
 
@@ -66,20 +66,9 @@ export const createButtonVotes = (svgIconOne, svgIconTwo,id) => {
   const iconMinus = createElement("div", "icon-minus");
   iconMinus.innerHTML = svgIconTwo;
   iconMinus.onclick = () => {
-    incrementVotes(false,id);
+    incrementVotes(false, id);
   };
   button.append(iconMinus);
 
   return button;
-};
-export const incrementVotes = (estado, id) => {
-  const totalVotesElement = document.getElementById("button-" + id );
-  let contadorVotos = parseInt(totalVotesElement.textContent);
-  totalVotesElement.textContent = contadorVotos;
-  if (estado == true) {
-    contadorVotos++;
-  } else {
-    contadorVotos--;
-  }
-  totalVotesElement.textContent = contadorVotos;
 };
