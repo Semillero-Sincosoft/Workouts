@@ -55,18 +55,18 @@ aside {
   height: fit-content;
   display: flex;
   width: 63rem;
-  /* padding: 0 1rem 0 1rem; */
-  justify-content: space-between;
+  align-items: center;
 }
 .content-user {
   display: flex;
   align-items: center;
-  width: 24.2rem;
   gap: 1.6rem;
+  margin-right: 2rem;
 }
 .text-title-comment {
   font-weight: 400;
   font-size: 1.6rem;
+  margin-right: 30rem;
   color: var(--Grayish-Blue);
 }
 .text-comment {
