@@ -1,4 +1,4 @@
-
+import { modal } from "./cardAlert.js";
 import { insertarTarea } from "./validationHomework.js";
 export const tareas = [
   { texto: "ir al banco", finalizado: false },
@@ -13,7 +13,6 @@ input.addEventListener("keyup", (e) => {
     const txtNuevaTarea = e.target.value;
 
     if (txtNuevaTarea.trim() !== "") {
-
       insertarTarea({
         texto: txtNuevaTarea,
         finalizado: false,
@@ -21,7 +20,7 @@ input.addEventListener("keyup", (e) => {
 
       document.getElementById("text").value = "";
     } else {
-      alert("Por favor, ingrese una tarea válida.");
+      modal.classList.add("fl")
     }
   }
 });
