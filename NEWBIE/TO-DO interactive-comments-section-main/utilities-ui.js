@@ -19,3 +19,17 @@ export const createUserAvatar = (user) => {
 
   return contentUser;
 }
+
+export const createButtonIcon = (svg,text) => {
+  const contentReply = createElement("div", "content-button-icon");
+
+  const iconReply = createElement("div", "icon-button");
+  iconReply.innerHTML = svg;
+  contentReply.append(iconReply);
+
+  const textReply = createElement("p", "text-icon-button");
+  textReply.textContent = text;
+  contentReply.append(textReply);
+
+  return contentReply
+}

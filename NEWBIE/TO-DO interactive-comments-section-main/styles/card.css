@@ -36,8 +36,9 @@ aside {
   height: 1.1rem;
   cursor: pointer;
 }
-.button-likes .icon-plus:hover svg path,.button-likes .icon-minus:hover svg path{
-    fill: var(--Moderate-blue);
+.button-likes .icon-plus:hover svg path,
+.button-likes .icon-minus:hover svg path {
+  fill: var(--Moderate-blue);
 }
 .button-likes .icon-minus {
   width: 1.1rem;
@@ -72,27 +73,27 @@ img {
   width: 3.3rem;
   height: 3.3rem;
 }
-.content-reply {
+.content-button-icon {
   display: flex;
   align-items: center;
   gap: 0.6rem;
 }
-.content-reply:hover svg path {
+.content-button-icon:hover svg path {
   fill: var(--Light-grayish-blue);
 }
-.content-reply:hover .text-reply{
-    color:var(--Light-grayish-blue) ;
-    cursor: pointer;
+.content-button-icon:hover .text-icon-button {
+  color: var(--Light-grayish-blue);
+  cursor: pointer;
 }
-.icon-reply {
+.icon-button {
   width: 1.4rem;
   height: 1.4rem;
 }
-.icon-reply:hover {
+.icon-button:hover {
   cursor: pointer;
   fill: hsl(239, 57%, 85%);
 }
-.text-reply {
+.text-icon-button {
   font-size: 1.6rem;
   font-weight: 500;
   color: var(--Moderate-blue);
