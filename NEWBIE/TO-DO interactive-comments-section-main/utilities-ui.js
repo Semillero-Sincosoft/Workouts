@@ -1,4 +1,3 @@
-import { incrementVotes } from "./functionalities.js";
 export const createElement = (tagName, className) => {
   const element = document.createElement(tagName);
   if (className) {
@@ -20,6 +19,7 @@ export const createUserAvatar = (user) => {
 
   return contentUser;
 };
+
 export const createButtonIcon = (svg, text) => {
   const contentReply = createElement("div", "content-button-icon");
 
@@ -40,35 +40,12 @@ export const createText = (content) => {
   return text;
 };
 
-export const createCommentHeader = () => {
-  const header = createElement("article", "content-title-card");
-  return header;
-};
 const prueba = () => {
   console.log("prueba");
 };
 
-export const createButtonVotes = (svgIconOne, svgIconTwo, id,score) => {
-  const button = createElement("div", "button-likes");
-
-  const iconPlus = createElement("div", "icon-plus");
-  iconPlus.innerHTML = svgIconOne;
-  iconPlus.onclick = () => {
-    incrementVotes(true, id);
-  };
-  button.append(iconPlus);
-
-  const totalVotes = createElement("h2", "score-likes");
-  totalVotes.setAttribute("id", "button-" + id);
-  totalVotes.textContent = score;
-  button.append(totalVotes);
-
-  const iconMinus = createElement("div", "icon-minus");
-  iconMinus.innerHTML = svgIconTwo;
-  iconMinus.onclick = () => {
-    incrementVotes(false, id);
-  };
-  button.append(iconMinus);
-
-  return button;
+export default {
+  htmlElement: createElement,
+  avatar: createUserAvatar,
+  buttonIcon: createButtonIcon,
 };
