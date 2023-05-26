@@ -1,3 +1,4 @@
+
 export const comentario1 = {
   id: 1,
   content:
@@ -44,16 +45,17 @@ export const comentario2 = {
   }
 
  export const comentario4 = {
-    "id": 4,
-    "content": "I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.",
-    "createdAt": "2 days ago",
-    "score": 2,
-    "replyingTo": "ramsesmiron",
-    "user": {
-      "image": { 
-        "png": "./images/avatars/image-juliusomo.png",
-        "webp": "./images/avatars/image-juliusomo.webp"
+    id: 4,
+    content: "I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.",
+    createdAt: "2 days ago",
+    score: 2,
+    replyingTo: "ramsesmiron",
+    user: {
+      image: { 
+        png: "./images/avatars/image-juliusomo.png",
+        webp: "./images/avatars/image-juliusomo.webp"
       },
-      "username": "juliusomo"
+      username: "juliusomo"
     }
   }
+  export const comentarios = [comentario1,comentario2,comentario3,comentario4];
