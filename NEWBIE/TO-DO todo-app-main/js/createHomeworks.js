@@ -23,7 +23,8 @@ export function crearArticles(stickResolve) {
   for (let i = 0; i < stickResolve.buttons.length; i++) {
     const button = document.createElement("button");
     button.textContent = stickResolve.buttons[i];
-
+    
+    button.id = "button-" + i;
     article.append(button);
   }
   stick.append(article);
