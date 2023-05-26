@@ -23,7 +23,7 @@ export const createUserAvatar = (user) => {
 export const createButtonIcon = (svg, text) => {
   const contentReply = createElement("div", "content-button-icon");
 
-  const iconReply = createElement("div", "icon-button");
+  const iconReply = createElement("button", "icon-button");
   iconReply.innerHTML = svg;
   contentReply.append(iconReply);
 
@@ -51,7 +51,7 @@ const prueba = () => {
 export const createButtonVotes = (svgIconOne, svgIconTwo, id,score) => {
   const button = createElement("div", "button-likes");
 
-  const iconPlus = createElement("div", "icon-plus");
+  const iconPlus = createElement("button", "icon-plus");
   iconPlus.innerHTML = svgIconOne;
   iconPlus.onclick = () => {
     incrementVotes(true, id);
@@ -63,7 +63,7 @@ export const createButtonVotes = (svgIconOne, svgIconTwo, id,score) => {
   totalVotes.textContent = score;
   button.append(totalVotes);
 
-  const iconMinus = createElement("div", "icon-minus");
+  const iconMinus = createElement("button", "icon-minus");
   iconMinus.innerHTML = svgIconTwo;
   iconMinus.onclick = () => {
     incrementVotes(false, id);
