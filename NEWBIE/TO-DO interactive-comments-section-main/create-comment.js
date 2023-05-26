@@ -1,11 +1,9 @@
-import { createElement } from "./utilities-ui.js";
+import { createElement,createUserAvatar } from "./utilities-ui.js";
 export const createComment = (comentarioPr) => {
   const idComment = comentarioPr.id;
   const contentText = comentarioPr.content;
   const scoreCard = comentarioPr.score;
   const timeAgo = comentarioPr.createdAt;
-  const img = comentarioPr.user.image.png;
-  const username = comentarioPr.user.username;
 
   const card = createElement("article", "content-card");
   card.setAttribute("id", idComment);
@@ -39,21 +37,16 @@ export const createComment = (comentarioPr) => {
   comment.append(contentTitleComment);
 
   //contenedor usuario
-  const contentUser = createElement("div", "content-user");
-  contentTitleComment.append(contentUser);
+ 
+  const avatar = createUserAvatar(comentarioPr.user)
+  contentTitleComment.append(avatar);
 
   //información usuario
-  const photoUser = createElement("img");
-  photoUser.src = img;
-  contentUser.append(photoUser);
 
-  const nameUser = createElement("h2");
-  nameUser.textContent = username;
-  contentUser.append(nameUser);
 
   const createdAt = createElement("p", "text-title-comment");
   createdAt.textContent = timeAgo;
-  contentUser.append(createdAt);
+  contentTitleComment.append(createdAt);
 
   const contentHome = document.getElementById("content-home");
   contentHome.append(card);
