@@ -44,21 +44,42 @@ export const createCommentHeader = () => {
   const header = createElement("article", "content-title-card");
   return header;
 };
+const prueba = () => {
+  console.log("prueba");
+};
 
-export const createButtonVotes = (svgIconOne,svgIconTwo) =>{
-  const button = createElement("div","button-likes")
+export const createButtonVotes = (svgIconOne, svgIconTwo,id) => {
+  const button = createElement("div", "button-likes");
 
-  const iconPlus = createElement("div","icon-plus");
+  const iconPlus = createElement("div", "icon-plus");
   iconPlus.innerHTML = svgIconOne;
+  iconPlus.onclick = () => {
+    incrementVotes(true,id);
+  };
   button.append(iconPlus);
 
-  const totalVotes = createElement("h2","score-likes")
-  totalVotes.textContent = "0"
+  const totalVotes = createElement("h2", "score-likes");
+  totalVotes.setAttribute("id", "button-" + id);
+  totalVotes.textContent = "0";
   button.append(totalVotes);
 
-  const iconMinus = createElement("div","icon-minus")
+  const iconMinus = createElement("div", "icon-minus");
   iconMinus.innerHTML = svgIconTwo;
-  button.append(iconMinus)
+  iconMinus.onclick = () => {
+    incrementVotes(false,id);
+  };
+  button.append(iconMinus);
 
-  return button
-}
+  return button;
+};
+export const incrementVotes = (estado, id) => {
+  const totalVotesElement = document.getElementById("button-" + id );
+  let contadorVotos = parseInt(totalVotesElement.textContent);
+  totalVotesElement.textContent = contadorVotos;
+  if (estado == true) {
+    contadorVotos++;
+  } else {
+    contadorVotos--;
+  }
+  totalVotesElement.textContent = contadorVotos;
+};
