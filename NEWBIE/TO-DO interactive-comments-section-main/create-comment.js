@@ -3,6 +3,7 @@ import {
   createUserAvatar,
   createButtonIcon,
   createText,
+  createCommentHeader
 } from "./utilities-ui.js";
 export const createComment = (comentarioPr) => {
   const idComment = comentarioPr.id;
@@ -38,7 +39,7 @@ export const createComment = (comentarioPr) => {
   card.append(comment);
 
   //Contenedor de encabezado del comentario
-  const contentTitleComment = createElement("article", "content-title-card");
+  const contentTitleComment = createCommentHeader()
   comment.append(contentTitleComment);
 
   //contenedor usuario

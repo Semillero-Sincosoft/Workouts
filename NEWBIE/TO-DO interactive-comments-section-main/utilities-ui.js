@@ -39,3 +39,7 @@ export const createText = (content) =>{
   text.textContent = content;
   return text;
 }
+export const createCommentHeader = () =>{
+  const header = createElement("article","content-title-card");
+  return header
+}
