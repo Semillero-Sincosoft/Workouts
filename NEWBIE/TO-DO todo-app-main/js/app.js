@@ -3,8 +3,11 @@ import { obtenerTareas} from "./servicios.js";
 import { insertarDatosTarea } from "./servicios.js";
 
 const tareas = obtenerTareas() 
+
 tareas.forEach(insertarTarea);
+const iterater = tareas.keys();
 const homeworkAssignment = document.getElementById("text");
+
 homeworkAssignment.addEventListener("keyup", (e) => {
   if (e.keyCode == 13) {
     const txtNuevaTarea = e.target.value;
