@@ -1,21 +1,21 @@
+import { createTag } from "./utilities.js";
+import icons from "./imgs.js/svg.js"
 export function crearTarea(tarea) {
   const { texto, finalizado } = tarea;
 
-  const article = document.createElement("article");
-  article.classList.add("homeworks");
+  const article = createTag("article","homework")
 
-  const div = document.createElement("div");
+  const div = createTag("div")
 
-  const input = document.createElement("input");
+  const input = createTag("input","circular-checkbox");
   input.setAttribute("type", "checkbox");
-  input.classList.add("circular-checkbox");
   input.checked = finalizado;
 
-  const textHomework = document.createElement("span");
+  const textHomework = createTag("span")
   textHomework.textContent = texto;
 
-  const close = document.createElement("img");
-  close.src = "images/icon-cross.svg";
+  const close = createTag("button")
+  close.innerHTML = icons.cross;
 
   article.append(div, close);
   div.append(input, textHomework);

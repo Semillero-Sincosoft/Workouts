@@ -36,6 +36,12 @@ body {
   --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
   --Ver-Dark-Grayish-Blue: hsl(237, 14%, 26%);
 }
+button{
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
 
 .container {
   display: flex;
@@ -44,9 +50,8 @@ body {
   align-items: center;
   height: fit-content;
 }
-.homeworks {
+.homework {
   height: 63px;
-
   border-bottom: solid 1px var(--Dark-Grayish-Blue);
   align-items: center;
   display: flex;
@@ -54,7 +59,7 @@ body {
   gap: 30px;
   padding: 24px;
 }
-.homeworks div {
+.homework div {
   display: flex;
   align-items: center;
   gap: 22px;
@@ -77,6 +82,7 @@ body {
 .circular-checkbox:hover {
   cursor: pointer;
 }
+
 
 span {
   font-size: 20px;
