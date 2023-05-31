@@ -55,6 +55,7 @@ aside {
   display: flex;
   width: 63rem;
   align-items: center;
+  justify-content: space-between;
 }
 .content-user {
   display: flex;
@@ -65,7 +66,6 @@ aside {
 .text-title-comment {
   font-weight: 400;
   font-size: 1.6rem;
-  margin-right: 30rem;
   color: var(--Grayish-Blue);
 }
 .text-comment {
@@ -81,29 +81,27 @@ img {
 .content-button-icon {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
 }
 .content-button-icon:hover svg path {
   fill: var(--Light-grayish-blue);
 }
-.content-button-icon:hover .text-icon-button {
+
+.content-button-icon button:hover {
   color: var(--Light-grayish-blue);
   cursor: pointer;
 }
-.icon-button {
-  width: 1.4rem;
-  height: 1.4rem;
-}
+
 .icon-button:hover {
   cursor: pointer;
   fill: hsl(239, 57%, 85%);
 }
-.text-icon-button {
+.content-button-icon button {
+  gap: 0.6rem;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: bold;
   color: var(--Moderate-blue);
 }
-button{
+button {
   background-color: transparent;
   border: none;
   display: flex;
