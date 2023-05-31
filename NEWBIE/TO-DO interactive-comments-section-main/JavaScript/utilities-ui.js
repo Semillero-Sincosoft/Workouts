@@ -6,5 +6,8 @@ export const createElement = (tagName, className) => {
   return element;
 };
 
-
-
+export const createText = (texto, clas) => {
+  const text = createElement("p", clas);
+  text.textContent = texto;
+  return text;
+};

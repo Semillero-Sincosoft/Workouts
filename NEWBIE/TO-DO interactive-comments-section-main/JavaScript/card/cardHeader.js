@@ -1,6 +1,6 @@
 import { createElement } from "../utilities-ui.js";
 
-export const createCommentHeader = () => {
+export const contentInfoUser = () => {
   const header = createElement("article", "content-title-card");
   return header;
 };
@@ -29,8 +29,4 @@ export const createButtonIcon = (svg, text) => {
   return contentReply;
 };
 
-export const createText = (content) => {
-  const text = createElement("p", "text-comment");
-  text.textContent = content;
-  return text;
-};
+//pasarala a utilidad  y en cardBody body pasarlar "utilizarla"
