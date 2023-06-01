@@ -9,14 +9,13 @@ import contentBodyCard from "./cardBody.js";
 import icon from "../data/svg.js";
 
 const createCard = (comentario) => {
-  const { idComment, score, user, createdAt, content } = comentario;
+  const { id, score, user, createdAt, content } = comentario;
   const contentCard = createElement("article", "content-card");
-  contentCard.setAttribute("id", idComment);
+  contentCard.setAttribute("id", id);
   const contentLikes = createElement("aside");
 
   const contentHeader = contentInfoUser();
-  const buttonLikes = createVotes(icon.minus, icon.plus, idComment, score);
-
+  const buttonLikes = createVotes(id, score);
   const iconReply = createButtonIcon(icon.reply, "Reply");
 
   const dateRegister = createElement("p", "text-title-comment");

@@ -11,3 +11,9 @@ export const createText = (texto, clas) => {
   text.textContent = texto;
   return text;
 };
+
+export const createAvatar = (image) => {
+  const photo = createElement("img");
+  photo.src = image.png;
+  return photo;
+};

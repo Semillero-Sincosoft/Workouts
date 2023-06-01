@@ -1,40 +1,54 @@
 import { createElement } from "../utilities-ui.js";
-export const createVotes = (svgIconOne, svgIconTwo, id, score) => {
-  const button = createElement("div", "button-likes");
+import icons from "./svg.js";
+import estado from "./estados.js";
+export const createVotes = (id, score) => {
+  const contentButton = createElement("div", "button-likes");
 
-  const iconPlus = createElement("button", "icon-plus");
-  iconPlus.innerHTML = svgIconOne;
-  iconPlus.onclick = () => {
-    incrementVotes(true, id);
+  const iconMinus = createElement("button", "icon-plus");
+  iconMinus.innerHTML = icons.minus;
+  iconMinus.onclick = () => {
+    let scoreActual = document.getElementById("labelScore-" + id).textContent;
+    scoreActual = parseInt(scoreActual);
+    const nuevoEstado = reduce(scoreActual, estado.positivo);
+    incrementVotes(nuevoEstado, id);
   };
-  button.append(iconPlus);
+  contentButton.append(iconMinus);
 
   const totalVotes = createElement("h2", "score-likes");
-  totalVotes.setAttribute("id", "button-" + id);
+  totalVotes.setAttribute("id", "labelScore-" + id);
   totalVotes.textContent = score;
-  button.append(totalVotes);
+  contentButton.append(totalVotes);
 
-  const iconMinus = createElement("button", "icon-minus");
-  iconMinus.innerHTML = svgIconTwo;
-  iconMinus.onclick = () => {
-    incrementVotes(false, id);
+  const reduce = (state, action) => {
+    switch (action) {
+      case estado.positivo:
+        return (state = state + 1);
+
+      case estado.negativo:
+        if (state > 0) {
+          return (state = state - 1);
+        }
+      default:
+        return state;
+    }
   };
-  button.append(iconMinus);
 
-  return button;
+  const iconPLus = createElement("button", "icon-minus");
+  iconPLus.innerHTML = icons.plus;
+  iconPLus.onclick = () => {
+    let scoreActual = document.getElementById("labelScore-" + id).textContent;
+    scoreActual = parseInt(scoreActual);
+    const nuevoEstado = reduce(scoreActual, estado.negativo);
+    incrementVotes(nuevoEstado, id);
+  };
+
+  contentButton.append(iconPLus);
+
+  return contentButton;
 };
 
-const incrementVotes = (estado, id) => {
-  const totalVotesElement = document.getElementById("button-" + id);
-  let contadorVotos = parseInt(totalVotesElement.textContent);
-  totalVotesElement.style.userSelect = "none";
-  if (estado == true) {
-    contadorVotos++;
-  } else {
-    contadorVotos--;
-  }
-  if (contadorVotos < 0) {
-    contadorVotos = 0;
-  }
-  totalVotesElement.textContent = contadorVotos;
+const incrementVotes = (votos, id) => {
+  const totalVotesElement = document.getElementById("labelScore-" + id);
+
+  totalVotesElement.textContent = votos;
 };
