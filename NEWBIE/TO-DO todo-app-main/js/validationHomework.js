@@ -1,9 +1,8 @@
 import { crearTarea } from "./createHomeworks.js";
-
+import { createTag } from "./utilities.js";
 export const container = document.querySelector("main");
-const homeworksContent = document.createElement("section");
+const homeworksContent = createTag ("section","content-homework");
 homeworksContent.setAttribute("id", "content-homeworks");
-homeworksContent.classList.add("content-homework");
 
 export const insertarTarea = (tarea) => {
   const htmlTarea = crearTarea(tarea);
