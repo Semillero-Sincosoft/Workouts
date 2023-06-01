@@ -1,6 +1,5 @@
 import { createElement } from "../utilities-ui.js";
-import { incrementVotes } from "../functionalities.js";
-export const createButtonVotes = (svgIconOne, svgIconTwo, id, score) => {
+export const createVotes = (svgIconOne, svgIconTwo, id, score) => {
   const button = createElement("div", "button-likes");
 
   const iconPlus = createElement("button", "icon-plus");
@@ -23,4 +22,19 @@ export const createButtonVotes = (svgIconOne, svgIconTwo, id, score) => {
   button.append(iconMinus);
 
   return button;
+};
+
+const incrementVotes = (estado, id) => {
+  const totalVotesElement = document.getElementById("button-" + id);
+  let contadorVotos = parseInt(totalVotesElement.textContent);
+  totalVotesElement.style.userSelect = "none";
+  if (estado == true) {
+    contadorVotos++;
+  } else {
+    contadorVotos--;
+  }
+  if (contadorVotos < 0) {
+    contadorVotos = 0;
+  }
+  totalVotesElement.textContent = contadorVotos;
 };
