@@ -36,7 +36,7 @@ body {
   --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
   --Ver-Dark-Grayish-Blue: hsl(237, 14%, 26%);
 }
-button{
+button {
   display: flex;
   align-items: center;
   background-color: transparent;
@@ -83,23 +83,38 @@ button{
   cursor: pointer;
 }
 
-
 span {
   font-size: 20px;
   color: var(--Ver-Dark-Grayish-Blue);
 }
 
 .content-homework {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 541px;
   padding: 11px;
-  height: fit-content;
+  height: 450px;
   position: relative;
   bottom: 45px;
   border-radius: 12px;
   background-color: #fff;
   box-shadow: 0px 2px 19px -4px rgba(148, 100, 148, 1);
 }
-
+.contenedor-tareas {
+  height: 400px;
+  overflow: scroll;
+}
+.contenedor-filtros {
+  display: flex;
+  justify-content: space-around;
+  height: fit-content;
+  width: 100%;
+}
+.contenedor-filtros .content-filter-1{
+  display: flex;
+  gap: 20px;
+}
 .content-stick {
   height: 51px;
   display: flex;
@@ -116,7 +131,7 @@ span {
   padding-right: 46px;
 }
 
-.content-stick article button:last-child{
+.content-stick article button:last-child {
   padding-left: 15px;
 }
 
