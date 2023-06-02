@@ -1,11 +1,12 @@
-import icons from "./imgs.js/svg.js";
+import icons from "./imgs/svg.js";
 import { createTag } from "./utilities.js";
-import { EventChecked } from "./functionalities.js/checked.js";
-import { cambiarEstadoHomeWork } from "./functionalities.js/change-status.js";
+import { EventChecked } from "./functionalities/checked.js";
+import { cambiarEstadoHomeWork } from "./tareas.js";
 export function crearTarea(tarea) {
-  const { texto } = tarea;
+  const { texto, id } = tarea;
 
   const article = createTag("article", "homework");
+  article.setAttribute("id",id)
 
   const div = createTag("div");
 
@@ -25,4 +26,6 @@ export function crearTarea(tarea) {
   input.addEventListener("change", () => cambiarEstadoHomeWork(tarea, input));
   return article;
 }
+
+
 
