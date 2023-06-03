@@ -3,7 +3,7 @@
   background-color: white;
   border-radius: 1rem;
   width: 73rem;
-  height: 16rem;
+  height: fit-content;
   padding: 1.5rem;
   gap: 2rem;
 }
@@ -106,4 +106,35 @@ button {
   border: none;
   display: flex;
   align-items: center;
+}
+
+.avatar-commentary {
+  align-items: flex-start;
+}
+.written {
+  width: 50.5rem;
+  height: 9.6rem;
+  border-radius: 1rem;
+  text-align: start;
+  padding: 1.2rem;
+  resize: none;
+  outline: none;
+}
+
+.btn-commentary {
+  height: fit-content;
+}
+.btn-commentary button {
+  width: 10.8rem;
+  height: 4.8rem;
+  border: solid;
+  background: var(--Moderate-blue);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.btn-commentary button:hover {
+  cursor: pointer;
 }

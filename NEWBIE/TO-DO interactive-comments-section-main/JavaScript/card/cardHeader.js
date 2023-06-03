@@ -27,6 +27,7 @@ export const createButtonIcon = (svg, text) => {
   contentReply.append(iconReply);
 
   return contentReply;
+
 };
 
 //pasarala a utilidad  y en cardBody body pasarlar "utilizarla"

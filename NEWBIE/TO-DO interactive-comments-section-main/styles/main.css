@@ -15,9 +15,9 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Rubik", sans-serif;
 }
 html {
-  font-family: "Rubik", sans-serif;
   font-size: 62.5%;
 }
 ::-webkit-scrollbar {

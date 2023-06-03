@@ -17,3 +17,12 @@ export const createAvatar = (image) => {
   photo.src = image.png;
   return photo;
 };
+
+export const createBtn = () => {
+  const contentBtn = createElement("article", "btn-commentary");
+  const btn = createElement("button");
+  btn.textContent = "REPLY";
+  contentBtn.btn = btn;
+  contentBtn.append(btn);
+  return contentBtn;
+};
