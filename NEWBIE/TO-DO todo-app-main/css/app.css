@@ -146,3 +146,9 @@ span {
 .content-stick button {
   cursor: pointer;
 }
+.hidden{
+  display: none;
+}
+.show{
+  display: flex;
+}

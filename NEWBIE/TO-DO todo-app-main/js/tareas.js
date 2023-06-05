@@ -1,13 +1,13 @@
 export const tareas = [];
 
 function elementsLeft() {
-  const p = document.getElementsByClassName("p0");
+  const itemsLeft = document.getElementsByClassName("p0");
   const elementosFaltantes = tareas.filter(
     (elemento) => elemento.finalizado == false
   );
   const numeroDeElementos = elementosFaltantes.length;
-  p[0].textContent = numeroDeElementos + " items left";
-  console.log(p);
+  console.log(itemsLeft,"pruebaDe items")
+  itemsLeft[0].textContent = numeroDeElementos + " items left";
 }
 
 export const insertarDatosTarea = (text, id) => {
@@ -16,7 +16,9 @@ export const insertarDatosTarea = (text, id) => {
   console.log(tareas);
 
   elementsLeft();
-
+  localStorage.setItem("arrayTareas",JSON.stringify(tareas))
+  const local = JSON.parse( localStorage.getItem("arrayTareas") )
+  console.log(local)
 };
 export const obtenerTareas = () => {
   return tareas;
@@ -40,3 +42,20 @@ export const cambiarEstadoHomeWork = (tarea, input) => {
 
   elementsLeft();
 };
+
+
+export const mostrarTareasCompletadas = function () {
+
+  const tareasFinalizadas = tareas.filter(function(tarea) {
+    return tarea.finalizado === false;
+  });
+  console.log(tareasFinalizadas,'SOBRE finalizadas')
+  tareasFinalizadas.forEach(function(tarea) {
+    console.log(tarea,'sobre tarea')
+    const article = document.getElementById(tarea.id);
+    article.classList.add("hidden")
+  });
+
+}
+
+
