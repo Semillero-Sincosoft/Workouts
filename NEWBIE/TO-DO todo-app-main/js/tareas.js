@@ -56,6 +56,39 @@ export const mostrarTareasCompletadas = function () {
   });
 }
 
+export const mostrarTodasTareasCompletadas2 = function () {
+
+  const todasTareas = tareas
+  todasTareas.forEach(function(tarea) {
+    const article = document.getElementById(tarea.id);
+    if(tarea.finalizado === false){
+      article.classList.add("hidden");
+    }else{
+      article.classList.remove("hidden");
+    }
+    // console.log(tarea,'sobre tarea')
+    // const article = document.getElementById(tarea.id);
+    // article.classList.remove("hidden")
+  });
+}
+
+
+export const mostrarTareasPendientes = function () {
+
+  const tareasPendientes = tareas
+  
+  console.log(tareasPendientes,'SOBRE finalizadas')
+  tareasPendientes.forEach(function(tarea) {
+    const article = document.getElementById(tarea.id);
+    if(tarea.finalizado === true){
+      article.classList.add("hidden");
+    }else{
+      article.classList.remove("hidden");
+    }
+    // const article = document.getElementById(tarea.id);
+    // article.classList.add("hidden")
+  });
+}
 
 export const mostrarTodasTareas = function () {
 
