@@ -1,7 +1,7 @@
 import { crearTarea } from "./createHomeworks.js";
 import { createTag } from "./utilities.js";
 import { mostrarTareasCompletadas, tareas } from "./tareas.js";
-
+import { mostrarTodasTareas } from "./tareas.js";
 export const container = document.querySelector("main");
 const homeworksContent = createTag("section", "content-homework");
 homeworksContent.setAttribute("id", "content-homeworks");
@@ -31,7 +31,7 @@ filters.map((filter, index) => {
     const itemCompleted = createTag("button", "filter-completed", filter[2]);
     element.append(itemAll, itemActive, itemCompleted);
     itemCompleted.addEventListener("click", mostrarTareasCompletadas); 
-    // itemAll.addEventListener("click",)
+    itemAll.addEventListener("click",mostrarTodasTareas);
   } else{
     const itemClear = createTag("button","filter-clear",filter)
     element.append(itemClear)

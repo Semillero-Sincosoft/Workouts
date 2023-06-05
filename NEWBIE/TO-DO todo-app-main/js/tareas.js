@@ -51,11 +51,19 @@ export const mostrarTareasCompletadas = function () {
   });
   console.log(tareasFinalizadas,'SOBRE finalizadas')
   tareasFinalizadas.forEach(function(tarea) {
-    console.log(tarea,'sobre tarea')
     const article = document.getElementById(tarea.id);
     article.classList.add("hidden")
   });
-
 }
 
 
+export const mostrarTodasTareas = function () {
+
+  const todasTareas = tareas
+
+  todasTareas.forEach(function(tarea) {
+    console.log(tarea,'sobre tarea')
+    const article = document.getElementById(tarea.id);
+    article.classList.remove("hidden")
+  });
+}
