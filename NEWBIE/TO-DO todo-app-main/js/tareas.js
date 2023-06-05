@@ -1,9 +1,22 @@
 export const tareas = [];
 
-export const insertarDatosTarea = (text,id) => {
-  const nuevaTarea = {id:id,texto: text, finalizado: false };
+function elementsLeft() {
+  const p = document.getElementsByClassName("p0");
+  const elementosFaltantes = tareas.filter(
+    (elemento) => elemento.finalizado == false
+  );
+  const numeroDeElementos = elementosFaltantes.length;
+  p[0].textContent = numeroDeElementos + " items left";
+  console.log(p);
+}
+
+export const insertarDatosTarea = (text, id) => {
+  const nuevaTarea = { id: id, texto: text, finalizado: false };
   tareas.push(nuevaTarea);
   console.log(tareas);
+
+  elementsLeft();
+
 };
 export const obtenerTareas = () => {
   return tareas;
@@ -24,4 +37,6 @@ export const cambiarEstadoHomeWork = (tarea, input) => {
 
     return t;
   });
+
+  elementsLeft();
 };
