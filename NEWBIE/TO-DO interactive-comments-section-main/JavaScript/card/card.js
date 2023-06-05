@@ -16,8 +16,9 @@ const createCard = (comentario) => {
 
   const contentHeader = contentInfoUser();
   const buttonLikes = createVotes(id, score);
-  const iconReply = createButtonIcon(icon.reply, "Reply");
-
+  let iconAction;
+  iconAction = createButtonIcon(icon.reply, "Reply");
+ 
   const dateRegister = createElement("p", "text-title-comment");
   dateRegister.textContent = createdAt;
 
@@ -29,7 +30,8 @@ const createCard = (comentario) => {
   contentCard.append(contentLikes, contentComment);
   contentLikes.append(buttonLikes);
   contentComment.append(contentHeader, textComment);
-  contentHeader.append(avatar, iconReply);
+  contentHeader.append(avatar, iconAction);
+  contentCard.replyButton = iconAction;
   avatar.append(dateRegister);
   return contentCard;
 };

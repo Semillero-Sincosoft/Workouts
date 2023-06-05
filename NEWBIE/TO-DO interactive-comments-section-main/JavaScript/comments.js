@@ -89,5 +89,6 @@ export const comentario4 = {
     },
     username: "cristian",
   },
+  replies: [],
 };
 export const comentarios = [comentario1, comentario2, comentario3, comentario4];

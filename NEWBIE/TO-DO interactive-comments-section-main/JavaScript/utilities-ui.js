@@ -18,11 +18,18 @@ export const createAvatar = (image) => {
   return photo;
 };
 
-export const createBtn = () => {
+export const createBtn = (text) => {
   const contentBtn = createElement("article", "btn-commentary");
   const btn = createElement("button");
-  btn.textContent = "REPLY";
+  btn.textContent = text;
   contentBtn.btn = btn;
   contentBtn.append(btn);
   return contentBtn;
+};
+
+const hiddenOpen = (clas) => {
+  const hidden = document.getElementById(clas);
+
+  if (hidden.classList.add("hidden")) {
+  }
 };

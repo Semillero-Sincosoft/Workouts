@@ -1,3 +1,8 @@
+.container-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .content-card {
   display: flex;
   background-color: white;
@@ -127,14 +132,19 @@ button {
 .btn-commentary button {
   width: 10.8rem;
   height: 4.8rem;
+  border-radius: 1rem;
   border: solid;
   background: var(--Moderate-blue);
   color: #fff;
   display: flex;
   justify-content: center;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.6rem;
 }
 .btn-commentary button:hover {
   cursor: pointer;
+}
+
+.btn-commentary button:disabled {
+  background-color: gray; 
 }

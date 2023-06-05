@@ -25,9 +25,8 @@ export const createButtonIcon = (svg, text) => {
   const iconReply = createElement("button", "icon-button");
   iconReply.innerHTML = svg + text;
   contentReply.append(iconReply);
-
+  contentReply.iconReply = iconReply;
   return contentReply;
-
 };
 
 //pasarala a utilidad  y en cardBody body pasarlar "utilizarla"
