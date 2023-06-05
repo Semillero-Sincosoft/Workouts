@@ -1,9 +1,10 @@
 import { crearTarea } from "./createHomeworks.js";
 import { createTag } from "./utilities.js";
-import { mostrarTareasCompletadas, tareas } from "./tareas.js";
 import { mostrarTodasTareas } from "./tareas.js";
 import { mostrarTareasPendientes } from "./tareas.js";
-import { mostrarTodasTareasCompletadas2 } from "./tareas.js";
+import { mostrarTodasTareasCompletadas } from "./tareas.js";
+import { tareas } from "./tareas.js";
+import { eliminarCompletados } from "./tareas.js";
 export const container = document.querySelector("main");
 const homeworksContent = createTag("section", "content-homework");
 homeworksContent.setAttribute("id", "content-homeworks");
@@ -34,10 +35,11 @@ filters.map((filter, index) => {
     element.append(itemAll, itemActive, itemCompleted);
     itemAll.addEventListener("click",mostrarTodasTareas);
     itemActive.addEventListener("click",mostrarTareasPendientes)
-    itemCompleted.addEventListener("click", mostrarTodasTareasCompletadas2); 
+    itemCompleted.addEventListener("click", mostrarTodasTareasCompletadas); 
   } else{
     const itemClear = createTag("button","filter-clear",filter)
     element.append(itemClear)
+    itemClear.addEventListener('click',()=>eliminarCompletados())
   }
 
   contentFilters.append(element);

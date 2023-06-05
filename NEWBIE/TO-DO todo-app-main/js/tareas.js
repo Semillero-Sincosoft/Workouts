@@ -1,3 +1,4 @@
+import { insertarTarea } from "./validationHomework.js";
 export const tareas = [];
 
 function elementsLeft() {
@@ -6,7 +7,6 @@ function elementsLeft() {
     (elemento) => elemento.finalizado == false
   );
   const numeroDeElementos = elementosFaltantes.length;
-  console.log(itemsLeft,"pruebaDe items")
   itemsLeft[0].textContent = numeroDeElementos + " items left";
 }
 
@@ -16,9 +16,9 @@ export const insertarDatosTarea = (text, id) => {
   console.log(tareas);
 
   elementsLeft();
-  localStorage.setItem("arrayTareas",JSON.stringify(tareas))
-  const local = JSON.parse( localStorage.getItem("arrayTareas") )
-  console.log(local)
+  // localStorage.setItem("arrayTareas", JSON.stringify(tareas));
+  // const local = JSON.parse(localStorage.getItem("arrayTareas"));
+  // console.log(local);
 };
 export const obtenerTareas = () => {
   return tareas;
@@ -43,60 +43,51 @@ export const cambiarEstadoHomeWork = (tarea, input) => {
   elementsLeft();
 };
 
-
-export const mostrarTareasCompletadas = function () {
-
-  const tareasFinalizadas = tareas.filter(function(tarea) {
-    return tarea.finalizado === false;
-  });
-  console.log(tareasFinalizadas,'SOBRE finalizadas')
-  tareasFinalizadas.forEach(function(tarea) {
+export const mostrarTodasTareasCompletadas = function () {
+  const todasTareas = tareas;
+  todasTareas.forEach(function (tarea) {
     const article = document.getElementById(tarea.id);
-    article.classList.add("hidden")
-  });
-}
-
-export const mostrarTodasTareasCompletadas2 = function () {
-
-  const todasTareas = tareas
-  todasTareas.forEach(function(tarea) {
-    const article = document.getElementById(tarea.id);
-    if(tarea.finalizado === false){
+    if (tarea.finalizado === false) {
       article.classList.add("hidden");
-    }else{
+    } else {
       article.classList.remove("hidden");
     }
-    // console.log(tarea,'sobre tarea')
-    // const article = document.getElementById(tarea.id);
-    // article.classList.remove("hidden")
   });
-}
-
+};
 
 export const mostrarTareasPendientes = function () {
+  const tareasPendientes = tareas;
 
-  const tareasPendientes = tareas
-  
-  console.log(tareasPendientes,'SOBRE finalizadas')
-  tareasPendientes.forEach(function(tarea) {
+  console.log(tareasPendientes, "SOBRE finalizadas");
+  tareasPendientes.forEach(function (tarea) {
     const article = document.getElementById(tarea.id);
-    if(tarea.finalizado === true){
+    if (tarea.finalizado === true) {
       article.classList.add("hidden");
-    }else{
+    } else {
       article.classList.remove("hidden");
     }
-    // const article = document.getElementById(tarea.id);
-    // article.classList.add("hidden")
   });
-}
+};
 
 export const mostrarTodasTareas = function () {
+  const todasTareas = tareas;
 
-  const todasTareas = tareas
-
-  todasTareas.forEach(function(tarea) {
-    console.log(tarea,'sobre tarea')
+  todasTareas.forEach(function (tarea) {
+    console.log(tarea, "sobre tarea");
     const article = document.getElementById(tarea.id);
-    article.classList.remove("hidden")
+    article.classList.remove("hidden");
   });
-}
+};
+export const eliminarCompletados = function () {
+  const tareas = obtenerTareas();
+  for (let i = tareas.length - 1; i >= 0; i--) {
+    if (tareas[i].finalizado) {
+      tareas.splice(i,1);
+    }
+  }
+  const divContent = document.getElementById("contenedor-tareas")
+  divContent.innerHTML = "";
+  console.log(tareas,'eliminados PR')
+tareas.forEach(insertarTarea);
+  return tareas
+};
