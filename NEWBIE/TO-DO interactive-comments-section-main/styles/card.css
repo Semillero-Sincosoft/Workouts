@@ -146,5 +146,9 @@ button {
 }
 
 .btn-commentary button:disabled {
-  background-color: gray; 
+  background-color: gray;
+}
+.content-icons {
+  display: flex;
+  gap: 2rem;
 }
