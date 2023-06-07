@@ -1,4 +1,6 @@
+import { createComment } from "../create-comment.js";
 import { createElement, createAvatar, createBtn } from "../utilities-ui.js";
+// import createCard from "./card.js";
 import createInputCommentary from "./contentCommentary.js";
 
 const createCommetary = (comentario) => {
@@ -11,30 +13,26 @@ const createCommetary = (comentario) => {
 
   const aside = createElement("aside", "avatar-commentary");
 
-  const button = createBtn("REPLY");
+  const buttonReply = createBtn("REPLY");
 
-  const validation = button.btn;
+  const validation = buttonReply.btn;
   validation.disabled = true;
   const arroba = `@${username}, `;
   const written = createInputCommentary(arroba);
 
   const txtComentario = written.textArea;
 
-  contentCommentary
-  contentCommentary.append(aside, written, button);
+  contentCommentary.append(aside, written, buttonReply);
 
-  // y.addEventListener()
-  const textoNuevoComentario = txtComentario;
-
-  textoNuevoComentario.addEventListener("keyup", () => {
-    if (textoNuevoComentario.value == arroba) {
+  txtComentario.addEventListener("keyup", () => {
+    if (txtComentario.value == arroba || txtComentario.value <= 10) {
       validation.disabled = true;
     } else {
       validation.disabled = false;
     }
   });
 
-  button.addEventListener("click", () => {
+  buttonReply.addEventListener("click", () => {
     const startTime = Date.now();
     function calcularTiempo() {
       const tiempoTranscurrido = Date.now() - startTime; // Calcular la diferencia de tiempo en milisegundos
@@ -46,23 +44,31 @@ const createCommetary = (comentario) => {
 
     const replyCommentary = {
       id: 3,
-      content: textoNuevoComentario.value,
+      content: txtComentario.value,
+
       createdAt: calcularTiempo(),
       score: 0,
       replyingTo: username,
       user: {
         image: {
-          png: `./images/avatars/${image}.png`,
-          webp: `./images/avatars/${image}.webp`,
+          png: "./images/avatars/image-ramsesmiron.png",
+          webp: "./images/avatars/image-ramsesmiron.webp",
         },
         username: "ramsesmiron",
       },
     };
 
-    comentario.replies.push(replyCommentary);
-    console.log(comentario);
+    comentario.replies = replyCommentary;
     txtComentario.value = "";
     validation.disabled = true;
+
+    const renderComment = createComment(replyCommentary);
+    renderComment.classList.add("reply-container");
+    contentCommentary.renderComment = renderComment;
+    contentCommentary.innerHTML = "";
+    contentCommentary.append(renderComment);
+    contentCommentary.classList.remove("content-card");
+    return renderComment;
   });
 
   aside.append(photoUser);

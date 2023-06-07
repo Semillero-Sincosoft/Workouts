@@ -7,11 +7,13 @@ export const createComment = (comentario) => {
   const commentary = createCommetary(comentario);
   const contentHome = document.getElementById("content-home");
   contentHome.append(containerCard);
+
   containerCard.append(card, commentary);
+
   containerCard.commentary = commentary;
   card.replyButton.addEventListener("click", () => {
     commentary.classList.toggle("hidden");
+    // commentary.parentNode.append(prueba);
   });
-
   return containerCard;
 };
