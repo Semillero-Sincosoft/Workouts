@@ -1,10 +1,12 @@
 export const EventChecked = function (input, span) {
   if (input.checked) {
-    span.style.color = "var(--Light-Grayish-Blue)";
-    span.style.textDecoration = "line-through";
+    span.classList.add("span-checked")
+    span.parentNode.parentNode.classList.remove("no-completado")
+    span.parentNode.parentNode.classList.add("completado")
   } else {
-    span.style.color = "var(--Ver-Dark-Grayish-Blue)";
-    span.style.textDecoration = "none";
+    span.classList.remove("span-checked")
+    span.parentNode.parentNode.classList.remove("completado")
+    span.parentNode.parentNode.classList.add("no-completado")
   }
 };
 

@@ -6,6 +6,7 @@ export function crearTarea(tarea) {
   const { texto, id } = tarea;
 
   const article = createTag("article", "homework");
+  article.classList.add("no-completado")
   article.setAttribute("id",id)
 
   const div = createTag("div");

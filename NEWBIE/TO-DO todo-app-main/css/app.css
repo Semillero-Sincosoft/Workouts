@@ -152,3 +152,7 @@ span {
 .show{
   display: flex;
 }
+.span-checked{
+  color: var(--Light-Grayish-Blue);
+  text-decoration: line-through;
+}
