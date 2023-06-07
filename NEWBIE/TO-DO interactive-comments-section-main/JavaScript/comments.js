@@ -1,3 +1,10 @@
+export const currentUser = {
+  image: {
+    png: "./images/avatars/image-juliusomo.png",
+    webp: "./images/avatars/image-juliusomo.webp",
+  },
+  username: "juliusomo",
+};
 export const comentario1 = {
   id: 1,
   content:
@@ -91,4 +98,4 @@ export const comentario4 = {
   },
   replies: [],
 };
-export const comentarios = [comentario1, comentario2,comentario3];
+export const comentarios = [comentario1, comentario2];

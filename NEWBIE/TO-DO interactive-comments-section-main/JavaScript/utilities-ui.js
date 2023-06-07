@@ -14,7 +14,7 @@ export const createText = (texto, clas) => {
 
 export const createAvatar = (image) => {
   const photo = createElement("img");
-  photo.src = image.png;
+  photo.src = image;
   return photo;
 };
 
