@@ -12,7 +12,7 @@ export const CrearBarraFiltros = function () {
     const element = createTag("div", "content-filter-" + index);
     let textOfElement;
     if (index == 0) {
-      textOfElement = createTag("p", "p" + index, filter);
+      textOfElement = createTag("p", "elements-left", filter);
       element.append(textOfElement);
     } else if (index == 1) {
       const itemAll = createTag(

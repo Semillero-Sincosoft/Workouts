@@ -111,7 +111,7 @@ span {
   height: fit-content;
   width: 100%;
 }
-.contenedor-filtros .content-filter-1{
+.contenedor-filtros .content-filter-1 {
   display: flex;
   gap: 20px;
 }
@@ -146,13 +146,37 @@ span {
 .content-stick button {
   cursor: pointer;
 }
-.hidden{
+.hidden {
   display: none;
 }
-.show{
+.show {
   display: flex;
 }
-.span-checked{
+.span-checked {
   color: var(--Light-Grayish-Blue);
   text-decoration: line-through;
+}
+.elements-left{
+  color: var(--Dark-Grayish-Blue);
+}
+.filter-all,
+.filter-active,
+.filter-completed,
+.filter-clear {
+  color: var(--Dark-Grayish-Blue);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.filter-all:hover,
+.filter-active:hover,
+.filter-completed:hover,
+.filter-clear:hover {
+  color: var(--Ver-Dark-Grayish-Blue);
+}
+.filter-all:focus,
+.filter-active:focus,
+.filter-completed:focus,
+.filter-clear:focus{
+  color: var(--Bright-Blue);
 }

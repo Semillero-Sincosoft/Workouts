@@ -1,6 +1,6 @@
 import { tareas } from "../tareas/creación_tareas_/contenedor-tareas.js";
 export const tareasRestantes = function () {
-  const itemsLeft = document.getElementsByClassName("p0");
+  const itemsLeft = document.getElementsByClassName("elements-left");
   const elementosFaltantes = tareas.filter(
     (elemento) => elemento.finalizado == false
   );
