@@ -20,7 +20,7 @@
   width: 43rem;
 } */
 .reply-container {
-  margin-left: 4rem;
+  margin-left: 3rem;
   border-left: solid 1px rgba(160, 160, 160, 0.699);
   padding-left: 5rem;
 }
@@ -28,7 +28,7 @@
   display: flex;
   background-color: white;
   border-radius: 1rem;
-  width: 73rem;
+  width: 100%;
   height: fit-content;
   padding: 1.5rem;
   gap: 2rem;
@@ -36,6 +36,7 @@
 .content-comment {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 1.5rem;
   padding: 1.5rem 0 0 0;
 }
@@ -79,7 +80,6 @@ aside {
 .content-title-card {
   height: fit-content;
   display: flex;
-  width: 63rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -186,3 +186,9 @@ button {
 
 /* 
 .commentary-reply */
+.content-textarea {
+  width: 100%;
+}
+.content-textarea textarea {
+  width: 100%;
+}

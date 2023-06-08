@@ -1,13 +1,15 @@
 import { currentUser } from "../comments.js";
 import { createComment } from "../create-comment.js";
 import { createElement, createAvatar, createBtn } from "../utilities-ui.js";
+import createCard from "./card.js";
 import createInputCommentary from "./contentCommentary.js";
 
 export const sectionAddComentary = (image, username, isReply = true) => {
   const imageCurrentUser = currentUser.image.png;
+  const nameUserReply = currentUser.username;
+
   const contentCommentary = createElement("div", "content-card");
   contentCommentary.classList.add("hidden");
-
   const photoUser = createAvatar(image);
 
   const aside = createElement("aside", "avatar-commentary");
@@ -35,10 +37,15 @@ export const sectionAddComentary = (image, username, isReply = true) => {
   contentCommentary.append(aside, divTextArea, buttonReply);
 
   txtComentario.addEventListener("keyup", () => {
-    if (txtComentario.value == arrobaUsername || txtComentario.value <= 10) {
+    if (txtComentario.value == arrobaUsername || txtComentario.value <= 40) {
       validation.disabled = true;
     } else {
       validation.disabled = false;
+    }
+    const value = txtComentario.value.trim();
+
+    if (value === "" && event.key === " ") {
+      event.preventDefault();
     }
   });
   buttonReply.addEventListener("click", () => {
@@ -53,7 +60,7 @@ export const sectionAddComentary = (image, username, isReply = true) => {
           png: imageCurrentUser,
           webp: imageCurrentUser,
         },
-        username,
+        username: nameUserReply,
       },
       replies: [],
     };
@@ -63,7 +70,8 @@ export const sectionAddComentary = (image, username, isReply = true) => {
     contentCommentary.append(cardReply);
     // txtComentario.value = "";
     //   //validacion del boton Reply
-    //   validation.disabled = true;
+
+    validation.disabled = true;
   });
 
   return contentCommentary;
@@ -84,24 +92,8 @@ const renderComentary = (comentario, isReply = false) => {
   let contentCommentary = sectionAddComentary(currentUser.image.png, username);
 
   if (comentario.replies.length > 0) {
-    comentario.replies.forEach((e) => commentaryReply(e));
+    comentario.replies.forEach((e) => commentaryReply(e, true));
   }
-  // buttonReply.addEventListener("click", () => {
-  //   const comentario = {
-  //     content: txtComentario.value,
-  //     user: {
-  //       username,
-  //     },
-  //   };
-  //   contentCommentary.innerHTML = "";
-  //   contentCommentary.classList.remove("content-card");
-  //   // descripcionDelComentario.value = "";
-  //   //validacion del boton Reply
-  //   validation.disabled = true;
-  // });
-  // const cardReply = commentaryReply(comentario);
-  // contentCommentary.append(cardReply);
-  // contentCommentary.renderComment = cardReply;
 
   return contentCommentary;
 };
@@ -109,16 +101,8 @@ const renderComentaryReply = (comentario) => {
   const cardReply = commentaryReply(comentario);
   return cardReply;
 };
-function calcularTiempo() {
-  const startTime = Date.now();
-  const tiempoTranscurrido = Date.now() - startTime; // Calcular la diferencia de tiempo en milisegundos
 
-  // Convertir el tiempo transcurrido a minutos
-  const minutosTranscurridos = Math.floor(tiempoTranscurrido / (1000 * 60));
-  return minutosTranscurridos;
-}
-
-const commentaryReply = (comentario) => {
+const commentaryReply = (comentario, isReply) => {
   const { content, user, createdAt } = comentario;
   const { image, username } = user;
 
@@ -139,19 +123,10 @@ const commentaryReply = (comentario) => {
     replies: [],
   };
 
-  comentario.replies = replyCommentary;
+  const renderComment = createComment(replyCommentary, isReply);
 
-  const renderComment = createComment(replyCommentary);
   renderComment.classList.add("reply-container");
-  const replyWidth = renderComment.querySelector(
-    ".reply-container .content-card"
-  );
-  const ancho = (replyWidth.style.width = "64rem");
-  const btnReply = renderComment.querySelector(
-    ".reply-container .content-title-card"
-  );
-  const widthBtnReply = (btnReply.style.width = "53.6rem");
-  
+
   return renderComment;
 };
 export default renderComentary;
