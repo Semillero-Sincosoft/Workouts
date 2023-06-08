@@ -17,11 +17,19 @@ export function crearTarea(tarea) {
   const textHomework = createTag("span");
   textHomework.textContent = texto;
 
-  const close = createTag("button");
+  const close = createTag("button","icon-delete");
   close.innerHTML = icons.cross;
 
-  article.append(div, close);
+  article.append(div);
   div.append(input, textHomework);
+
+  article.addEventListener("mouseleave", function() {
+    article.removeChild(close); // Remueve el botón del div cuando el mouse sale del artículo
+  });
+  article.addEventListener("mouseenter", function() {
+    article.appendChild(close); // Añade el botón al div cuando se le hace hover al artículo
+  });
+  
 
   input.addEventListener("change", () => EventChecked(input, textHomework));
   input.addEventListener("change", () => cambiarEstadoHomeWork(tarea, input));
