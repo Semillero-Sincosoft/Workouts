@@ -12,8 +12,8 @@ const contentListHomeworks = createTag(
 );
 export const contentFilters = createTag("div", "contenedor-filtros");
 
-export const insertarTarea = (tarea) => {
-  const htmlTarea = crearTarea(tarea);
+export const insertarTarea = (tarea,index) => {
+  const htmlTarea = crearTarea(tarea,index);
   container.append(homeworksContent);
   homeworksContent.append(contentListHomeworks, contentFilters);
   contentListHomeworks.append(htmlTarea);

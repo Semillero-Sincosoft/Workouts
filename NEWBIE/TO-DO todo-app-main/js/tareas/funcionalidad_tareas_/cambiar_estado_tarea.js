@@ -1,4 +1,4 @@
-import { obtenerTareas } from "../creación_tareas_/contenedor-tareas.js";
+import { obtenerTareas } from "../creación_tareas_/contenedor_tareas.js";
 import { tareasRestantes } from "../../filtros/tareas_restantes.js";
 export const cambiarEstadoHomeWork = (tarea, input) => {
   const tareas = obtenerTareas();
