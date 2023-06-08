@@ -151,6 +151,7 @@ const commentaryReply = (comentario) => {
     ".reply-container .content-title-card"
   );
   const widthBtnReply = (btnReply.style.width = "53.6rem");
+  
   return renderComment;
 };
 export default renderComentary;
