@@ -1,20 +1,19 @@
-import { insertarTarea } from "./validationHomework.js";
-import { obtenerTareas } from "./tareas.js";
-import { insertarDatosTarea } from "./tareas.js";
+import { insertarTarea } from "./tareas/funcionalidad_tareas_/validationHomework.js";
+import { obtenerTareas } from "./tareas/creación_tareas_/contenedor-tareas.js";
+import { insertarDatosTarea } from "./tareas/funcionalidad_tareas_/insertar_datos.js";
 import { generarIdÚnico } from "./utilities.js";
-
 
 const homeworkAssignment = document.getElementById("text");
 homeworkAssignment.addEventListener("keyup", (e) => {
   if (e.keyCode == 13) {
     const txtNuevaTarea = e.target.value;
-    const idNuevaTarea = generarIdÚnico(); 
+    const idNuevaTarea = generarIdÚnico();
     if (txtNuevaTarea.trim() !== "") {
       insertarTarea({
-        id:idNuevaTarea,
-        texto: txtNuevaTarea
+        id: idNuevaTarea,
+        texto: txtNuevaTarea,
       });
-      insertarDatosTarea(txtNuevaTarea,idNuevaTarea);
+      insertarDatosTarea(txtNuevaTarea, idNuevaTarea);
       document.getElementById("text").value = "";
     }
   }

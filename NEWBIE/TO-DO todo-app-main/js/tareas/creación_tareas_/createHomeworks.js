@@ -1,13 +1,13 @@
-import icons from "./imgs/svg.js";
-import { createTag } from "./utilities.js";
-import { EventChecked } from "./functionalities/checked.js";
-import { cambiarEstadoHomeWork } from "./tareas.js";
+import icons from "../../imgs/svg.js";
+import { createTag } from "../../utilities.js";
+import { EventChecked } from "../../functionalities/checked.js";
+import { cambiarEstadoHomeWork } from "../funcionalidad_tareas_/cambiar_estado_tarea.js";
 export function crearTarea(tarea) {
   const { texto, id } = tarea;
 
   const article = createTag("article", "homework");
-  article.classList.add("no-completado")
-  article.setAttribute("id",id)
+  article.classList.add("no-completado");
+  article.setAttribute("id", id);
 
   const div = createTag("div");
 
@@ -27,6 +27,3 @@ export function crearTarea(tarea) {
   input.addEventListener("change", () => cambiarEstadoHomeWork(tarea, input));
   return article;
 }
-
-
-

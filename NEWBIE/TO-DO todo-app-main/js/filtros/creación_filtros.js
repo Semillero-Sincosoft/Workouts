@@ -1,26 +1,8 @@
-import { crearTarea } from "./createHomeworks.js";
-import { createTag } from "./utilities.js";
-import { tareas } from "./tareas.js";
-import { eliminarCompletados } from "./tareas.js";
-import { mostrarTareasPorEstado } from "./tareas.js";
-export const container = document.querySelector("main");
-const homeworksContent = createTag("section", "content-homework");
-homeworksContent.setAttribute("id", "content-homeworks");
-const contentListHomeworks = createTag(
-  "div",
-  "contenedor-tareas",
-  "",
-  "contenedor-tareas"
-);
-const contentFilters = createTag("div", "contenedor-filtros");
-
-export const insertarTarea = (tarea) => {
-  const htmlTarea = crearTarea(tarea);
-  container.append(homeworksContent);
-  homeworksContent.append(contentListHomeworks, contentFilters);
-  contentListHomeworks.append(htmlTarea);
-};
-const CrearBarraFiltros = function () {
+import { createTag } from "../utilities.js";
+import { mostrarTareasPorEstado } from "./mostrar_tarea_por_estado.js";
+import { contentFilters } from "../tareas/funcionalidad_tareas_/validationHomework.js";
+import { eliminarCompletados } from "./eliminar_completados.js";
+export const CrearBarraFiltros = function () {
   const filters = [
     "items left",
     ["All", "Active", "Completed"],
@@ -44,14 +26,15 @@ const CrearBarraFiltros = function () {
       element.append(itemAll, itemActive, itemCompleted);
       itemAll.addEventListener("click", () => mostrarTareasPorEstado());
       itemActive.addEventListener("click", () => mostrarTareasPorEstado(true));
-      itemCompleted.addEventListener("click", () => mostrarTareasPorEstado(false));
+      itemCompleted.addEventListener("click", () =>
+        mostrarTareasPorEstado(false)
+      );
     } else {
       const itemClear = createTag("button", "filter-clear", filter);
       element.append(itemClear);
       itemClear.addEventListener("click", () => eliminarCompletados());
     }
-    
+
     contentFilters.append(element);
   });
 };
-CrearBarraFiltros()
