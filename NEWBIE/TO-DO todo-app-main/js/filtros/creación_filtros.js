@@ -2,9 +2,10 @@ import { createTag } from "../utilities.js";
 import { mostrarTareasPorEstado } from "./mostrar_tarea_por_estado.js";
 import { contentFilters } from "../tareas/funcionalidad_tareas_/validationHomework.js";
 import { eliminarCompletados } from "./eliminar_completados.js";
+import { tareasRestantes } from "./tareas_restantes.js";
 export const CrearBarraFiltros = function () {
   const filters = [
-    "items left",
+    tareasRestantes() + " items left",
     ["All", "Active", "Completed"],
     "Clear Completed",
   ];
@@ -12,7 +13,7 @@ export const CrearBarraFiltros = function () {
     const element = createTag("div", "content-filter-" + index);
     let textOfElement;
     if (index == 0) {
-      textOfElement = createTag("p", "elements-left", filter);
+      textOfElement = createTag("p", "elements-left", filter,"elements-left");
       element.append(textOfElement);
     } else if (index == 1) {
       const itemAll = createTag(

@@ -17,6 +17,6 @@ export const generarIdÚnico = () => {
   return idAleatorio;
 };
 export const obtenerIndex = () => {
-    const indexElement = tareas.length
+    const indexElement = tareas.length-1
     return indexElement
 }

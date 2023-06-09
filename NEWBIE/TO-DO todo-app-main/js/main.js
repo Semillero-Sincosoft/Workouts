@@ -10,13 +10,13 @@ homeworkAssignment.addEventListener("keyup", (e) => {
   if (e.keyCode == 13) {
     const txtNuevaTarea = e.target.value;
     const idNuevaTarea = generarIdÚnico();
- 
+
     if (txtNuevaTarea.trim() !== "") {
+      insertarDatosTarea(txtNuevaTarea, idNuevaTarea);
       insertarTarea({
         id: idNuevaTarea,
         texto: txtNuevaTarea,
       },obtenerIndex());
-      insertarDatosTarea(txtNuevaTarea, idNuevaTarea);
       document.getElementById("text").value = "";
     }
   }

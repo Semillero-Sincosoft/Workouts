@@ -12,5 +12,6 @@ export const eliminarCompletados = function () {
   console.log(tareas, "eliminados PR");
   tareas.forEach((tarea, index)=>{insertarTarea(tarea,index)});
   //   tareas.forEach(insertarTarea);
+  localStorage.setItem("arrayTareas",JSON.stringify(tareas))
   return tareas;
 };

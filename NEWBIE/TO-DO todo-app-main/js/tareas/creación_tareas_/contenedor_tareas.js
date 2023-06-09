@@ -1,8 +1,10 @@
-export const tareas = [];
-
+export const tareas = JSON.parse(localStorage.getItem("arrayTareas")) != null ? JSON.parse(localStorage.getItem("arrayTareas")) : [];   
+console.log(tareas,'ORIGINAL')
 export const obtenerTareas = () => {
-  const local = JSON.parse(localStorage.getItem("arrayTareas"));
+  const local = tareas
+  console.log(local,'LOCAL OR')
   localStorage.setItem("arrayTareas", JSON.stringify(local));
 
-  return tareas;
+  return local;
 };
+
