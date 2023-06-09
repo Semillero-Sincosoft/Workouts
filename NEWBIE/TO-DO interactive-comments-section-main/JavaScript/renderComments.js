@@ -3,7 +3,7 @@ import renderComentary from "./card/commentary.js";
 import { modalDelete, modalHtml } from "./modal.js";
 import { createElement } from "./utilities-ui.js";
 
-export const createComment = (comentario, isReply) => {
+export const renderComments = (comentario, isReply) => {
   const containerCard = createElement("section", "container-card");
   const containerCardReplies = createElement("section", "container-replies");
   const card = createCard(comentario);
@@ -27,13 +27,6 @@ export const createComment = (comentario, isReply) => {
   card.replyButton.addEventListener("click", () => {
     commentary.classList.toggle("hidden");
   });
-
-  // iconDelete.id = "btnDelete";
-  // iconEdit.id = "btnEdit";
-  // const editar = document.getElementById("btnEdit");
-  // card.delete.addEventListener("click", () => {
-  //   commentary.style.border = "solid red";
-  // });
 
   card.delete.addEventListener("click", () => {
     console.log("EVENTO DEL DELETE");
