@@ -1,7 +1,6 @@
 import { currentUser } from "../comments.js";
 import { createComment } from "../create-comment.js";
 import { createElement, createAvatar, createBtn } from "../utilities-ui.js";
-import createCard from "./card.js";
 import createInputCommentary from "./contentCommentary.js";
 
 export const sectionAddComentary = (image, username, isReply = true) => {

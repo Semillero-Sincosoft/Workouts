@@ -1,6 +1,6 @@
 import createCard from "./card/card.js";
 import renderComentary from "./card/commentary.js";
-import { modalDelete } from "./modal.js";
+import { modalDelete, modalHtml } from "./modal.js";
 import { createElement } from "./utilities-ui.js";
 
 export const createComment = (comentario, isReply) => {
@@ -38,6 +38,7 @@ export const createComment = (comentario, isReply) => {
   card.delete.addEventListener("click", () => {
     console.log("EVENTO DEL DELETE");
     modalDelete();
+    modalHtml.classList.toggle("hidden");
   });
 
   card.edit.addEventListener("click", () => {
