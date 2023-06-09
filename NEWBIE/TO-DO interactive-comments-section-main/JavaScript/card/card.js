@@ -1,5 +1,5 @@
 import { contentInfoUser, createVotes, buttonAction } from "./index.js";
-import { createElement } from "../utilities-ui.js";
+import { createElement, generateId } from "../utilities-ui.js";
 import contentBodyCard from "./cardBody.js";
 
 const createCard = (comentario) => {
@@ -11,7 +11,7 @@ const createCard = (comentario) => {
   contentCard.setAttribute("id", id);
 
   const contentHeader = contentInfoUser(createdAt, user);
-  const btnLikes = createVotes(id, score);
+  const btnLikes = createVotes(generateId(id), score);
 
   const btnActions = buttonAction(username);
 

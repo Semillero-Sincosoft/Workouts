@@ -1,6 +1,11 @@
 import { currentUser } from "../comments.js";
 import { renderComments } from "../renderComments.js";
-import { createElement, createAvatar, createBtn, generateId } from "../utilities-ui.js";
+import {
+  createElement,
+  createAvatar,
+  createBtn,
+  generateId,
+} from "../utilities-ui.js";
 import createTextareaComment from "./contentCommentary.js";
 import action from "../data/acciones.js";
 export const sectionAddComentary = (
@@ -29,6 +34,7 @@ export const sectionAddComentary = (
   validation.disabled = true;
 
   let arrobaUsername = "";
+
   if (actionBtn == action.reply) {
     arrobaUsername = `@${username}, `;
   }
@@ -36,19 +42,16 @@ export const sectionAddComentary = (
   const divTextArea = createTextareaComment(arrobaUsername);
 
   const txtComent = divTextArea.textArea;
-
   contentCommentary.append(aside, divTextArea, buttonReply);
 
   txtComent.addEventListener("keyup", () => {
-    if (txtComent.value == arrobaUsername || txtComent.value.length <= 14) {
+    if (
+      txtComent.value == arrobaUsername ||
+      txtComent.value.trim().length <= 10
+    ) {
       validation.disabled = true;
     } else {
       validation.disabled = false;
-    }
-    const value = txtComent.value.trim();
-
-    if (value === "" && event.key === " ") {
-      event.preventDefault();
     }
   });
 
@@ -72,8 +75,6 @@ export const sectionAddComentary = (
     contentCommentary.innerHTML = "";
     contentCommentary.classList.remove("content-card");
     contentCommentary.append(cardReply);
-    // txtComentario.value = "";
-    //   //validacion del boton Reply
 
     validation.disabled = true;
   });
@@ -95,9 +96,9 @@ const renderComentary = (comentario, isReply = false) => {
   //const { image, username } = comentario.user;
   let contentCommentary = sectionAddComentary(currentUser.image.png, username);
 
-  if (comentario.replies.length > 0) {
-    comentario.replies.forEach((e) => commentaryReply(e, true));
-  }
+  // if (comentario.replies.length > 0) {
+  //   comentario.replies.forEach((e) => commentaryReply(e, true));
+  // }
 
   return contentCommentary;
 };
@@ -106,7 +107,7 @@ const renderComentaryReply = (comentario) => {
   return cardReply;
 };
 
-const commentaryReply = (comentario, isReply) => {
+export const commentaryReply = (comentario, isReply) => {
   const { content, user, createdAt } = comentario;
   const { image, username } = user;
 

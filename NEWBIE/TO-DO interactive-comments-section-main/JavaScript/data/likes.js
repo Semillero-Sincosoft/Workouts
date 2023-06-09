@@ -1,4 +1,4 @@
-import { createElement } from "../utilities-ui.js";
+import { createElement, generateId } from "../utilities-ui.js";
 import icons from "./svg.js";
 import estado from "./estados.js";
 export const createVotes = (id, score) => {

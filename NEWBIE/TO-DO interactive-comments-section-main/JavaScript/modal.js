@@ -3,7 +3,7 @@ import { createBtn, createElement, createText } from "./utilities-ui.js";
 export const modalHtml = document.getElementById("content-modal");
 export const modalDelete = () => {
   modalHtml.classList.add("hidden");
-  const prueba = createElement("div", "container-modal");
+
   const contentModal = createElement("section", "content-modal");
   const title = createElement("h2", "title-modal");
   title.textContent = "Delete comment";
@@ -15,7 +15,8 @@ export const modalDelete = () => {
   const btnConfirmDelete = createBtn("NO,   CANCEL");
   btnConfirmDelete.classList.add("btn-no-delete");
   const cancelDelete = createBtn("YES, DELETE");
-  cancelDelete.classList.add("btn-yes-delete");
+  contentModal.cancel = cancelDelete;
+
   contentModal.append(title, textModal, contentBtn);
   contentBtn.append(btnConfirmDelete, cancelDelete);
   modalHtml.append(contentModal);
