@@ -51,7 +51,7 @@ button {
   height: fit-content;
 }
 .homework {
-  height: 63px;
+  height: fit-content;
   border-bottom: solid 1px var(--Dark-Grayish-Blue);
   align-items: center;
   display: flex;
@@ -84,6 +84,7 @@ button {
 }
 
 span {
+  width: 370px;
   font-size: 20px;
   color: var(--Ver-Dark-Grayish-Blue);
 }

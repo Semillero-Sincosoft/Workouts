@@ -28,10 +28,6 @@ tareas.forEach((tarea, index)=>{insertarTarea(tarea,index)});
 
 // const tareas = [1,2,3,4];
 
- 
-
 // tareas.forEach((tarea, index)=>{
-
 //     console.log(tarea, index)
-
 // })
