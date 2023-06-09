@@ -1,7 +1,7 @@
 import { currentUser } from "../comments.js";
 import { renderComments } from "../renderComments.js";
-import { createElement, createAvatar, createBtn } from "../utilities-ui.js";
-import createInputCommentary from "./contentCommentary.js";
+import { createElement, createAvatar, createBtn, generateId } from "../utilities-ui.js";
+import createTextareaComment from "./contentCommentary.js";
 import action from "../data/acciones.js";
 export const sectionAddComentary = (
   image,
@@ -19,7 +19,7 @@ export const sectionAddComentary = (
   aside.append(photoUser);
   let txtBoton = action.reply;
 
-  if (actionBtn == false) {
+  if (actionBtn == action.send) {
     txtBoton = action.send;
     contentCommentary.classList.remove("hidden");
   }
@@ -29,11 +29,11 @@ export const sectionAddComentary = (
   validation.disabled = true;
 
   let arrobaUsername = "";
-  if (actionBtn) {
+  if (actionBtn == action.reply) {
     arrobaUsername = `@${username}, `;
   }
 
-  const divTextArea = createInputCommentary(arrobaUsername);
+  const divTextArea = createTextareaComment(arrobaUsername);
 
   const txtComent = divTextArea.textArea;
 
@@ -51,9 +51,10 @@ export const sectionAddComentary = (
       event.preventDefault();
     }
   });
+
   buttonReply.addEventListener("click", () => {
     const newComment = {
-      id: 3,
+      id: generateId(),
       content: txtComent.value,
       createdAt: "JUST NOW",
       score: 0,
