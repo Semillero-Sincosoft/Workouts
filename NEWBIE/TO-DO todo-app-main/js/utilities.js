@@ -1,4 +1,4 @@
-import { tareas } from "./tareas/creación_tareas_/contenedor_tareas.js";
+import { obtenerTareas } from "./tareas/creación_tareas_/contenedor_tareas.js";
 export const createTag = (tagName, className, text, id) => {
   const element = document.createElement(tagName);
   if (className) {
@@ -17,6 +17,6 @@ export const generarIdÚnico = () => {
   return idAleatorio;
 };
 export const obtenerIndex = () => {
-    const indexElement = tareas.length-1
-    return indexElement
-}
+  const indexElement = obtenerTareas.length-1;
+  return indexElement;
+};
