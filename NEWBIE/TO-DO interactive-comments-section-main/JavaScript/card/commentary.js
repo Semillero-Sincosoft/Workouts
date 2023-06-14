@@ -94,12 +94,12 @@ const renderComentary = (comentario, isReply = false) => {
     image = comentario.user.image.png;
     username = comentario.user.username;
   }
-  //const { image, username } = comentario.user;
+  // const { image, username } = comentario.user;
   let contentCommentary = sectionAddComentary(currentUser.image.png, username);
 
-  // if (comentario.replies.length > 0) {
-  //   comentario.replies.forEach((e) => commentaryReply(e, true));
-  // }
+  //  if (comentario.replies.length > 0) {
+  //    comentario.replies.forEach((e) => commentaryReply(e, true));
+  //  }
 
   return contentCommentary;
 };
@@ -109,11 +109,11 @@ const renderComentaryReply = (comentario) => {
 };
 
 export const commentaryReply = (comentario, isReply) => {
-  const { content, user, createdAt } = comentario;
+  const { id, content, user, createdAt } = comentario;
   const { image, username } = user;
 
   const replyCommentary = {
-    id: generateId(),
+    id: id,
     content: content,
 
     createdAt,
@@ -128,6 +128,7 @@ export const commentaryReply = (comentario, isReply) => {
     },
     replies: [],
   };
+  commentaryReply.id = replyCommentary;
 
   const renderComment = renderComments(replyCommentary, isReply);
 

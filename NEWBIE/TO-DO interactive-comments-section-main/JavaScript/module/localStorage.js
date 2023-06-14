@@ -5,7 +5,7 @@ const saveLocalStorage = (key, value) => {
 const getLocalStorage = (key) => {
   return JSON.parse(localStorage.getItem(key));
 };
-function remove(key, id) {
+function removeLocalstorage(key, id) {
   const element = getLocalStorage(key) ? getLocalStorage(key) : [];
   element.filter((x) => {
     x.id != id;
@@ -25,6 +25,6 @@ const addItem = (key, value) => {
 export default {
   save: saveLocalStorage,
   get: getLocalStorage,
-  delete: remove,
+  delete: removeLocalstorage,
   prueba: addItem,
 };
