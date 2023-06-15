@@ -3,6 +3,7 @@ import { createTag } from "../../utilities.js";
 import { EventChecked } from "../../functionalities/checked.js";
 import { cambiarEstadoHomeWork } from "../funcionalidad_tareas_/cambiar_estado_tarea.js";
 import { eliminarTarea } from "../../functionalities/eliminar_tarea.js";
+import { obtenerIndex } from "../../utilities.js";
 
 export function crearTarea(tarea, index) {
   const { texto, id } = tarea;
@@ -14,26 +15,27 @@ export function crearTarea(tarea, index) {
   article.setAttribute("id", id);
   article.setAttribute("index", index);
   const div = createTag("div");
-
   const input = createTag("input", "circular-checkbox");
   input.setAttribute("type", "checkbox");
-  localArrayTareas.map((tarea) => {
-    let estado = false;
-    console.log(tarea, "AQUIIIII");
-    if (tarea.index) {
-      estado = tarea.finalizado;
-    }
-    if (tarea.finalizado == true) {
-      input.checked = true;
-      // article.classList.remove("no-completado")
-      // article.classList.add("completado")
-    } else if(tarea.finalizado == false){
-      input.checked = false;
-      // article.classList.remove("completado")
-      // article.classList.add("no-completado")
-    }
-    console.log(estado, "miraaaaaaa");
-  });
+  // localArrayTareas.map((tarea) => {
+  //   let estado = false;
+  //   console.log(tarea, "AQUIIIII");
+  //   if (tarea.id == tarea.id) {
+  //     estado = tarea.finalizado;
+  //   }
+  //   if (tarea.finalizado == true) {
+  //     console.log("AHORA ES TRUE")
+  //     input.checked = true;
+  //     // article.classList.remove("no-completado")
+  //     // article.classList.add("completado")
+  //   } else if(tarea.finalizado == false){
+  //     console.log("AHORA ES FALSE")
+  //     input.checked = false;
+  //     // article.classList.remove("completado")
+  //     // article.classList.add("no-completado")
+  //   }
+  //   console.log(estado, "miraaaaaaa");
+  // });
   const textHomework = createTag("span");
   textHomework.textContent = texto;
 
