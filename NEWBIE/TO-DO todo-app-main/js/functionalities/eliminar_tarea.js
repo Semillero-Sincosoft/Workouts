@@ -7,7 +7,6 @@ export const eliminarTarea = function (index) {
   tarea.splice(index, 1);
   const divContent = document.getElementById("contenedor-tareas");
   divContent.innerHTML = "";
-  // localStorage.setItem("arrayTareas",JSON.stringify(tarea))
   local.save("arrayTareas", tarea);
   tarea.forEach(insertarTarea);
   const itemsLeft = document.getElementById("elements-left");

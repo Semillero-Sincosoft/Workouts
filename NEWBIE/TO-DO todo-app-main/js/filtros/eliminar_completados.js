@@ -1,3 +1,4 @@
+import local from "../../module/localStorage.js"
 import { insertarTarea } from "../tareas/funcionalidad_tareas_/validationHomework.js";
 import { obtenerTareas } from "../tareas/creación_tareas_/contenedor_tareas.js";
 export const eliminarCompletados = function () {
@@ -11,7 +12,6 @@ export const eliminarCompletados = function () {
   divContent.innerHTML = "";
   console.log(tareas, "eliminados PR");
   tareas.forEach((tarea, index)=>{insertarTarea(tarea,index)});
-  //   tareas.forEach(insertarTarea);
-  localStorage.setItem("arrayTareas",JSON.stringify(tareas))
+  local.save("arrayTarea",tareas)
   return tareas;
 };

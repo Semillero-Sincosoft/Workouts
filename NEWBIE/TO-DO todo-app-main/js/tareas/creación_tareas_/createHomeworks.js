@@ -11,6 +11,7 @@ export function crearTarea(tarea, index) {
   const article = createTag("article", "homework");
   const localArrayTareas = JSON.parse(localStorage.getItem("arrayTareas"));
   console.log(localArrayTareas, "homeworks");
+
   article.classList.add("no-completado");
   article.setAttribute("id", id);
   article.setAttribute("index", index);
@@ -52,7 +53,7 @@ export function crearTarea(tarea, index) {
     article.removeChild(close);
   });
 
-  input.addEventListener("change", () => EventChecked(input, textHomework));
   input.addEventListener("change", () => cambiarEstadoHomeWork(tarea, input));
+  input.addEventListener("change", () => EventChecked(input, textHomework));
   return article;
 }
