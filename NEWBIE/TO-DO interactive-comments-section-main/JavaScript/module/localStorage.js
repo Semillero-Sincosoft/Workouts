@@ -1,3 +1,5 @@
+import { elimina } from "../main.js";
+
 const saveLocalStorage = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));
 };
@@ -7,15 +9,14 @@ const getLocalStorage = (key) => {
 };
 function removeLocalstorage(key, id) {
   const element = getLocalStorage(key) ? getLocalStorage(key) : [];
-  element.filter((x) => {
-    x.id != id;
-  });
+  // element.filter((x) => x.id == id);
 
+  element.indexOf(id);
+  element.splice(elimina, 1);
   console.log(element, "sobre X");
-  localStorage.removeItem(key);
 }
 const addItem = (key, value) => {
-  const element = getLocalStorage(key) ? getLocalStorage(key) : [];
+  const element = getLocalStorage(key) != null ? getLocalStorage(key) : [];
   element.push(value);
 
   saveLocalStorage(key, element);
@@ -26,5 +27,5 @@ export default {
   save: saveLocalStorage,
   get: getLocalStorage,
   delete: removeLocalstorage,
-  prueba: addItem,
+  add: addItem,
 };

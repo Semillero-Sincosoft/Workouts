@@ -76,8 +76,7 @@ export const sectionAddComentary = (
     contentCommentary.append(cardReply);
 
     validation.disabled = true;
-    local.prueba("comentarios", newComment);
-    // local.save("comentarios", newComment);
+    local.add("comentarios", newComment);
   });
 
   return contentCommentary;

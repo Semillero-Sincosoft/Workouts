@@ -30,13 +30,6 @@ export const createBtn = (text) => {
   return contentBtn;
 };
 
-// const hiddenOpen = (clas) => {
-//   const hidden = document.getElementById(clas);
-
-//   if (hidden.classList.add("hidden")) {
-//   }
-// };
-
 export const generateId = (id) => {
   
   const idAleatorio = Math.random().toString(8).substring(2, 6);
@@ -44,9 +37,9 @@ export const generateId = (id) => {
   return idAleatorio;
 };
 
-const takeoutIndex = () => {
-  comentarios.length;
-  console.log(comentarios);
-};
+// const takeoutIndex = () => {
+//   comentarios.length;
+//   console.log(comentarios);
+// };
 
-takeoutIndex()
+// takeoutIndex()
