@@ -1,9 +1,12 @@
 import createCard from "./card/card.js";
-import renderComentary, { commentaryReply } from "./card/commentary.js";
+import renderComentary, {
+  commentaryReply,
+  sectionAddComentary,
+} from "./card/commentary.js";
+import { currentUser } from "./comments.js";
 import { modalHtml } from "./modal.js";
 import { createElement } from "./utilities-ui.js";
-import local from "./module/localStorage.js";
-import { elimina } from "./main.js";
+
 export const renderComments = (comentario) => {
   const containerCard = createElement("section", "container-card");
   const containerCardReplies = createElement("section", "container-replies");
@@ -13,7 +16,7 @@ export const renderComments = (comentario) => {
   const contentHome = document.getElementById("content-home");
 
   contentHome.append(containerCard);
-  containerCard.append(card, commentary);
+  containerCard.append(card);
   let commentReply;
   if (comentario.replies.length > 0) {
     commentReply = comentario.replies.forEach((comment) => {
@@ -30,7 +33,13 @@ export const renderComments = (comentario) => {
   containerCard.commentary = commentary;
   // containerCard.contentBtn = card;
   card.replyButton.addEventListener("click", () => {
-    commentary.classList.toggle("hidden");
+    commentary.classList.remove("hidden");
+    const addReply = sectionAddComentary(
+      currentUser.image.png,
+      currentUser.username
+    );
+
+    containerCard.append(addReply);
   });
 
   card.delete.addEventListener("click", () => {

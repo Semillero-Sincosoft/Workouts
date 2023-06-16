@@ -19,7 +19,7 @@ export const sectionAddComentary = (
   const nameUserReply = currentUser.username;
 
   const contentCommentary = createElement("div", "content-card");
-  contentCommentary.classList.add("hidden");
+  //contentCommentary.classList.add("hidden"); //condicionar
   const photoUser = createAvatar(image);
 
   const aside = createElement("aside", "avatar-commentary");
@@ -95,10 +95,6 @@ const renderComentary = (comentario, isReply = false) => {
   }
   // const { image, username } = comentario.user;
   let contentCommentary = sectionAddComentary(currentUser.image.png, username);
-
-  //  if (comentario.replies.length > 0) {
-  //    comentario.replies.forEach((e) => commentaryReply(e, true));
-  //  }
 
   return contentCommentary;
 };

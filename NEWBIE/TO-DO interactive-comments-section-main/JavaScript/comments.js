@@ -3,7 +3,7 @@ export const currentUser = {
     png: "./images/avatars/image-juliusomo.png",
     webp: "./images/avatars/image-juliusomo.webp",
   },
-  username: "juliusomo",
+  username: "Elyato",
 };
 export const comentario1 = {
   id: 1,
@@ -61,7 +61,7 @@ export const comentario2 = {
           png: "./images/avatars/image-juliusomo.png",
           webp: "./images/avatars/image-juliusomo.webp",
         },
-        username: "juliusomo",
+        username: "Elyato",
       },
     },
   ],

@@ -9,11 +9,11 @@ const getLocalStorage = (key) => {
 };
 function removeLocalstorage(key, id) {
   const element = getLocalStorage(key) ? getLocalStorage(key) : [];
-  // element.filter((x) => x.id == id);
+  element.filter((x) => x.id != id);
 
-  element.indexOf(id);
-  element.splice(elimina, 1);
-  console.log(element, "sobre X");
+  const newElement = element.filter((x) => x.id != id);
+
+  saveLocalStorage("comentarios", newElement);
 }
 const addItem = (key, value) => {
   const element = getLocalStorage(key) != null ? getLocalStorage(key) : [];

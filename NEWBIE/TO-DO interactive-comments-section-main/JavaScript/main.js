@@ -23,6 +23,8 @@ modal.cancel.addEventListener("click", () => {
   modalHtml.classList.toggle("hidden");
   const idElimina = modalHtml.getAttribute("idEliminar");
   elimina(idElimina);
+  // const obtenerIdAELiminar = elementVacio.vacio;
+  // local.save(obtenerIdAELiminar);
 });
 
 modal.btnNoCancel.addEventListener("click", () => {
