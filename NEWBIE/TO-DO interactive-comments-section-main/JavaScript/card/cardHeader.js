@@ -47,7 +47,7 @@ export const buttonAction = (username) => {
   const iconEdit = createButtonIcon(icon.edit, "EDIT");
 
   contentIcons.append(iconDelete, iconEdit);
-  if (commentLocal.username == username) {
+  if (commentLocal.currentUser.username == username) {
     btnRenderizar = contentIcons;
   }
   btnRenderizar.reply = iconReply;

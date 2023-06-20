@@ -7,14 +7,15 @@ import local from "./module/localStorage.js";
 import localStorage from "./module/localStorage.js";
 import { commentLocal } from "./infoLocalStorage.js";
 localStorage.save("comentarios", comentarios);
-console.log(commentLocal,'HPTA')
-comentarios.forEach(renderComments());
+
+commentLocal.comments.map((x) => renderComments(x));
+
 const contentHome = document.getElementById("content-home");
-// const youProfile = sectionAddComentary(
-//   currentUser.image.png,
-//   currentUser.username,
-//   action.send
-// );
+const youProfile = sectionAddComentary(
+  commentLocal.currentUser.image.png,
+  commentLocal.currentUser.username,
+  action.send
+);
 contentHome.append(youProfile);
 
 export const elimina = (id) => {

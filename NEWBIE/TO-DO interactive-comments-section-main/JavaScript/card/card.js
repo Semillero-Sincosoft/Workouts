@@ -3,14 +3,8 @@ import { createElement, generateId } from "../utilities-ui.js";
 import contentBodyCard from "./cardBody.js";
 import { commentLocal } from "../infoLocalStorage.js";
 
-const createCard = () => {
-  const {
-    id,
-    score,
-    user,
-    createdAt,
-    content: descComment,
-  } = commentLocal.comments[0];
+const createCard = (comentario) => {
+  const { id, score, user, createdAt, content: descComment } = comentario;
   const { username } = user;
 
   const contentCard = createElement("article", "content-card");

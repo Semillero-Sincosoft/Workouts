@@ -7,15 +7,16 @@ const getLocalStorage = (key) => {
 };
 function removeLocalstorage(key, id) {
   const element = getLocalStorage(key) ? getLocalStorage(key) : [];
-  element.filter((x) => x.id != id);
+  element.comments.filter((x) => x.id != id);
 
-  const newElement = element.filter((x) => x.id != id);
+  const newElement = element.comments.filter((x) => x.id != id);
 
   saveLocalStorage("comentarios", newElement);
 }
 const addItem = (key, value) => {
   const element = getLocalStorage(key) != null ? getLocalStorage(key) : [];
-  element.push(value);
+  element.comments.filter((x) => x.id == 2)[0].replies.push(value);
+  element.comments.push(value);
 
   saveLocalStorage(key, element);
   return element;

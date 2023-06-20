@@ -16,8 +16,8 @@ export const sectionAddComentary = (
   username,
   actionBtn = action.reply
 ) => {
-  const imageCurrentUser = currentUser.image.png;
-  const nameUserReply = currentUser.username;
+  const imageCurrentUser = commentLocal.currentUser.image.png;
+  const nameUserReply = commentLocal.currentUser.username;
 
   const contentCommentary = createElement("div", "content-card");
   const photoUser = createAvatar(image);
@@ -87,17 +87,20 @@ export const sectionAddComentary = (
 };
 
 const renderComentary = (isReply = false) => {
-  const { user } = commentLocal.comments[0];
+  const { user } = commentLocal.comments;
   let image, username;
   if (isReply) {
-    username = comentario.username;
+    username = commentLocal.comments.username;
   }
 
   if (user) {
-    image = commentLocal.comments[0].user.image.png;
-    username = comentario.user.username;
+    image = commentLocal.comments.user.image.png;
+    username = commentLocal.comments.user.username;
   }
-  let contentCommentary = sectionAddComentary(currentUser.image.png, username);
+  let contentCommentary = sectionAddComentary(
+    commentLocal.currentUser.image.png,
+    username
+  );
 
   return contentCommentary;
 };
