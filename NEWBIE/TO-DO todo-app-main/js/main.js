@@ -3,7 +3,7 @@ import { obtenerTareas } from "./tareas/creación_tareas_/contenedor_tareas.js";
 import { insertarDatosTarea } from "./tareas/funcionalidad_tareas_/insertar_datos.js";
 import { generarIdÚnico } from "./utilities.js";
 import { obtenerIndex } from "./utilities.js";
-
+import { validacionEstado } from "./validacion_estado.js";
 
 const homeworkAssignment = document.getElementById("text");
 homeworkAssignment.addEventListener("keyup", (e) => {
@@ -13,13 +13,20 @@ homeworkAssignment.addEventListener("keyup", (e) => {
 
     if (txtNuevaTarea.trim() !== "") {
       insertarDatosTarea(txtNuevaTarea, idNuevaTarea);
-      insertarTarea({
-        id: idNuevaTarea,
-        texto: txtNuevaTarea,
-      },obtenerIndex());
+      insertarTarea(
+        {
+          id: idNuevaTarea,
+          texto: txtNuevaTarea,
+        },
+        obtenerIndex()
+      );
       document.getElementById("text").value = "";
     }
   }
 });
 const tareas = obtenerTareas();
-tareas.forEach((tarea, index)=>{insertarTarea(tarea,index)});
+tareas.forEach((tarea, index) => {
+  insertarTarea(tarea, index);
+});
+
+validacionEstado();

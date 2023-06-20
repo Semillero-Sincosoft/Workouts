@@ -12,6 +12,6 @@ export const eliminarCompletados = function () {
   divContent.innerHTML = "";
   console.log(tareas, "eliminados PR");
   tareas.forEach((tarea, index)=>{insertarTarea(tarea,index)});
-  local.save("arrayTarea",tareas)
+  local.save("arrayTareas",tareas)
   return tareas;
 };
