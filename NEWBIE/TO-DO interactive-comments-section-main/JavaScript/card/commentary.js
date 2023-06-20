@@ -1,4 +1,4 @@
-import { currentUser } from "../comments.js";
+// import { currentUser } from "../comments.js";
 import { renderComments } from "../renderComments.js";
 import {
   createElement,
@@ -9,6 +9,7 @@ import {
 import createTextareaComment from "./contentCommentary.js";
 import action from "../data/acciones.js";
 import local from "../module/localStorage.js";
+import { commentLocal } from "../infoLocalStorage.js";
 
 export const sectionAddComentary = (
   image,
@@ -19,7 +20,6 @@ export const sectionAddComentary = (
   const nameUserReply = currentUser.username;
 
   const contentCommentary = createElement("div", "content-card");
-  //contentCommentary.classList.add("hidden"); //condicionar
   const photoUser = createAvatar(image);
 
   const aside = createElement("aside", "avatar-commentary");
@@ -70,9 +70,13 @@ export const sectionAddComentary = (
       },
       replies: [],
     };
-    const cardReply = renderComentaryReply(newComment);
+
+    const prueba = actionBtn == action.send ? false : true;
+
+    const cardReply = renderComentaryReply(newComment, prueba);
     contentCommentary.innerHTML = "";
     contentCommentary.classList.remove("content-card");
+
     contentCommentary.append(cardReply);
 
     validation.disabled = true;
@@ -82,24 +86,23 @@ export const sectionAddComentary = (
   return contentCommentary;
 };
 
-const renderComentary = (comentario, isReply = false) => {
-  const { user } = comentario;
+const renderComentary = (isReply = false) => {
+  const { user } = commentLocal.comments[0];
   let image, username;
   if (isReply) {
     username = comentario.username;
   }
 
   if (user) {
-    image = comentario.user.image.png;
+    image = commentLocal.comments[0].user.image.png;
     username = comentario.user.username;
   }
-  // const { image, username } = comentario.user;
   let contentCommentary = sectionAddComentary(currentUser.image.png, username);
 
   return contentCommentary;
 };
-const renderComentaryReply = (comentario) => {
-  const cardReply = commentaryReply(comentario);
+const renderComentaryReply = (comentario, isReply) => {
+  const cardReply = commentaryReply(comentario, isReply);
   return cardReply;
 };
 
@@ -126,8 +129,7 @@ export const commentaryReply = (comentario, isReply) => {
   commentaryReply.id = replyCommentary;
 
   const renderComment = renderComments(replyCommentary, isReply);
-
-  renderComment.classList.add("reply-container");
+  if (isReply) renderComment.classList.add("reply-container");
 
   return renderComment;
 };

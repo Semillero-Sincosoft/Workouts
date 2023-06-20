@@ -1,18 +1,20 @@
-import sectionAddComentary from "./card/commentary.js";
-import { comentarios, currentUser } from "./comments.js";
+import { sectionAddComentary } from "./card/commentary.js";
+import { comentarios } from "./comments.js";
 import action from "./data/acciones.js";
 import { modalDelete, modalHtml } from "./modal.js";
 import { renderComments } from "./renderComments.js";
 import local from "./module/localStorage.js";
-
-comentarios.forEach(renderComments);
-
+import localStorage from "./module/localStorage.js";
+import { commentLocal } from "./infoLocalStorage.js";
+localStorage.save("comentarios", comentarios);
+console.log(commentLocal,'HPTA')
+comentarios.forEach(renderComments());
 const contentHome = document.getElementById("content-home");
-const youProfile = sectionAddComentary(
-  currentUser.image.png,
-  currentUser.username,
-  action.send
-);
+// const youProfile = sectionAddComentary(
+//   currentUser.image.png,
+//   currentUser.username,
+//   action.send
+// );
 contentHome.append(youProfile);
 
 export const elimina = (id) => {
@@ -23,8 +25,9 @@ modal.cancel.addEventListener("click", () => {
   modalHtml.classList.toggle("hidden");
   const idElimina = modalHtml.getAttribute("idEliminar");
   elimina(idElimina);
-  // const obtenerIdAELiminar = elementVacio.vacio;
-  // local.save(obtenerIdAELiminar);
+  const eliminarCard = document
+    .getElementById(idElimina)
+    .parentNode.parentNode.remove();
 });
 
 modal.btnNoCancel.addEventListener("click", () => {

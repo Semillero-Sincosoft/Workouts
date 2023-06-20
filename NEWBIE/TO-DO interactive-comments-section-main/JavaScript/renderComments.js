@@ -3,7 +3,7 @@ import renderComentary, {
   commentaryReply,
   sectionAddComentary,
 } from "./card/commentary.js";
-import { currentUser } from "./comments.js";
+// import { currentUser } from "./comments.js";
 import { modalHtml } from "./modal.js";
 import { createElement } from "./utilities-ui.js";
 
@@ -44,8 +44,6 @@ export const renderComments = (comentario) => {
 
   card.delete.addEventListener("click", () => {
     console.log("EVENTO DEL DELETE");
-    // modalDelete();
-
     modalHtml.classList.toggle("hidden");
     modalHtml.setAttribute("idEliminar", card.id);
   });
