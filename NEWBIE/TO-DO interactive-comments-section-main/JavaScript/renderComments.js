@@ -3,6 +3,7 @@ import renderComentary, {
   commentaryReply,
   sectionAddComentary,
 } from "./card/commentary.js";
+import acciones from "./data/acciones.js";
 import { commentLocal } from "./infoLocalStorage.js";
 import { modalHtml } from "./modal.js";
 import { createElement } from "./utilities-ui.js";
@@ -36,7 +37,9 @@ export const renderComments = (comentario) => {
     commentary.classList.remove("hidden");
     const addReply = sectionAddComentary(
       commentLocal.currentUser.image.png,
-      commentLocal.currentUser.username
+      commentLocal.currentUser.username,
+      acciones.reply,
+      comentario.id
     );
 
     containerCard.append(addReply);

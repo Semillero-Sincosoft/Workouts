@@ -6,15 +6,15 @@ import { renderComments } from "./renderComments.js";
 import local from "./module/localStorage.js";
 import localStorage from "./module/localStorage.js";
 import { commentLocal } from "./infoLocalStorage.js";
-localStorage.save("comentarios", comentarios);
 
 commentLocal.comments.map((x) => renderComments(x));
 
 const contentHome = document.getElementById("content-home");
 const youProfile = sectionAddComentary(
   commentLocal.currentUser.image.png,
-  commentLocal.currentUser.username,
-  action.send
+  "commentLocal.currentUser.username",
+  action.send,
+  0
 );
 contentHome.append(youProfile);
 

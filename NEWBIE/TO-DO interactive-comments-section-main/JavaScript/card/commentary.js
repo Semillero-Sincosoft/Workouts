@@ -14,13 +14,17 @@ import { commentLocal } from "../infoLocalStorage.js";
 export const sectionAddComentary = (
   image,
   username,
-  actionBtn = action.reply
+  actionBtn = action.reply,
+  id
 ) => {
   const imageCurrentUser = commentLocal.currentUser.image.png;
   const nameUserReply = commentLocal.currentUser.username;
 
   const contentCommentary = createElement("div", "content-card");
   const photoUser = createAvatar(image);
+  const inputHidden = createElement("input");
+  inputHidden.setAttribute("type", "hidden");
+  inputHidden.value = id;
 
   const aside = createElement("aside", "avatar-commentary");
   aside.append(photoUser);
@@ -71,31 +75,36 @@ export const sectionAddComentary = (
       replies: [],
     };
 
-    const prueba = actionBtn == action.send ? false : true;
+    const validationButtonReplyOSend = actionBtn == action.send ? false : true;
 
-    const cardReply = renderComentaryReply(newComment, prueba);
+    const cardReply = renderComentaryReply(
+      newComment,
+      validationButtonReplyOSend
+    );
     contentCommentary.innerHTML = "";
     contentCommentary.classList.remove("content-card");
 
-    contentCommentary.append(cardReply);
+    contentCommentary.append(cardReply, inputHidden);
 
     validation.disabled = true;
-    local.add("comentarios", newComment);
+    local.add("comentarios", newComment, inputHidden.value);
   });
 
   return contentCommentary;
 };
 
-const renderComentary = (isReply = false) => {
-  const { user } = commentLocal.comments;
+const renderComentary = (comentario) => {
+  const { user } = comentario;
   let image, username;
-  if (isReply) {
-    username = commentLocal.comments.username;
-  }
+  // if (isReply) {
+  //   username = user.username;
+  // } else {
+  //   username = comentario;
+  // }
 
   if (user) {
-    image = commentLocal.comments.user.image.png;
-    username = commentLocal.comments.user.username;
+    image = user.image.png;
+    username =  user.username;
   }
   let contentCommentary = sectionAddComentary(
     commentLocal.currentUser.image.png,
