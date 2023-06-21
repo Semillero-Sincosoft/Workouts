@@ -2,7 +2,6 @@ import { crearTarea } from "../creación_tareas_/createHomeworks.js";
 import { createTag } from "../../utilities.js";
 import { CrearBarraFiltros } from "../../filtros/creación_filtros.js";
 import { tareasRestantes } from "../../filtros/tareas_restantes.js";
-import { validacionEstado } from "../../validacion_estado.js";
 export const container = document.querySelector("main");
 const homeworksContent = createTag("section", "content-homework");
 homeworksContent.setAttribute("id", "content-homeworks");

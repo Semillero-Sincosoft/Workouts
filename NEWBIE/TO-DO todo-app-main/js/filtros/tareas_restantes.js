@@ -5,6 +5,5 @@ export const tareasRestantes = function () {
     (elemento) => elemento.finalizado == false
   );
   const numeroDeElementos = elementosFaltantes.length;
-  console.log(tareas, "restantes XV");
   return numeroDeElementos;
 };

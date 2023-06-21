@@ -7,38 +7,13 @@ import { eliminarTarea } from "../../functionalities/eliminar_tarea.js";
 export function crearTarea(tarea, index) {
   const { texto, id } = tarea;
   const article = createTag("article", "homework");
-  const localArrayTareas = JSON.parse(localStorage.getItem("arrayTareas"));
-  console.log(localArrayTareas, "homeworks");
   article.classList.add("no-completado");
   article.setAttribute("id", id);
   article.setAttribute("index", index);
-
-  article.classList.add(`article-${index}`);
-
   const div = createTag("div");
   const input = createTag("input", "circular-checkbox");
   input.setAttribute("type", "checkbox");
-
-  input.setAttribute("id",`input-${id}`);
-
-  // localArrayTareas.map((tarea) => {
-  //   let estado = false;
-  //   if (tarea) {
-  //     estado = tarea.finalizado;
-  //   }
-  //   if (estado === false) {
-  //     console.log("AHORA ES FALSE");
-  //     input.checked = false;
-  //     article.classList.remove("completado")
-  //     article.classList.add("no-completado")
-  //   } else if (estado === true) {
-  //     console.log("AHORA ES TRUE");
-  //     input.checked = true;
-  //     article.classList.remove("no-completado")
-  //     article.classList.add("completado")
-  //     console.log(article,'PADRE')
-  //   }
-  // });
+  input.setAttribute("id", `input-${id}`);
 
   const textHomework = createTag("span");
   textHomework.textContent = texto;
@@ -55,8 +30,6 @@ export function crearTarea(tarea, index) {
   article.addEventListener("mouseleave", function () {
     article.removeChild(close);
   });
-
-
 
   input.addEventListener("change", () => cambiarEstadoHomeWork(tarea, input));
   input.addEventListener("change", () => EventChecked(input, textHomework));

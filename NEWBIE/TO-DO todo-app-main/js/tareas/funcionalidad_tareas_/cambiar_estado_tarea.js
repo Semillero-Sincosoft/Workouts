@@ -1,4 +1,4 @@
-import local from "../../../module/localStorage.js"
+import local from "../../../module/localStorage.js";
 import { obtenerTareas } from "../creación_tareas_/contenedor_tareas.js";
 import { tareasRestantes } from "../../filtros/tareas_restantes.js";
 export const cambiarEstadoHomeWork = (tarea, input) => {
@@ -14,7 +14,7 @@ export const cambiarEstadoHomeWork = (tarea, input) => {
     }
     return t;
   });
-  local.save("arrayTareas",tareas)
+  local.save("arrayTareas", tareas);
   const itemsLeft = document.getElementById("elements-left");
   itemsLeft.textContent = tareasRestantes() + " items left";
 };

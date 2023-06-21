@@ -17,6 +17,7 @@ export const generarIdÚnico = () => {
   return idAleatorio;
 };
 export const obtenerIndex = () => {
-  const indexElement = JSON.parse(localStorage.getItem("arrayTareas")).length-1;
+  const indexElement =
+    JSON.parse(localStorage.getItem("arrayTareas")).length - 1;
   return indexElement;
 };
