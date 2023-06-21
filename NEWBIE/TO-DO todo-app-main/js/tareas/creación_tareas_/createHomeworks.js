@@ -16,7 +16,9 @@ export function crearTarea(tarea, index) {
   input.setAttribute("id", `input-${id}`);
 
   const textHomework = createTag("span");
+  textHomework.setAttribute("id",`span-${id}`)
   textHomework.textContent = texto;
+
 
   const close = createTag("button", "icon-delete");
   close.innerHTML = icons.cross;
