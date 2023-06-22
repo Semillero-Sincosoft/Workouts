@@ -1,15 +1,11 @@
 export const mostrarTareasPorEstado = function (estado) {
-  const TareaCompletada = document.querySelectorAll(".homework");
-  TareaCompletada.forEach((article) => {
-    if (estado === true && article.classList.contains("completado")) {
-      article.classList.add("hidden");
-    } else if (
-      estado === false &&
-      article.classList.contains("no-completado")
-    ) {
-      article.classList.add("hidden");
+  $(".homework").each(function () {
+    if (estado === true && $(this).hasClass("completado")) {
+      $(this).addClass("hidden");
+    } else if (estado === false && $(this).hasClass("no-completado")) {
+      $(this).addClass("hidden");
     } else {
-      article.classList.remove("hidden");
+      $(this).removeClass("hidden");
     }
   });
 };
