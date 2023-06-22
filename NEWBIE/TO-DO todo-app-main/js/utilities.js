@@ -1,4 +1,3 @@
-import { obtenerTareas } from "./tareas/creación_tareas_/contenedor_tareas.js";
 export const createTag = (tagName, className, text, id) => {
   const element = document.createElement(tagName);
   if (className) {

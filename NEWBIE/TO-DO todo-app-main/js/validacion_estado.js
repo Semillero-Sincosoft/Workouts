@@ -1,19 +1,19 @@
 export const validacionEstado = () => {
   const localArrayTareas = JSON.parse(localStorage.getItem("arrayTareas"));
   localArrayTareas.map((tarea) => {
-    const article = document.getElementById(tarea.id);
-    const input = document.getElementById(`input-${tarea.id}`);
-    const span = document.getElementById(`span-${tarea.id}`)
+    const article = $("#" + tarea.id);
+    const input = $(`#input-${tarea.id}`);
+    const span = $(`#span-${tarea.id}`)
     if (tarea.finalizado === false) {
-      input.checked = false;
-      span.classList.remove("span-checked")
-      article.classList.remove("completado");
-      article.classList.add("no-completado");
+      input.prop("checked",false)
+      span.removeClass("span-checked")
+      article.removeClass("completado");
+      article.addClass("no-completado");
     } else if (tarea.finalizado === true) {
-      span.classList.add("span-checked")
-      input.checked = true;
-      article.classList.remove("no-completado");
-      article.classList.add("completado");
+      input.prop("checked",true)
+      span.addClass("span-checked")
+      article.removeClass("no-completado");
+      article.addClass("completado");
     }
   });
 };

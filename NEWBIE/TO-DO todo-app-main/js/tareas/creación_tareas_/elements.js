@@ -2,7 +2,7 @@ import { createTag } from "../../utilities.js";
 import icons from "../../imgs/svg.js";
 import { eliminarTarea } from "../../functionalities/eliminar_tarea.js";
 export const createArticle = (id, index) => {
-  const article = createTag("article", "homework", "", id, index);
+  const article = createTag("article", "homework", "", id);
   $(article).addClass("no-completado");
   article.setAttribute("index", index);
   return article;
