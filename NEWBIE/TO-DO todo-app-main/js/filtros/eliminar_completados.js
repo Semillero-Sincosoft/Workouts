@@ -9,8 +9,7 @@ export const eliminarCompletados = function () {
       tareas.splice(i, 1);
     }
   }
-  const divContent = document.getElementById("contenedor-tareas");
-  divContent.innerHTML = "";
+  $("#contenedor-tareas").html("")
   tareas.forEach((tarea, index) => {
     insertarTarea(tarea, index);
   });
