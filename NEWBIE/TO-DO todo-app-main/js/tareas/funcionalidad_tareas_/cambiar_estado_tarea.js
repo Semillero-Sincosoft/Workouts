@@ -15,6 +15,5 @@ export const cambiarEstadoHomeWork = (tarea, input) => {
     return t;
   });
   local.save("arrayTareas", tareas);
-  const itemsLeft = document.getElementById("elements-left");
-  itemsLeft.textContent = tareasRestantes() + " items left";
+  $('#elements-left').text(tareasRestantes() + " items left")
 };
