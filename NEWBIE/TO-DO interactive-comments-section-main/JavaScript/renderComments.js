@@ -17,12 +17,16 @@ export const renderComments = (comentario) => {
   const contentHome = document.getElementById("content-home");
 
   contentHome.append(containerCard);
+
   containerCard.append(card);
+
   let commentReply;
   if (comentario.replies.length > 0) {
     commentReply = comentario.replies.forEach((comment) => {
       comment.replica = true;
-      commentaryReply(comment, true);
+      const reply = commentaryReply(comment, true);
+      containerCardReplies.append(reply);
+      containerCard.append(containerCardReplies);
     });
   }
 
@@ -56,4 +60,34 @@ export const renderComments = (comentario) => {
   });
 
   return containerCard;
+};
+
+export const renderCommentsReply = (comentario) => {
+  const card = createCard(comentario);
+  const containerCardReplies = createElement("section", "container-replies");
+  // const commentary = renderComentary(comentario);
+  card.replyButton.addEventListener("click", () => {
+    commentary.classList.remove("hidden");
+    const addReply = sectionAddComentary(
+      commentLocal.currentUser.image.png,
+      commentLocal.currentUser.username,
+      acciones.reply,
+      comentario.id
+    );
+
+     containerCardReplies.append(addReply);
+    // card.append(containerCardReplies);
+  });
+
+  card.delete.addEventListener("click", () => {
+    console.log("EVENTO DEL DELETE");
+    modalHtml.classList.toggle("hidden");
+    modalHtml.setAttribute("idEliminar", card.id);
+  });
+
+  card.edit.addEventListener("click", () => {
+    console.log("EVENTO DEL EDIT");
+  });
+
+  return card;
 };
