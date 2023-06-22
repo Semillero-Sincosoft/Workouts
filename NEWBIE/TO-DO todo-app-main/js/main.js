@@ -20,7 +20,7 @@ homeworkAssignment.addEventListener("keyup", (e) => {
         },
         obtenerIndex()
       );
-      document.getElementById("text").value = "";
+      $('#text').val("")
     }
   }
 });

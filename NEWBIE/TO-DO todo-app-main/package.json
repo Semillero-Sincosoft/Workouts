@@ -1,0 +1,14 @@
+{
+  "name": "to-do-todo-app-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Santiago Rios",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.0"
+  }
+}

@@ -12,5 +12,5 @@ export const eliminarTarea = function (index) {
   tarea.forEach(insertarTarea);
   const itemsLeft = document.getElementById("elements-left");
   itemsLeft.textContent = tareasRestantes() + " items left";
-  validacionEstado()
+  validacionEstado();
 };
