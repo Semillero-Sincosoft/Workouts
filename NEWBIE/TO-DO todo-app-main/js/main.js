@@ -5,8 +5,7 @@ import { generarIdÚnico } from "./utilities.js";
 import { obtenerIndex } from "./utilities.js";
 import { validacionEstado } from "./validacion_estado.js";
 
-const homeworkAssignment = document.getElementById("text");
-homeworkAssignment.addEventListener("keyup", (e) => {
+$('#text').on("keyup", (e) => {
   if (e.keyCode == 13) {
     const txtNuevaTarea = e.target.value;
     const idNuevaTarea = generarIdÚnico();
