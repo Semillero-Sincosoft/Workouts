@@ -25,17 +25,14 @@ export const CrearBarraFiltros = function () {
       const itemActive = createTag("button", "filter-active", filter[1]);
       const itemCompleted = createTag("button", "filter-completed", filter[2]);
       element.append(itemAll, itemActive, itemCompleted);
-      itemAll.addEventListener("click", () => mostrarTareasPorEstado());
-      itemActive.addEventListener("click", () => mostrarTareasPorEstado(true));
-      itemCompleted.addEventListener("click", () =>
-        mostrarTareasPorEstado(false)
-      );
+      itemAll.on("click", () => mostrarTareasPorEstado());
+      itemActive.on("click", () => mostrarTareasPorEstado(true));
+      itemCompleted.on("click", () => mostrarTareasPorEstado(false));
     } else {
       const itemClear = createTag("button", "filter-clear", filter);
       element.append(itemClear);
-      itemClear.addEventListener("click", () => eliminarCompletados());
+      itemClear.on("click", () => eliminarCompletados());
     }
-
     contentFilters.append(element);
   });
 };
