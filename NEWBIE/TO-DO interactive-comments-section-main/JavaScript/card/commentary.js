@@ -9,9 +9,10 @@ export const sectionAddComentary = (
   image,
   username,
   actionBtn = action.reply,
-  id,
+  comentario,
   containerCard
 ) => {
+  const { id } = comentario;
   const contentCommentary = createElement("div", "content-card");
   sectionAddComentary.divCommentary = contentCommentary;
   const photoUser = createAvatar(image);

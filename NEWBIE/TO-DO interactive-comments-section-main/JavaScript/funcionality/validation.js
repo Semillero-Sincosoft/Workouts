@@ -9,10 +9,10 @@ export const validationReplies = (card, comentario, containerCard) => {
       commentLocal.currentUser.image.png,
       comentario.user.username,
       acciones.reply,
-      comentario.id,
+      comentario,
       containerCard
-      );
-      containerCard.append(addReply);
+    );
+    containerCard.append(addReply);
 
   });
 

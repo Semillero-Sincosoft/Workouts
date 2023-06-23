@@ -5,7 +5,7 @@ export const mostrarMiPerfil = () => {
   const contentHome = document.getElementById("content-home");
   const youProfile = sectionAddComentary(
     commentLocal.currentUser.image.png,
-    "commentLocal.currentUser.username",
+    commentLocal.currentUser.username,
     action.send,
     0
   );
