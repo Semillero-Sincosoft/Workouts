@@ -50,13 +50,20 @@ export const sectionAddComentary = (
   });
 
   buttonReply.addEventListener("click", () => {
-    createNewCommentary(txtComent.value, username, actionBtn, validation, id);
+    const cardReply = createNewCommentary(
+      txtComent.value,
+      username,
+      actionBtn,
+      validation,
+      id
+    );
+    //contentCommentary.append(cardReply);
   });
 
   return contentCommentary;
 };
 
-const renderComentary = (comentario) => {
+export const addSectionComment = (comentario) => {
   const { user } = comentario;
   let image, username;
 
@@ -64,12 +71,7 @@ const renderComentary = (comentario) => {
     image = user.image.png;
     username = user.username;
   }
-  let contentCommentary = sectionAddComentary(
-    commentLocal.currentUser.image.png,
-    username
-  );
-
-  return contentCommentary;
+  return sectionAddComentary(commentLocal.currentUser.image.png, username);
 };
 
 export const commentaryReply = (comentario, isReply) => {
@@ -97,4 +99,3 @@ export const commentaryReply = (comentario, isReply) => {
   const renderComment = renderCommentsReply(replyCommentary, isReply);
   if (isReply) return renderComment;
 };
-export default renderComentary;

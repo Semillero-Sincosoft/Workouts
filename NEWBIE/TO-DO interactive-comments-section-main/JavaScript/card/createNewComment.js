@@ -1,6 +1,7 @@
 import action from "../data/acciones.js";
 import { commentLocal } from "../infoLocalStorage.js";
 import local from "../module/localStorage.js";
+import { renderComments } from "../renderComments.js";
 import { generateId } from "../utilities-ui.js";
 import { commentaryReply, sectionAddComentary } from "./commentary.js";
 
@@ -32,9 +33,9 @@ export const createNewCommentary = (
   const validationButtonReplyOSend = actionBtn == action.send ? false : true;
 
   const cardReply = commentaryReply(newComment, validationButtonReplyOSend);
-  const contentCommentary = sectionAddComentary.divCommentary;
+  const contentCommentary = renderComments.containerCardReplies; // sectionAddComentary.divCommentary;
   contentCommentary.innerHTML = "";
-  contentCommentary.classList.remove("content-card");
+  // // contentCommentary.classList.remove("content-card");
 
   const inputHidden = sectionAddComentary.inputHidden;
   inputHidden.value = id;
@@ -42,4 +43,5 @@ export const createNewCommentary = (
 
   validation.disabled = true;
   local.add("comentarios", newComment, inputHidden.value);
+  return cardReply;
 };
