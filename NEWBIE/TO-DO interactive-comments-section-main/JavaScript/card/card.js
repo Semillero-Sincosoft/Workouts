@@ -13,7 +13,7 @@ const createCard = (comentario) => {
   contentCard.id = id;
 
   const contentHeader = contentInfoUser(createdAt, user);
-  const btnLikes = createVotes(generateId(id), score);
+  const btnLikes = createVotes(generateId(id), score, comentario);
   localStorage.get()
   const btnActions = buttonAction(username);
 
