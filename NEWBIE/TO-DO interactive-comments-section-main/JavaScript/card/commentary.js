@@ -1,4 +1,4 @@
-import { renderComments, renderCommentsReply } from "../renderComments.js";
+import { renderCommentsReply } from "../renderComments.js";
 import { createElement, createAvatar, createBtn } from "../utilities-ui.js";
 import createTextareaComment from "./contentCommentary.js";
 import action from "../data/acciones.js";
@@ -16,8 +16,8 @@ export const sectionAddComentary = (
   const photoUser = createAvatar(image);
   const inputHidden = createElement("input");
   inputHidden.setAttribute("type", "hidden");
-  // inputHidden.value = id;
   sectionAddComentary.inputHidden = inputHidden;
+
   const aside = createElement("aside", "avatar-commentary");
   aside.append(photoUser);
   let txtBoton = action.reply;
@@ -71,10 +71,6 @@ const renderComentary = (comentario) => {
 
   return contentCommentary;
 };
-// export const renderComentaryReply = (comentario, isReply) => {
-//   const cardReply = commentaryReply(comentario, isReply);
-//   return cardReply;
-// };
 
 export const commentaryReply = (comentario, isReply) => {
   const { id, content, user, createdAt } = comentario;
@@ -99,8 +95,6 @@ export const commentaryReply = (comentario, isReply) => {
   commentaryReply.id = replyCommentary;
 
   const renderComment = renderCommentsReply(replyCommentary, isReply);
-  if (isReply) renderComment.classList.add("reply-container");
-
-  return renderComment;
+  if (isReply) return renderComment;
 };
 export default renderComentary;

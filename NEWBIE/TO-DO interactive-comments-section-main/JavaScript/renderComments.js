@@ -13,7 +13,6 @@ export const renderComments = (comentario) => {
   const containerCardReplies = createElement("section", "container-replies");
   const card = createCard(comentario);
   const commentary = renderComentary(comentario);
-
   const contentHome = document.getElementById("content-home");
 
   contentHome.append(containerCard);
@@ -65,7 +64,6 @@ export const renderComments = (comentario) => {
 export const renderCommentsReply = (comentario) => {
   const card = createCard(comentario);
   const containerCardReplies = createElement("section", "container-replies");
-  // const commentary = renderComentary(comentario);
   card.replyButton.addEventListener("click", () => {
     commentary.classList.remove("hidden");
     const addReply = sectionAddComentary(
@@ -75,12 +73,11 @@ export const renderCommentsReply = (comentario) => {
       comentario.id
     );
 
-     containerCardReplies.append(addReply);
+    containerCardReplies.append(addReply);
     // card.append(containerCardReplies);
   });
 
   card.delete.addEventListener("click", () => {
-    console.log("EVENTO DEL DELETE");
     modalHtml.classList.toggle("hidden");
     modalHtml.setAttribute("idEliminar", card.id);
   });
