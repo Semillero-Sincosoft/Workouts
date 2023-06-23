@@ -1,4 +1,4 @@
-import { renderCommentsReply } from "../renderComments.js";
+import { renderComments, renderCommentsReply } from "../renderComments.js";
 import { createElement, createAvatar, createBtn } from "../utilities-ui.js";
 import createTextareaComment from "./contentCommentary.js";
 import action from "../data/acciones.js";
@@ -59,8 +59,12 @@ export const sectionAddComentary = (
       validation,
       id
     );
-    containerCard.replies.append(cardReply);
-    contentCommentary.classList.add("hidden");
+    if (id == 0) { //Nuevo comentario
+      containerCard.append(cardReply);
+    } else {
+      containerCard.replies.append(cardReply);
+      contentCommentary.classList.add("hidden");
+    }
   });
 
   return contentCommentary;
@@ -101,4 +105,5 @@ export const commentaryReply = (comentario, isReply) => {
 
   const renderComment = renderCommentsReply(replyCommentary, isReply);
   if (isReply) return renderComment;
+  return renderComments(replyCommentary);
 };

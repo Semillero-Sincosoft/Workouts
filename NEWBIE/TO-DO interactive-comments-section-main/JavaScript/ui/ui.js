@@ -9,6 +9,7 @@ export const uiRenderComments = (card) => {
   containerCard.append(card, containerCardReplies);
 
   uiRenderComments.replies = containerCardReplies;
-    containerCard.replies = containerCardReplies;
+  containerCard.replies = containerCardReplies;
+  //containerCard.principal = contentHome;
   return containerCard;
 };
