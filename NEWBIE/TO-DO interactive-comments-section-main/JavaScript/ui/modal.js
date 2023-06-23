@@ -1,4 +1,4 @@
-import { createBtn, createElement, createText } from "./utilities-ui.js";
+import { createBtn, createElement, createText } from "../utilities-ui.js";
 
 export const modalHtml = document.getElementById("content-modal");
 export const modalDelete = () => {
@@ -14,9 +14,9 @@ export const modalDelete = () => {
   const contentBtn = createElement("div", "conten-btn");
   const doNotDelete = createBtn("NO,   CANCEL");
   doNotDelete.classList.add("btn-no-delete");
-contentModal.btnNoCancel = doNotDelete
+  contentModal.btnNoCancel = doNotDelete;
   const btnEliminate = createBtn("YES, DELETE");
-  btnEliminate.classList.add("btn-yes-delete")
+  btnEliminate.classList.add("btn-yes-delete");
   contentModal.cancel = btnEliminate;
 
   contentModal.append(title, textModal, contentBtn);

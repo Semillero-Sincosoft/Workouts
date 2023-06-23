@@ -2,14 +2,15 @@ import { renderCommentsReply } from "../renderComments.js";
 import { createElement, createAvatar, createBtn } from "../utilities-ui.js";
 import createTextareaComment from "./contentCommentary.js";
 import action from "../data/acciones.js";
-import { commentLocal } from "../infoLocalStorage.js";
+import { commentLocal } from "../module/infoLocalStorage.js";
 import { createNewCommentary } from "./createNewComment.js";
 
 export const sectionAddComentary = (
   image,
   username,
   actionBtn = action.reply,
-  id
+  id,
+  containerCard
 ) => {
   const contentCommentary = createElement("div", "content-card");
   sectionAddComentary.divCommentary = contentCommentary;
@@ -57,7 +58,8 @@ export const sectionAddComentary = (
       validation,
       id
     );
-    //contentCommentary.append(cardReply);
+    containerCard.replies.append(cardReply);
+    contentCommentary.classList.add("hidden");
   });
 
   return contentCommentary;
