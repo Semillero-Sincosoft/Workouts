@@ -13,15 +13,15 @@ export const sectionAddComentary = (
   containerCard
 ) => {
   const { id } = comentario;
-  const contentCommentary = createElement("div", "content-card");
-  sectionAddComentary.divCommentary = contentCommentary;
+  const $contentCommentary = createElement("div", "content-card");
+  sectionAddComentary.divCommentary = $contentCommentary;
   const photoUser = createAvatar(image);
   const inputHidden = createElement("input");
-  inputHidden.setAttribute("type", "hidden");
+  $(inputHidden).attr("type", "hidden");
   sectionAddComentary.inputHidden = inputHidden;
 
   const aside = createElement("aside", "avatar-commentary");
-  aside.append(photoUser);
+  $(aside).append(photoUser);
   let txtBoton = action.reply;
 
   if (actionBtn == action.send) {
@@ -40,18 +40,18 @@ export const sectionAddComentary = (
 
   const divTextArea = createTextareaComment(texto);
 
-  const txtComent = divTextArea.textArea;
-  contentCommentary.append(aside, divTextArea, buttonReply);
+  $($contentCommentary).append(aside, divTextArea, buttonReply);
 
-  txtComent.addEventListener("keyup", () => {
-    if (txtComent.value == texto || txtComent.value.trim().length <= 10) {
+  const txtComent = divTextArea.textArea;
+  $(txtComent).on("keyup", () => {
+    if ($(txtComent).val == texto || txtComent.value.trim().length <= 10) {
       validation.disabled = true;
     } else {
       validation.disabled = false;
     }
   });
 
-  buttonReply.addEventListener("click", () => {
+  $(buttonReply).on("click", () => {
     const cardReply = createNewCommentary(
       txtComent.value,
       username,
@@ -59,15 +59,16 @@ export const sectionAddComentary = (
       validation,
       id
     );
-    if (id == 0) { //Nuevo comentario
+    if (id == 0) {
+      //Nuevo comentario
       containerCard.append(cardReply);
     } else {
       containerCard.replies.append(cardReply);
-      contentCommentary.classList.add("hidden");
+      $($contentCommentary).addClass("hidden");
     }
   });
 
-  return contentCommentary;
+  return $contentCommentary;
 };
 
 export const addSectionComment = (comentario) => {
