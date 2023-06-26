@@ -2,15 +2,15 @@ import { sectionAddComentary } from "./card/commentary.js";
 import action from "./data/acciones.js";
 import { commentLocal } from "./module/infoLocalStorage.js";
 export const mostrarMiPerfil = () => {
-  const contentPrueba = document.getElementById("content-prueba");
-  const comentario = {
+  const myProfile = $("#content-prueba");
+  const comment = {
     id: 0,
   };
   const youProfile = sectionAddComentary(
     commentLocal.currentUser.image.png,
     commentLocal.currentUser.username,
     action.send,
-    comentario,
+    comment,
   );
-  contentPrueba.append(youProfile);
+  myProfile.append(youProfile);
 };

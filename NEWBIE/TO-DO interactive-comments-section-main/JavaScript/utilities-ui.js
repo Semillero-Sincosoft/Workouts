@@ -31,7 +31,7 @@ export const createBtn = (text) => {
 };
 
 export const generateId = (id) => {
-  const idAleatorio = Math.random().toString(8).substring(2, 6);
+  const idRandom = Math.random().toString(8).substring(2, 6);
 
-  return idAleatorio;
+  return idRandom;
 };
