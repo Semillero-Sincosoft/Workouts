@@ -7,21 +7,20 @@ export const createVotes = (id, score, comentario) => {
   const contentButton = createElement("div", "button-likes");
 
   const iconMinus = createElement("button", "icon-plus");
-  iconMinus.innerHTML = icons.minus;
-  iconMinus.onclick = () => {
-    let scoreActual = document.getElementById("labelScore-" + id).textContent;
+  $(iconMinus).html(icons.minus);
+  $(iconMinus).on("click", () => {
+    let scoreActual = $(`#labelScore-${id}`).text();
     scoreActual = parseInt(scoreActual);
     const nuevoEstado = reduce(scoreActual, estado.positivo);
     incrementVotes(nuevoEstado, id);
     //const newcommentScore = comentario.score = nuevoEstado;
-    console.log(newcommentScore);
-  };
-  contentButton.append(iconMinus);
+    // console.log(newcommentScore);
+  });
 
   const totalVotes = createElement("h2", "score-likes");
-  totalVotes.setAttribute("id", "labelScore-" + id);
-  totalVotes.textContent = score;
-  contentButton.append(totalVotes);
+  $(totalVotes).attr(`id`, `labelScore-${id}`);
+  $(totalVotes).text(score);
+  contentButton.append(iconMinus, totalVotes);
 
   const reduce = (state, action) => {
     switch (action) {
@@ -38,9 +37,9 @@ export const createVotes = (id, score, comentario) => {
   };
 
   const iconPLus = createElement("button", "icon-minus");
-  iconPLus.innerHTML = icons.plus;
+  $(iconPLus).html(icons.plus);
   iconPLus.onclick = () => {
-    let scoreActual = document.getElementById("labelScore-" + id).textContent;
+    let scoreActual = $(`#labelScore-${id}`).text();
     scoreActual = parseInt(scoreActual);
     const nuevoEstado = reduce(scoreActual, estado.negativo);
     incrementVotes(nuevoEstado, id);
@@ -52,7 +51,5 @@ export const createVotes = (id, score, comentario) => {
 };
 
 const incrementVotes = (votos, id) => {
-  const totalVotesElement = document.getElementById("labelScore-" + id);
-
-  totalVotesElement.textContent = votos;
+  return $(`#labelScore-${id}`).text(votos);
 };
