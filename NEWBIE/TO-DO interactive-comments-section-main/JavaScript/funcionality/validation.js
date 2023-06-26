@@ -4,7 +4,7 @@ import { commentLocal } from "../module/infoLocalStorage.js";
 import { modalHtml } from "../ui/modal.js";
 
 export const validationReplies = (card, comentario, containerCard) => {
-  card.replyButton.addEventListener("click", () => {
+  $(card.replyButton).on("click", () => {
     const addReply = sectionAddComentary(
       commentLocal.currentUser.image.png,
       comentario.user.username,
@@ -12,17 +12,16 @@ export const validationReplies = (card, comentario, containerCard) => {
       comentario,
       containerCard
     );
-    containerCard.append(addReply);
-
+    $(containerCard).append(addReply);
   });
 
-  card.delete.addEventListener("click", () => {
+  $(card.delete).on("click", () => {
     console.log("EVENTO DEL DELETE");
-    modalHtml.classList.toggle("hidden");
-    modalHtml.setAttribute("idEliminar", card.id);
+    $(modalHtml).toggleClass("hidden");
+    $(modalHtml).attr("idEliminar", card.id);
   });
 
-  card.edit.addEventListener("click", () => {
+  $(card.edit).on("click", () => {
     console.log("EVENTO DEL EDIT");
   });
 };
