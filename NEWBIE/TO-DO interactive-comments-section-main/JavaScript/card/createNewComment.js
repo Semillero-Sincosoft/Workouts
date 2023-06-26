@@ -43,7 +43,7 @@ export const createNewCommentary = (
 
     cardReply = commentaryReply(newComment, validationButtonReplyOSend);
     const contentCommentary = uiRenderComments.replies;
-    contentCommentary.append(cardReply, inputHidden);
+    $(contentCommentary).append(cardReply, inputHidden);
 
   }
 
