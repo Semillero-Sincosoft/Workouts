@@ -7,7 +7,7 @@ export const renderComments = (comentario) => {
   const containerCard = uiRenderComments(card);
 
   if (comentario.replies.length > 0) {
-    comentario.replies.forEach((comentarioReplica) => {
+    $.each(comentario.replies, (index, comentarioReplica) => {
       const cardReply = renderCommentsReply(
         comentarioReplica,
         containerCard.replies
@@ -19,13 +19,9 @@ export const renderComments = (comentario) => {
   return containerCard;
 };
 
-export const renderCommentsReply = (comentario,containerCard) => {
+export const renderCommentsReply = (comentario, containerCard) => {
   const card = createCard(comentario);
 
-  validationReplies(
-    card,
-    comentario,
-    containerCard
-  );
+  validationReplies(card, comentario, containerCard);
   return card;
 };
