@@ -1,6 +1,3 @@
-import { commentaryReply } from "./card/commentary.js";
-import { comentarios } from "./comments.js";
-
 export const createElement = (tagName, className, id) => {
   const element = document.createElement(tagName);
   if (className) {
