@@ -10,6 +10,5 @@ export const uiRenderComments = (card) => {
 
   uiRenderComments.replies = containerCardReplies;
   containerCard.replies = containerCardReplies;
-  //containerCard.principal = contentHome;
   return containerCard;
 };

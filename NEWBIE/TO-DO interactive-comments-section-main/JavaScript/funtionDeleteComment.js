@@ -10,9 +10,7 @@ export const deleteCommentary = () => {
     modalHtml.classList.toggle("hidden");
     const idElimina = modalHtml.getAttribute("idEliminar");
     elimina(idElimina);
-    const eliminarCard = document
-      .getElementById(idElimina)
-      .parentNode.parentNode.remove();
+    const eliminarCard = document.getElementById(idElimina).remove();
   });
   modal.btnNoCancel.addEventListener("click", () => {
     modalHtml.classList.toggle("hidden");
