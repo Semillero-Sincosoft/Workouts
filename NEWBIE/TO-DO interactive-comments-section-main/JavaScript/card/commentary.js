@@ -4,6 +4,7 @@ import createTextareaComment from "./contentCommentary.js";
 import action from "../data/acciones.js";
 import { commentLocal } from "../module/infoLocalStorage.js";
 import { createNewCommentary } from "./createNewComment.js";
+import { uiRenderComments } from "../ui/ui.js";
 
 export const sectionAddComentary = (
   image,
@@ -59,10 +60,7 @@ export const sectionAddComentary = (
       validation,
       id
     );
-    if (id == 0) {
-      //Nuevo comentario
-      containerCard.append(cardReply);
-    } else {
+    if (!id == 0) {
       containerCard.replies.append(cardReply);
       $($contentCommentary).addClass("hidden");
     }

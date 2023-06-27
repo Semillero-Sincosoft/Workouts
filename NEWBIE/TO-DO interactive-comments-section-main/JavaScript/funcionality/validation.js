@@ -1,4 +1,6 @@
 import { sectionAddComentary } from "../card/commentary.js";
+import createTextareaComment from "../card/contentCommentary.js";
+import { createNewCommentary } from "../card/createNewComment.js";
 import acciones from "../data/acciones.js";
 import { commentLocal } from "../module/infoLocalStorage.js";
 import { modalHtml } from "../ui/modal.js";
@@ -23,5 +25,6 @@ export const validationReplies = (card, comentario, containerCard) => {
 
   $(card.edit).on("click", () => {
     console.log("EVENTO DEL EDIT");
+    
   });
 };

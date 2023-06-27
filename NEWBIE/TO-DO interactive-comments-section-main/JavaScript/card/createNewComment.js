@@ -7,7 +7,7 @@ import { generateId } from "../utilities-ui.js";
 import { commentaryReply, sectionAddComentary } from "./commentary.js";
 
 export const createNewCommentary = (
-  valor,
+  content,
   username,
   actionBtn,
   validation,
@@ -17,7 +17,7 @@ export const createNewCommentary = (
   const nameUserReply = commentLocal.currentUser.username;
   const newComment = {
     id: generateId(),
-    content: valor,
+    content: content,
     createdAt: "JUST NOW",
     score: 0,
     replyingTo: username,
