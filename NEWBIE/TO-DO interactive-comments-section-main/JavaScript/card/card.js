@@ -17,7 +17,8 @@ const createCard = (comentario) => {
 
   const contentComment = createElement("section", "content-comment");
 
-  const textComment = contentBodyCard(descComment);
+  const textComment = contentBodyCard(descComment, id);
+  createCard.textComment = textComment;
 
   $(contentHeader).append(btnActions);
   $(contentComment).append(contentHeader, textComment);
@@ -29,5 +30,4 @@ const createCard = (comentario) => {
 
   return contentCard;
 };
-
 export default createCard;

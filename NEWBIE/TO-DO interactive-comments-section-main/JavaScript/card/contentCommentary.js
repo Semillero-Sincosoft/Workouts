@@ -1,10 +1,11 @@
 import { createElement } from "../utilities-ui.js";
 
-  const createTextareaComment = (username) => {
+const createTextareaComment = (text) => {
   const contentWrittenCommentary = createElement("section", "content-textarea");
+
   const writtenCommentary = createElement("textarea", "written");
   writtenCommentary.id = "commentary";
-  writtenCommentary.textContent = username;
+  writtenCommentary.textContent = text;
   writtenCommentary.placeholder = "agregar comentario";
   contentWrittenCommentary.textArea = writtenCommentary;
 
