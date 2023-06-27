@@ -1,0 +1,70 @@
+.content-available-units {
+    height: 112.7rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: solid var(--Medium-gray);
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .content-available-units .content-about-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 22rem;
+    width: 93%;
+    line-height: 2.7rem;
+  }
+  .content-available-units div {
+    background-color: white;
+    width: 63.4rem;
+    height: 24.8rem;
+    padding: 1rem 0 1rem 0;
+    border: solid var(--Medium-gray);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .content-available-units .content-title-card {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .content-available-units .content-text-card {
+    width: 90%;
+    line-height: 2.7rem;
+  }
+  .content-available-units .content-title-card p {
+    color: var(--Moderate-cyan);
+    font-weight: 500;
+  }
+  .content-available-units .content-info-card {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .content-available-units .content-info-card article {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .content-available-units .content-info-card button {
+    width: 15.7rem;
+    height: 4.8rem;
+    border-radius: 5rem;
+    border: none;
+    color: white;
+    background-color: var(--Moderate-cyan);
+  }
+  section .card-title-disable,
+  section .card-text-disable,
+  section .card-info-disable {
+    opacity: 40%;
+  }
+  section .card-info-disable .disable-button {
+    background-color: var(--light-black);
+  }

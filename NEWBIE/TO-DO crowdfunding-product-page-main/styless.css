@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700;800&display=swap");
+@import url(estilos/dialog-support.css);
+@import url(estilos/dialog-thx.css);
+@import url(estilos/products-cards.css);
+@import url(estilos/content-stats.css);
+@import url(estilos/content-support.css);
+:root {
+  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Dark-cyan: hsl(176, 72%, 28%);
+  --Strong-cyan:hsl(176,39%,57%,100%);
+  --Dark-gray: hsl(0, 0%, 48%);
+  --Very-light-gray: hsl(0, 0%, 85%);
+  --Medium-gray: hsl(0, 0%, 96%);
+  --Light-Gray: hsl(0, 0%, 98%);
+  --light-black: hsl(0, 0%, 60%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Commissioner", sans-serif;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
+h1 {
+  font-size: 2.7rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+p {
+  font-size: 1.6rem;
+  color: var(--Dark-gray);
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Light-Gray);
+}
+header {
+  width: 100%;
+  height: 40rem;
+  background-image: url(images/image-hero-desktop.jpg);
+  background-repeat: round;
+  padding: 4rem 16rem 0 16rem;
+  position: relative;
+}
+div.content-drop-menu {
+  display: none;
+}
+header section {
+  display: flex;
+  justify-content: space-between;
+}
+header section nav ul {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 3rem;
+}
+li {
+  list-style: none;
+  color: white;
+}
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+main {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-home {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 73rem;
+  position: relative;
+  top: -9rem;
+}
+.show{
+  display: flex;
+}
+.oculto {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  nav {
+    opacity: 0;
+  }
+  .nav-open {
+    width: 32.7rem;
+    height: 21.2rem;
+    border-radius: 1rem;
+    background-color: white;
+    opacity: 1;
+    z-index: 3;
+    position: absolute;
+    top: 9rem;
+    right: 8rem;
+    padding: 3rem 0 0 2.5rem;
+  }
+  header section {
+    margin: 4rem 4rem 0 4rem;
+  }
+  header section nav ul {
+    flex-direction: column;
+    gap: 4.5rem;
+  }
+  li {
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  div.content-drop-menu {
+    display: flex;
+    height: fit-content;
+  }
+
+  button.icon-menu,
+  button.icon-close {
+    background: transparent;
+    border: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  p,
+  h4 {
+    font-size: 1.4rem;
+  }
+  p {
+    text-align: center;
+  }
+  header {
+    background-image: url(images/image-hero-mobile.jpg);
+    padding: 0;
+  }
+  .content-bookmark p {
+    display: none;
+  }
+  .content-bookmark {
+    width: fit-content;
+    background-color: transparent;
+  }
+  .content-home {
+    width: 32.7rem;
+  }
+  .content-stats {
+    height: 41.3rem;
+  }
+  .content-numbers-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-numbers-stats article {
+    text-align: center;
+    border: none;
+  }
+  .content-stats .load-bar {
+    width: 28rem;
+  }
+  .content-stats .load-bar div {
+    width: 21.9rem;
+  }
+  .content-available-units {
+    height: 168.7rem;
+    justify-content: end;
+    padding-bottom: 4rem;
+    gap: 2.5rem;
+  }
+  .content-available-units div {
+    width: 27.8rem;
+    height: 37rem;
+  }
+  .content-available-units .content-about-project {
+    width: 99%;
+    margin: 0 0 3rem 0;
+    height: 37.2rem;
+    gap: 2rem;
+  }
+  .content-about-project p {
+    text-align: start;
+  }
+  section.content-title-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  section.content-text-card p {
+    width: 95%;
+    text-align: start;
+  }
+  section.content-info-card {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
