@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --primary-font: "Big Shoulders Display", cursive;
+  --Secondary-font: "Lexend Deca", sans-serif;
+}
+body {
+  background-color: var(--Very-light-gray);
+  height: 100vh;
+  width: 100vw;
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2{
+    font-family: var(--primary-font);
+    color: var(--paragraphs);
+}
+p, button{
+    font-family: var(--Secondary-font);
+    color:var(--paragraphs);
+}
+.content-cards {
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+}
+.card-1 {
+  background-color: var(--Bright-orange);
+  width: 307px;
+  height: 500px;
+  padding: 48px 40px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.card-1__img{
+    width: 25%;
+    margin-bottom: 20px;
+}
+.card-1__h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.card-1__p{
+    font-size: 17px;
+    font-weight: 100;
+    margin-bottom: 120px;
+}
+.card-1__button{
+    margin-bottom: 55px;
+    height: 48px;
+    width: 146px;
+    color:var(--Bright-orange);
+    border:none;
+    border-radius: 50px;
+    background-color: var(--Very-light-gray);
+}
+.card-1__button:hover{
+    background-color: transparent;
+    border:solid 2px ;
+    color:var(--paragraphs);
+
+}
