@@ -24,9 +24,15 @@ const addItem = (key, value, idPrincipal) => {
   return element;
 };
 
+const saveScoreLocalStorage = (key, id, score) => {
+  getLocalStorage(key);
+  console.log(getLocalStorage(key));
+};
+
 export default {
   save: saveLocalStorage,
   get: getLocalStorage,
   delete: removeLocalstorage,
   add: addItem,
+  score: saveScoreLocalStorage,
 };

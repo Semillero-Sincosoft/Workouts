@@ -1,90 +1,27 @@
 import createCard from "./card/card.js";
-import renderComentary, {
-  commentaryReply,
-  sectionAddComentary,
-} from "./card/commentary.js";
-import acciones from "./data/acciones.js";
-import { commentLocal } from "./infoLocalStorage.js";
-import { modalHtml } from "./modal.js";
-import { createElement } from "./utilities-ui.js";
+import { validationReplies } from "./funcionality/validation.js";
+import { uiRenderComments } from "./ui/ui.js";
 
 export const renderComments = (comentario) => {
-  const containerCard = createElement("section", "container-card");
-  const containerCardReplies = createElement("section", "container-replies");
   const card = createCard(comentario);
-  const commentary = renderComentary(comentario);
-  const contentHome = document.getElementById("content-home");
+  const containerCard = uiRenderComments(card);
 
-  contentHome.append(containerCard);
-
-  containerCard.append(card);
-
-  let commentReply;
   if (comentario.replies.length > 0) {
-    commentReply = comentario.replies.forEach((comment) => {
-      comment.replica = true;
-      const reply = commentaryReply(comment, true);
-      containerCardReplies.append(reply);
-      containerCard.append(containerCardReplies);
+    $.each(comentario.replies, (index, comentarioReplica) => {
+      const cardReply = renderCommentsReply(
+        comentarioReplica,
+        containerCard.replies
+      );
+      containerCard.replies.append(cardReply);
     });
   }
-
-  if (comentario.replica) {
-    containerCardReplies.append(commentReply);
-    containerCard.append(containerCardReplies);
-  }
-
-  containerCard.commentary = commentary;
-  // containerCard.contentBtn = card;
-  card.replyButton.addEventListener("click", () => {
-    commentary.classList.remove("hidden");
-    const addReply = sectionAddComentary(
-      commentLocal.currentUser.image.png,
-      commentLocal.currentUser.username,
-      acciones.reply,
-      comentario.id
-    );
-
-    containerCard.append(addReply);
-  });
-
-  card.delete.addEventListener("click", () => {
-    console.log("EVENTO DEL DELETE");
-    modalHtml.classList.toggle("hidden");
-    modalHtml.setAttribute("idEliminar", card.id);
-  });
-
-  card.edit.addEventListener("click", () => {
-    console.log("EVENTO DEL EDIT");
-  });
-
+  validationReplies(card, comentario, containerCard);
   return containerCard;
 };
 
-export const renderCommentsReply = (comentario) => {
+export const renderCommentsReply = (comentario, containerCard) => {
   const card = createCard(comentario);
-  const containerCardReplies = createElement("section", "container-replies");
-  card.replyButton.addEventListener("click", () => {
-    commentary.classList.remove("hidden");
-    const addReply = sectionAddComentary(
-      commentLocal.currentUser.image.png,
-      commentLocal.currentUser.username,
-      acciones.reply,
-      comentario.id
-    );
 
-    containerCardReplies.append(addReply);
-    // card.append(containerCardReplies);
-  });
-
-  card.delete.addEventListener("click", () => {
-    modalHtml.classList.toggle("hidden");
-    modalHtml.setAttribute("idEliminar", card.id);
-  });
-
-  card.edit.addEventListener("click", () => {
-    console.log("EVENTO DEL EDIT");
-  });
-
+  validationReplies(card, comentario, containerCard);
   return card;
 };

@@ -1,13 +1,16 @@
 import { sectionAddComentary } from "./card/commentary.js";
 import action from "./data/acciones.js";
-import { commentLocal } from "./infoLocalStorage.js";
+import { commentLocal } from "./module/infoLocalStorage.js";
 export const mostrarMiPerfil = () => {
-  const contentHome = document.getElementById("content-home");
+  const myProfile = $("#content-prueba");
+  const comment = {
+    id: 0,
+  };
   const youProfile = sectionAddComentary(
     commentLocal.currentUser.image.png,
-    "commentLocal.currentUser.username",
+    commentLocal.currentUser.username,
     action.send,
-    0
+    comment,
   );
-  contentHome.append(youProfile);
+  myProfile.append(youProfile);
 };
