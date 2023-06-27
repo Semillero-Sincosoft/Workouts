@@ -1,7 +1,8 @@
 import { createElement } from "../utilities-ui.js";
 import icons from "./svg.js";
 import estado from "./estados.js";
-export const createVotes = (id, score, comentario) => {
+import local from "../module/localStorage.js";
+export const createVotes = (id, score) => {
   const contentLikes = createElement("aside");
 
   const contentButton = createElement("div", "button-likes");
@@ -51,5 +52,8 @@ export const createVotes = (id, score, comentario) => {
 };
 
 const incrementVotes = (votos, id) => {
+  const valorDelBoton = $(`#labelScore-${id}`).parent().parent().parent()[0].id;
+  console.log(valorDelBoton);
+  local.score("comentarios", valorDelBoton, votos);
   return $(`#labelScore-${id}`).text(votos);
 };
