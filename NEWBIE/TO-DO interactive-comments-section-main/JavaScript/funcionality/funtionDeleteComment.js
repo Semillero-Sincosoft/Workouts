@@ -1,5 +1,5 @@
-import { modalDelete, modalHtml } from "./ui/modal.js";
-import local from "./module/localStorage.js";
+import { modalDelete, modalHtml } from "../ui/modal.js";
+import local from "../module/localStorage.js";
 
 export const elimina = (id) => {
   local.delete("comentarios", id);

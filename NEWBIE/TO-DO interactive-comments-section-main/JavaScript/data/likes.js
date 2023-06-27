@@ -53,7 +53,6 @@ export const createVotes = (id, score) => {
 
 const incrementVotes = (votos, id) => {
   const valorDelBoton = $(`#labelScore-${id}`).parent().parent().parent()[0].id;
-  console.log(valorDelBoton);
   local.score("comentarios", valorDelBoton, votos);
   return $(`#labelScore-${id}`).text(votos);
 };
