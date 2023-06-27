@@ -6,13 +6,13 @@ export const elimina = (id) => {
 };
 export const deleteCommentary = () => {
   const modal = modalDelete();
-  modal.cancel.addEventListener("click", () => {
-    modalHtml.classList.toggle("hidden");
-    const idElimina = modalHtml.getAttribute("idEliminar");
+  $(modal.cancel).on("click", () => {
+    $(modalHtml).toggleClass("hidden");
+    const idElimina = $(modalHtml).attr("idEliminar");
     elimina(idElimina);
-    const eliminarCard = document.getElementById(idElimina).remove();
+    $(`#${idElimina}`).remove()
   });
-  modal.btnNoCancel.addEventListener("click", () => {
-    modalHtml.classList.toggle("hidden");
+  $(modal.btnNoCancel).on("click", () => {
+    $(modalHtml).toggleClass("hidden");
   });
 };
