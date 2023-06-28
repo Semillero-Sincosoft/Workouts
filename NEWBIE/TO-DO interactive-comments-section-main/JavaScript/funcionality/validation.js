@@ -23,11 +23,12 @@ export const validationReplies = (card, comentario, containerCard) => {
   });
 
   $(card.edit).on("click", () => {
-    // const texarea = createTextareaComment();
-    // const btnUpdate = createBtn();
-    const update = textUpdate();
-    $(`#content-id${card.id}`).html(update);
+    const update = textUpdate(card.text, card.id);
 
+    replace(card.id, update);
     console.log("EVENTO DEL EDIT");
   });
 };
+
+export const replace = (id, contentHtml) =>
+  $(`#content-id${id}`).html(contentHtml);

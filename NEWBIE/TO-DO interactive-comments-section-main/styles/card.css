@@ -185,7 +185,7 @@ button {
   padding: 1rem;
 }
 
-.update .btn-commentary{
+.update .btn-commentary {
   display: flex;
   justify-content: end;
 }
@@ -200,4 +200,11 @@ button {
 textarea {
   resize: none;
   outline: none;
+}
+
+.update {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--Grayish-Blue);
+  line-height: 2rem;
 }

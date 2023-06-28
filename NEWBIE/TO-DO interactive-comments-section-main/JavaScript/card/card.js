@@ -10,7 +10,7 @@ const createCard = (comentario) => {
   const contentCardReplies = createElement("div");
   $(contentCard).attr("id", id);
   contentCard.id = id;
-
+  contentCard.text = descComment;
   const contentHeader = contentInfoUser(createdAt, user);
   const btnLikes = createVotes(generateId(id), score, comentario);
   const btnActions = buttonAction(username);

@@ -24,25 +24,26 @@ const addItem = (key, value, idPrincipal) => {
   return element;
 };
 
-const saveScoreLocalStorage = (key, id, score) => {
+const updatePropLocalStorage = (key, id, prop, val) => {
   const origin = getLocalStorage(key);
   origin.comments.map((comment) => {
     if (comment.id == id) {
-      comment.score = score;
+      comment[prop] = val;
     } else {
       comment.replies.map((reply) => {
         if (reply.id == id) {
-          reply.score = score;
+          reply[prop] = val;
         }
       });
     }
   });
   saveLocalStorage("comentarios", origin);
 };
+
 export default {
   save: saveLocalStorage,
   get: getLocalStorage,
   delete: removeLocalstorage,
   add: addItem,
-  score: saveScoreLocalStorage,
+  update: updatePropLocalStorage,
 };
