@@ -1,7 +1,5 @@
 const UPDATE = "UPDATE";
-
 const SEND = "SEND";
-
 const REPLY = "REPLY";
 
 export default {

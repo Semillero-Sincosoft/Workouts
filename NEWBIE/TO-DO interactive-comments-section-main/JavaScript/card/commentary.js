@@ -1,10 +1,9 @@
 import { renderComments, renderCommentsReply } from "../renderComments.js";
 import { createElement, createAvatar, createBtn } from "../utilities-ui.js";
 import createTextareaComment from "./contentCommentary.js";
-import action from "../data/acciones.js";
+import action from "../data/accion.js";
 import { commentLocal } from "../module/infoLocalStorage.js";
 import { createNewCommentary } from "./createNewComment.js";
-import { uiRenderComments } from "../ui/ui.js";
 
 export const sectionAddComentary = (
   image,
@@ -39,11 +38,11 @@ export const sectionAddComentary = (
     texto = `@${username}, `;
   }
 
-  const divTextArea = createTextareaComment(texto);
+  const divTextarea = createTextareaComment(texto);
 
-  $($contentCommentary).append(aside, divTextArea, buttonReply);
+  $($contentCommentary).append(aside, divTextarea, buttonReply);
 
-  const txtComent = divTextArea.textArea;
+  const txtComent = divTextarea.textArea;
   $(txtComent).on("keyup", () => {
     if ($(txtComent).val == texto || txtComent.value.trim().length <= 10) {
       validation.disabled = true;

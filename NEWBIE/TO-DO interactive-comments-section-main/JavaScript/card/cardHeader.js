@@ -1,7 +1,6 @@
 import { createElement, createText } from "../utilities-ui.js";
 import icon from "../data/svg.js";
 import { commentLocal } from "../module/infoLocalStorage.js";
-// import { currentUser } from "../comments.js";
 export const contentInfoUser = (createdAt, user) => {
   const header = createElement("article", "content-title-card");
   const avatar = createUserAvatar(user);
@@ -15,7 +14,7 @@ export const contentInfoUser = (createdAt, user) => {
 
 export const createUserAvatar = (user) => {
   const contentUser = createElement("div", "content-user");
-
+  
   const photoUser = createElement("img");
   photoUser.src = user.image.png;
   $(contentUser).append(photoUser);
