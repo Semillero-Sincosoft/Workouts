@@ -10,7 +10,7 @@ export const eliminarCompletados = function () {
     }
   }
   $("#contenedor-tareas").html("")
-  tareas.forEach((tarea, index) => {
+  tareas.forEach((tarea:unknown, index: unknown) => {
     insertarTarea(tarea, index);
   });
   local.save("arrayTareas", tareas);
