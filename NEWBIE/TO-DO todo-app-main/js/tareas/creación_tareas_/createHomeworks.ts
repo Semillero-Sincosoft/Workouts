@@ -1,10 +1,9 @@
-import { createTag } from "../../utilities.js";
-import { createArticle } from "./elements.js";
-import { createInput } from "./elements.js";
-import { createButtonClose } from "./elements.js";
-import { EventChecked } from "../../functionalities/checked.js";
-import { cambiarEstadoHomeWork } from "../funcionalidad_tareas_/cambiar_estado_tarea.js";
-export function crearTarea(tarea, index) {
+import { createTag } from "../../utilities";
+import { createArticle, createInput, createButtonClose } from "./elements";
+import { EventChecked } from "../../functionalities/checked";
+import { cambiarEstadoHomeWork } from "../funcionalidad_tareas_/cambiar_estado_tarea";
+
+export function crearTarea(tarea: any, index: string) {
   const { texto, id } = tarea;
   const article = createArticle(id, index);
   const div = createTag("div");
@@ -22,8 +21,9 @@ export function crearTarea(tarea, index) {
     article.removeChild(close);
   });
 
-  $(input).on("change", () => cambiarEstadoHomeWork(tarea, input));
-  $(input).on("change", () => EventChecked(input, textHomework));
+  $(input).on("change", () => cambiarEstadoHomeWork(tarea, input as HTMLInputElement));
+  $(input).on("change", () => EventChecked(input as HTMLInputElement, textHomework));
 
   return article;
 }
+
