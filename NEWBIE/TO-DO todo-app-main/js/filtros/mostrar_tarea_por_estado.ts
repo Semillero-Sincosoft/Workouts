@@ -1,4 +1,4 @@
-export const mostrarTareasPorEstado = function (estado) {
+export const mostrarTareasPorEstado = function (estado?:boolean) {
   $(".homework").each(function () {
     if (estado === true && $(this).hasClass("completado")) {
       $(this).addClass("hidden");

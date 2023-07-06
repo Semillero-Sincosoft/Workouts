@@ -1,5 +1,5 @@
 
-export const createTag = (tagName?:string, className?:string, text?:string, id?:string | number) => {
+export const createTag = (tagName?:string, className?:string, text?:string, id?:string) => {
   const element = document.createElement(tagName);
   if (className) {
     element.classList.add(className);

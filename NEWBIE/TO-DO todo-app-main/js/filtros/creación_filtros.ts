@@ -1,19 +1,21 @@
-import { createTag } from "../utilities.js";
-import { mostrarTareasPorEstado } from "./mostrar_tarea_por_estado.js";
-import { contentFilters } from "../tareas/funcionalidad_tareas_/validationHomework.js";
-import { eliminarCompletados } from "./eliminar_completados.js";
-import { tareasRestantes } from "./tareas_restantes.js";
+import { createTag } from "../utilities";
+import { mostrarTareasPorEstado } from "./mostrar_tarea_por_estado";
+import { contentFilters } from "../tareas/funcionalidad_tareas_/validationHomework";
+import { eliminarCompletados } from "./eliminar_completados";
+import { tareasRestantes } from "./tareas_restantes";
+
 export const CrearBarraFiltros = function () {
-  const filters = [
+  const filters: (string | string[])[] = [
     tareasRestantes() + " items left",
     ["All", "Active", "Completed"],
     "Clear Completed",
   ];
-  filters.map((filter, index) => {
+  filters.map((filter: string | string[], index: number) => {
     const element = createTag("div", "content-filter-" + index);
-    let textOfElement;
+    let textOfElement: HTMLElement;
     if (index == 0) {
-      textOfElement = createTag("p", "elements-left", filter, "elements-left");
+      textOfElement = createTag("button", "filter-all", filter[0] as string, "filter-all");
+
       element.append(textOfElement);
     } else if (index == 1) {
       const itemAll = createTag(
@@ -29,7 +31,7 @@ export const CrearBarraFiltros = function () {
       $(itemActive).on("click", () => mostrarTareasPorEstado(true));
       $(itemCompleted).on("click", () => mostrarTareasPorEstado(false));
     } else {
-      const itemClear = createTag("button", "filter-clear", filter);
+      const itemClear = createTag("button", "filter-clear", filter[0] as string);
       element.append(itemClear);
       $(itemClear).on("click", () => eliminarCompletados());
     }
