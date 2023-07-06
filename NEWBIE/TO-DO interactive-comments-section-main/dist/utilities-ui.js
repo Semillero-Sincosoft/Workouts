@@ -15,7 +15,6 @@ exports.createElement = createElement;
 const createText = (texto, clas) => {
     const text = (0, exports.createElement)("p", clas);
     $(text).text(texto);
-    return text;
 };
 exports.createText = createText;
 const createAvatar = (image) => {

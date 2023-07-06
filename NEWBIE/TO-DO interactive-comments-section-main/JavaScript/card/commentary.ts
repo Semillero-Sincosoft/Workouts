@@ -10,7 +10,7 @@ export const sectionAddComentary = (
   username,
   actionBtn = action.reply,
   comentario,
-  containerCard
+  containerCard?
 ) => {
   const { id } = comentario;
   const $contentCommentary = createElement("div", "content-card");

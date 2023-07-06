@@ -8,7 +8,9 @@ const getLocalStorage = (key) => {
     return get ? JSON.parse(get) : null;
 };
 function removeLocalstorage(key, id) {
-    const element = getLocalStorage(key) ? getLocalStorage(key) : [];
+    const element = getLocalStorage(key)
+        ? getLocalStorage(key)
+        : [];
     element.comments.find((x) => x.id == 1).replies.splice(0, 1);
     const newElement = element.comments.filter((x) => x.id != id);
     saveLocalStorage("comentarios", element);

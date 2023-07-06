@@ -4,4 +4,4 @@ if (localStorage.get("comentarios") == null) {
   localStorage.save("comentarios", comentarios);
 }
 
-export const commentLocal = localStorage.get("comentarios");
+export const commentLocal:any = localStorage.get("comentarios");

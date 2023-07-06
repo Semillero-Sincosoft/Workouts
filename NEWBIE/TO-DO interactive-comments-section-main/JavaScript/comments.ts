@@ -8,7 +8,7 @@ interface User {
   username: string;
 }
 
-interface Comment {
+export interface Comment {
   id: number;
   content: string;
   createdAt: string;
@@ -18,7 +18,7 @@ interface Comment {
   replies?: Comment[];
 }
 
-interface ComentariosData {
+export interface ComentariosData {
   currentUser: User;
   comments: Comment[];
 }

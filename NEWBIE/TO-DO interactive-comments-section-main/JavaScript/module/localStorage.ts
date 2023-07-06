@@ -1,4 +1,5 @@
-const saveLocalStorage = (key: string, value:[]) => {
+import { ComentariosData } from "../comments";
+const saveLocalStorage = (key: string, value: ComentariosData) => {
   localStorage.setItem(key, JSON.stringify(value));
 };
 
@@ -7,8 +8,11 @@ const getLocalStorage = <T>(key: string): T | null => {
   return get ? JSON.parse(get) : null;
 };
 
-function removeLocalstorage(key:string, id) {
-  const element = getLocalStorage(key) ? getLocalStorage(key) : [];
+function removeLocalstorage(key: string, id: number) {
+  const element: string[]   = getLocalStorage(key)
+    ? getLocalStorage(key)
+    : [];
+
   element.comments.find((x) => x.id == 1).replies.splice(0, 1);
   const newElement = element.comments.filter((x) => x.id != id);
 

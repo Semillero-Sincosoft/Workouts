@@ -18,8 +18,6 @@ const createVotes = (id, score) => {
         scoreActual = parseInt(scoreActual);
         const nuevoEstado = reduce(scoreActual, state_js_1.default.positivo);
         incrementVotes(nuevoEstado, id);
-        //const newcommentScore = comentario.score = nuevoEstado;
-        // console.log(newcommentScore);
     });
     const totalVotes = (0, utilities_ui_js_1.createElement)("h2", "score-likes");
     $(totalVotes).attr(`id`, `labelScore-${id}`);

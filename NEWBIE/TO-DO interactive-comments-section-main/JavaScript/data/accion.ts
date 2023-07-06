@@ -1,6 +1,6 @@
-const UPDATE = "UPDATE";
-const SEND = "SEND";
-const REPLY = "REPLY";
+const UPDATE: string = "UPDATE";
+const SEND: string = "SEND";
+const REPLY: string = "REPLY";
 
 export default {
   update: UPDATE,
