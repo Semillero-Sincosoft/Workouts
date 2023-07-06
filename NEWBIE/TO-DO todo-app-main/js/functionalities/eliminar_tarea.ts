@@ -3,7 +3,7 @@ import { obtenerTareas } from "../tareas/creación_tareas_/contenedor_tareas.js"
 import { tareasRestantes } from "../filtros/tareas_restantes.js";
 import local from "../../module/localStorage.js";
 import { validacionEstado } from "../validacion_estado.js";
-export const eliminarTarea = function (index) {
+export const eliminarTarea = function (index: number) {
   const tarea = obtenerTareas();
   tarea.splice(index, 1);
   $('#contenedor-tareas').empty()

@@ -1,4 +1,4 @@
-export const EventChecked = function (input, span) {
+export const EventChecked = function (input:HTMLInputElement, span:HTMLSpanElement) {
   const $parentElement = $(span).parent().parent();
   if (input.checked) {
     $(span).addClass("span-checked");
