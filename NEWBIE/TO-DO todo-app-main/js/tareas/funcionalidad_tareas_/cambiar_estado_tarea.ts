@@ -1,7 +1,7 @@
-import local from "../../../module/localStorage.js";
+import local from "../../../module/localStorage";
 import { obtenerTareas } from "../creación_tareas_/contenedor_tareas.js";
 import { tareasRestantes } from "../../filtros/tareas_restantes.js";
-export const cambiarEstadoHomeWork = (tarea, input) => {
+export const cambiarEstadoHomeWork = (tarea:any, input: HTMLInputElement) => {
   const tareas = obtenerTareas();
   if (input.checked) {
     tarea.finalizado = true;

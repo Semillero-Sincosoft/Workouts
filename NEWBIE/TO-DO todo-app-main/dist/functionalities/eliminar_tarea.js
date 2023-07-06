@@ -14,7 +14,7 @@ const eliminarTarea = function (index) {
     tarea.splice(index, 1);
     $('#contenedor-tareas').empty();
     localStorage_1.default.save("arrayTareas", tarea);
-    tarea.forEach((tareaItem, indexItem) => (0, validationHomework_1.insertarTarea)(tareaItem, indexItem.toString()));
+    tarea.forEach(validationHomework_1.insertarTarea);
     $('#elements-left').text((0, tareas_restantes_1.tareasRestantes)() + " items left");
     (0, validacion_estado_1.validacionEstado)();
 };
