@@ -1,0 +1,32 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const index_js_1 = require("./index.js");
+const utilities_ui_js_1 = require("../utilities-ui.js");
+const cardBody_js_1 = __importDefault(require("./cardBody.js"));
+const createCard = (comentario) => {
+    const { id, score, user, createdAt, content: descComment } = comentario;
+    const { username } = user;
+    const contentCard = (0, utilities_ui_js_1.createElement)("article", "content-card");
+    const contentCardReplies = (0, utilities_ui_js_1.createElement)("div");
+    $(contentCard).attr("id", id);
+    contentCard.id = id;
+    contentCard.text = descComment;
+    const contentHeader = (0, index_js_1.contentInfoUser)(createdAt, user);
+    const btnLikes = (0, index_js_1.createVotes)((0, utilities_ui_js_1.generateId)(id), score, comentario);
+    const btnActions = (0, index_js_1.buttonAction)(username);
+    const contentComment = (0, utilities_ui_js_1.createElement)("section", "content-comment");
+    const textComment = (0, cardBody_js_1.default)(descComment, id);
+    createCard.textComment = textComment;
+    $(contentHeader).append(btnActions);
+    $(contentComment).append(contentHeader, textComment);
+    $(contentCard).append(btnLikes, contentComment, contentCardReplies);
+    contentCard.replyButton = btnActions.reply;
+    contentCard.delete = btnActions.delete;
+    contentCard.edit = btnActions.edit;
+    contentCard.contentIcons = btnActions.contentIcons;
+    return contentCard;
+};
+exports.default = createCard;
