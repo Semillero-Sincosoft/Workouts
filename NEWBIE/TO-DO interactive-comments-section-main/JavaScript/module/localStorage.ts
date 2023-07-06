@@ -1,11 +1,13 @@
-const saveLocalStorage = (key, value) => {
+const saveLocalStorage = (key: string, value:[]) => {
   localStorage.setItem(key, JSON.stringify(value));
 };
 
-const getLocalStorage = (key) => {
-  return JSON.parse(localStorage.getItem(key));
+const getLocalStorage = <T>(key: string): T | null => {
+  const get: string | null = localStorage.getItem(key);
+  return get ? JSON.parse(get) : null;
 };
-function removeLocalstorage(key, id) {
+
+function removeLocalstorage(key:string, id) {
   const element = getLocalStorage(key) ? getLocalStorage(key) : [];
   element.comments.find((x) => x.id == 1).replies.splice(0, 1);
   const newElement = element.comments.filter((x) => x.id != id);
