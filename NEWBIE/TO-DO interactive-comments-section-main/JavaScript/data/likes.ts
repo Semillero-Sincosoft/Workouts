@@ -1,8 +1,8 @@
 import { createElement } from "../utilities-ui.js";
 import icons from "./svg.js";
-import estado from "./estados.js";
+import estado from "./state.js";
 import local from "../module/localStorage.js";
-export const createVotes = (id, score) => {
+export const createVotes = (id: number, score: string) => {
   const contentLikes = createElement("aside");
 
   const contentButton = createElement("div", "button-likes");
@@ -10,12 +10,10 @@ export const createVotes = (id, score) => {
   const iconMinus = createElement("button", "icon-plus");
   $(iconMinus).html(icons.minus);
   $(iconMinus).on("click", () => {
-    let scoreActual = $(`#labelScore-${id}`).text();
+    let scoreActual: string | number = $(`#labelScore-${id}`).text();
     scoreActual = parseInt(scoreActual);
     const nuevoEstado = reduce(scoreActual, estado.positivo);
     incrementVotes(nuevoEstado, id);
-    //const newcommentScore = comentario.score = nuevoEstado;
-    // console.log(newcommentScore);
   });
 
   const totalVotes = createElement("h2", "score-likes");
@@ -23,7 +21,7 @@ export const createVotes = (id, score) => {
   $(totalVotes).text(score);
   contentButton.append(iconMinus, totalVotes);
 
-  const reduce = (state, action) => {
+  const reduce = (state: number, action:string) => {
     switch (action) {
       case estado.positivo:
         return (state = state + 1);
@@ -40,7 +38,7 @@ export const createVotes = (id, score) => {
   const iconPLus = createElement("button", "icon-minus");
   $(iconPLus).html(icons.plus);
   iconPLus.onclick = () => {
-    let scoreActual = $(`#labelScore-${id}`).text();
+    let scoreActual: string | number = $(`#labelScore-${id}`).text();
     scoreActual = parseInt(scoreActual);
     const nuevoEstado = reduce(scoreActual, estado.negativo);
     incrementVotes(nuevoEstado, id);
@@ -51,7 +49,7 @@ export const createVotes = (id, score) => {
   return contentLikes;
 };
 
-const incrementVotes = (votos, id) => {
+const incrementVotes = (votos: number, id: number) => {
   const idComment = $(`#labelScore-${id}`).parent().parent().parent()[0].id;
   local.update("comentarios", idComment, "score", votos);
   return $(`#labelScore-${id}`).text(votos);

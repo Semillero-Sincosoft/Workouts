@@ -1,7 +1,7 @@
 import { renderComments } from "./renderComments.js";
 import { commentLocal } from "./module/infoLocalStorage.js";
-import { mostrarMiPerfil } from "./youProfile.js";
+import { showMyProfile } from "./youProfile.js";
 import { deleteCommentary } from "./funcionality/DeleteComment.js";
-commentLocal.comments.map((comentario) => renderComments(comentario));
-mostrarMiPerfil();
+commentLocal.comments.map((comentario:string) => renderComments(comentario));
+showMyProfile();
 deleteCommentary();

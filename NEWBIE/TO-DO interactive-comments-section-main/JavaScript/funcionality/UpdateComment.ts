@@ -7,12 +7,12 @@ export const textUpdate = (texto, id) => {
   text.textContent = texto;
   const btnUpdate = createBtn("UPDATE");
   $(btnUpdate).on("click", () => {
-    const sacarElNuevoValor = text.value;
+    const newTextUpdate = text.value;
     const textReplace = $("<p>", {
       class: "update",
-    }).text(sacarElNuevoValor);
+    }).text(newTextUpdate);
     replace(id, textReplace);
-    local.update("comentarios", id, "content", sacarElNuevoValor);
+    local.update("comentarios", id, "content", newTextUpdate);
   });
   contentUpdate.append(text, btnUpdate);
   return contentUpdate;

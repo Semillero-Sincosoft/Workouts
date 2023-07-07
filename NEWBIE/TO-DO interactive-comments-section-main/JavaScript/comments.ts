@@ -1,4 +1,29 @@
-export const comentarios = {
+interface Image {
+  png: string;
+  webp: string;
+}
+
+interface User {
+  image: Image;
+  username: string;
+}
+
+export interface Comment {
+  id: number;
+  content: string;
+  createdAt: string;
+  score: number;
+  replyingTo?: string; //  es opcional
+  user: User;
+  replies?: Comment[];
+}
+
+export interface ComentariosData {
+  currentUser: User;
+  comments: Comment[];
+}
+
+export const comentarios: ComentariosData = {
   currentUser: {
     image: {
       png: "./images/avatars/image-juliusomo.png",

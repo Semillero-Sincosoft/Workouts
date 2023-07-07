@@ -1,7 +1,6 @@
 import { contentInfoUser, createVotes, buttonAction } from "./index.js";
 import { createElement, generateId } from "../utilities-ui.js";
 import contentBodyCard from "./cardBody.js";
-
 const createCard = (comentario) => {
   const { id, score, user, createdAt, content: descComment } = comentario;
   const { username } = user;
