@@ -3,7 +3,7 @@ const CardHeader = ({userName,createAt}) => {
   return (
     <>
       <div className="content-user">
-        <img src="./assets/avatars/image-amyrobson.png" alt="" />
+        <img src="src/assets/avatars/image-amyrobson.png" alt="" />
         <h2>{userName}</h2>
         <p>{createAt}</p>
       </div>

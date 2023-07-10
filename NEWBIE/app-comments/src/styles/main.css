@@ -58,3 +58,11 @@ body {
   height: fit-content;
   padding: 1rem;
 }
+.icon-plus-svg{
+  height: 11px;
+  width: 11px;
+}
+.icon-minus-svg{
+  height: 3px;
+  width: 11px;
+}

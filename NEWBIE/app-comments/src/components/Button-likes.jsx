@@ -1,21 +1,16 @@
-import {ReactComponent as svgPlus} from './assets/icon-plus.svg'
-import ViteLog from'/vite.svg'
+import IconPlus  from '/src/assets/svg/icon-plus.svg';
+import IconMinus from '/src/assets/svg/icon-minus.svg'
 export const ButtonLikes = () => {
   return (
     <>
       <aside>
         <div className="button-likes">
           <button className="icon-plus">
-           <svgPlus />
+          <img src={IconPlus} className='icon-plus-svg' alt="" />
           </button>
           <h2 className="score-likes">12</h2>
           <button className="icon-minus">
-            <svg width="11" height="3" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M9.256 2.66c.204 0 .38-.056.53-.167.148-.11.222-.243.222-.396V.722c0-.152-.074-.284-.223-.395a.859.859 0 0 0-.53-.167H.76a.859.859 0 0 0-.53.167C.083.437.009.57.009.722v1.375c0 .153.074.285.223.396a.859.859 0 0 0 .53.167h8.495Z"
-                fill="#C5C6EF"
-              />
-            </svg>
+         <img src={IconMinus} className='icon-minus-svg' alt="" />
           </button>
         </div>
       </aside>
