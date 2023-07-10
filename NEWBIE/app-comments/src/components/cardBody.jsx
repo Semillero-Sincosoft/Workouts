@@ -1,7 +1,7 @@
 export const ContentBodyCard = () => {
   return (
     <>
-      <article>
+      <article className="txt-prueba">
         <TextComment />
       </article>
     </>
@@ -11,7 +11,11 @@ export const ContentBodyCard = () => {
 export const TextComment = () => {
   return (
     <>
-      <p className="text-comment"></p>
+      <p className="text-comment">
+        Impressive! Though it seems the drag feature could be improved. But
+        overall it looks incredible. You´ve nailed the design and the
+        responsiveness at various breakpoints works really well
+      </p>
     </>
   );
 };
