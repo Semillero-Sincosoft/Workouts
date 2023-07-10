@@ -3,7 +3,7 @@ import { createElement, createText } from "../utilities-ui.js";
 const contentBodyCard = (comentario, id) => {
   const contentWritten = createElement(
     "article",
-    "txt-prueba",
+    "content-written",
     `content-id${id}`
   );
 

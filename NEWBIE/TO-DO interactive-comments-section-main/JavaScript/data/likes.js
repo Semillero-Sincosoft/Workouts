@@ -1,6 +1,6 @@
 import { createElement } from "../utilities-ui.js";
 import icons from "./svg.js";
-import estado from "./estados.js";
+import estado from "./state.js";
 import local from "../module/localStorage.js";
 export const createVotes = (id, score) => {
   const contentLikes = createElement("aside");

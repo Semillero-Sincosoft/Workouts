@@ -1,4 +1,4 @@
-import action from "../data/acciones.js";
+import action from "../data/accion.js";
 import { commentLocal } from "../module/infoLocalStorage.js";
 import local from "../module/localStorage.js";
 import { renderComments } from "../renderComments.js";
@@ -32,22 +32,17 @@ export const createNewCommentary = (
   };
 
   const validationButtonReplyOSend = actionBtn == action.send ? false : true;
-
   const inputHidden = sectionAddComentary.inputHidden;
   inputHidden.value = id;
+
   let cardReply;
   if (id == 0) {
     cardReply = renderComments(newComment);
-
   } else {
-
     cardReply = commentaryReply(newComment, validationButtonReplyOSend);
     const contentCommentary = uiRenderComments.replies;
     $(contentCommentary).append(cardReply, inputHidden);
-
   }
-
-
 
   validation.disabled = true;
   local.add("comentarios", newComment, inputHidden.value);
