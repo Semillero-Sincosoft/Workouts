@@ -1,19 +1,14 @@
-export const ContentBodyCard = () => {
+const CardBody = () => {
   return (
     <>
-      <article>
-      <TextComment/>
+      <article className="content-card-text">
+        <p className="text-comment">
+          Impressive! Though it seems the drag feature could be improved. But
+          overall it looks incredible. You´ve nailed the design and the
+          responsiveness at various breakpoints works really well.
+        </p>
       </article>
-      
     </>
-  )
-}
-
-export const TextComment = () => {
-    return(
-        <>
-            <p className='text-comment'></p>
-        </>
-    )
-}
-
+  );
+};
+export default CardBody;

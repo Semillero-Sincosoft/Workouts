@@ -1,17 +1,18 @@
 import "../styles/main.css";
-import {ContentBodyCard} from "./CardBody"
 import CardHeader from "./CardHeader";
+import CardBody from "./CardBody"
+import { ButtonLikes } from "./button-likes";
 const Card = () => {
   return (
     <>
       <article className="content-card">
-        <CardHeader />
+        <ButtonLikes />
         <section className="content-comment">
-            <ContentBodyCard />
+          <article className="content-title-card">
+            <CardHeader />
+          </article>
+        <CardBody />
         </section>
-        <div>
-            <p></p>
-        </div>
       </article>
     </>
   );
