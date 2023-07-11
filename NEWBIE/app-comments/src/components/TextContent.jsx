@@ -1,4 +1,4 @@
-const CardBody = ({title}) => {
+const CardBody = ({ title }) => {
   return (
     <>
       <article className="content-card-text">
