@@ -1,7 +1,7 @@
 import "../../styles/main.css";
-import { ContentBodyCard } from "./CardBody";
-import { CardHeader } from "./CardHeader";
-import Likes from "./Likes";
+import { ContentBodyCard } from "./TextCommentary";
+import { CardHeader } from "./Header";
+import Likes from "./LikeCounter";
 export const Card = ({ comentario }) => {
   return (
     <article className="content-card">
@@ -9,7 +9,8 @@ export const Card = ({ comentario }) => {
       <section className="content-comment">
         <CardHeader
           username={comentario.user.username}
-          createAt={comentario.createdAt}
+          createdAt={comentario.createdAt}
+          image={comentario.user.image.png}
         />
 
         <ContentBodyCard content={comentario.content} />

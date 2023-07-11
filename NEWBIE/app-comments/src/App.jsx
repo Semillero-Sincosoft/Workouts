@@ -1,16 +1,25 @@
 import { createPortal } from "react-dom";
 import { Card } from "./components/Comment";
-import Modal from "./components/Modal";
 import { useState } from "react";
-import { comments } from "./components/data";
+import { comments } from "./components/data/data.js";
+import { YouProfile } from "./components/YouProfile";
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
-      {isOpen && createPortal(<Modal />, document.body)}
+      {isOpen && createPortal(<YouProfile />, document.body)}
       {comments.map((comentario) => (
-        <Card key={comentario.id} comentario={comentario} />
+        <section key={comentario.id}>
+          <Card comentario={comentario} />
+
+          {comentario.replies.length > 0 && (
+            <section className="container-replies">
+              <Card comentario={comentario.replies[0]} />
+              <Card comentario={comentario.replies[1]} />
+            </section>
+          )}
+        </section>
       ))}
     </>
   );
