@@ -1,6 +1,6 @@
 import IconPlus  from '/src/assets/svg/icon-plus.svg';
 import IconMinus from '/src/assets/svg/icon-minus.svg'
-export const ButtonLikes = () => {
+export const ButtonLikes = ({score}) => {
   return (
     <>
       <aside>
@@ -8,7 +8,7 @@ export const ButtonLikes = () => {
           <button className="icon-plus">
           <img src={IconPlus} className='icon-plus-svg' alt="" />
           </button>
-          <h2 className="score-likes">12</h2>
+          <h2 className="score-likes">{score}</h2>
           <button className="icon-minus">
          <img src={IconMinus} className='icon-minus-svg' alt="" />
           </button>

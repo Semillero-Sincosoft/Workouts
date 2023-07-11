@@ -1,9 +1,9 @@
 
-const CardHeader = ({userName,createAt}) => {
+const CardHeader = ({userName,createAt,img}) => {
   return (
     <>
       <div className="content-user">
-        <img src="src/assets/avatars/image-amyrobson.png" alt="" />
+        <img src={img} alt="" />
         <h2>{userName}</h2>
         <p>{createAt}</p>
       </div>
