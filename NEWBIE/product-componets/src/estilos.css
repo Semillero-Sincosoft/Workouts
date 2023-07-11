@@ -12,6 +12,10 @@ body {
   justify-content: center;
   display: flex;
 }
+main{
+  display: flex;
+  align-items: center;
+}
 .content-perfume {
   align-items: center;
   background-color: #fff;

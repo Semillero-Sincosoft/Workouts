@@ -1,3 +1,4 @@
+import "../src/estilos.css"
 import Ilustration from "./Ilustration";
 import TextContent from "./TextContent";
 import Cost from "./Cost";
