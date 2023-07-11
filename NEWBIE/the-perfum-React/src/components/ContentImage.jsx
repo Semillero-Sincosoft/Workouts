@@ -1,7 +1,9 @@
-export const ImageContent = () => {
+export function ContentImage() {
   return (
-    <section>
-      <img src="images/image-product-desktop.jpg" alt="" />
+    <section className="img-container">
+      <img src="images/image-product-desktop.jpg" className="img" alt="" />
     </section>
   );
-};
+}
+
+export default ContentImage;
