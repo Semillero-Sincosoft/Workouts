@@ -1,10 +1,10 @@
-import './App.css'
-
+import "../src/estilos.css"
+import Card from "../components/Card"
 function App() {
 
   return (
     <>
-
+      <Card />
     </>
   )
 }
