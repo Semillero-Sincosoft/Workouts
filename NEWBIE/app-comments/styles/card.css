@@ -208,3 +208,15 @@ textarea {
   color: var(--Grayish-Blue);
   line-height: 2rem;
 }
+
+
+.icon-plus1{
+  width: 11px;
+  height: 11px;
+}
+
+
+.icon-minus1{
+  width: 15px;
+  height: 5px;
+}
