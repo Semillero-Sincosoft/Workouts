@@ -1,10 +1,10 @@
-export const CardHeader = () => {
+export const CardHeader = ({ username }, { createdAt }) => {
   return (
     <article className="content-title-card">
       <div className="content-user">
         <img src="./images/avatars/image-amyrobson.png" alt="" />
-        <h2>xdxd</h2>
-        <p>createdAt </p>
+        <h2>{username}</h2>
+        <p> {createdAt} </p>
       </div>
       <CreateButtonReply />
     </article>

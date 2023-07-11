@@ -2,14 +2,17 @@ import "../../styles/main.css";
 import { ContentBodyCard } from "./CardBody";
 import { CardHeader } from "./CardHeader";
 import Likes from "./Likes";
-export const Card = () => {
+export const Card = ({ comentario }) => {
   return (
     <article className="content-card">
-      <Likes />
+      <Likes score={comentario.score} />
       <section className="content-comment">
-        <CardHeader />
+        <CardHeader
+          username={comentario.user.username}
+          createAt={comentario.createdAt}
+        />
 
-        <ContentBodyCard  />
+        <ContentBodyCard content={comentario.content} />
       </section>
     </article>
   );

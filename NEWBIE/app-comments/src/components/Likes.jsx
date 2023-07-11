@@ -1,15 +1,15 @@
 import IconPlus from "../assets/svg/icon-plus.svg";
 import IconMinus from "../assets/svg/icon-minus.svg";
-const Likes = () => {
+const Likes = ({ score }) => {
   return (
     <aside>
       <div className="button-likes">
         <button className="icon-plus">
-          <img src={IconPlus}className="icon-plus1" alt="" />
+          <img src={IconPlus} className="icon-plus1" alt="" />
         </button>
-        <h2>0</h2>
+        <h2>{score}</h2>
         <button className="icon-minus">
-         <img src={IconMinus} className="icon-minus1" alt="" />
+          <img src={IconMinus} className="icon-minus1" alt="" />
         </button>
       </div>
     </aside>
