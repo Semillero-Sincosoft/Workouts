@@ -12,7 +12,7 @@ body {
   justify-content: center;
   display: flex;
 }
-main{
+main {
   display: flex;
   align-items: center;
 }
@@ -41,6 +41,7 @@ main{
   flex-direction: column;
   align-items: center;
   display: flex;
+  gap: 22px;
 }
 .escrito {
   flex-direction: column;
@@ -73,10 +74,11 @@ main{
 .prices {
   display: flex;
   justify-content: space-between;
+  margin-right: 40px;
 }
 .number-big {
   color: #3c8067;
-  padding-top: 21px;
+  padding-top: 19px;
   font-size: 31px;
   width: 13%;
   margin-right: 52%;
