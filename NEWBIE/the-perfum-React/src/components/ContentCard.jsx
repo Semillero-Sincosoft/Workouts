@@ -1,4 +1,3 @@
-import { BtnBuy } from "./BtnBuy";
 import { ContentDescription } from "./ContentDescription";
 import ContentImage from "./ContentImage";
 
