@@ -2,7 +2,6 @@ const button = document.getElementById("button");
 const container = document.querySelector(".container");
 const main2 = document.querySelector(".container-active");
 const xd = document.querySelector(".raiting-selected");
-
 function ocultarMostrar() {
   button.addEventListener("click", () => {
     container.style.display = "none";
