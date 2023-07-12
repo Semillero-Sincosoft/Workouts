@@ -1,5 +1,6 @@
 import Img from "./Img";
-const User = ({routeAvatar, nameAvatar, createAt}) => {
+import IconShare from "./IconShare";
+const ContentFooter = ({routeAvatar, nameAvatar, createAt}) => {
   return (
     <div className="content-boton">
       <Avatar
@@ -7,6 +8,7 @@ const User = ({routeAvatar, nameAvatar, createAt}) => {
         nameAvatar={nameAvatar}
         createAt={createAt}
       />
+      <IconShare />
     </div>
   );
 };
@@ -15,7 +17,6 @@ export const Avatar = ({ routeAvatar, nameAvatar, createAt }) => {
   return (
     <>
       <div className="logo">
-        {/* <img className="img-logo" src={routeAvatar} alt="" /> */}
         <Img route={routeAvatar} classTag={'content-avatar-user'} classImg={'img-logo'} />
         <div className="name">
           <h3>{nameAvatar}</h3>
@@ -25,4 +26,4 @@ export const Avatar = ({ routeAvatar, nameAvatar, createAt }) => {
     </>
   );
 };
-export default User;
+export default ContentFooter;

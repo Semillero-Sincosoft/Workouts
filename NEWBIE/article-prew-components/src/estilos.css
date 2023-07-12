@@ -10,6 +10,9 @@ body {
   background-color: hsl(210, 46%, 95%);
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 :root {
   --very-dark-color: hsl(217, 19%, 35%);
@@ -21,12 +24,14 @@ body {
 .container {
   height: auto;
   font-size: 13px;
+  width: 871px;
 }
 .content {
   border-radius: 20px;
   flex-direction: row;
   background-color: var(--white-color);
   overflow: hidden;
+  display: flex;
 }
 .content-img {
   height: 310px;
@@ -38,6 +43,8 @@ body {
 
 .content-escrito {
   padding: 0px 35px 0px 39px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   width: 484px;
   height: inherit;
@@ -96,8 +103,7 @@ body {
   align-items: center;
   color: var(--white-color);
   position: absolute;
-  /* right: 123px; */
-  top: 488px;
+  top: 646px;
   transform: translateX(272px);
 }
 .share-img:hover {
@@ -164,6 +170,9 @@ body {
   .content-escrito {
     width: 375px;
     padding-inline: 29px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   .title {
     width: auto;
@@ -178,14 +187,16 @@ body {
   .share {
     top: 2px;
     right: -29px;
-    height: 81px;
+    height: 75px;
     width: 488px;
     border-radius: 0px 0px 11px 11px;
     justify-content: center;
     transform: translateX(0);
   }
   .content-boton {
+    justify-content: space-around;
     position: relative;
+    margin-bottom:10px ;
   }
 
   .share-img {
@@ -194,6 +205,7 @@ body {
   .share-img:hover {
     background-color: var(--desaturade-blue-color);
     position: relative;
-    top: 18px;
+    top: 17px;
+    right:2px ;
   }
 }
