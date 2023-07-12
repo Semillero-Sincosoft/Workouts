@@ -16,6 +16,7 @@ function App() {
         />
 
         <DescriptionCard
+          route={"./src/assets/images/icon-suvs.svg"}
           classContent={"suvs"}
           title={"SUSV"}
           text={
@@ -24,6 +25,7 @@ function App() {
           classBtn={"learn2"}
         />
         <DescriptionCard
+        route={"./src/assets/images/icon-luxury.svg"}
           classContent={"luxu"}
           title={"LUXURY"}
           text={

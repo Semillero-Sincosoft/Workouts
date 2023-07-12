@@ -1,7 +1,7 @@
-export const ContentImage = (route) => {
+export const ContentImage = ({ route }) => {
   return (
     <>
-      <img src={route} alt="" />
+      <img className="img" src={route} alt="" />
     </>
   );
 };
