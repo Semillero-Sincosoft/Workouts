@@ -7,5 +7,4 @@ const TextContent = ({ textTitle, textSubtitle, textParagraph }) => {
     </section>
   );
 };
-
 export default TextContent;
