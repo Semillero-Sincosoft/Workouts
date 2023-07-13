@@ -6,14 +6,15 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+
 }
 body {
   background-color: #f2ebe3;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
   display: flex;
+  width: 100vw;
+  height: 100vh;
 }
+
 .content-perfume {
   align-items: center;
   background-color: #fff;
