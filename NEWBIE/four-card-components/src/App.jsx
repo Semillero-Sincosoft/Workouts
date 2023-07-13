@@ -17,11 +17,9 @@ function App() {
       <section className="content">
         <ContentCard
           calssCard={"card-1"}
-          titleCard={"Team Builder"}
-          textCard={
-            "scans our talent network to create the optimal team for your project"
-          }
-          img={"./src/assets/images/icon-team-builder.svg"}
+          titleCard={"Supervisor"}
+          textCard={" Monitors activity to identify project roadblocks"}
+          img={"./src/assets/images/icon-supervisor.svg"}
         />
         <ContentCard
           calssCard={"card-2"}
@@ -31,7 +29,14 @@ function App() {
           }
           img={"./src/assets/images/icon-team-builder.svg"}
         />
-        <ContentCard calssCard={"card-3"} />
+        <ContentCard
+          calssCard={"card-4"}
+          titleCard={"Calculator"}
+          textCard={
+            "Uses data from past projects to provide better delivery estimates"
+          }
+          img={"./src/assets/images/icon-calculator.svg"}
+        />
       </section>
     </section>
   );
