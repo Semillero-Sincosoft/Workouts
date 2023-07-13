@@ -1,7 +1,7 @@
-const Image = (image) => {
+const Image = ({route}) => {
   return (
     <article className="img flex-and-direction">
-      <img src={image} alt="" />
+      <img src={route} alt="" />
     </article>
   );
 };

@@ -1,3 +1,4 @@
+import { ContentCard } from "./components/ContentCards";
 import TextContent from "./components/TextContent";
 import "./four-card.css";
 
@@ -13,7 +14,25 @@ function App() {
           }
         />
       </header>
-      <section className="content"></section>
+      <section className="content">
+        <ContentCard
+          calssCard={"card-1"}
+          titleCard={"Team Builder"}
+          textCard={
+            "scans our talent network to create the optimal team for your project"
+          }
+          img={"./src/assets/images/icon-team-builder.svg"}
+        />
+        <ContentCard
+          calssCard={"card-2"}
+          titleCard={"Team Builder"}
+          textCard={
+            "scans our talent network to create the optimal team for your project"
+          }
+          img={"./src/assets/images/icon-team-builder.svg"}
+        />
+        <ContentCard calssCard={"card-3"} />
+      </section>
     </section>
   );
 }

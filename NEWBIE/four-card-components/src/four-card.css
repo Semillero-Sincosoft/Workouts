@@ -15,6 +15,7 @@
   --gris-color: hsl(0, 0%, 98%);
 }
 body {
+  display: flex;
   font-size: 15px;
   background-color: var(--gris-color);
   width: 100vw;
