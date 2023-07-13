@@ -4,6 +4,7 @@ import "./estilos.css";
 import "./utilidades/utilidades.css";
 // import "./components/index.js";
 import { ButtonSumit } from "./components/ButtonSumit";
+import { BtnCalification } from "./components/btnCalification";
 function App() {
   return (
     <main className="flex container flex-column">
@@ -20,6 +21,7 @@ function App() {
           }
           classDescription={"descripcion"}
         />
+        <BtnCalification />
         <ButtonSumit />
       </section>
     </main>
