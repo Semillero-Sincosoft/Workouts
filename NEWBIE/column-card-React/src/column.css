@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f2f2f2;
+  --yellow-color: #e38826;
+  --cyan-color: #006970;
+  --darkcyan-color: #004241;
+  --trasparent-color: #ffffffbf;
+}
+
+body {
+  background-color: var(--trasparent-color);
+  font-family: "Lexend Deca", sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.card {
+  align-items: center;
+  flex-direction: column;
+}
+
+.escrito {
+  display: flex;
+  width: 1040px;
+  height: 500px;
+  color: var(--primary-color);
+}
+.title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 40px;
+}
+.text {
+  color: var(--trasparent-color);
+  line-height: 24px;
+  padding: 0px 79px 0px 0px;
+}
+
+.img {
+  width: 64px;
+  height: 40px;
+}
+
+.sedan {
+  background-color: var(--yellow-color);
+  padding: 0px 26px 0px 38px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.suvs {
+  background-color: var(--cyan-color);
+  padding: 0px 26px 0px 38px;
+}
+.luxu {
+  background-color: var(--darkcyan-color);
+  padding: 0px 26px 0px 38px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.learn1 {
+  color: var(--yellow-color);
+  background-color: var(--trasparent-color);
+}
+.learn2 {
+  color: var(--cyan-color);
+  background-color: var(--trasparent-color);
+}
+
+.learn3 {
+  color: var(--darkcyan-color);
+  background-color: var(--trasparent-color);
+}
+
+.learns:hover {
+  background-color: transparent;
+  color: var(--trasparent-color);
+  cursor: -webkit-grab;
+}
+.learns {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  border: solid 2px white;
+}
+
+@media screen and (max-width: 1038px) {
+  .card {
+    margin: 10px;
+  }
+  .escrito {
+    width: 375px;
+    height: auto;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 30px;
+    padding: 17px 0px 0px 0px;
+  }
+  .text {
+    font-size: 17px;
+    padding: 15px 84px 15px 7px;
+    line-height: 30px;
+  }
+  .sedan {
+    border-radius: 10px 10px 0px 0px;
+    padding: 22px 0px 25px 15px;
+  }
+  .suvs {
+    padding: 22px 0px 25px 15px;
+  }
+  .luxu {
+    border-radius: 0px 0px 10px 10px;
+    padding: 22px 0px 25px 15px;
+  }
+}
