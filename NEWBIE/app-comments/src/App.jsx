@@ -1,26 +1,27 @@
-import { createPortal } from "react-dom";
-import { Card } from "./components/Comment";
 import { useState } from "react";
-import { comments } from "./components/data/data.js";
-import { YouProfile } from "./components/YouProfile";
+import CardComment from "./components/CardComment";
+import { comentarios } from "./components/data";
+import { TextArea } from "./components/TextArea";
+
 function App() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [coments, setComents] = useState(comentarios);
 
   return (
     <>
-      {isOpen && createPortal(<YouProfile />, document.body)}
-      {comments.map((comentario) => (
-        <section key={comentario.id}>
-          <Card comentario={comentario} />
-
-          {comentario.replies.length > 0 && (
-            <section className="container-replies">
-              <Card comentario={comentario.replies[0]} />
-              <Card comentario={comentario.replies[1]} />
-            </section>
-          )}
-        </section>
-      ))}
+      <section className="container-card">
+        {coments.map((comentario) => (
+          <section className="container-card" key={comentario.id}>
+            <CardComment comentario={comentario} />
+            {comentario.replies.length > 0 && (
+              <section className="container-replies">
+                <CardComment comentario={comentario.replies[0]} />
+                <CardComment comentario={comentario.replies[1]} />
+              </section>
+            )}
+          </section>
+        ))}
+      </section>
+      <TextArea />
     </>
   );
 }

@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.insertarTarea = exports.contentFilters = void 0;
+const createHomeworks_1 = require("../creaci\u00F3n_tareas_/createHomeworks");
+const utilities_1 = require("../../utilities");
+const creaci_n_filtros_1 = require("../../filtros/creaci\u00F3n_filtros");
+const tareas_restantes_1 = require("../../filtros/tareas_restantes");
+const container = $("main");
+const homeworksContent = (0, utilities_1.createTag)("section", "content-homework", "", "content-homeworks");
+const contentListHomeworks = (0, utilities_1.createTag)("div", "contenedor-tareas", "", "contenedor-tareas");
+exports.contentFilters = (0, utilities_1.createTag)("div", "contenedor-filtros");
+const insertarTarea = (tarea, index) => {
+    const htmlTarea = (0, createHomeworks_1.crearTarea)(tarea, index);
+    container.append(homeworksContent);
+    homeworksContent.append(contentListHomeworks, exports.contentFilters);
+    contentListHomeworks.append(htmlTarea);
+    $("#elements-left").text((0, tareas_restantes_1.tareasRestantes)() + " items left");
+};
+exports.insertarTarea = insertarTarea;
+(0, creaci_n_filtros_1.CrearBarraFiltros)();
