@@ -1,6 +1,7 @@
 import ImgCard from "./components/ImgCard";
 import TextContent from "./components/TextContent";
 import BtnCard from "./components/BtnCard";
+import BtnCalificacion from "./components/BtnCalificacion";
 import "./estilos.css";
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
               "Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!"
             }
           />
-          <div className="flex numbers"></div>
+         <BtnCalificacion />
           <BtnCard />
         </section>
       </main>
