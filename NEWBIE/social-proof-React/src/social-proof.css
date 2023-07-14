@@ -20,6 +20,9 @@ body {
   --magentaclaro-color: hsl(300, 24%, 96%);
   --blanco-color: hsl(0, 0%, 100%);
 }
+h1{
+  font-size: 15px;
+}
 .container {
   display: flex;
 }
