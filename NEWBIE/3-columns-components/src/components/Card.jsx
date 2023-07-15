@@ -1,15 +1,15 @@
-import Img from "./img"
-import ContentInfo from "./ContentInfo"
-import Button from "./Button"
-import '../column.css'
-const Card = ({ classCard, route, title, text, classBtn }) => {
-    return (
-      <article className={`${classCard} flex-direction`}>
-        <Img route={route} />
-        <ContentInfo title={title} text={text} />
-        <Button classBtn={classBtn} />
-      </article>
-    );
-  };
-  
-export default Card
+import Img from "./img";
+import ContentInfo from "./ContentInfo";
+import Button from "./Button";
+import "../column.css";
+const Card = ({ colorCard, image, title, text }) => {
+  return (
+    <article className={`${colorCard} flex-direction`}>
+      {image}
+      <ContentInfo title={title} text={text} />
+      <Button />
+    </article>
+  );
+};
+
+export default Card;

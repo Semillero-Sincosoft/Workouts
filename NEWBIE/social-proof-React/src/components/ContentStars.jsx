@@ -1,4 +1,4 @@
-export const ContentStars = (classContentStar) => {
+const ContentStars = (classContentStar) => {
   return (
     <section className="reviews flex-and-direction">
       <article className={`${classContentStar} content-stars`}>
@@ -16,3 +16,4 @@ export const ContentStars = (classContentStar) => {
     </section>
   );
 };
+export default ContentStars;

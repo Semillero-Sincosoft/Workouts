@@ -37,6 +37,19 @@ body {
   height: 500px;
   color: var(--primary-color);
 }
+.escrito article {
+  padding: 0px 26px 0px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.escrito article:first-child {
+  border-radius: 10px 0px 0px 10px;
+}
+.escrito article:last-child {
+  border-radius: 0px 10px 10px 0px;
+}
+
 .title {
   font-family: "Big Shoulders Display", cursive;
   font-size: 40px;
@@ -47,34 +60,20 @@ body {
   padding: 0px 79px 0px 0px;
 }
 
-.img{
+.img {
   width: 64px;
   height: 40px;
 }
 
 .sedan {
   background-color: var(--yellow-color);
-  padding: 0px 26px 0px 38px;
-  border-radius: 10px 0px 0px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .suvs {
   background-color: var(--cyan-color);
-  padding: 0px 26px 0px 38px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 .luxu {
   background-color: var(--darkcyan-color);
-  padding: 0px 26px 0px 38px;
-  border-radius: 0px 10px 10px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .learns {
@@ -88,23 +87,13 @@ body {
   color: var(--trasparent-color);
   cursor: -webkit-grab;
 }
-.learn1 {
-  color: var(--yellow-color);
-  background-color: var(--trasparent-color);
-}
-.learn2 {
-  color: var(--cyan-color);
-  background-color: var(--trasparent-color);
-}
 
-.learn3 {
-  color: var(--darkcyan-color);
-  background-color: var(--trasparent-color);
+.btn-learns{
+background-color: var(--trasparent-color);
 }
-
-@media screen and (max-width: 1038px){
+@media screen and (max-width: 1038px) {
   .card {
-  margin: 10px;
+    margin: 10px;
   }
   .escrito {
     width: 375px;
@@ -120,15 +109,14 @@ body {
     padding: 15px 84px 15px 7px;
     line-height: 30px;
   }
-  .sedan {
+  .escrito article:first-child {
     border-radius: 10px 10px 0px 0px;
-    padding: 22px 0px 25px 15px;
   }
-  .suvs {
-    padding: 22px 0px 25px 15px;
-  }
-  .luxu {
+  .escrito article:last-child {
+    border-radius: 0px 10px 10px 0px;
     border-radius: 0px 0px 10px 10px;
+  }
+  .escrito article {
     padding: 22px 0px 25px 15px;
   }
 }

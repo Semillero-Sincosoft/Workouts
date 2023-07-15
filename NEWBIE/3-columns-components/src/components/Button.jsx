@@ -1,9 +1,9 @@
-const Button = ({classBtn}) => {
+const Button = () => {
   return (
     <>
-      <button className={`${classBtn} learns`}>Learn More</button>
+      <button className={`btn-learns learns`}>Learn More</button>
     </>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
