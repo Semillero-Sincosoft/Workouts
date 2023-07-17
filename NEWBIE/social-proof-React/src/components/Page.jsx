@@ -1,5 +1,6 @@
 import TextContent from "./TextContent";
 import ContentStars from "./ContentStars";
+import ComentaryCard from "./ComentaryCard";
 import "../social-proof.css";
 const Page = () => {
   return (
@@ -27,6 +28,7 @@ const Page = () => {
             />
           </section>
         </header>
+        <section className="cards"></section>
       </section>
     </main>
   );
