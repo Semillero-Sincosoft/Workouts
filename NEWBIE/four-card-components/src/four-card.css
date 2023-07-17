@@ -49,6 +49,13 @@ body {
   justify-content: center;
   gap: 18px;
 }
+.content section {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 367px;
+  height: 209px;
+  box-shadow: 3px 6px 10px 1px var(--grisbody-color);
+}
 .columns {
   gap: 18px;
 }
@@ -76,7 +83,6 @@ body {
   align-items: end;
   padding: 25px;
 }
-
 
 @media screen and (max-width: 1000px) {
   body {

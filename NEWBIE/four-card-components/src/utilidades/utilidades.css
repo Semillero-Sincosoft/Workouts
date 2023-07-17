@@ -1,10 +1,4 @@
-.cards {
-  background-color: #fff;
-  border-radius: 10px;
-  width: 367px;
-  height: 209px;
-  box-shadow: 3px 6px 10px 1px var(--grisbody-color);
-}
+
 
 .flex-and-direction {
   display: flex;
