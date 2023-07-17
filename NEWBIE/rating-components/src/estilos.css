@@ -139,6 +139,9 @@ body {
 }
 
 @media only screen and (min-width: 375px) and (max-width: 600px) {
+  .content {
+    gap: 10px;
+  }
   .container {
     width: auto;
     height: 509px;
