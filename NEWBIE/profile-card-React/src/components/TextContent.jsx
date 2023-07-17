@@ -1,8 +1,20 @@
-export const TextContent = ({ textTitle, classTitle, text, classText,textSpan, classSpan }) => {
+import ImgCard from "./ImgCard";
+import { profile } from "./data/data";
+
+export const TextContent = () => {
   return (
-    <>
-      <h1 className={classTitle}>{textTitle} <span className={classSpan}>{textSpan}</span></h1>
-      <p className={classText}> {text}</p>
-    </>
+    <section className="content">
+      <ImgCard
+        route={"./src/assets/images/image-victor.jpg"}
+        classTag={"img-perfil"}
+      />
+      <div className="victor">
+        <h1 className="name">
+          {profile.user.name}
+          <span className="year">{profile.user.age}</span>
+        </h1>
+          <p className="form">{profile.user.city}</p>
+      </div>
+    </section>
   );
 };
