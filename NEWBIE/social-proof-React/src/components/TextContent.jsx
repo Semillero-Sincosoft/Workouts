@@ -1,12 +1,10 @@
-
-
-const TextContent = ({classTitle,textTitle,classText,text}) => {
+const TextContent = ({ textTitle, text }) => {
   return (
     <>
-      <h1 className={classTitle}>{textTitle}</h1>
-      <p className={classText}>{text}</p>
+      <h1>{textTitle}</h1>
+      <p>{text}</p>
     </>
-  )
-}
+  );
+};
 
-export default TextContent
+export default TextContent;
