@@ -21,7 +21,7 @@ export const CardContent = () => {
         }
       />
       <Card
-        colorCard={"luxu"}
+        colorCard="luxu"
         image={<ImgLuxury />}
         title={"LUXURY"}
         text={

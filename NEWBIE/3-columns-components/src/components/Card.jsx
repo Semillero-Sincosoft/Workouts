@@ -1,4 +1,3 @@
-import Img from "./img";
 import ContentInfo from "./ContentInfo";
 import Button from "./Button";
 import "../column.css";

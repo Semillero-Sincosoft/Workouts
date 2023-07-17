@@ -50,6 +50,7 @@ body {
 }
 .name {
   padding-bottom: 10px;
+  font-size: 24px;
 }
 .year {
   font-weight: 400;
@@ -64,10 +65,12 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-
-.description {
+.num h1 {
+  font-size: 24px;
+}
+.num p {
   color: var(--dark-grey-color);
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 3px;
   padding-bottom: 30px;
 }
