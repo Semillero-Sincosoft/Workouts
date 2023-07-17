@@ -1,10 +1,10 @@
 import "../src/estilos.css"
-import Card from "../components/Card"
+import ProductCard from "../components/ProductCard"
 function App() {
 
   return (
     <>
-      <Card />
+      <ProductCard />
     </>
   )
 }
