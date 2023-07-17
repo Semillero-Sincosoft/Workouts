@@ -1,4 +1,4 @@
-const Cost = () => {
+const ProductCost = () => {
   return (
     <>
       <div className="flex align-justify prices">
@@ -9,4 +9,4 @@ const Cost = () => {
   );
 };
 
-export default Cost;
+export default ProductCost;
