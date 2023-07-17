@@ -1,13 +1,13 @@
 import { ContentNetworks } from "./ContentNetworks";
-import ImgCard from "./ImgCard";
-import { TextContent } from "./TextContent";
+import { PersonaInfo } from "./PersonaInfo";
+import { BackgroundCard } from "./data/img/BackgroundCard";
 
 export const ContentProfile = () => {
   return (
     <main className="perfil">
       <section className="container">
-        <ImgCard route={"./src/assets/images/bg-pattern-card.svg"} />
-        <TextContent />
+        <BackgroundCard />
+        <PersonaInfo />
         <ContentNetworks />
       </section>
     </main>

@@ -65,11 +65,10 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-.num h1{
+.num h1 {
   font-size: 24px;
 }
-
-.description {
+.num p {
   color: var(--dark-grey-color);
   font-size: 15px;
   letter-spacing: 3px;
