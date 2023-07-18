@@ -1,4 +1,4 @@
-const Button = () => {
+const BtnLearnMore = () => {
   return (
     <>
       <button className={`btn-learns learns`}>Learn More</button>
@@ -6,4 +6,4 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default BtnLearnMore;

@@ -1,12 +1,12 @@
 import ContentInfo from "./ContentInfo";
-import Button from "./Button";
+import BtnLearnMore from "./BtnLearnMore";
 import "../column.css";
 const Card = ({ colorCard, image, title, text }) => {
   return (
     <article className={`${colorCard} flex-direction`}>
       {image}
       <ContentInfo title={title} text={text} />
-      <Button />
+      <BtnLearnMore />
     </article>
   );
 };
