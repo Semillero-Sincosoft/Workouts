@@ -1,4 +1,4 @@
-import "../src/estilos.css";
+
 import ProductImg from "./imgs/ProductImg";
 import TextContent from "./TextContent";
 import ProductCost from "./ProductCost";
