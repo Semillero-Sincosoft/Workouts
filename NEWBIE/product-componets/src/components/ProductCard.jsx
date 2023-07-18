@@ -1,16 +1,15 @@
-
 import ProductImg from "./imgs/ProductImg";
-import TextContent from "./TextContent";
+import DescriptionProduct from "./DescriptionProduct";
 import ProductCost from "./ProductCost";
-import ButtonCard from "./ButtonCard";
+import BtnAddProduct from "./BtnAddProduct";
 const ProductCard = () => {
   return (
     <section className="flex content-perfume">
       <ProductImg />
       <div className="flex main-content">
-        <TextContent />
+        <DescriptionProduct />
         <ProductCost />
-        <ButtonCard />
+        <BtnAddProduct />
       </div>
     </section>
   );
