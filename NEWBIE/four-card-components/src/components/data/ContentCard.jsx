@@ -3,7 +3,7 @@ import { ImageCalculator } from "../img/ImageCalculator";
 import { ImageKarma } from "../img/imageKarma";
 import { ImageSupervisor } from "../img/imageSupervisor";
 import { HeaderContent } from "../HeaderContent";
-import { Card } from "../Card";
+import { CardTool } from "../CardTool";
 
 export const ContentCard = () => {
   const cardData = [
@@ -39,12 +39,12 @@ export const ContentCard = () => {
     <main>
       <HeaderContent />
       <section className="content">
-        <Card key={cardData[0].titleCard} {...cardData[0]} />
+        <CardTool key={cardData[0].titleCard} {...cardData[0]} />
         <div className="columns flex-and-direction">
-          <Card key={cardData[1].titleCard} {...cardData[1]} />
-          <Card key={cardData[2].titleCard} {...cardData[2]} />
+          <CardTool key={cardData[1].titleCard} {...cardData[1]} />
+          <CardTool key={cardData[2].titleCard} {...cardData[2]} />
         </div>
-        <Card key={cardData[3].titleCard} {...cardData[3]} />
+        <CardTool key={cardData[3].titleCard} {...cardData[3]} />
       </section>
     </main>
   );
