@@ -1,8 +1,8 @@
-import { ContentProfile } from "./components/ContentProfile";
+import { CardProfile } from "./components/CardProfile";
 import "./profile.css";
 
 function App() {
-  return <ContentProfile />;
+  return <CardProfile />;
 }
 
 export default App;

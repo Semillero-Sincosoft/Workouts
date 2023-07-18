@@ -1,4 +1,4 @@
-export const Card = ({ colorCard, titleCard, textCard, imageCard }) => {
+export const CardTool = ({ colorCard, titleCard, textCard, imageCard }) => {
   return (
     <section className={`${colorCard}`}>
       <article className="title-content">

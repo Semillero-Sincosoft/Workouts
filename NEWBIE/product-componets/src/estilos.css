@@ -70,6 +70,7 @@ main {
   width: 275px;
   line-height: 28px;
   margin-left: 40px;
+  font-family: "Montserrat", sans-serif;
 }
 .prices {
   display: flex;

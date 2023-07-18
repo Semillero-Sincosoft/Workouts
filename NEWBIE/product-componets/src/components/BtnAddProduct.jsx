@@ -1,5 +1,5 @@
 import SvgShoppingCart from "./imgs/SvgShoppingCart";
-const ButtonCard = () => {
+const BtnAddProduct = () => {
   return (
     <>
       <button className="flex align-justify btn-cart">
@@ -10,4 +10,4 @@ const ButtonCard = () => {
   );
 };
 
-export default ButtonCard;
+export default BtnAddProduct;

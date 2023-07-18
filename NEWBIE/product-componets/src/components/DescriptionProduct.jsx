@@ -1,4 +1,4 @@
-const TextContent = () => {
+const DescriptionProduct = () => {
   return (
     <>
       <h4 className="flex titulo">PERFUME</h4>
@@ -13,4 +13,4 @@ const TextContent = () => {
   );
 };
 
-export default TextContent;
+export default DescriptionProduct;

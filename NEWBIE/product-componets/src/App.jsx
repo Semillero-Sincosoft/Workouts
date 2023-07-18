@@ -1,12 +1,7 @@
-import "../src/estilos.css"
-import ProductCard from "../components/ProductCard"
+import ProductCard from "./components/ProductCard";
+import "./estilos.css"
 function App() {
-
-  return (
-    <>
-      <ProductCard />
-    </>
-  )
+  return <ProductCard />;
 }
 
-export default App
+export default App;
