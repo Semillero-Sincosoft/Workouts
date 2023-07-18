@@ -1,4 +1,4 @@
-import CardFaq from "./components/CardFaq";
+ import CardFaq from "./components/CardFaq";
 function App() {
   return (
     <div>
