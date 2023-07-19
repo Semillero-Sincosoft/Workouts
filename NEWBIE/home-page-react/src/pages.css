@@ -153,18 +153,18 @@ footer {
   color: var(--very-dark-blue);
 }
 
-.cards {
+.content-card {
   display: flex;
   gap: 24px;
 }
-.cards h2 {
+.content-cards h2 {
   color: var(--Grayish-blue);
 }
-.cards p {
+.content-cards p {
   line-height: 25px;
 }
 
-.card-1 {
+.card {
   width: 233px;
   display: flex;
   flex-direction: column;
@@ -172,7 +172,7 @@ footer {
   padding-right: 19px;
 }
 
-.card-2 {
+/* .card-2 {
   width: 233px;
   display: flex;
   flex-direction: column;
@@ -186,7 +186,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   font-size: 14px;
-}
+} */
 
 .cards:last-child {
   margin-left: 55px;
