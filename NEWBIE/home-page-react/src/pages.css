@@ -13,12 +13,16 @@
   --very-dark-blue: hsl(240, 100%, 5%);
   --font-content: "Inter", sans-serif;
 }
-body {
+
+#root {
   width: 100%;
   height: 100%;
   background-color: var(--off-white);
   font-size: 15px;
   font-family: var(--font-content);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main {
   width: 1111px;
@@ -157,10 +161,10 @@ footer {
   display: flex;
   gap: 24px;
 }
-.content-cards h2 {
+.content-card h2 {
   color: var(--Grayish-blue);
 }
-.content-cards p {
+.content-card p {
   line-height: 25px;
 }
 
