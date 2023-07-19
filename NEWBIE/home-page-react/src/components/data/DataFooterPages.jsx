@@ -3,7 +3,7 @@ import { Imagekeyboard } from "../image/Imagekeyboard";
 import { ImageController } from "../image/ImageController";
 import { ContentSpam } from "../ContentSpam";
 
-export const data = () => {
+export const DataFooterPages = () => {
   const footerPages = [
     {
       imageSpam: <ImageComputerRetro />,
