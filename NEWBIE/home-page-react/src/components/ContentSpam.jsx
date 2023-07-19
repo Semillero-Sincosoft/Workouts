@@ -1,6 +1,6 @@
 export const ContentSpam = ({ imageSpam, enumeration, title, text }) => {
   return (
-    <section className="cards">
+    <section className="content-card">
       <article className="content-img">{imageSpam}</article>
       <article className="card">
         <h2>{enumeration}</h2>
