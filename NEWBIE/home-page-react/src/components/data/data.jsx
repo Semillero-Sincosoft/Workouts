@@ -25,10 +25,10 @@ export const data = () => {
     },
   ];
   return (
-    <section className="cards">
+    <footer>
       {footerPages.map((cardData) => (
         <ContentSpam key={cardData.enumeration} {...cardData} />
       ))}
-    </section>
+    </footer>
   );
 };
