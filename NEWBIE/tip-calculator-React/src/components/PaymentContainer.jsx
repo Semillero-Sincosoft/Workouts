@@ -1,7 +1,7 @@
 const PaymentContainer = ({ title }) => {
   return (
     <article className="content-proportion">
-      <div>
+      <div className="amount">
         <h3>{title}</h3>
         <p>/ person</p>
       </div>

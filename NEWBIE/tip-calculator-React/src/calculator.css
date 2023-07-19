@@ -28,6 +28,14 @@ body {
   --color-Strong: hsl(172, 67%, 45%);
   --Desature-cyan: hsl(183, 79%, 24%);
 }
+#root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
 
 .container {
   display: flex;
