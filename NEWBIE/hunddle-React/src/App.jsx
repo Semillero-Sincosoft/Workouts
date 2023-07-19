@@ -1,5 +1,5 @@
-import Page from "./components/Page";
-
+import { Page } from "./components/Page";
+import "./hubdle.css";
 function App() {
   return (
     <>

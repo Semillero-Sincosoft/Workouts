@@ -149,10 +149,9 @@ body {
   left: 335px;
   top: -115px;
 }
-.content-community h2{
+.content-community h2 {
   color: black;
 }
-
 
 .get-started-2 {
   width: 270px;
@@ -231,7 +230,7 @@ svg {
   border-radius: 18px;
 }
 
-.content-networks img{
+.content-networks img {
   width: 25px;
 }
 
