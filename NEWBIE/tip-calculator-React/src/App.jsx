@@ -1,4 +1,4 @@
-import "./calculator.css"
+import "./calculator.css";
 function App() {
   return <></>;
 }

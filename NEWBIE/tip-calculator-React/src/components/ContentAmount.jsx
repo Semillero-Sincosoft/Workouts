@@ -1,3 +1,4 @@
+import { BtnReset } from "./BtnReset";
 import PaymentContainer from "./PaymentContainer";
 
 export const ContentAmount = () => {
@@ -7,6 +8,7 @@ export const ContentAmount = () => {
         <PaymentContainer title="Tip Amount" />
         <PaymentContainer title="Total" />
       </div>
+      <BtnReset />
     </section>
   );
 };
