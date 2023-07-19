@@ -1,9 +1,9 @@
-import CardCalification from "./components/CardCalification";
+import Page from "./components/Page";
 
 function App() {
   return (
     <div>
-      <CardCalification />
+      <Page />
     </div>
   );
 }
