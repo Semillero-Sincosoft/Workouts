@@ -1,3 +1,15 @@
+import Header from "./Header";
+import SupportCard from "./SupportCard";
+import StatisticsCard from "./StatisticsCard";
+import "./css/crow.css";
 export const PageCrowdfunding = () => {
-  return <div className="container header"></div>;
+  return (
+    <>
+      <Header />
+      <main className="container header">
+        <SupportCard />
+        <StatisticsCard />
+      </main>
+    </>
+  );
 };
