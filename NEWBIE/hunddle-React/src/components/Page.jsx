@@ -1,7 +1,6 @@
-import HeaderPage from "./HeaderPage"
-import CardsInfoData from "./Data/CardsInfoData"
-import ImgCardFlowing from "./Imgs/ImgCardFlowing"
-import '../hubdle.css'
+import HeaderPage from "./HeaderPage";
+import CardsInfoData from "./Data/CardsInfoData";
+import "../hubdle.css";
 const Page = () => {
   return (
     <main className="container flex-and-direction">
@@ -10,7 +9,7 @@ const Page = () => {
         <CardsInfoData />
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
