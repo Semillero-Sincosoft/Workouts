@@ -1,4 +1,6 @@
-export const CardStand = ({ stand, price, text, units }) => {
+import { BtnCard } from "./BtnCard";
+
+export const CardStand = ({ stand, price, text, units, textBtn }) => {
   return (
     <article className="card">
       <div className="title-card">
@@ -11,7 +13,7 @@ export const CardStand = ({ stand, price, text, units }) => {
           <h2>{units}</h2>
           <p>left</p>
         </div>
-        <button className="btn-card">Select Reward</button>
+        <BtnCard textBtn={textBtn} />
       </section>
     </article>
   );
