@@ -41,12 +41,11 @@ body {
 .encendido {
   display: flex;
 }
-.prueba{
-
+.prueba {
 }
 @media screen and (max-width: 750px) {
   header {
-    background-image: url(../images/image-hero-mobile.jpg);
+    background-image: url(./src/assets/images/image-hero-mobile.jpg);
   }
   li {
     margin: 0;
@@ -77,8 +76,8 @@ body {
     line-height: 20px;
     padding-bottom: 0;
   } */
-  .text-card-buy-monitor{
-padding-bottom: 45px;
+  .text-card-buy-monitor {
+    padding-bottom: 45px;
   }
   .card-monitor h1 {
     text-align: center;
@@ -190,19 +189,19 @@ padding-bottom: 45px;
   .title-mohogany {
     flex-direction: column;
   }
-  
+
   .content-nav {
     display: flex;
     height: fit-content;
   }
-  
+
   header .menu-button button {
     background: transparent;
     outline: none;
     border: none;
     cursor: pointer;
   }
-  
+
   header nav #menu-close {
     background: transparent;
     border: none;
@@ -254,7 +253,4 @@ padding-bottom: 45px;
   .card-project p {
     font-size: 14px;
   }
-
 }
-
-
