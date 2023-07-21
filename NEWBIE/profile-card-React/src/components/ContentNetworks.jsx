@@ -1,4 +1,4 @@
-import { profile } from "./data/data";
+import { profile } from "./data/data-profile";
 
 export const ContentNetworks = () => {
   return (

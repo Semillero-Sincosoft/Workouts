@@ -1,6 +1,6 @@
 
 import { ImgProfile } from "./data/img/imgProfile";
-import { profile } from "./data/data";
+import { profile } from "./data/data-profile";
 
 export const PersonaInfo = () => {
   return (
