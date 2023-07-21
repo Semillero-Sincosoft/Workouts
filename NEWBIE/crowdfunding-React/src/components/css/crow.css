@@ -46,7 +46,7 @@ body {
 }
 @media screen and (max-width: 750px) {
   header {
-    background-image: url(../images/image-hero-mobile.jpg);
+    background-image: url(./src/assets/images/image-hero-mobile.jpg);
   }
   li {
     margin: 0;
