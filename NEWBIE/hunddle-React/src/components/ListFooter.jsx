@@ -6,7 +6,6 @@ export const ListFooter = ({ text1, text2, text3 }) => {
         <li>{text2}</li>
         <li>{text3}</li>
       </ul>
-      <ul></ul>
     </>
   );
 };

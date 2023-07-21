@@ -1,6 +1,7 @@
 import { ListFooter } from "./ListFooter";
 import { ContentNetworks } from "./ContentNetworks";
 import { ContactContainer } from "./ContactContainer";
+import { ModalContent } from "./ModalContent";
 
 export const Page = () => {
   return (
@@ -14,6 +15,7 @@ export const Page = () => {
           </article>
           <ContentNetworks />
         </section>
+        <ModalContent />
       </footer>
     </main>
   );
