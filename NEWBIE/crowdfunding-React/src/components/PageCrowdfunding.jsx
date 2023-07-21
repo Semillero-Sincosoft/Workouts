@@ -1,6 +1,3 @@
-
 export const PageCrowdfunding = () => {
-  return (
-    <div>PageCrowdfunding</div>
-  )
-}
+  return <div className="container header"></div>;
+};
