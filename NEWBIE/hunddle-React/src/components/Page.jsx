@@ -1,5 +1,5 @@
 import HeaderPage from "./HeaderPage"
-import CardInfoPage from "./CardInfoPage"
+import CardsInfoData from "./Data/CardsInfoData"
 import ImgCardFlowing from "./Imgs/ImgCardFlowing"
 import '../hubdle.css'
 const Page = () => {
@@ -7,7 +7,7 @@ const Page = () => {
     <main className="container flex-and-direction">
       <HeaderPage />
       <div className="content-written flex-and-direction">
-        <CardInfoPage />
+        <CardsInfoData />
       </div>
     </main>
   )
