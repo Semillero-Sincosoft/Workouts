@@ -11,6 +11,19 @@
   margin-bottom: 60px;
   padding-bottom: 40px;
 }
+
+.content-cards article:last-child {
+  border: solid var(--color-Dark-gray) 1px;
+}
+.content-cards article:last-child h3 {
+  color: var(--color-Dark-gray);
+}
+.content-cards article:last-child button {
+  background-color: var(--color-Dark-gray);
+}
+.content-cards article:last-child h2 {
+  color: var(--color-Dark-gray);
+}
 .card-project {
   gap: 45px;
   height: 268px;
@@ -99,8 +112,4 @@
   background-color: var(--color-Dark-gray);
   color: #fff;
   font-weight: 700;
-}
-
-.number-mohogany h2 {
-  color: var(--color-Dark-gray);
 }
